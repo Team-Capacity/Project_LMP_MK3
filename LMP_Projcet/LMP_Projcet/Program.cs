@@ -7,6 +7,7 @@ using LibraryMgrProgram;
 using LibraryMgrProgram.NonCustomerForm;
 using LMP_Projcet.Customer;
 using LMP_Projcet.NonCustomer;
+using LMP_Projcet.Start;
 
 namespace LMP_Projcet
 {
@@ -20,7 +21,7 @@ namespace LMP_Projcet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMainForm());
+            Application.Run(new MemberAddForm());
         }
     }
 }

@@ -734,7 +734,7 @@ namespace LibraryMgrProgram
             this.grpABIBookModi.Controls.Add(this.txtABIBLocation1);
             this.grpABIBookModi.Controls.Add(this.lbABIBLocation1);
             this.grpABIBookModi.Controls.Add(this.btnABIImgUplode1);
-            this.grpABIBookModi.Controls.Add(this.ImgAMView1);
+          this.grpABIBookModi.Controls.Add(this.ImgAMView1);
             this.grpABIBookModi.Controls.Add(this.txtABIBookCount1);
             this.grpABIBookModi.Controls.Add(this.lbABIBookCount1);
             this.grpABIBookModi.Controls.Add(this.btnABIClear1);
