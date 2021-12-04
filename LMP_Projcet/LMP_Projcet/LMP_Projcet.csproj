@@ -1,0 +1,361 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CE1A7B75-5810-413B-8DBA-82123AB5AD51}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LMP_Projcet</RootNamespace>
+    <AssemblyName>LMP_Projcet</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Installer for Windows\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AdminBookInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminBookInfoForm.Designer.cs">
+      <DependentUpon>AdminBookInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminContentsMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminContentsMainForm.Designer.cs">
+      <DependentUpon>AdminContentsMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerMgrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminCustomerMgrForm.Designer.cs">
+      <DependentUpon>AdminCustomerMgrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminInputOutputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminInputOutputForm.Designer.cs">
+      <DependentUpon>AdminInputOutputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMainForm.Designer.cs">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminNoticeForm.Designer.cs">
+      <DependentUpon>AdminNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminOperationForm.Designer.cs">
+      <DependentUpon>AdminOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminSuggestionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminSuggestionForm.Designer.cs">
+      <DependentUpon>AdminSuggestionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\SubAdminBookForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\SubAdminBookForm.Designer.cs">
+      <DependentUpon>SubAdminBookForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerBookInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerBookInfoForm.Designer.cs">
+      <DependentUpon>CustomerBookInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerContentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerContentsForm.Designer.cs">
+      <DependentUpon>CustomerContentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerEditForm.Designer.cs">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMainForm.Designer.cs">
+      <DependentUpon>CustomerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerMyInfomationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerMyInfomationForm.Designer.cs">
+      <DependentUpon>CustomerMyInfomationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerNoticeForm.Designer.cs">
+      <DependentUpon>CustomerNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerOperationForm.Designer.cs">
+      <DependentUpon>CustomerOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\CustomerWriteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\CustomerWriteForm.Designer.cs">
+      <DependentUpon>CustomerWriteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Methods\dbTest.cs" />
+    <Compile Include="Methods\FormChange.cs" />
+    <Compile Include="Methods\GroupBoxBorderChagne.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Methods\MouseEvent.cs" />
+    <Compile Include="NonCustomer\NonCustomerBookInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerBookInfoForm.Designer.cs">
+      <DependentUpon>NonCustomerBookInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerContentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerContentsForm.Designer.cs">
+      <DependentUpon>NonCustomerContentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerMainForm.Designer.cs">
+      <DependentUpon>NonCustomerMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerNoticeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerNoticeForm.Designer.cs">
+      <DependentUpon>NonCustomerNoticeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonCustomer\NonCustomerOperationForm.Designer.cs">
+      <DependentUpon>NonCustomerOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\FontChangeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Operation\FontChangeForm.Designer.cs">
+      <DependentUpon>FontChangeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Start\IDPWSearchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\IDPWSearchForm.Designer.cs">
+      <DependentUpon>IDPWSearchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start\MemberAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start\MemberAddForm.Designer.cs">
+      <DependentUpon>MemberAddForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Admin\AdminBookInfoForm.resx">
+      <DependentUpon>AdminBookInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminContentsMainForm.resx">
+      <DependentUpon>AdminContentsMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminCustomerMgrForm.resx">
+      <DependentUpon>AdminCustomerMgrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminInputOutputForm.resx">
+      <DependentUpon>AdminInputOutputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMainForm.resx">
+      <DependentUpon>AdminMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminNoticeForm.resx">
+      <DependentUpon>AdminNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminOperationForm.resx">
+      <DependentUpon>AdminOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminSuggestionForm.resx">
+      <DependentUpon>AdminSuggestionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\SubAdminBookForm.resx">
+      <DependentUpon>SubAdminBookForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerBookInfoForm.resx">
+      <DependentUpon>CustomerBookInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerContentsForm.resx">
+      <DependentUpon>CustomerContentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerEditForm.resx">
+      <DependentUpon>CustomerEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerMainForm.resx">
+      <DependentUpon>CustomerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerMyInfomationForm.resx">
+      <DependentUpon>CustomerMyInfomationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerNoticeForm.resx">
+      <DependentUpon>CustomerNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerOperationForm.resx">
+      <DependentUpon>CustomerOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\CustomerWriteForm.resx">
+      <DependentUpon>CustomerWriteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Methods\GroupBoxBorderChagne.resx">
+      <DependentUpon>GroupBoxBorderChagne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonCustomer\NonCustomerBookInfoForm.resx">
+      <DependentUpon>NonCustomerBookInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonCustomer\NonCustomerContentsForm.resx">
+      <DependentUpon>NonCustomerContentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonCustomer\NonCustomerMainForm.resx">
+      <DependentUpon>NonCustomerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonCustomer\NonCustomerNoticeForm.resx">
+      <DependentUpon>NonCustomerNoticeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonCustomer\NonCustomerOperationForm.resx">
+      <DependentUpon>NonCustomerOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Operation\FontChangeForm.resx">
+      <DependentUpon>FontChangeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Start\IDPWSearchForm.resx">
+      <DependentUpon>IDPWSearchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start\MemberAddForm.resx">
+      <DependentUpon>MemberAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Customer\man %281%29.jpg" />
+    <Content Include="Resources\Customer\man %281%29.png" />
+    <Content Include="Resources\Customer\man.png" />
+    <Content Include="Resources\Customer\manman %281%29.png" />
+    <Content Include="Resources\Customer\premium-icon-educational-book-3139349.png" />
+    <Content Include="Resources\Customer\small2.png" />
+    <Content Include="Resources\Information\관리자.png" />
+    <Content Include="Resources\Information\비회원.png" />
+    <Content Include="Resources\Information\회원.png" />
+    <Content Include="Resources\Operation\ddoing1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
