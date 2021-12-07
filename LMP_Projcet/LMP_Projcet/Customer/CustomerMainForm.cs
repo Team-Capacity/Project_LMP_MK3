@@ -22,6 +22,13 @@ namespace LibraryMgrProgram
         public CustomerMainForm()
         {
             InitializeComponent();
+            FontChangeForm fc = new FontChangeForm();
+            if(fc.rdoFCBlack.Checked)
+            {
+                this.BackColor = Color.Black;
+            }
+
+
         }
 
         MouseEvent mouseEvent = new MouseEvent();
@@ -80,7 +87,7 @@ namespace LibraryMgrProgram
         //공지사항,추천도서,현황 기본으로 로드
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
-            
+        
             formChange.ChangeFIF(ccf, palCMMain);
           
         }
@@ -123,5 +130,6 @@ namespace LibraryMgrProgram
         {
             
         }
+
     }
 }

@@ -499,7 +499,7 @@
         AiIgCIiAIiIAiIgCIiAf/9k=
 </value>
   </data>
-  <data name="picCMBookInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picCMCusInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxMTEhUUEhIWFhMWFhYYFRcXFxoYGBYXHR8XGBcVGBgY
         HSggGBolGxUWIjIhJSkrLi4uGiEzODMtNygtLi3/2wBDAQoKCg4NDhsQEBsvJSAmLS0tLTUtLS0tLTUt
@@ -625,7 +625,7 @@
         AiIgCIiAIiIAiIgCIiAf/9k=
 </value>
   </data>
-  <data name="picCMCusInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="picCMBookInfo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         /9j/4AAQSkZJRgABAQEAAAAAAAD/2wBDAAkGBxMTEhUUEhIWFhMWFhYYFRcXFxoYGBYXHR8XGBcVGBgY
         HSggGBolGxUWIjIhJSkrLi4uGiEzODMtNygtLi3/2wBDAQoKCg4NDhsQEBsvJSAmLS0tLTUtLS0tLTUt

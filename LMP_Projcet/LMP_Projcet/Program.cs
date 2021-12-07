@@ -21,7 +21,7 @@ namespace LMP_Projcet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MemberAddForm());
+            Application.Run(new CustomerMainForm());
         }
     }
 }

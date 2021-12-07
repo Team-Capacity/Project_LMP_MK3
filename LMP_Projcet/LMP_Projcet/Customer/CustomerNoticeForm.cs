@@ -51,6 +51,7 @@ namespace LMP_Projcet.Customer
 
         private void btnCNClose_Click(object sender, EventArgs e)
         {
+            CustomerOperationForm.chkShow1 = false;
             mouseEvent.ButtonClose(this);
         }
 

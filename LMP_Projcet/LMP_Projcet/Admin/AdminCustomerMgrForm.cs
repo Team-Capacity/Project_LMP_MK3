@@ -21,5 +21,10 @@ namespace LibraryMgrProgram
         {
 
         }
+
+        private void AdminCustomerMgrForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

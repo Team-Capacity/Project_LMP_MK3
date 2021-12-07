@@ -42,16 +42,16 @@ namespace LibraryMgrProgram
             this.lbFontTema = new System.Windows.Forms.Label();
             this.btnFCCancle = new System.Windows.Forms.Button();
             this.btnFCSetting = new System.Windows.Forms.Button();
-            this.lstboxFCSizelist = new System.Windows.Forms.ListBox();
-            this.lbFCSize = new System.Windows.Forms.Label();
             this.lstboxFCStylelist = new System.Windows.Forms.ListBox();
             this.lbFCStyle = new System.Windows.Forms.Label();
-            this.cmbFCEn_Sel = new System.Windows.Forms.ComboBox();
-            this.lbFCEnglish = new System.Windows.Forms.Label();
             this.cmbFCKo_Sel = new System.Windows.Forms.ComboBox();
             this.lbFCKorea = new System.Windows.Forms.Label();
             this.lbFCFontList = new System.Windows.Forms.Label();
             this.lstFCListChoice = new System.Windows.Forms.ListBox();
+            this.lstboxFCSizelist = new System.Windows.Forms.ListBox();
+            this.lbFCSize = new System.Windows.Forms.Label();
+            this.cmbFCEn_Sel = new System.Windows.Forms.ComboBox();
+            this.lbFCEnglish = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.plnFC.SuspendLayout();
@@ -83,7 +83,6 @@ namespace LibraryMgrProgram
             this.plnFC.Paint += new System.Windows.Forms.PaintEventHandler(this.plnFC_Paint);
             this.plnFC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseDown);
             this.plnFC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseMove);
-            this.plnFC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PlnFC_MouseUP);
             // 
             // btnFCMax
             // 
@@ -206,6 +205,7 @@ namespace LibraryMgrProgram
             this.rdoFCBlack.TabStop = true;
             this.rdoFCBlack.Text = "다크";
             this.rdoFCBlack.UseVisualStyleBackColor = true;
+         
             // 
             // rdoFCWhite
             // 
@@ -245,30 +245,7 @@ namespace LibraryMgrProgram
             this.btnFCSetting.TabIndex = 6;
             this.btnFCSetting.Text = "설정";
             this.btnFCSetting.UseVisualStyleBackColor = true;
-            // 
-            // lstboxFCSizelist
-            // 
-            this.lstboxFCSizelist.FormattingEnabled = true;
-            this.lstboxFCSizelist.ItemHeight = 12;
-            this.lstboxFCSizelist.Items.AddRange(new object[] {
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.lstboxFCSizelist.Location = new System.Drawing.Point(500, 56);
-            this.lstboxFCSizelist.Name = "lstboxFCSizelist";
-            this.lstboxFCSizelist.Size = new System.Drawing.Size(27, 52);
-            this.lstboxFCSizelist.TabIndex = 9;
-            this.lstboxFCSizelist.SelectedIndexChanged += new System.EventHandler(this.lstboxFCSizelist_SelectedIndexChanged);
-            // 
-            // lbFCSize
-            // 
-            this.lbFCSize.AutoSize = true;
-            this.lbFCSize.Location = new System.Drawing.Point(568, 57);
-            this.lbFCSize.Name = "lbFCSize";
-            this.lbFCSize.Size = new System.Drawing.Size(29, 12);
-            this.lbFCSize.TabIndex = 8;
-            this.lbFCSize.Text = "크기";
+            this.btnFCSetting.Click += new System.EventHandler(this.btnFCSetting_Click);
             // 
             // lstboxFCStylelist
             // 
@@ -292,23 +269,6 @@ namespace LibraryMgrProgram
             this.lbFCStyle.Size = new System.Drawing.Size(41, 12);
             this.lbFCStyle.TabIndex = 6;
             this.lbFCStyle.Text = "스타일";
-            // 
-            // cmbFCEn_Sel
-            // 
-            this.cmbFCEn_Sel.FormattingEnabled = true;
-            this.cmbFCEn_Sel.Location = new System.Drawing.Point(354, 72);
-            this.cmbFCEn_Sel.Name = "cmbFCEn_Sel";
-            this.cmbFCEn_Sel.Size = new System.Drawing.Size(121, 20);
-            this.cmbFCEn_Sel.TabIndex = 5;
-            // 
-            // lbFCEnglish
-            // 
-            this.lbFCEnglish.AutoSize = true;
-            this.lbFCEnglish.Location = new System.Drawing.Point(320, 76);
-            this.lbFCEnglish.Name = "lbFCEnglish";
-            this.lbFCEnglish.Size = new System.Drawing.Size(29, 12);
-            this.lbFCEnglish.TabIndex = 4;
-            this.lbFCEnglish.Text = "영문";
             // 
             // cmbFCKo_Sel
             // 
@@ -361,6 +321,47 @@ namespace LibraryMgrProgram
             this.lstFCListChoice.TabIndex = 0;
             this.lstFCListChoice.SelectedIndexChanged += new System.EventHandler(this.lstFCListChoice_SelectedIndexChanged);
             // 
+            // lstboxFCSizelist
+            // 
+            this.lstboxFCSizelist.FormattingEnabled = true;
+            this.lstboxFCSizelist.ItemHeight = 12;
+            this.lstboxFCSizelist.Items.AddRange(new object[] {
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.lstboxFCSizelist.Location = new System.Drawing.Point(500, 56);
+            this.lstboxFCSizelist.Name = "lstboxFCSizelist";
+            this.lstboxFCSizelist.Size = new System.Drawing.Size(27, 52);
+            this.lstboxFCSizelist.TabIndex = 9;
+            this.lstboxFCSizelist.SelectedIndexChanged += new System.EventHandler(this.lstboxFCSizelist_SelectedIndexChanged);
+            // 
+            // lbFCSize
+            // 
+            this.lbFCSize.AutoSize = true;
+            this.lbFCSize.Location = new System.Drawing.Point(568, 57);
+            this.lbFCSize.Name = "lbFCSize";
+            this.lbFCSize.Size = new System.Drawing.Size(29, 12);
+            this.lbFCSize.TabIndex = 8;
+            this.lbFCSize.Text = "크기";
+            // 
+            // cmbFCEn_Sel
+            // 
+            this.cmbFCEn_Sel.FormattingEnabled = true;
+            this.cmbFCEn_Sel.Location = new System.Drawing.Point(354, 72);
+            this.cmbFCEn_Sel.Name = "cmbFCEn_Sel";
+            this.cmbFCEn_Sel.Size = new System.Drawing.Size(121, 20);
+            this.cmbFCEn_Sel.TabIndex = 5;
+            // 
+            // lbFCEnglish
+            // 
+            this.lbFCEnglish.AutoSize = true;
+            this.lbFCEnglish.Location = new System.Drawing.Point(320, 76);
+            this.lbFCEnglish.Name = "lbFCEnglish";
+            this.lbFCEnglish.Size = new System.Drawing.Size(29, 12);
+            this.lbFCEnglish.TabIndex = 4;
+            this.lbFCEnglish.Text = "영문";
+            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -409,27 +410,27 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnFCMax;
         private System.Windows.Forms.Button btnFCMin;
         private System.Windows.Forms.Button btnFCClose;
-        private System.Windows.Forms.RadioButton rdoFCBasic;
-        private System.Windows.Forms.RadioButton rdoFCSetting;
-        private System.Windows.Forms.GroupBox grpFCSetting;
-        private System.Windows.Forms.PictureBox picFCWhite;
-        private System.Windows.Forms.PictureBox picFCBlack;
-        private System.Windows.Forms.RadioButton rdoFCBlack;
-        private System.Windows.Forms.RadioButton rdoFCWhite;
-        private System.Windows.Forms.Label lbFontTema;
-        private System.Windows.Forms.Button btnFCCancle;
-        private System.Windows.Forms.Button btnFCSetting;
         private System.Windows.Forms.ListBox lstboxFCSizelist;
         private System.Windows.Forms.Label lbFCSize;
-        private System.Windows.Forms.ListBox lstboxFCStylelist;
         private System.Windows.Forms.Label lbFCStyle;
-        private System.Windows.Forms.ComboBox cmbFCKo_Sel;
-        private System.Windows.Forms.Label lbFCKorea;
         private System.Windows.Forms.Label lbFCFontList;
-        private System.Windows.Forms.ListBox lstFCListChoice;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ComboBox cmbFCEn_Sel;
         private System.Windows.Forms.Label lbFCEnglish;
         private System.Windows.Forms.ComboBox comboBox1;
+        public System.Windows.Forms.GroupBox grpFCSetting;
+        public System.Windows.Forms.RadioButton rdoFCBasic;
+        public System.Windows.Forms.RadioButton rdoFCSetting;
+        public System.Windows.Forms.PictureBox picFCWhite;
+        public System.Windows.Forms.PictureBox picFCBlack;
+        public System.Windows.Forms.RadioButton rdoFCBlack;
+        public System.Windows.Forms.RadioButton rdoFCWhite;
+        public System.Windows.Forms.Label lbFontTema;
+        public System.Windows.Forms.Button btnFCCancle;
+        public System.Windows.Forms.Button btnFCSetting;
+        public System.Windows.Forms.ListBox lstboxFCStylelist;
+        public System.Windows.Forms.ComboBox cmbFCKo_Sel;
+        public System.Windows.Forms.Label lbFCKorea;
+        public System.Windows.Forms.ListBox lstFCListChoice;
     }
 }

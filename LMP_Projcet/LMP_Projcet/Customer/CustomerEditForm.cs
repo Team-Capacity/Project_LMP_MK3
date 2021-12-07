@@ -29,10 +29,12 @@ namespace LMP_Projcet.Customer
            
         }
 
+     
         //개인정보 수정 취소 -> 메인화면 개인정보뜬 화면으로 이동
         private void btnCusEditCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+             CustomerMyInfomationForm.chkShow = false;
+             this.Close();
         }
 
         private void CustomerEditForm_Load(object sender, EventArgs e)
@@ -67,7 +69,9 @@ namespace LMP_Projcet.Customer
 
         private void btnCEClose_Click_1(object sender, EventArgs e)
         {
+            CustomerMyInfomationForm.chkShow = false;
             mouseEvent.ButtonClose(this);
+            
         }
 
 
@@ -89,19 +93,22 @@ namespace LMP_Projcet.Customer
             dialog.Filter = "모든파일(*.*)|*.*";
             dialog.RestoreDirectory = true;
 
-            if (dialog.ShowDialog() == DialogResult.OK)
+            var result = dialog.ShowDialog();  //변수로 선언해주고 if문안에 넣어주지 않으면 취소눌러도 파일창이 한번 더뜸.
+
+            if (result == DialogResult.OK)
             {
                 image_file = dialog.FileName;
                 picCMICustomerImg.Image = Bitmap.FromFile(image_file);
                 picCMICustomerImg.SizeMode = PictureBoxSizeMode.StretchImage;
             }
-            else if (dialog.ShowDialog() == DialogResult.Cancel)
+            else if (result == DialogResult.Cancel)
             {
-                //if 뒤에 지우면 한번에 취소  무슨차이일까?
                 return;
+                
 
             }
-        
+            this.Close();
+
 
 
 

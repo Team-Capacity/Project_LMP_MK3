@@ -18,10 +18,25 @@ namespace LMP_Projcet.Customer
     {
 
         FormChange formChange = new FormChange();
-    
+      
+
+        public static bool chkShow1 = false;  // chkShow를 같이 쓰면 공지사항 클릭했을때 다른 (색상/글꼴,건의사항)버튼 이벤트가 발생 안함
+        public static bool chkShow2 = false;
+        public static bool chkShow3 = false;
+
         public CustomerOperationForm()
         {
             InitializeComponent();
+          
+
+
+
+
+
+
+
+
+
         }
 
         //공지사항 클릭 이동
@@ -29,9 +44,18 @@ namespace LMP_Projcet.Customer
         {
 
           
-            CustomerNoticeForm cn = new CustomerNoticeForm();
-            cn.Location = new Point(500, 150);
-            cn.Show();
+            if(!chkShow1)
+            {
+                CustomerNoticeForm cn = new CustomerNoticeForm();
+                cn.Location = new Point(500, 150);
+                cn.Show();
+                chkShow1 = true;
+            }
+           
+            else
+            {
+                return;
+            }
 
             
             
@@ -43,8 +67,17 @@ namespace LMP_Projcet.Customer
         private void lbCOSuggest_Click(object sender, EventArgs e)
         {
            
-            CustomerWriteForm cw = new CustomerWriteForm();   
-            cw.Show();      
+            if(!chkShow2)
+            {
+                CustomerWriteForm cw = new CustomerWriteForm();
+                cw.Show();
+                chkShow2 = true;
+            }
+            else
+            {
+                return;
+            }
+              
             
             //한번 더 클릭시 기존의 창은 닫히고 다시 열리는
 
@@ -57,16 +90,18 @@ namespace LMP_Projcet.Customer
 
         FontChangeForm fc;
      
-        public static bool chkShow = false;
+     
 
         private void lbCOColor_Click(object sender, EventArgs e)
         {
 
-        if(!chkShow)
+        if(!chkShow3)
             {
                 fc = new FontChangeForm();
+                fc.Location = new Point(500, 250);
                 fc.Show();
-                chkShow = true;
+                chkShow3 = true;
+                
             }
         else
             {
@@ -80,7 +115,7 @@ namespace LMP_Projcet.Customer
 
         private void CustomerOperationForm_Load(object sender, EventArgs e)
         {
-
+       
 
         }
 

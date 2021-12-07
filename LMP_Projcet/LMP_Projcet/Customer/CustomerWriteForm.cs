@@ -56,6 +56,7 @@ namespace LMP_Projcet.Customer
 
         private void btnCusClose_Click(object sender, EventArgs e)
         {
+            CustomerOperationForm.chkShow2 = false;
             mouseEvent.ButtonClose(this);
         }
 
@@ -106,6 +107,7 @@ namespace LMP_Projcet.Customer
             {
                 if (MessageBox.Show("현재 입력중인 내용이 있습니다. 정말로 취소하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    CustomerOperationForm.chkShow2 = false;
                     this.Close();
                 }
                 else
@@ -115,6 +117,7 @@ namespace LMP_Projcet.Customer
 
             }
             else
+                CustomerOperationForm.chkShow2 = false;
                 this.Close();
             
           
