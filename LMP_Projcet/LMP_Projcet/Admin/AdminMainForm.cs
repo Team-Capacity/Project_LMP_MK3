@@ -65,6 +65,7 @@ namespace LibraryMgrProgram
         {
             formChange.ChangeFIF(aConForm, palAMMain);
             db.dbConnection();
+            lbAMCustomer.Text = db.dbSelectCus("1")+"님 환영합니다.";
         }
 
         private void lbAMHome_Click(object sender, EventArgs e)
