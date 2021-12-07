@@ -22,7 +22,14 @@ namespace LibraryMgrProgram
 
         private void btnSerOK_Click(object sender, EventArgs e)
         {
-
+            if (txtSerName.Text == "" && txtSerPH.Text == "" && txtSerBir.Text == "")
+            {
+                MessageBox.Show("입력해주세요.");
+            }
+            else if (txtSerName.Text == "" || txtSerPH.Text == "" || txtSerBir.Text == "")
+            {
+                MessageBox.Show("입력 칸 중 빈칸이있습니다.");
+            }
         }
 
         private void plnAM_MouseDown(object sender, MouseEventArgs e)
@@ -47,5 +54,17 @@ namespace LibraryMgrProgram
             lf.Show();
         }
 
+        private void btnSerPwOK_Click(object sender, EventArgs e)
+        {
+            if (txtSerID.Text == "" && txtSerPwName.Text == "" && txtSerPwBir.Text == "")
+            {
+                MessageBox.Show("입력해주세요.");
+            }
+
+            else if (txtSerID.Text == "" || txtSerPwName.Text == "" || txtSerPwBir.Text == "")
+            {
+                MessageBox.Show("입력 칸 중 빈칸이있습니다.");
+            }
+        }
     }
 }

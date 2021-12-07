@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryMgrProgram;
 using LMP_Projcet.Methods;
+using LMP_Projcet.Start;
 
 namespace LMP_Projcet
 {
@@ -41,6 +42,11 @@ namespace LMP_Projcet
             {
                 CustomerMainForm customerMainForm = new CustomerMainForm();
                 formChange.ChangeF(this, customerMainForm);
+            }
+            //빈칸 입력시 메시지 출력
+            if(txtLFID.Text == "" && txtLFPW.Text == "")
+            {
+                MessageBox.Show("빈칸이있습니다.");
             }
         }
 
@@ -82,7 +88,8 @@ namespace LMP_Projcet
 
         private void labLFAddMem_Click(object sender, EventArgs e)
         {
-
+            MemberAddForm MA = new MemberAddForm();
+            formChange.ChangeF(this, MA);
         }
 
         private void txtLFID_TextChanged(object sender, EventArgs e)
