@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibraryMgrProgram.NonCustomerForm;
 using LMP_Projcet;
-using LMP_Projcet.Customer;
+using LMP_Projcet.NonCustomer;
 using LMP_Projcet.Methods;
 
 
@@ -21,9 +21,11 @@ namespace LibraryMgrProgram
         {
             InitializeComponent();
         }
-
+        NonCustomerOperationForm NonOpeForm = new NonCustomerOperationForm();
+        NonCustomerBookInfoForm NonBookForm = new NonCustomerBookInfoForm();
         MouseEvent mouseEvent = new MouseEvent();
         FormChange formChange = new FormChange();
+
       
         NonCustomerContentsForm ncc = new NonCustomerContentsForm();
 
@@ -85,7 +87,18 @@ namespace LibraryMgrProgram
 
         private void lbNCMLogo_Click(object sender, EventArgs e)
         {
+            formChange.ChangeFIF(ncc, palNCMMain);
+        }
 
+        private void lbNCMBookInfo_Click(object sender, EventArgs e)
+        {
+            formChange.ChangeFIF(NonBookForm, palNCMMain);
+        }
+
+        private void lbNCMOperation_Click(object sender, EventArgs e)
+        {
+
+            formChange.ChangeFIF(NonOpeForm, palNCMMain);
         }
     }
 }

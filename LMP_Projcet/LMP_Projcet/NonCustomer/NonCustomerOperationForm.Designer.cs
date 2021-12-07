@@ -47,7 +47,7 @@ namespace LMP_Projcet.NonCustomer
             this.grpNCOColor.BackColor = System.Drawing.Color.White;
             this.grpNCOColor.Controls.Add(this.lbNCOColor);
             this.grpNCOColor.Controls.Add(this.picNCOColor);
-            this.grpNCOColor.Location = new System.Drawing.Point(577, 228);
+            this.grpNCOColor.Location = new System.Drawing.Point(614, 189);
             this.grpNCOColor.Name = "grpNCOColor";
             this.grpNCOColor.Size = new System.Drawing.Size(210, 97);
             this.grpNCOColor.TabIndex = 130;
@@ -57,6 +57,7 @@ namespace LMP_Projcet.NonCustomer
             // lbNCOColor
             // 
             this.lbNCOColor.AutoSize = true;
+            this.lbNCOColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lbNCOColor.Font = new System.Drawing.Font("굴림", 20F);
             this.lbNCOColor.Location = new System.Drawing.Point(57, 70);
             this.lbNCOColor.Name = "lbNCOColor";
@@ -79,7 +80,7 @@ namespace LMP_Projcet.NonCustomer
             this.grpNCONotice.BackColor = System.Drawing.Color.White;
             this.grpNCONotice.Controls.Add(this.lbNCONotice);
             this.grpNCONotice.Controls.Add(this.picNCONotice);
-            this.grpNCONotice.Location = new System.Drawing.Point(308, 228);
+            this.grpNCONotice.Location = new System.Drawing.Point(345, 189);
             this.grpNCONotice.Name = "grpNCONotice";
             this.grpNCONotice.Size = new System.Drawing.Size(210, 97);
             this.grpNCONotice.TabIndex = 132;
@@ -89,12 +90,14 @@ namespace LMP_Projcet.NonCustomer
             // lbNCONotice
             // 
             this.lbNCONotice.AutoSize = true;
+            this.lbNCONotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lbNCONotice.Font = new System.Drawing.Font("굴림", 20F);
             this.lbNCONotice.Location = new System.Drawing.Point(63, 70);
             this.lbNCONotice.Name = "lbNCONotice";
             this.lbNCONotice.Size = new System.Drawing.Size(120, 27);
             this.lbNCONotice.TabIndex = 127;
             this.lbNCONotice.Text = "공지사항";
+            this.lbNCONotice.Click += new System.EventHandler(this.lbNCONotice_Click);
             // 
             // picNCONotice
             // 

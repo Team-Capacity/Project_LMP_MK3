@@ -177,7 +177,6 @@ namespace LibraryMgrProgram
             this.grpABIBookInfo.Controls.Add(this.lbABIBookPage3);
             this.grpABIBookInfo.Controls.Add(this.lbABIBookger3);
             this.grpABIBookInfo.Controls.Add(this.lbABIBLocation3);
-            this.grpABIBookInfo.Controls.Add(this.ImgAMView3);
             this.grpABIBookInfo.Controls.Add(this.lbABIBookCount3);
             this.grpABIBookInfo.Controls.Add(this.lbABIBookExp3);
             this.grpABIBookInfo.Controls.Add(this.label17);
@@ -734,7 +733,6 @@ namespace LibraryMgrProgram
             this.grpABIBookModi.Controls.Add(this.txtABIBLocation1);
             this.grpABIBookModi.Controls.Add(this.lbABIBLocation1);
             this.grpABIBookModi.Controls.Add(this.btnABIImgUplode1);
-            this.grpABIBookModi.Controls.Add(this.ImgAMView1);
             this.grpABIBookModi.Controls.Add(this.txtABIBookCount1);
             this.grpABIBookModi.Controls.Add(this.lbABIBookCount1);
             this.grpABIBookModi.Controls.Add(this.btnABIClear1);

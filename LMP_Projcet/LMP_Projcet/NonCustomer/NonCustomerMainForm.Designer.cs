@@ -137,11 +137,12 @@ namespace LibraryMgrProgram
             this.lbNCMOperation.AutoSize = true;
             this.lbNCMOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lbNCMOperation.Font = new System.Drawing.Font("굴림", 20F);
-            this.lbNCMOperation.Location = new System.Drawing.Point(527, 135);
+            this.lbNCMOperation.Location = new System.Drawing.Point(528, 135);
             this.lbNCMOperation.Name = "lbNCMOperation";
             this.lbNCMOperation.Size = new System.Drawing.Size(120, 27);
             this.lbNCMOperation.TabIndex = 148;
             this.lbNCMOperation.Text = "환경설정";
+            this.lbNCMOperation.Click += new System.EventHandler(this.lbNCMOperation_Click);
             // 
             // lbNCMBookInfo
             // 
@@ -153,6 +154,7 @@ namespace LibraryMgrProgram
             this.lbNCMBookInfo.Size = new System.Drawing.Size(93, 27);
             this.lbNCMBookInfo.TabIndex = 146;
             this.lbNCMBookInfo.Text = "책정보";
+            this.lbNCMBookInfo.Click += new System.EventHandler(this.lbNCMBookInfo_Click);
             // 
             // dgvNCM
             // 
@@ -232,7 +234,6 @@ namespace LibraryMgrProgram
             this.ClientSize = new System.Drawing.Size(1400, 800);
             this.Controls.Add(this.lbNCMHome);
             this.Controls.Add(this.picNCMLogo);
-            this.Controls.Add(this.palNCMMain);
             this.Controls.Add(this.dgvNCM);
             this.Controls.Add(this.lbNCMLogin);
             this.Controls.Add(this.lbNCMOperation);
@@ -240,6 +241,7 @@ namespace LibraryMgrProgram
             this.Controls.Add(this.lbNCMBookInfo);
             this.Controls.Add(this.picNCMBookInfo);
             this.Controls.Add(this.plnNCM);
+            this.Controls.Add(this.palNCMMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NonCustomerMainForm";
             this.RightToLeftLayout = true;
