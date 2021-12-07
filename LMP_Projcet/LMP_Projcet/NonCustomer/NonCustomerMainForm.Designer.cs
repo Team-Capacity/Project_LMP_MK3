@@ -137,7 +137,7 @@ namespace LibraryMgrProgram
             this.lbNCMOperation.AutoSize = true;
             this.lbNCMOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lbNCMOperation.Font = new System.Drawing.Font("굴림", 20F);
-            this.lbNCMOperation.Location = new System.Drawing.Point(527, 135);
+            this.lbNCMOperation.Location = new System.Drawing.Point(528, 135);
             this.lbNCMOperation.Name = "lbNCMOperation";
             this.lbNCMOperation.Size = new System.Drawing.Size(120, 27);
             this.lbNCMOperation.TabIndex = 148;
