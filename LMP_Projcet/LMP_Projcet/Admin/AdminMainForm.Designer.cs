@@ -160,9 +160,9 @@ namespace LibraryMgrProgram
             this.lbAMCustomer.Font = new System.Drawing.Font("Gulim", 14F);
             this.lbAMCustomer.Location = new System.Drawing.Point(1196, 56);
             this.lbAMCustomer.Name = "lbAMCustomer";
-            this.lbAMCustomer.Size = new System.Drawing.Size(192, 19);
+            this.lbAMCustomer.Size = new System.Drawing.Size(165, 19);
             this.lbAMCustomer.TabIndex = 120;
-            this.lbAMCustomer.Text = "관리자님 환영합니다.";
+            this.lbAMCustomer.Text = "000님 환영합니다.";
             // 
             // palAMMain
             // 
