@@ -11,7 +11,7 @@ using LibraryMgrProgram.NonCustomerForm;
 using LMP_Projcet;
 using LMP_Projcet.Customer;
 using LMP_Projcet.Methods;
-
+using LMP_Projcet.NonCustomer;
 
 namespace LibraryMgrProgram
 {
@@ -86,6 +86,17 @@ namespace LibraryMgrProgram
         private void lbNCMLogo_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lbNCMBookInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbNCMOperation_Click(object sender, EventArgs e)
+        {
+            NonCustomerOperationForm no = new NonCustomerOperationForm();
+            formChange.ChangeFIF(no, palNCMMain);
         }
     }
 }

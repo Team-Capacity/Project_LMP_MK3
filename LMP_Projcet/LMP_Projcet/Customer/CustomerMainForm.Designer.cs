@@ -43,19 +43,19 @@ namespace LibraryMgrProgram
             this.picCMLogo = new System.Windows.Forms.PictureBox();
             this.picCMCustomer = new System.Windows.Forms.PictureBox();
             this.picCMOperation = new System.Windows.Forms.PictureBox();
-            this.picCMBookInfo = new System.Windows.Forms.PictureBox();
             this.picCMCusInfo = new System.Windows.Forms.PictureBox();
             this.btnCMClose = new System.Windows.Forms.Button();
             this.btnCMMin = new System.Windows.Forms.Button();
             this.btnCMMax = new System.Windows.Forms.Button();
             this.plnCM = new System.Windows.Forms.TableLayoutPanel();
+            this.picCMBookInfo = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMOperation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCusInfo)).BeginInit();
             this.plnCM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -66,10 +66,14 @@ namespace LibraryMgrProgram
             // 
             // palCMMain
             // 
+            this.palCMMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.palCMMain.Location = new System.Drawing.Point(12, 235);
             this.palCMMain.Name = "palCMMain";
             this.palCMMain.Size = new System.Drawing.Size(1376, 553);
             this.palCMMain.TabIndex = 131;
+           
             // 
             // lbCMCustomer
             // 
@@ -197,18 +201,6 @@ namespace LibraryMgrProgram
             this.picCMOperation.TabIndex = 140;
             this.picCMOperation.TabStop = false;
             // 
-            // picCMBookInfo
-            // 
-            this.picCMBookInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.picCMBookInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picCMBookInfo.Image = ((System.Drawing.Image)(resources.GetObject("picCMBookInfo.Image")));
-            this.picCMBookInfo.Location = new System.Drawing.Point(286, 85);
-            this.picCMBookInfo.Name = "picCMBookInfo";
-            this.picCMBookInfo.Size = new System.Drawing.Size(100, 77);
-            this.picCMBookInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCMBookInfo.TabIndex = 138;
-            this.picCMBookInfo.TabStop = false;
-            // 
             // picCMCusInfo
             // 
             this.picCMCusInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -292,9 +284,22 @@ namespace LibraryMgrProgram
             this.plnCM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnCM_MouseMove);
             this.plnCM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnCM_MouseUp);
             // 
+            // picCMBookInfo
+            // 
+            this.picCMBookInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.picCMBookInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picCMBookInfo.Image = ((System.Drawing.Image)(resources.GetObject("picCMBookInfo.Image")));
+            this.picCMBookInfo.Location = new System.Drawing.Point(286, 85);
+            this.picCMBookInfo.Name = "picCMBookInfo";
+            this.picCMBookInfo.Size = new System.Drawing.Size(100, 77);
+            this.picCMBookInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCMBookInfo.TabIndex = 138;
+            this.picCMBookInfo.TabStop = false;
+            // 
             // CustomerMainForm
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
@@ -322,9 +327,9 @@ namespace LibraryMgrProgram
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMOperation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCusInfo)).EndInit();
             this.plnCM.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,7 +343,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label lbCMOperation;
         private System.Windows.Forms.PictureBox picCMOperation;
         private System.Windows.Forms.Label lbCMBookInfo;
-        private System.Windows.Forms.PictureBox picCMBookInfo;
         private System.Windows.Forms.Label lbCMCusInfo;
         private System.Windows.Forms.PictureBox picCMCusInfo;
         private System.Windows.Forms.DataGridView CusGridView;
@@ -349,5 +353,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnCMMin;
         private System.Windows.Forms.Button btnCMMax;
         private System.Windows.Forms.TableLayoutPanel plnCM;
+        private System.Windows.Forms.PictureBox picCMBookInfo;
     }
 }

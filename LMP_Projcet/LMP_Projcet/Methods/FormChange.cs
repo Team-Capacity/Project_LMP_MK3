@@ -34,5 +34,6 @@ namespace LMP_Projcet.Methods
             g.BorderColor = Color.White;
         }
 
+        
     }
 }

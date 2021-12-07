@@ -245,6 +245,7 @@ namespace LMP_Projcet.Customer
             this.lbCMICustomerState.Size = new System.Drawing.Size(85, 19);
             this.lbCMICustomerState.TabIndex = 185;
             this.lbCMICustomerState.Text = "대출가능";
+     
             // 
             // lbCMIRank
             // 

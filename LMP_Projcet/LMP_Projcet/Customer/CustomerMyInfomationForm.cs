@@ -22,17 +22,31 @@ namespace LMP_Projcet.Customer
         FormChange fc = new FormChange();
         
         
+        
 
 
         private void CustomerMyInfomationForm_Load(object sender, EventArgs e)
         {
 
         }
-       
+
+
+        public static bool chkShow = false;
         private void btnCMIEdit_Click(object sender, EventArgs e)
         {
-            CustomerEditForm ce = new CustomerEditForm();
-            ce.Show();
+        
+
+            if(!chkShow)
+            {
+                CustomerEditForm ce = new CustomerEditForm();
+                ce.Show();
+                chkShow = true;
+            }
+            else
+            {
+                return;
+            }
+           
         }
 
         private void lbCMIMyEmail_Click(object sender, EventArgs e)
@@ -54,5 +68,7 @@ namespace LMP_Projcet.Customer
         {
 
         }
+
+       
     }
 }

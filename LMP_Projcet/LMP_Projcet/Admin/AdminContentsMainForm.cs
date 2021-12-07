@@ -16,5 +16,10 @@ namespace LibraryMgrProgram.AdminForm
         {
             InitializeComponent();
         }
+
+        private void AdminContentsMainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

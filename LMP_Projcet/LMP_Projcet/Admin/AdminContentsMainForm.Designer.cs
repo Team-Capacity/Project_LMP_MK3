@@ -64,7 +64,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             this.lbACMNotic.AutoSize = true;
             this.lbACMNotic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbACMNotic.Font = new System.Drawing.Font("Gulim", 22F);
+            this.lbACMNotic.Font = new System.Drawing.Font("굴림", 22F);
             this.lbACMNotic.Location = new System.Drawing.Point(273, 28);
             this.lbACMNotic.Name = "lbACMNotic";
             this.lbACMNotic.Size = new System.Drawing.Size(133, 30);
@@ -215,6 +215,7 @@ namespace LibraryMgrProgram.AdminForm
             this.Name = "AdminContentsMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminContentsForm";
+            this.Load += new System.EventHandler(this.AdminContentsMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvACNotice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView1)).EndInit();

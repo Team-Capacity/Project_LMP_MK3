@@ -16,15 +16,41 @@ namespace LibraryMgrProgram
 {
     public partial class FontChangeForm : Form
     {
+        public bool radioCheckedChanged = false;
         public FontChangeForm()
         {
             InitializeComponent();
+            this.rdoFCWhite.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
+            this.rdoFCBlack.CheckedChanged += new EventHandler(radioButton_CheckedChanged);
+
+            this.rdoFCWhite.Click += new EventHandler(radioButton_Click);
+            this.rdoFCBlack.Click += new EventHandler(radioButton_Click);
+
+           
             
         }
 
+        public void radioButton_Click(object sender, EventArgs e)
+        {
+            
+            RadioButton rdo = sender as RadioButton;
+            if (!radioCheckedChanged)
+            {
+                rdo.Checked = false;
+            }
+            radioCheckedChanged = false;
+
+        }
+
+        public void radioButton_CheckedChanged(object sender, EventArgs e)
+        {
+           
+            radioCheckedChanged = true;
+        }
+
         MouseEvent mouseEvent = new MouseEvent();
-      
-       
+
+
 
         private void plnFC_MouseDown(object sender, MouseEventArgs e)
         {
@@ -74,17 +100,13 @@ namespace LibraryMgrProgram
 
         }
 
-        private void PlnFC_MouseUP(object sender, MouseEventArgs e)
-        {
-
-        }
 
 
        
         private void btnFCClose_Click(object sender, EventArgs e)
         {
 
-            CustomerOperationForm.chkShow = false;
+            CustomerOperationForm.chkShow3 = false;
             this.Close();
 
         }
@@ -93,7 +115,7 @@ namespace LibraryMgrProgram
        
         private void btnFCCancle_Click(object sender, EventArgs e)
         {
-            CustomerOperationForm.chkShow = false;
+            CustomerOperationForm.chkShow3 = false;
             this.Close();
         }
         
@@ -108,17 +130,17 @@ namespace LibraryMgrProgram
             
         }
 
-        private void FontChangeForm_Load(object sender, EventArgs e)
+        public void FontChangeForm_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void rdoFCBasic_CheckedChanged(object sender, EventArgs e)
+        public void rdoFCBasic_CheckedChanged(object sender, EventArgs e)
         {
             grpFCSetting.Enabled = false;
         }
 
-        private void rdoFCSetting_CheckedChanged(object sender, EventArgs e)
+        public void rdoFCSetting_CheckedChanged(object sender, EventArgs e)
         {
             grpFCSetting.Enabled = true;
         }
@@ -128,6 +150,30 @@ namespace LibraryMgrProgram
 
         }
 
+
+        
+        public void btnFCSetting_Click(object sender, EventArgs e)
+        {
       
+            if(rdoFCBlack.Checked)
+            {
+                this.BackColor = Color.Black;
+                CustomerMainForm cm = new CustomerMainForm();
+                cm.BackColor = Color.Black;
+              //  CustomerOperationForm.chkShow3 = false;
+               // this.Close();
+               
+              
+               
+            }
+            else if(rdoFCWhite.Checked)
+            {
+                this.BackColor = Color.White;
+                CustomerOperationForm.chkShow3 = false;
+                this.Close();
+            }
+        }
+
+       
     }
 }
