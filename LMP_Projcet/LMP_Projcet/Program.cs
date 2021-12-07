@@ -20,7 +20,7 @@ namespace LMP_Projcet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AdminMainForm());
+            Application.Run(new LoginForm());
         }
     }
 }

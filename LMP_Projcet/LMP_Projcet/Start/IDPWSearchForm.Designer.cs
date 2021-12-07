@@ -39,9 +39,9 @@ namespace LibraryMgrProgram
             this.labSerHP = new System.Windows.Forms.Label();
             this.labSerName = new System.Windows.Forms.Label();
             this.grpSerPW = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnSerPwOK = new System.Windows.Forms.Button();
+            this.txtSerPwBir = new System.Windows.Forms.TextBox();
+            this.txtSerPwName = new System.Windows.Forms.TextBox();
             this.txtSerID = new System.Windows.Forms.TextBox();
             this.labSerPwBir = new System.Windows.Forms.Label();
             this.labSerPwHP = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@ namespace LibraryMgrProgram
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
             this.label1.Location = new System.Drawing.Point(17, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
@@ -83,7 +83,7 @@ namespace LibraryMgrProgram
             // 
             // btnSerOK
             // 
-            this.btnSerOK.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnSerOK.Font = new System.Drawing.Font("굴림", 10F);
             this.btnSerOK.Location = new System.Drawing.Point(134, 156);
             this.btnSerOK.Name = "btnSerOK";
             this.btnSerOK.Size = new System.Drawing.Size(112, 30);
@@ -142,9 +142,9 @@ namespace LibraryMgrProgram
             // 
             // grpSerPW
             // 
-            this.grpSerPW.Controls.Add(this.button1);
-            this.grpSerPW.Controls.Add(this.textBox1);
-            this.grpSerPW.Controls.Add(this.textBox2);
+            this.grpSerPW.Controls.Add(this.btnSerPwOK);
+            this.grpSerPW.Controls.Add(this.txtSerPwBir);
+            this.grpSerPW.Controls.Add(this.txtSerPwName);
             this.grpSerPW.Controls.Add(this.txtSerID);
             this.grpSerPW.Controls.Add(this.labSerPwBir);
             this.grpSerPW.Controls.Add(this.labSerPwHP);
@@ -156,29 +156,30 @@ namespace LibraryMgrProgram
             this.grpSerPW.TabIndex = 7;
             this.grpSerPW.TabStop = false;
             // 
-            // button1
+            // btnSerPwOK
             // 
-            this.button1.Font = new System.Drawing.Font("Gulim", 10F);
-            this.button1.Location = new System.Drawing.Point(134, 156);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "확인";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSerPwOK.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnSerPwOK.Location = new System.Drawing.Point(134, 156);
+            this.btnSerPwOK.Name = "btnSerPwOK";
+            this.btnSerPwOK.Size = new System.Drawing.Size(112, 30);
+            this.btnSerPwOK.TabIndex = 6;
+            this.btnSerPwOK.Text = "확인";
+            this.btnSerPwOK.UseVisualStyleBackColor = true;
+            this.btnSerPwOK.Click += new System.EventHandler(this.btnSerPwOK_Click);
             // 
-            // textBox1
+            // txtSerPwBir
             // 
-            this.textBox1.Location = new System.Drawing.Point(90, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 21);
-            this.textBox1.TabIndex = 5;
+            this.txtSerPwBir.Location = new System.Drawing.Point(90, 116);
+            this.txtSerPwBir.Name = "txtSerPwBir";
+            this.txtSerPwBir.Size = new System.Drawing.Size(238, 21);
+            this.txtSerPwBir.TabIndex = 5;
             // 
-            // textBox2
+            // txtSerPwName
             // 
-            this.textBox2.Location = new System.Drawing.Point(90, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(238, 21);
-            this.textBox2.TabIndex = 4;
+            this.txtSerPwName.Location = new System.Drawing.Point(90, 84);
+            this.txtSerPwName.Name = "txtSerPwName";
+            this.txtSerPwName.Size = new System.Drawing.Size(238, 21);
+            this.txtSerPwName.TabIndex = 4;
             // 
             // txtSerID
             // 
@@ -217,7 +218,7 @@ namespace LibraryMgrProgram
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label5.Font = new System.Drawing.Font("굴림", 15F);
             this.label5.Location = new System.Drawing.Point(17, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 20);
@@ -231,7 +232,7 @@ namespace LibraryMgrProgram
             this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFClose.FlatAppearance.BorderSize = 0;
             this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 15F);
+            this.btnLFClose.Font = new System.Drawing.Font("굴림", 15F);
             this.btnLFClose.Location = new System.Drawing.Point(747, 6);
             this.btnLFClose.Name = "btnLFClose";
             this.btnLFClose.Size = new System.Drawing.Size(34, 25);
@@ -266,6 +267,7 @@ namespace LibraryMgrProgram
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.plnAM);
             this.Controls.Add(this.grpSerPW);
@@ -295,9 +297,9 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label labSerName;
         private System.Windows.Forms.Button btnSerOK;
         private System.Windows.Forms.GroupBox grpSerPW;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnSerPwOK;
+        private System.Windows.Forms.TextBox txtSerPwBir;
+        private System.Windows.Forms.TextBox txtSerPwName;
         private System.Windows.Forms.TextBox txtSerID;
         private System.Windows.Forms.Label labSerPwBir;
         private System.Windows.Forms.Label labSerPwHP;
