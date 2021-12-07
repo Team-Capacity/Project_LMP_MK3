@@ -5,51 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using System.Windows.Forms;
+using LMP_Projcet.Methods.DB;
 
 namespace LMP_Projcet.Methods
 {
     class dbTest
     {
-        public static string server = "192.168.0.24";
-        public static string port = "3306";
-        public static string database = "LibaryProgram_DB";
-        public static string userId = "LMP";
-        public static string password = "LMP1234";
-        MySqlConnection conn;
-
-        public void dbConnection()
-        {
-            string connStr = 
-                "Data Source = " + server
-                +";Port = " + port
-                +";Database = " + database
-                +";User ID = " + userId 
-                +";Password = " + password + ";";
-            try
-            { 
-                conn = new MySqlConnection(connStr);
-                conn.Open();
-                //MessageBox.Show("DB연동에 성공하였습니다.");
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("DB연동에 실패하였습니다.");
-            }
-        }
-
-
         public string dbSelectCus(string selectCmd)
         {
             try
             {
-                string selCommad = "SELECT CusName FROM Customer WHERE CusID = 'admin' ";
+                dbConnect connect = new dbConnect();
+                connect.dbConnection();
+                string selCommad = "SELECT CName FROM Customer WHERE CID = 'admin' ";
                 //string selCommad = selectCmd;
-                MySqlCommand cmd = new MySqlCommand(selCommad, conn);
+                MySqlCommand cmd = new MySqlCommand(selCommad, connect.conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
                 string result;
                 while (dbReader.Read())
                 {
-                    string name = dbReader["CusName"] as String;
+                    string name = dbReader["CName"] as String;
                     return result = name;
                 }
                 dbReader.Close();

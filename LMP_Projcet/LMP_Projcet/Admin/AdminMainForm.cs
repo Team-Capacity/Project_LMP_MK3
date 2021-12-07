@@ -64,7 +64,7 @@ namespace LibraryMgrProgram
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
             formChange.ChangeFIF(aConForm, palAMMain);
-            db.dbConnection();
+            //db.dbConnection();
             lbAMCustomer.Text = db.dbSelectCus("1")+"님 환영합니다.";
         }
 
