@@ -11,15 +11,33 @@ namespace LMP_Projcet.Methods
 {
     class dbTest
     {
+        dbConnect dbSource = new dbConnect();
+        MySqlConnection conn = new MySqlConnection();
+
+        public void dbConnection()
+        {
+            string connStr = "Data Source = " + dbSource.Server
+                + ";Port = " + dbSource.Port
+                + ";Database = " + dbSource.Database
+                + ";User ID = " + dbSource.UserId
+                + ";Password = " + dbSource.Password + ";";
+            try
+            {
+                conn = new MySqlConnection(connStr);
+                conn.Open();
+            }
+            catch (MySqlException)
+            {
+                MessageBox.Show("DB연동에 실패하였습니다.");
+            }
+        }
+
+        // select 문 검색용
         public string dbSelectCus(string selectCmd)
         {
             try
             {
-                dbConnect connect = new dbConnect();
-                connect.dbConnection();
-                string selCommad = "SELECT CName FROM Customer WHERE CID = 'admin' ";
-                //string selCommad = selectCmd;
-                MySqlCommand cmd = new MySqlCommand(selCommad, connect.conn);
+                MySqlCommand cmd = new MySqlCommand(selectCmd, conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
                 string result;
                 while (dbReader.Read())
@@ -36,7 +54,5 @@ namespace LMP_Projcet.Methods
                 throw;
             }
         }
-
-
     }
 }

@@ -26,6 +26,7 @@ namespace LibraryMgrProgram
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
+        String sql = "";
 
         public AdminMainForm()
         {
@@ -64,8 +65,9 @@ namespace LibraryMgrProgram
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
             formChange.ChangeFIF(aConForm, palAMMain);
-            //db.dbConnection();
-            lbAMCustomer.Text = db.dbSelectCus("1")+"님 환영합니다.";
+            db.dbConnection();
+            sql = "select cName from Customer where CID = 'admin';";
+            lbAMCustomer.Text = db.dbSelectCus(sql)+"님 환영합니다.";
         }
 
         private void lbAMHome_Click(object sender, EventArgs e)
