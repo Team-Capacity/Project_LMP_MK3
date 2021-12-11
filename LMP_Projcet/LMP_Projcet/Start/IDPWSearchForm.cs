@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LMP_Projcet.Methods;
 using LMP_Projcet;
+using MySql.Data.MySqlClient;
 
 namespace LibraryMgrProgram
 {
     public partial class IDPWSearchForm : Form
     {
+        dbTest db = new dbTest();
         MouseEvent mouseEvent = new MouseEvent();
         public IDPWSearchForm()
         {
@@ -22,13 +24,32 @@ namespace LibraryMgrProgram
 
         private void btnSerOK_Click(object sender, EventArgs e)
         {
-            if (txtSerName.Text == "" && txtSerPH.Text == "" && txtSerBir.Text == "")
+            db.dbConnection();
+            string name = txtSerName.Text;
+            string bir = txtSerBir.Text;
+            string ph = txtSerPH.Text;
+            string ID = "select * from Customer where CID";
+            string sql = "select CID from Customer where CName = '" + name + "'" + "and CBirth = '" + bir + "';" +"and CPH = '" + ph + "';";
+            try
             {
-                MessageBox.Show("입력해주세요.");
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                MySqlDataReader dbReader = cmd.ExecuteReader();
+                while (dbReader.Read() == true)
+                {
+                    name = dbReader["CName"] as String;
+                    bir = dbReader["CBirth"] as String;
+                    ph = dbReader["CPH"] as String;
+
+                    if (name.Equals(sql) == bir.Equals(sql) == ph.Equals(sql)){
+                        MessageBox.Show("");
+                    }
+                }   
+                    dbReader.Close();
             }
-            else if (txtSerName.Text == "" || txtSerPH.Text == "" || txtSerBir.Text == "")
+            catch (Exception)
             {
-                MessageBox.Show("입력 칸 중 빈칸이있습니다.");
+                MessageBox.Show("select문에 실패하였습니다.");
+                throw;
             }
         }
 

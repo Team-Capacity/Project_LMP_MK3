@@ -11,9 +11,9 @@ namespace LMP_Projcet.Methods
 {
     class dbTest
     {
-        dbConnect dbSource = new dbConnect();
-        MySqlConnection conn = new MySqlConnection();
-
+       dbConnect dbSource = new dbConnect();
+       public MySqlConnection conn = new MySqlConnection();
+        
         public void dbConnection()
         {
             string connStr = "Data Source = " + dbSource.Server

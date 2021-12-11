@@ -65,7 +65,7 @@ namespace LibraryMgrProgram
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbAMHome.AutoSize = true;
             this.lbAMHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbAMHome.Font = new System.Drawing.Font("Gulim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAMHome.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAMHome.Location = new System.Drawing.Point(12, 135);
             this.lbAMHome.Name = "lbAMHome";
             this.lbAMHome.Size = new System.Drawing.Size(209, 34);
@@ -91,7 +91,7 @@ namespace LibraryMgrProgram
             // 
             this.lbAMInOut.AutoSize = true;
             this.lbAMInOut.BackColor = System.Drawing.Color.Yellow;
-            this.lbAMInOut.Font = new System.Drawing.Font("Gulim", 20F);
+            this.lbAMInOut.Font = new System.Drawing.Font("굴림", 20F);
             this.lbAMInOut.Location = new System.Drawing.Point(327, 135);
             this.lbAMInOut.Name = "lbAMInOut";
             this.lbAMInOut.Size = new System.Drawing.Size(131, 27);
@@ -103,7 +103,7 @@ namespace LibraryMgrProgram
             // 
             this.lbAMCusInfo.AutoSize = true;
             this.lbAMCusInfo.BackColor = System.Drawing.Color.Yellow;
-            this.lbAMCusInfo.Font = new System.Drawing.Font("Gulim", 20F);
+            this.lbAMCusInfo.Font = new System.Drawing.Font("굴림", 20F);
             this.lbAMCusInfo.Location = new System.Drawing.Point(527, 135);
             this.lbAMCusInfo.Name = "lbAMCusInfo";
             this.lbAMCusInfo.Size = new System.Drawing.Size(120, 27);
@@ -115,7 +115,7 @@ namespace LibraryMgrProgram
             // 
             this.lbAMBookInfo.AutoSize = true;
             this.lbAMBookInfo.BackColor = System.Drawing.Color.Yellow;
-            this.lbAMBookInfo.Font = new System.Drawing.Font("Gulim", 20F);
+            this.lbAMBookInfo.Font = new System.Drawing.Font("굴림", 20F);
             this.lbAMBookInfo.Location = new System.Drawing.Point(727, 135);
             this.lbAMBookInfo.Name = "lbAMBookInfo";
             this.lbAMBookInfo.Size = new System.Drawing.Size(93, 27);
@@ -127,7 +127,7 @@ namespace LibraryMgrProgram
             // 
             this.lbAMOperation.AutoSize = true;
             this.lbAMOperation.BackColor = System.Drawing.Color.Yellow;
-            this.lbAMOperation.Font = new System.Drawing.Font("Gulim", 20F);
+            this.lbAMOperation.Font = new System.Drawing.Font("굴림", 20F);
             this.lbAMOperation.Location = new System.Drawing.Point(927, 135);
             this.lbAMOperation.Name = "lbAMOperation";
             this.lbAMOperation.Size = new System.Drawing.Size(120, 27);
@@ -146,7 +146,7 @@ namespace LibraryMgrProgram
             // lbAMLoginOut
             // 
             this.lbAMLoginOut.AutoSize = true;
-            this.lbAMLoginOut.Font = new System.Drawing.Font("Gulim", 12F);
+            this.lbAMLoginOut.Font = new System.Drawing.Font("굴림", 12F);
             this.lbAMLoginOut.ForeColor = System.Drawing.Color.Black;
             this.lbAMLoginOut.Location = new System.Drawing.Point(1316, 85);
             this.lbAMLoginOut.Name = "lbAMLoginOut";
@@ -158,7 +158,7 @@ namespace LibraryMgrProgram
             // lbAMCustomer
             // 
             this.lbAMCustomer.AutoSize = true;
-            this.lbAMCustomer.Font = new System.Drawing.Font("Gulim", 14F);
+            this.lbAMCustomer.Font = new System.Drawing.Font("굴림", 14F);
             this.lbAMCustomer.Location = new System.Drawing.Point(1223, 56);
             this.lbAMCustomer.Name = "lbAMCustomer";
             this.lbAMCustomer.Size = new System.Drawing.Size(165, 19);
@@ -208,7 +208,7 @@ namespace LibraryMgrProgram
             this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFClose.FlatAppearance.BorderSize = 0;
             this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFClose.Font = new System.Drawing.Font("굴림", 10F);
             this.btnLFClose.Location = new System.Drawing.Point(1380, 6);
             this.btnLFClose.Name = "btnLFClose";
             this.btnLFClose.Size = new System.Drawing.Size(20, 20);
@@ -223,7 +223,7 @@ namespace LibraryMgrProgram
             this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFMax.FlatAppearance.BorderSize = 0;
             this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMax.Font = new System.Drawing.Font("굴림", 10F);
             this.btnLFMax.Location = new System.Drawing.Point(1354, 6);
             this.btnLFMax.Name = "btnLFMax";
             this.btnLFMax.Size = new System.Drawing.Size(19, 20);
@@ -238,7 +238,7 @@ namespace LibraryMgrProgram
             this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFMin.FlatAppearance.BorderSize = 0;
             this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMin.Font = new System.Drawing.Font("굴림", 10F);
             this.btnLFMin.Location = new System.Drawing.Point(1326, 6);
             this.btnLFMin.Name = "btnLFMin";
             this.btnLFMin.Size = new System.Drawing.Size(20, 20);
@@ -250,7 +250,7 @@ namespace LibraryMgrProgram
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 23);
