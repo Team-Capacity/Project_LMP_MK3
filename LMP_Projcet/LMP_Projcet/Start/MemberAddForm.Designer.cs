@@ -130,6 +130,7 @@ namespace LMP_Projcet.Start
             this.btnMA_Join.TabIndex = 177;
             this.btnMA_Join.Text = "회원가입";
             this.btnMA_Join.UseVisualStyleBackColor = true;
+            this.btnMA_Join.Click += new System.EventHandler(this.btnMA_Join_Click);
             // 
             // grpcMA_Sex
             // 
@@ -281,6 +282,7 @@ namespace LMP_Projcet.Start
             this.btnMA_IdCheck.TabIndex = 13;
             this.btnMA_IdCheck.Text = "중복확인";
             this.btnMA_IdCheck.UseVisualStyleBackColor = true;
+            this.btnMA_IdCheck.Click += new System.EventHandler(this.btnMA_IdCheck_Click);
             // 
             // txtMA_PwCheck
             // 
@@ -300,7 +302,6 @@ namespace LMP_Projcet.Start
             this.txtMA_Pw.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Pw.TabIndex = 15;
             this.txtMA_Pw.Text = "seethepw@123";
-         
             // 
             // lbMA_Birth
             // 

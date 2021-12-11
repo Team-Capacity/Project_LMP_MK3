@@ -9,18 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LMP_Projcet.Methods.DB;
+using LMP_Projcet;
+using MySql.Data.MySqlClient;
 namespace LMP_Projcet.Start
+
 {
     public partial class MemberAddForm : Form
     {
+        dbTest db = new dbTest();
         public MemberAddForm()
         {
             InitializeComponent();
         }
 
 
-  
+
         private void MemberAddForm_Load(object sender, EventArgs e)
         {
 
@@ -104,6 +108,29 @@ namespace LMP_Projcet.Start
             this.Close();
         }
 
-        
+        private void btnMA_IdCheck_Click(object sender, EventArgs e)
+        {
+            db.dbConnection();
+            string id = txtMA_Id.Text;
+            string sql = "select CIO from Customer where CID = '" + id + "'";
+        }
+
+        private void btnMA_Join_Click(object sender, EventArgs e)
+        {
+            db.dbConnection();
+
+            string id = txtMA_Id.Text;
+            string pw = txtMA_Pw.Text;
+            string passwordcheck = txtMA_PwCheck.Text;
+            string name = txtMA_Name.Text;
+            string PH = txtMA_Phone.Text;
+            string Year = cmbMA_Year.Text;
+            string Month = cmbMA_Month.Text;
+            string Day = cmbMA_Day.Text;
+
+
+
+
+        }
     }
 }

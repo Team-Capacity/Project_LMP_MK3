@@ -15,8 +15,10 @@ using MySql.Data.MySqlClient;
 namespace LMP_Projcet
 {
 
+
     public partial class LoginForm : Form
     {
+
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
@@ -26,6 +28,7 @@ namespace LMP_Projcet
             InitializeComponent();
         }
 
+
         private void btnLFNonLogin_Click(object sender, EventArgs e)
         {
             NonCustomerMainForm nonCustomerMainForm = new NonCustomerMainForm();
@@ -33,43 +36,8 @@ namespace LMP_Projcet
             this.Hide();
         }
 
-        private void btnLFLogin_Click(object sender, EventArgs e)
+        private void LoginForm_Load(object sender, EventArgs e)
         {
-            db.dbConnection();
-
-            string id = txtLFID.Text;
-            string password = txtLFPW.Text;
-
-            string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
-            string rank = "";
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                MySqlDataReader dbReader = cmd.ExecuteReader();
-                while (dbReader.Read())
-                {
-                    rank = dbReader["CRank"] as String;
-                }
-                if (rank.Equals("1"))
-                {
-                    AdminMainForm amf = new AdminMainForm();
-                    formChange.ChangeF(this, amf);
-                }
-                else
-                {
-                    CustomerMainForm cmf = new CustomerMainForm();
-                    formChange.ChangeF(this, cmf);
-                }
-                dbReader.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("select문에 실패하였습니다.");
-                throw;
-            }
-            
-
-          
 
         }
 
@@ -126,9 +94,59 @@ namespace LMP_Projcet
 
         }
 
-        private void LoginForm_Load(object sender, EventArgs e)
+        private void btnLFLogin_Click(object sender, EventArgs e)
         {
+            db.dbConnection();
+            string id = txtLFID.Text;
+            string password = txtLFPW.Text;
 
+            string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+            string rank = "";
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                MySqlDataReader dbReader = cmd.ExecuteReader();
+                while (dbReader.Read())
+                {
+                    rank = dbReader["CRank"] as String;
+                }
+                if (rank.Equals("1"))
+                {
+                    AdminMainForm amf = new AdminMainForm();
+                    formChange.ChangeF(this, amf);
+                }
+                if (rank.Equals("2"))
+                {
+                    AdminMainForm amf = new AdminMainForm();
+                    formChange.ChangeF(this, amf);
+                }
+                if(rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
+                {
+                    CustomerMainForm cmf = new CustomerMainForm();
+                    formChange.ChangeF(this, cmf);
+                }
+                dbReader.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("select문에 실패하였습니다.");
+                throw;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            mouseEvent.ButtonClose(this);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMaxSize(this);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMinSize(this);
         }
     }
 }

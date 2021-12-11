@@ -41,19 +41,20 @@ namespace LMP_Projcet
             this.grpLogLogin = new System.Windows.Forms.GroupBox();
             this.btnLFNonLogin = new System.Windows.Forms.Button();
             this.picLogLogo = new System.Windows.Forms.PictureBox();
-            this.plnAM = new System.Windows.Forms.TableLayoutPanel();
-            this.btnLFMax = new System.Windows.Forms.Button();
-            this.btnLFMin = new System.Windows.Forms.Button();
-            this.btnLFClose = new System.Windows.Forms.Button();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.grpLogLogin.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogLogo)).BeginInit();
-            this.plnAM.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gulim", 30F);
+            this.label1.Font = new System.Drawing.Font("굴림", 30F);
             this.label1.Location = new System.Drawing.Point(197, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 40);
@@ -63,7 +64,7 @@ namespace LMP_Projcet
             // labLogID
             // 
             this.labLogID.AutoSize = true;
-            this.labLogID.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLogID.Font = new System.Drawing.Font("굴림", 10F);
             this.labLogID.Location = new System.Drawing.Point(104, 190);
             this.labLogID.Name = "labLogID";
             this.labLogID.Size = new System.Drawing.Size(64, 14);
@@ -73,7 +74,7 @@ namespace LMP_Projcet
             // labLogPW
             // 
             this.labLogPW.AutoSize = true;
-            this.labLogPW.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLogPW.Font = new System.Drawing.Font("굴림", 10F);
             this.labLogPW.Location = new System.Drawing.Point(90, 257);
             this.labLogPW.Name = "labLogPW";
             this.labLogPW.Size = new System.Drawing.Size(78, 14);
@@ -99,7 +100,7 @@ namespace LMP_Projcet
             // labLFSearch
             // 
             this.labLFSearch.AutoSize = true;
-            this.labLFSearch.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLFSearch.Font = new System.Drawing.Font("굴림", 10F);
             this.labLFSearch.Location = new System.Drawing.Point(81, 313);
             this.labLFSearch.Name = "labLFSearch";
             this.labLFSearch.Size = new System.Drawing.Size(144, 14);
@@ -110,7 +111,7 @@ namespace LMP_Projcet
             // labLFAddMem
             // 
             this.labLFAddMem.AutoSize = true;
-            this.labLFAddMem.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLFAddMem.Font = new System.Drawing.Font("굴림", 10F);
             this.labLFAddMem.Location = new System.Drawing.Point(266, 313);
             this.labLFAddMem.Name = "labLFAddMem";
             this.labLFAddMem.Size = new System.Drawing.Size(63, 14);
@@ -129,7 +130,7 @@ namespace LMP_Projcet
             // 
             // btnLFLogin
             // 
-            this.btnLFLogin.Font = new System.Drawing.Font("Gulim", 20F);
+            this.btnLFLogin.Font = new System.Drawing.Font("굴림", 20F);
             this.btnLFLogin.Location = new System.Drawing.Point(61, 408);
             this.btnLFLogin.Name = "btnLFLogin";
             this.btnLFLogin.Size = new System.Drawing.Size(150, 50);
@@ -161,7 +162,7 @@ namespace LMP_Projcet
             // 
             // btnLFNonLogin
             // 
-            this.btnLFNonLogin.Font = new System.Drawing.Font("Gulim", 20F);
+            this.btnLFNonLogin.Font = new System.Drawing.Font("굴림", 20F);
             this.btnLFNonLogin.Location = new System.Drawing.Point(242, 408);
             this.btnLFNonLogin.Name = "btnLFNonLogin";
             this.btnLFNonLogin.Size = new System.Drawing.Size(150, 50);
@@ -181,74 +182,84 @@ namespace LMP_Projcet
             this.picLogLogo.TabIndex = 10;
             this.picLogLogo.TabStop = false;
             // 
-            // plnAM
+            // tableLayoutPanel1
             // 
-            this.plnAM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.plnAM.AutoSize = true;
-            this.plnAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.plnAM.ColumnCount = 3;
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43F));
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39F));
-            this.plnAM.Controls.Add(this.btnLFMax, 1, 1);
-            this.plnAM.Controls.Add(this.btnLFMin, 0, 1);
-            this.plnAM.Controls.Add(this.btnLFClose, 2, 1);
-            this.plnAM.Location = new System.Drawing.Point(1, 0);
-            this.plnAM.Name = "plnAM";
-            this.plnAM.RowCount = 2;
-            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnAM.Size = new System.Drawing.Size(600, 30);
-            this.plnAM.TabIndex = 74;
-            this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
-            this.plnAM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseMove);
-            this.plnAM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseUp);
+            this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Silver;
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel1.Controls.Add(this.button1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button2, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.button3, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 2);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 35);
+            this.tableLayoutPanel1.TabIndex = 132;
             // 
-            // btnLFMax
+            // button1
             // 
-            this.btnLFMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLFMax.FlatAppearance.BorderSize = 0;
-            this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 15F);
-            this.btnLFMax.Location = new System.Drawing.Point(538, 6);
-            this.btnLFMax.Name = "btnLFMax";
-            this.btnLFMax.Size = new System.Drawing.Size(20, 20);
-            this.btnLFMax.TabIndex = 3;
-            this.btnLFMax.Text = "🗖";
-            this.btnLFMax.UseVisualStyleBackColor = false;
-            this.btnLFMax.Click += new System.EventHandler(this.btnLFMax_Click);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("굴림", 10F);
+            this.button1.Location = new System.Drawing.Point(578, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(20, 20);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "🗙";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnLFMin
+            // button2
             // 
-            this.btnLFMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLFMin.FlatAppearance.BorderSize = 0;
-            this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 15F);
-            this.btnLFMin.Location = new System.Drawing.Point(495, 6);
-            this.btnLFMin.Name = "btnLFMin";
-            this.btnLFMin.Size = new System.Drawing.Size(20, 20);
-            this.btnLFMin.TabIndex = 2;
-            this.btnLFMin.Text = "🗕";
-            this.btnLFMin.UseVisualStyleBackColor = false;
-            this.btnLFMin.Click += new System.EventHandler(this.btnLFMin_Click);
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("굴림", 10F);
+            this.button2.Location = new System.Drawing.Point(552, 6);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(19, 20);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "🗖";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // btnLFClose
+            // button3
             // 
-            this.btnLFClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLFClose.FlatAppearance.BorderSize = 0;
-            this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 15F);
-            this.btnLFClose.Location = new System.Drawing.Point(577, 6);
-            this.btnLFClose.Name = "btnLFClose";
-            this.btnLFClose.Size = new System.Drawing.Size(20, 20);
-            this.btnLFClose.TabIndex = 1;
-            this.btnLFClose.Text = "🗙";
-            this.btnLFClose.UseVisualStyleBackColor = false;
-            this.btnLFClose.Click += new System.EventHandler(this.btnLFClose_Click);
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("굴림", 10F);
+            this.button3.Location = new System.Drawing.Point(524, 6);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(20, 20);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "🗕";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.Font = new System.Drawing.Font("굴림", 15F);
+            this.label3.Location = new System.Drawing.Point(3, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "로그인폼";
             // 
             // LoginForm
             // 
@@ -256,7 +267,7 @@ namespace LMP_Projcet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(600, 550);
-            this.Controls.Add(this.plnAM);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.grpLogLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
@@ -265,7 +276,7 @@ namespace LMP_Projcet
             this.grpLogLogin.ResumeLayout(false);
             this.grpLogLogin.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picLogLogo)).EndInit();
-            this.plnAM.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,10 +296,11 @@ namespace LMP_Projcet
         private System.Windows.Forms.PictureBox picLogLogo;
         private System.Windows.Forms.GroupBox grpLogLogin;
         private System.Windows.Forms.Button btnLFNonLogin;
-        private System.Windows.Forms.TableLayoutPanel plnAM;
-        private System.Windows.Forms.Button btnLFMax;
-        private System.Windows.Forms.Button btnLFMin;
-        private System.Windows.Forms.Button btnLFClose;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label3;
     }
 }
 

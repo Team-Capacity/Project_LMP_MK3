@@ -116,7 +116,7 @@ namespace LibraryMgrProgram
             // labSerBir
             // 
             this.labSerBir.AutoSize = true;
-            this.labSerBir.Location = new System.Drawing.Point(19, 93);
+            this.labSerBir.Location = new System.Drawing.Point(19, 119);
             this.labSerBir.Name = "labSerBir";
             this.labSerBir.Size = new System.Drawing.Size(65, 12);
             this.labSerBir.TabIndex = 3;
@@ -125,7 +125,7 @@ namespace LibraryMgrProgram
             // labSerHP
             // 
             this.labSerHP.AutoSize = true;
-            this.labSerHP.Location = new System.Drawing.Point(19, 125);
+            this.labSerHP.Location = new System.Drawing.Point(19, 87);
             this.labSerHP.Name = "labSerHP";
             this.labSerHP.Size = new System.Drawing.Size(65, 12);
             this.labSerHP.TabIndex = 2;
