@@ -81,6 +81,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIBookPage = new System.Windows.Forms.Label();
             this.lbCBIBookger = new System.Windows.Forms.Label();
             this.lbCBIBLocation = new System.Windows.Forms.Label();
+            this.ImgCBIView = new System.Windows.Forms.PictureBox();
             this.lbCBIBookCount = new System.Windows.Forms.Label();
             this.lbCBIBookExp = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -138,16 +139,15 @@ namespace LMP_Projcet.Customer
             this.lbABIBookCountResult = new System.Windows.Forms.Label();
             this.tacCBIMain = new System.Windows.Forms.TabControl();
             this.CBIInfo = new System.Windows.Forms.TabPage();
-            this.ImgCBIView = new System.Windows.Forms.PictureBox();
             this.ImgAMView3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ImgAMView2 = new System.Windows.Forms.PictureBox();
             this.grpCBIBookList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCBIBookList)).BeginInit();
             this.grpCBIBookInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).BeginInit();
             this.tacCBIMain.SuspendLayout();
             this.CBIInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView2)).BeginInit();
@@ -504,6 +504,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIBBookExp.Name = "lbCBIBBookExp";
             this.lbCBIBBookExp.Size = new System.Drawing.Size(436, 162);
             this.lbCBIBBookExp.TabIndex = 42;
+            this.lbCBIBBookExp.Text = "123";
             this.lbCBIBBookExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbCBIBookCount2
@@ -645,6 +646,16 @@ namespace LMP_Projcet.Customer
             this.lbCBIBLocation.Size = new System.Drawing.Size(59, 13);
             this.lbCBIBLocation.TabIndex = 19;
             this.lbCBIBLocation.Text = "도서위치";
+            // 
+            // ImgCBIView
+            // 
+            this.ImgCBIView.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ImgCBIView.Location = new System.Drawing.Point(309, 35);
+            this.ImgCBIView.Name = "ImgCBIView";
+            this.ImgCBIView.Size = new System.Drawing.Size(160, 180);
+            this.ImgCBIView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ImgCBIView.TabIndex = 16;
+            this.ImgCBIView.TabStop = false;
             // 
             // lbCBIBookCount
             // 
@@ -1168,16 +1179,6 @@ namespace LMP_Projcet.Customer
             this.CBIInfo.Text = "도서정보";
             this.CBIInfo.UseVisualStyleBackColor = true;
             // 
-            // ImgCBIView
-            // 
-            this.ImgCBIView.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ImgCBIView.Location = new System.Drawing.Point(309, 35);
-            this.ImgCBIView.Name = "ImgCBIView";
-            this.ImgCBIView.Size = new System.Drawing.Size(160, 180);
-            this.ImgCBIView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ImgCBIView.TabIndex = 16;
-            this.ImgCBIView.TabStop = false;
-            // 
             // ImgAMView3
             // 
             this.ImgAMView3.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -1227,9 +1228,9 @@ namespace LMP_Projcet.Customer
             ((System.ComponentModel.ISupportInitialize)(this.dgvCBIBookList)).EndInit();
             this.grpCBIBookInfo.ResumeLayout(false);
             this.grpCBIBookInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).EndInit();
             this.tacCBIMain.ResumeLayout(false);
             this.CBIInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView2)).EndInit();
