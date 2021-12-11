@@ -66,6 +66,7 @@ namespace LibraryMgrProgram
         {
             formChange.ChangeFIF(aConForm, palAMMain);
             db.dbConnection();
+            // 4단계
             sql = "select cName from Customer where CID = 'admin';";
             lbAMCustomer.Text = db.dbSelectCus(sql)+"님 환영합니다.";
         }

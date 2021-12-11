@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using LMP_Projcet.Methods.DB;
+using System.Net;
+using System.IO;
+using Renci.SshNet;
 
 namespace LibraryMgrProgram
 {
@@ -13,6 +17,7 @@ namespace LibraryMgrProgram
         // 상단바로 폼 이동 시키기
         private bool isMove = false;
         private Point fpt;
+        private dbConnect db = new dbConnect();
 
         public void PlanMouseMove(MouseEventArgs e, Form f)
         {
@@ -63,12 +68,13 @@ namespace LibraryMgrProgram
         {
             //이미지를 담기 위한 변수
             string imageFile = string.Empty;
+            string imagePath = string.Empty;
             //이미지 선택을 위한 다이얼로그
             OpenFileDialog dialog = new OpenFileDialog();
             //다이얼로그 시작위치 설정
             dialog.InitialDirectory = "C:\\";
             dialog.Title = "이미지 선택창";
-            dialog.Filter = "이미지 파일 (*.jpg , *.png) | *.jpg; *.png; |모든 파일 (*.*) | *.*";
+            dialog.Filter = "이미지 파일 (*.jpg , *.jpeg ,*.png) | *.jpg; *.jpeg; *.png; |모든 파일 (*.*) | *.*";
             dialog.RestoreDirectory = true;
 
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -76,6 +82,7 @@ namespace LibraryMgrProgram
                 try
                 {
                     imageFile = dialog.FileName;
+                    
                 }catch(Exception e)
                 {
                     MessageBox.Show("불러오기 도중 에러가 발생하였습니다.");
@@ -98,18 +105,42 @@ namespace LibraryMgrProgram
             
         }
 
-        public void ImageSave(PictureBox imageBox)
+        public void ImageSave(PictureBox imageBox, string saveName)
         {
             // 이미지 저장 경로
-            string savePath = "~~~";
+            string savePath = "";
             // 해당 경로에 디렉토리가 있는지 확인
-            if (!System.IO.Directory.Exists(savePath))
+            if (!Directory.Exists(savePath))
             {
                 //만약 지정 경로에 디렉토리가 없다면 만들고 있다면 만들지 않기
-                System.IO.Directory.CreateDirectory(savePath);
-                // PictureBox의 이미지를 저장(경로+ "\\저장이미지이름"+이미지 포맷)
-                imageBox.Image.Save(savePath + "\\" + imageBox.Name, System.Drawing.Imaging.ImageFormat.Jpeg);
+                Directory.CreateDirectory(savePath);
             }
+            // PictureBox의 이미지를 저장(경로+ "\\저장이미지이름"+이미지 포맷)
+            imageBox.Image.Save(savePath + "\\" + saveName + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+        }
+
+        public void ftpList()
+        {
+            string ftpURL = db.Server;
+            string ftpUser = db.Id;
+            string ftpPassword = db.Pwd;
+
+            int port = 6000;
+
+            string ftpDirectory = "/home/pi/LMP";
+
+            var conInfo = new ConnectionInfo(ftpURL, port.ToString(), new PasswordAuthenticationMethod(ftpUser, ftpPassword));
+            using(var sftp = new SftpClient(conInfo))
+            {
+                sftp.Connect();
+
+                foreach(var f in sftp.ListDirectory("."))
+                {
+                    MessageBox.Show(f.Name);
+                }
+            }
+
+
         }
 
     }

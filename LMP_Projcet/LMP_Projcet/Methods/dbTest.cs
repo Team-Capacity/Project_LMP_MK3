@@ -12,7 +12,7 @@ namespace LMP_Projcet.Methods
     class dbTest
     {
         dbConnect dbSource = new dbConnect();
-        MySqlConnection conn = new MySqlConnection();
+        public MySqlConnection conn = new MySqlConnection();
 
         public void dbConnection()
         {
@@ -52,6 +52,22 @@ namespace LMP_Projcet.Methods
             {
                 MessageBox.Show("select문에 실패하였습니다.");
                 throw;
+            }
+        }
+
+        public void dbUpdate(string updateCmd)
+        {
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(updateCmd, conn);
+                if(cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공적으로 추가 되었습니다.");
+                }
+            }
+            catch (MySqlException e)
+            {
+                MessageBox.Show("DB수정에 실패하였습니다.");
             }
         }
     }

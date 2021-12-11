@@ -60,8 +60,8 @@ namespace LibraryMgrProgram
             this.grpABIBookAdd = new System.Windows.Forms.GroupBox();
             this.txtABIMakeDay2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAMIMakePlace2 = new System.Windows.Forms.TextBox();
+            this.txtAMIBookpage2 = new System.Windows.Forms.TextBox();
             this.lbABIMakePlace2 = new System.Windows.Forms.Label();
             this.lbABIBookpage2 = new System.Windows.Forms.Label();
             this.comABIBookger2 = new System.Windows.Forms.ComboBox();
@@ -116,13 +116,6 @@ namespace LibraryMgrProgram
             this.lbABIBookName1 = new System.Windows.Forms.Label();
             this.grpABIBookList = new System.Windows.Forms.GroupBox();
             this.dgvABIBookList = new System.Windows.Forms.DataGridView();
-            this.순번 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BOOK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.도서번호 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.출판사 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.저자 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.대출현황 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.장르 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtABISerBar = new System.Windows.Forms.TextBox();
             this.btnABISer = new System.Windows.Forms.Button();
             this.cmbABISerList = new System.Windows.Forms.ComboBox();
@@ -452,8 +445,8 @@ namespace LibraryMgrProgram
             this.grpABIBookAdd.BackColor = System.Drawing.Color.White;
             this.grpABIBookAdd.Controls.Add(this.txtABIMakeDay2);
             this.grpABIBookAdd.Controls.Add(this.label1);
-            this.grpABIBookAdd.Controls.Add(this.textBox2);
-            this.grpABIBookAdd.Controls.Add(this.textBox3);
+            this.grpABIBookAdd.Controls.Add(this.txtAMIMakePlace2);
+            this.grpABIBookAdd.Controls.Add(this.txtAMIBookpage2);
             this.grpABIBookAdd.Controls.Add(this.lbABIMakePlace2);
             this.grpABIBookAdd.Controls.Add(this.lbABIBookpage2);
             this.grpABIBookAdd.Controls.Add(this.comABIBookger2);
@@ -502,19 +495,19 @@ namespace LibraryMgrProgram
             this.label1.TabIndex = 28;
             this.label1.Text = "출판날짜";
             // 
-            // textBox2
+            // txtAMIMakePlace2
             // 
-            this.textBox2.Location = new System.Drawing.Point(230, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(73, 26);
-            this.textBox2.TabIndex = 27;
+            this.txtAMIMakePlace2.Location = new System.Drawing.Point(230, 199);
+            this.txtAMIMakePlace2.Name = "txtAMIMakePlace2";
+            this.txtAMIMakePlace2.Size = new System.Drawing.Size(73, 26);
+            this.txtAMIMakePlace2.TabIndex = 27;
             // 
-            // textBox3
+            // txtAMIBookpage2
             // 
-            this.textBox3.Location = new System.Drawing.Point(253, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(50, 26);
-            this.textBox3.TabIndex = 26;
+            this.txtAMIBookpage2.Location = new System.Drawing.Point(253, 132);
+            this.txtAMIBookpage2.Name = "txtAMIBookpage2";
+            this.txtAMIBookpage2.Size = new System.Drawing.Size(50, 26);
+            this.txtAMIBookpage2.TabIndex = 26;
             // 
             // lbABIMakePlace2
             // 
@@ -617,6 +610,7 @@ namespace LibraryMgrProgram
             this.btnABIClear2.TabIndex = 13;
             this.btnABIClear2.Text = "초기화";
             this.btnABIClear2.UseVisualStyleBackColor = true;
+            this.btnABIClear2.Click += new System.EventHandler(this.btnABIClear2_Click);
             // 
             // btnABIOk2
             // 
@@ -626,6 +620,7 @@ namespace LibraryMgrProgram
             this.btnABIOk2.TabIndex = 12;
             this.btnABIOk2.Text = "확인";
             this.btnABIOk2.UseVisualStyleBackColor = true;
+            this.btnABIOk2.Click += new System.EventHandler(this.btnABIOk2_Click);
             // 
             // rtxtABIBBookExp2
             // 
@@ -1023,64 +1018,21 @@ namespace LibraryMgrProgram
             // 
             // dgvABIBookList
             // 
+            this.dgvABIBookList.AllowUserToAddRows = false;
+            this.dgvABIBookList.AllowUserToDeleteRows = false;
+            this.dgvABIBookList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvABIBookList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvABIBookList.BackgroundColor = System.Drawing.Color.White;
             this.dgvABIBookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvABIBookList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.순번,
-            this.BOOK,
-            this.도서번호,
-            this.출판사,
-            this.저자,
-            this.대출현황,
-            this.장르});
             this.dgvABIBookList.Location = new System.Drawing.Point(14, 16);
             this.dgvABIBookList.Name = "dgvABIBookList";
+            this.dgvABIBookList.ReadOnly = true;
             this.dgvABIBookList.RowHeadersVisible = false;
             this.dgvABIBookList.RowTemplate.Height = 23;
+            this.dgvABIBookList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvABIBookList.Size = new System.Drawing.Size(745, 434);
             this.dgvABIBookList.TabIndex = 0;
-            // 
-            // 순번
-            // 
-            this.순번.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.순번.HeaderText = "순번";
-            this.순번.Name = "순번";
-            this.순번.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // BOOK
-            // 
-            this.BOOK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BOOK.HeaderText = "도서명";
-            this.BOOK.Name = "BOOK";
-            // 
-            // 도서번호
-            // 
-            this.도서번호.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.도서번호.HeaderText = "도서번호";
-            this.도서번호.Name = "도서번호";
-            // 
-            // 출판사
-            // 
-            this.출판사.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.출판사.HeaderText = "출판사";
-            this.출판사.Name = "출판사";
-            // 
-            // 저자
-            // 
-            this.저자.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.저자.HeaderText = "저자";
-            this.저자.Name = "저자";
-            // 
-            // 대출현황
-            // 
-            this.대출현황.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.대출현황.HeaderText = "도서위치";
-            this.대출현황.Name = "대출현황";
-            // 
-            // 장르
-            // 
-            this.장르.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.장르.HeaderText = "장르";
-            this.장르.Name = "장르";
+            this.dgvABIBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvABIBookList_CellContentClick);
             // 
             // txtABISerBar
             // 
@@ -1097,6 +1049,7 @@ namespace LibraryMgrProgram
             this.btnABISer.TabIndex = 35;
             this.btnABISer.Text = "검색";
             this.btnABISer.UseVisualStyleBackColor = true;
+            this.btnABISer.Click += new System.EventHandler(this.btnABISer_Click);
             // 
             // cmbABISerList
             // 
@@ -1152,13 +1105,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.TabPage BookEdit;
         private System.Windows.Forms.GroupBox grpABIBookList;
         private System.Windows.Forms.DataGridView dgvABIBookList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 순번;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BOOK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 도서번호;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 출판사;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 저자;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 대출현황;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 장르;
         private System.Windows.Forms.TextBox txtABISerBar;
         private System.Windows.Forms.Button btnABISer;
         private System.Windows.Forms.ComboBox cmbABISerList;
@@ -1220,8 +1166,8 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.GroupBox grpABIBookAdd;
         private System.Windows.Forms.TextBox txtABIMakeDay2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAMIMakePlace2;
+        private System.Windows.Forms.TextBox txtAMIBookpage2;
         private System.Windows.Forms.Label lbABIMakePlace2;
         private System.Windows.Forms.Label lbABIBookpage2;
         private System.Windows.Forms.ComboBox comABIBookger2;
