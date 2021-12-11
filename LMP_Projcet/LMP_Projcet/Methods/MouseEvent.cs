@@ -68,7 +68,7 @@ namespace LibraryMgrProgram
             //다이얼로그 시작위치 설정
             dialog.InitialDirectory = "C:\\";
             dialog.Title = "이미지 선택창";
-            dialog.Filter = "이미지 파일 (*.jpg) | *.jpg; |모든 파일 (*.*) | *.*";
+            dialog.Filter = "이미지 파일 (*.jpg , *.png) | *.jpg; *.png; |모든 파일 (*.*) | *.*";
             dialog.RestoreDirectory = true;
 
             if (dialog.ShowDialog() == DialogResult.OK)

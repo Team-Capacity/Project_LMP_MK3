@@ -41,9 +41,10 @@ namespace LibraryMgrProgram
             this.lbAMCustomer = new System.Windows.Forms.Label();
             this.palAMMain = new System.Windows.Forms.Panel();
             this.plnAM = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLFClose = new System.Windows.Forms.Button();
             this.btnLFMax = new System.Windows.Forms.Button();
             this.btnLFMin = new System.Windows.Forms.Button();
-            this.btnLFClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.picAMOperation = new System.Windows.Forms.PictureBox();
             this.picAMBookInfo = new System.Windows.Forms.PictureBox();
@@ -158,7 +159,7 @@ namespace LibraryMgrProgram
             // 
             this.lbAMCustomer.AutoSize = true;
             this.lbAMCustomer.Font = new System.Drawing.Font("Gulim", 14F);
-            this.lbAMCustomer.Location = new System.Drawing.Point(1196, 56);
+            this.lbAMCustomer.Location = new System.Drawing.Point(1223, 56);
             this.lbAMCustomer.Name = "lbAMCustomer";
             this.lbAMCustomer.Size = new System.Drawing.Size(165, 19);
             this.lbAMCustomer.TabIndex = 120;
@@ -180,14 +181,15 @@ namespace LibraryMgrProgram
             | System.Windows.Forms.AnchorStyles.Right)));
             this.plnAM.AutoSize = true;
             this.plnAM.BackColor = System.Drawing.Color.Silver;
-            this.plnAM.ColumnCount = 3;
+            this.plnAM.ColumnCount = 4;
             this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.plnAM.Controls.Add(this.btnLFMax, 1, 1);
-            this.plnAM.Controls.Add(this.btnLFMin, 0, 1);
-            this.plnAM.Controls.Add(this.btnLFClose, 2, 1);
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.Controls.Add(this.btnLFClose, 3, 1);
+            this.plnAM.Controls.Add(this.btnLFMax, 2, 1);
+            this.plnAM.Controls.Add(this.btnLFMin, 1, 1);
+            this.plnAM.Controls.Add(this.label1, 0, 1);
             this.plnAM.ImeMode = System.Windows.Forms.ImeMode.On;
             this.plnAM.Location = new System.Drawing.Point(-3, -3);
             this.plnAM.Name = "plnAM";
@@ -199,36 +201,6 @@ namespace LibraryMgrProgram
             this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
             this.plnAM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseMove);
             this.plnAM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseUp);
-            // 
-            // btnLFMax
-            // 
-            this.btnLFMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLFMax.FlatAppearance.BorderSize = 0;
-            this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
-            this.btnLFMax.Location = new System.Drawing.Point(1353, 6);
-            this.btnLFMax.Name = "btnLFMax";
-            this.btnLFMax.Size = new System.Drawing.Size(19, 20);
-            this.btnLFMax.TabIndex = 3;
-            this.btnLFMax.Text = "🗖";
-            this.btnLFMax.UseVisualStyleBackColor = false;
-            this.btnLFMax.Click += new System.EventHandler(this.btnAMMax_Click);
-            // 
-            // btnLFMin
-            // 
-            this.btnLFMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLFMin.FlatAppearance.BorderSize = 0;
-            this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
-            this.btnLFMin.Location = new System.Drawing.Point(1327, 6);
-            this.btnLFMin.Name = "btnLFMin";
-            this.btnLFMin.Size = new System.Drawing.Size(20, 20);
-            this.btnLFMin.TabIndex = 2;
-            this.btnLFMin.Text = "🗕";
-            this.btnLFMin.UseVisualStyleBackColor = false;
-            this.btnLFMin.Click += new System.EventHandler(this.btnAMMin_Click);
             // 
             // btnLFClose
             // 
@@ -244,6 +216,46 @@ namespace LibraryMgrProgram
             this.btnLFClose.Text = "🗙";
             this.btnLFClose.UseVisualStyleBackColor = false;
             this.btnLFClose.Click += new System.EventHandler(this.btnAMClose_Click);
+            // 
+            // btnLFMax
+            // 
+            this.btnLFMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMax.FlatAppearance.BorderSize = 0;
+            this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMax.Location = new System.Drawing.Point(1354, 6);
+            this.btnLFMax.Name = "btnLFMax";
+            this.btnLFMax.Size = new System.Drawing.Size(19, 20);
+            this.btnLFMax.TabIndex = 3;
+            this.btnLFMax.Text = "🗖";
+            this.btnLFMax.UseVisualStyleBackColor = false;
+            this.btnLFMax.Click += new System.EventHandler(this.btnAMMax_Click);
+            // 
+            // btnLFMin
+            // 
+            this.btnLFMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMin.FlatAppearance.BorderSize = 0;
+            this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMin.Location = new System.Drawing.Point(1326, 6);
+            this.btnLFMin.Name = "btnLFMin";
+            this.btnLFMin.Size = new System.Drawing.Size(20, 20);
+            this.btnLFMin.TabIndex = 2;
+            this.btnLFMin.Text = "🗕";
+            this.btnLFMin.UseVisualStyleBackColor = false;
+            this.btnLFMin.Click += new System.EventHandler(this.btnAMMin_Click);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "메인폼";
             // 
             // pictureBox1
             // 
@@ -361,5 +373,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnLFMin;
         private System.Windows.Forms.Button btnLFClose;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
