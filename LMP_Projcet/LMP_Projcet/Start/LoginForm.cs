@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LibraryMgrProgram;
 using LMP_Projcet.Methods;
 using LMP_Projcet.Start;
+using MySql.Data.MySqlClient;
 
 namespace LMP_Projcet
 {
@@ -18,6 +19,7 @@ namespace LMP_Projcet
     {
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
+        dbTest db = new dbTest();
 
         public LoginForm()
         {
@@ -33,12 +35,13 @@ namespace LMP_Projcet
 
         private void btnLFLogin_Click(object sender, EventArgs e)
         {
+            
             if(txtLFID.Text == "admin" && txtLFPW.Text == "admin")
             {
                 AdminMainForm adminMainForm = new AdminMainForm();
                 formChange.ChangeF(this, adminMainForm);
             }
-            else if(txtLFID.Text =="1" && txtLFID.Text == "1")
+            else if(txtLFID.Text =="1" && txtLFPW.Text == "1")
             {
                 CustomerMainForm customerMainForm = new CustomerMainForm();
                 formChange.ChangeF(this, customerMainForm);
@@ -48,6 +51,10 @@ namespace LMP_Projcet
             {
                 MessageBox.Show("빈칸이있습니다.");
             }
+            
+
+          
+
         }
 
         private void btnLFMin_Click(object sender, EventArgs e)

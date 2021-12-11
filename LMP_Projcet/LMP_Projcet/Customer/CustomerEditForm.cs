@@ -1,5 +1,6 @@
 ﻿using LibraryMgrProgram;
 using LMP_Projcet.Methods;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,9 +21,9 @@ namespace LMP_Projcet.Customer
         }
 
         MouseEvent mouseEvent = new MouseEvent();
-     
    
-     
+
+
 
         private void btnCusDel_Click(object sender, EventArgs e)
         {
@@ -93,7 +94,7 @@ namespace LMP_Projcet.Customer
             dialog.Filter = "모든파일(*.*)|*.*";
             dialog.RestoreDirectory = true;
 
-            var result = dialog.ShowDialog();  //변수로 선언해주고 if문안에 넣어주지 않으면 취소눌러도 파일창이 한번 더뜸.
+            var result = dialog.ShowDialog();  
 
             if (result == DialogResult.OK)
             {
@@ -107,13 +108,14 @@ namespace LMP_Projcet.Customer
                 
 
             }
-            this.Close();
+           
 
 
 
 
         }
 
+       
         //저장버튼 클릭
         private void btnCESave_Click(object sender, EventArgs e)
         {

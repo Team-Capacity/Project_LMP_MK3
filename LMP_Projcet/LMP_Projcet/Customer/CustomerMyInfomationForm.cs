@@ -1,4 +1,6 @@
 ﻿using LMP_Projcet.Methods;
+using LMP_Projcet.Methods.DB;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,15 +22,25 @@ namespace LMP_Projcet.Customer
         }
 
         FormChange fc = new FormChange();
-        
-        
-        
+        DataTable dbdataset;
+        BindingSource bSource;
+        dbConnect db = new dbConnect();
+
+
 
 
         private void CustomerMyInfomationForm_Load(object sender, EventArgs e)
         {
 
+           
+
+
+
         }
+       
+
+
+
 
 
         public static bool chkShow = false;
