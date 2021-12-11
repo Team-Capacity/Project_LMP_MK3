@@ -37,12 +37,14 @@ namespace LMP_Projcet.Methods
         {
             try
             {
+                selectCmd = "select * from lmp.book;";
+
                 MySqlCommand cmd = new MySqlCommand(selectCmd, conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
                 string result;
                 while (dbReader.Read())
                 {
-                    string name = dbReader["CName"] as String;
+                    string name = dbReader["BName"] as String;
                     return result = name;
                 }
                 dbReader.Close();

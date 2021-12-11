@@ -67,6 +67,10 @@ namespace LMP_Projcet
                 MessageBox.Show("select문에 실패하였습니다.");
                 throw;
             }
+            
+
+          
+
         }
 
 

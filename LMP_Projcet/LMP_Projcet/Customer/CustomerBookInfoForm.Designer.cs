@@ -32,13 +32,6 @@ namespace LMP_Projcet.Customer
             this.cmbCBISerList = new System.Windows.Forms.ComboBox();
             this.grpCBIBookList = new System.Windows.Forms.GroupBox();
             this.dgvCBIBookList = new System.Windows.Forms.DataGridView();
-            this.순번 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BOOK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.도서번호 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.출판사 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.저자 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.대출현황 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.장르 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtCBISerBar = new System.Windows.Forms.TextBox();
             this.btnCBISer = new System.Windows.Forms.Button();
             this.lbABIBookName3 = new System.Windows.Forms.Label();
@@ -81,6 +74,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIBookPage = new System.Windows.Forms.Label();
             this.lbCBIBookger = new System.Windows.Forms.Label();
             this.lbCBIBLocation = new System.Windows.Forms.Label();
+            this.ImgCBIView = new System.Windows.Forms.PictureBox();
             this.lbCBIBookCount = new System.Windows.Forms.Label();
             this.lbCBIBookExp = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -138,16 +132,15 @@ namespace LMP_Projcet.Customer
             this.lbABIBookCountResult = new System.Windows.Forms.Label();
             this.tacCBIMain = new System.Windows.Forms.TabControl();
             this.CBIInfo = new System.Windows.Forms.TabPage();
-            this.ImgCBIView = new System.Windows.Forms.PictureBox();
             this.ImgAMView3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ImgAMView2 = new System.Windows.Forms.PictureBox();
             this.grpCBIBookList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCBIBookList)).BeginInit();
             this.grpCBIBookInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).BeginInit();
             this.tacCBIMain.SuspendLayout();
             this.CBIInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView2)).BeginInit();
@@ -158,7 +151,7 @@ namespace LMP_Projcet.Customer
             this.cmbCBISerList.FormattingEnabled = true;
             this.cmbCBISerList.Items.AddRange(new object[] {
             "제목",
-            "제목+저자"});
+            "저자"});
             this.cmbCBISerList.Location = new System.Drawing.Point(274, 13);
             this.cmbCBISerList.Name = "cmbCBISerList";
             this.cmbCBISerList.Size = new System.Drawing.Size(121, 20);
@@ -177,64 +170,20 @@ namespace LMP_Projcet.Customer
             // 
             // dgvCBIBookList
             // 
+            this.dgvCBIBookList.AllowUserToAddRows = false;
+            this.dgvCBIBookList.AllowUserToDeleteRows = false;
+            this.dgvCBIBookList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvCBIBookList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvCBIBookList.BackgroundColor = System.Drawing.Color.White;
             this.dgvCBIBookList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCBIBookList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.순번,
-            this.BOOK,
-            this.도서번호,
-            this.출판사,
-            this.저자,
-            this.대출현황,
-            this.장르});
             this.dgvCBIBookList.Location = new System.Drawing.Point(14, 16);
             this.dgvCBIBookList.Name = "dgvCBIBookList";
+            this.dgvCBIBookList.ReadOnly = true;
             this.dgvCBIBookList.RowHeadersVisible = false;
             this.dgvCBIBookList.RowTemplate.Height = 23;
             this.dgvCBIBookList.Size = new System.Drawing.Size(745, 434);
             this.dgvCBIBookList.TabIndex = 0;
-            // 
-            // 순번
-            // 
-            this.순번.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.순번.HeaderText = "순번";
-            this.순번.Name = "순번";
-            this.순번.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // BOOK
-            // 
-            this.BOOK.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.BOOK.HeaderText = "도서명";
-            this.BOOK.Name = "BOOK";
-            // 
-            // 도서번호
-            // 
-            this.도서번호.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.도서번호.HeaderText = "도서번호";
-            this.도서번호.Name = "도서번호";
-            // 
-            // 출판사
-            // 
-            this.출판사.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.출판사.HeaderText = "출판사";
-            this.출판사.Name = "출판사";
-            // 
-            // 저자
-            // 
-            this.저자.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.저자.HeaderText = "저자";
-            this.저자.Name = "저자";
-            // 
-            // 대출현황
-            // 
-            this.대출현황.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.대출현황.HeaderText = "도서위치";
-            this.대출현황.Name = "대출현황";
-            // 
-            // 장르
-            // 
-            this.장르.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.장르.HeaderText = "장르";
-            this.장르.Name = "장르";
+            this.dgvCBIBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCBIBookList_CellClick);
             // 
             // txtCBISerBar
             // 
@@ -242,7 +191,7 @@ namespace LMP_Projcet.Customer
             this.txtCBISerBar.Name = "txtCBISerBar";
             this.txtCBISerBar.Size = new System.Drawing.Size(314, 21);
             this.txtCBISerBar.TabIndex = 42;
-            this.txtCBISerBar.TextChanged += new System.EventHandler(this.txtCBISerBar_TextChanged);
+        
             // 
             // btnCBISer
             // 
@@ -252,6 +201,7 @@ namespace LMP_Projcet.Customer
             this.btnCBISer.TabIndex = 41;
             this.btnCBISer.Text = "검색";
             this.btnCBISer.UseVisualStyleBackColor = true;
+            this.btnCBISer.Click += new System.EventHandler(this.btnCBISer_Click);
             // 
             // lbABIBookName3
             // 
@@ -645,6 +595,16 @@ namespace LMP_Projcet.Customer
             this.lbCBIBLocation.Size = new System.Drawing.Size(59, 13);
             this.lbCBIBLocation.TabIndex = 19;
             this.lbCBIBLocation.Text = "도서위치";
+            // 
+            // ImgCBIView
+            // 
+            this.ImgCBIView.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ImgCBIView.Location = new System.Drawing.Point(309, 35);
+            this.ImgCBIView.Name = "ImgCBIView";
+            this.ImgCBIView.Size = new System.Drawing.Size(160, 180);
+            this.ImgCBIView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ImgCBIView.TabIndex = 16;
+            this.ImgCBIView.TabStop = false;
             // 
             // lbCBIBookCount
             // 
@@ -1168,16 +1128,6 @@ namespace LMP_Projcet.Customer
             this.CBIInfo.Text = "도서정보";
             this.CBIInfo.UseVisualStyleBackColor = true;
             // 
-            // ImgCBIView
-            // 
-            this.ImgCBIView.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ImgCBIView.Location = new System.Drawing.Point(309, 35);
-            this.ImgCBIView.Name = "ImgCBIView";
-            this.ImgCBIView.Size = new System.Drawing.Size(160, 180);
-            this.ImgCBIView.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ImgCBIView.TabIndex = 16;
-            this.ImgCBIView.TabStop = false;
-            // 
             // ImgAMView3
             // 
             this.ImgAMView3.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -1227,9 +1177,9 @@ namespace LMP_Projcet.Customer
             ((System.ComponentModel.ISupportInitialize)(this.dgvCBIBookList)).EndInit();
             this.grpCBIBookInfo.ResumeLayout(false);
             this.grpCBIBookInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).EndInit();
             this.tacCBIMain.ResumeLayout(false);
             this.CBIInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ImgCBIView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView2)).EndInit();
@@ -1243,13 +1193,6 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.ComboBox cmbCBISerList;
         private System.Windows.Forms.GroupBox grpCBIBookList;
         private System.Windows.Forms.DataGridView dgvCBIBookList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 순번;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BOOK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 도서번호;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 출판사;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 저자;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 대출현황;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 장르;
         private System.Windows.Forms.TextBox txtCBISerBar;
         private System.Windows.Forms.Button btnCBISer;
         private System.Windows.Forms.Label lbABIBookName3;
