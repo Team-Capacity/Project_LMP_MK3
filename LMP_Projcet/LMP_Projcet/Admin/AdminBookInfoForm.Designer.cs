@@ -31,6 +31,7 @@ namespace LibraryMgrProgram
             this.tacABIMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grpABIBookInfo = new System.Windows.Forms.GroupBox();
+            this.ImgAMView4 = new System.Windows.Forms.PictureBox();
             this.lbABIBBookExp = new System.Windows.Forms.Label();
             this.lbABIBookCount = new System.Windows.Forms.Label();
             this.lbABIBookger = new System.Windows.Forms.Label();
@@ -86,6 +87,7 @@ namespace LibraryMgrProgram
             this.lbABIBookName2 = new System.Windows.Forms.Label();
             this.BookEdit = new System.Windows.Forms.TabPage();
             this.grpABIBookModi = new System.Windows.Forms.GroupBox();
+            this.ImgAMView5 = new System.Windows.Forms.PictureBox();
             this.txtABIMakeDay1 = new System.Windows.Forms.TextBox();
             this.lbABIMakeDay1 = new System.Windows.Forms.Label();
             this.txtABIMakePlace1 = new System.Windows.Forms.TextBox();
@@ -127,11 +129,13 @@ namespace LibraryMgrProgram
             this.tacABIMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.grpABIBookInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgAMView4)).BeginInit();
             this.BookAdd.SuspendLayout();
             this.grpABIBookAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgAMView2)).BeginInit();
             this.BookEdit.SuspendLayout();
             this.grpABIBookModi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgAMView5)).BeginInit();
             this.grpABIBookList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvABIBookList)).BeginInit();
             this.SuspendLayout();
@@ -160,6 +164,7 @@ namespace LibraryMgrProgram
             // grpABIBookInfo
             // 
             this.grpABIBookInfo.BackColor = System.Drawing.Color.White;
+            this.grpABIBookInfo.Controls.Add(this.ImgAMView4);
             this.grpABIBookInfo.Controls.Add(this.lbABIBBookExp);
             this.grpABIBookInfo.Controls.Add(this.lbABIBookCount);
             this.grpABIBookInfo.Controls.Add(this.lbABIBookger);
@@ -191,6 +196,16 @@ namespace LibraryMgrProgram
             this.grpABIBookInfo.TabIndex = 10;
             this.grpABIBookInfo.TabStop = false;
             this.grpABIBookInfo.Text = "도서 정보";
+            // 
+            // ImgAMView4
+            // 
+            this.ImgAMView4.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ImgAMView4.Location = new System.Drawing.Point(309, 35);
+            this.ImgAMView4.Name = "ImgAMView4";
+            this.ImgAMView4.Size = new System.Drawing.Size(160, 180);
+            this.ImgAMView4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ImgAMView4.TabIndex = 30;
+            this.ImgAMView4.TabStop = false;
             // 
             // lbABIBBookExp
             // 
@@ -565,6 +580,7 @@ namespace LibraryMgrProgram
             this.btnABIImgUplode2.TabIndex = 17;
             this.btnABIImgUplode2.Text = "불러오기";
             this.btnABIImgUplode2.UseVisualStyleBackColor = true;
+            this.btnABIImgUplode2.Click += new System.EventHandler(this.btnABIImgUplode2_Click);
             // 
             // ImgAMView2
             // 
@@ -722,6 +738,7 @@ namespace LibraryMgrProgram
             // grpABIBookModi
             // 
             this.grpABIBookModi.BackColor = System.Drawing.Color.White;
+            this.grpABIBookModi.Controls.Add(this.ImgAMView5);
             this.grpABIBookModi.Controls.Add(this.txtABIMakeDay1);
             this.grpABIBookModi.Controls.Add(this.lbABIMakeDay1);
             this.grpABIBookModi.Controls.Add(this.txtABIMakePlace1);
@@ -755,6 +772,16 @@ namespace LibraryMgrProgram
             this.grpABIBookModi.TabIndex = 30;
             this.grpABIBookModi.TabStop = false;
             this.grpABIBookModi.Text = "도서 수정";
+            // 
+            // ImgAMView5
+            // 
+            this.ImgAMView5.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.ImgAMView5.Location = new System.Drawing.Point(309, 36);
+            this.ImgAMView5.Name = "ImgAMView5";
+            this.ImgAMView5.Size = new System.Drawing.Size(160, 180);
+            this.ImgAMView5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ImgAMView5.TabIndex = 43;
+            this.ImgAMView5.TabStop = false;
             // 
             // txtABIMakeDay1
             // 
@@ -1102,6 +1129,7 @@ namespace LibraryMgrProgram
             this.tabPage1.ResumeLayout(false);
             this.grpABIBookInfo.ResumeLayout(false);
             this.grpABIBookInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgAMView4)).EndInit();
             this.BookAdd.ResumeLayout(false);
             this.grpABIBookAdd.ResumeLayout(false);
             this.grpABIBookAdd.PerformLayout();
@@ -1109,6 +1137,7 @@ namespace LibraryMgrProgram
             this.BookEdit.ResumeLayout(false);
             this.grpABIBookModi.ResumeLayout(false);
             this.grpABIBookModi.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgAMView5)).EndInit();
             this.grpABIBookList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvABIBookList)).EndInit();
             this.ResumeLayout(false);
@@ -1216,5 +1245,7 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtABIBookName2;
         private System.Windows.Forms.Label lbABIBookName2;
+        private System.Windows.Forms.PictureBox ImgAMView4;
+        private System.Windows.Forms.PictureBox ImgAMView5;
     }
 }

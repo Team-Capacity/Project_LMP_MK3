@@ -168,6 +168,7 @@
       <DependentUpon>CustomerWriteForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Methods\dbTest.cs" />
+    <Compile Include="Methods\DB\dbConnect.cs" />
     <Compile Include="Methods\FormChange.cs" />
     <Compile Include="Methods\GroupBoxBorderChagne.cs">
       <SubType>Component</SubType>

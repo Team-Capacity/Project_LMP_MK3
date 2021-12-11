@@ -100,16 +100,5 @@ namespace LibraryMgrProgram
 
             formChange.ChangeFIF(NonOpeForm, palNCMMain);
         }
-
-        private void lbNCMBookInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbNCMOperation_Click(object sender, EventArgs e)
-        {
-            NonCustomerOperationForm no = new NonCustomerOperationForm();
-            formChange.ChangeFIF(no, palNCMMain);
-        }
     }
 }
