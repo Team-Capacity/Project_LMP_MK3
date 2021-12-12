@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
 using LMP_Projcet.Methods.DB;
+using LMP_Projcet.Methods;
 using System.Net;
 using System.IO;
 using Renci.SshNet;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace LibraryMgrProgram
 {
@@ -17,7 +20,8 @@ namespace LibraryMgrProgram
         // 상단바로 폼 이동 시키기
         private bool isMove = false;
         private Point fpt;
-        private dbConnect db = new dbConnect();
+        private dbTest db = new dbTest();
+        private dbConnect dbc = new dbConnect();
 
         public void PlanMouseMove(MouseEventArgs e, Form f)
         {
@@ -121,9 +125,9 @@ namespace LibraryMgrProgram
 
         public void ftpList()
         {
-            string ftpURL = db.Server;
-            string ftpUser = db.Id;
-            string ftpPassword = db.Pwd;
+            string ftpURL = dbc.Server;
+            string ftpUser = dbc.Id;
+            string ftpPassword = dbc.Pwd;
 
             int port = 6000;
 
@@ -140,6 +144,48 @@ namespace LibraryMgrProgram
                 }
             }
 
+
+        }
+
+        public void reloadForm(string sqlQuery, DataGridView dgv, int chkBookCus)
+        {
+            db.dbConnection();
+            MySqlCommand cmdDatabase = new MySqlCommand(sqlQuery, db.conn);
+            DataTable dbdataset;
+            BindingSource bSource;
+            string[] Bname = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "발행 날짜", "설명", "책추가" };
+            string[] Cname = { "회원번호", "등급", "id" , "pw", "이름" ,"대출권수", "전화번호","생년월일" , "주소" , "가입날짜","성별"};
+            
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDatabase;
+                dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                bSource = new BindingSource();
+                bSource.DataSource = dbdataset;
+                dgv.DataSource = bSource;
+                sda.Update(dbdataset);
+
+                if(chkBookCus == 0)
+                {
+                    for (int i = 0; i < 14; i++)
+                    {
+                        dgv.Columns[i].HeaderText = Bname[i];
+                    }
+                }else if(chkBookCus ==1)
+                {
+                    for (int i = 0; i < 14; i++)
+                    {
+                        dgv.Columns[i].HeaderText = Cname[i];
+                    }
+                }
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
+                dgv.AllowUserToAddRows = false;
+
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
 
         }
 

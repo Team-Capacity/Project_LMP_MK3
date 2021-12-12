@@ -100,5 +100,10 @@ namespace LibraryMgrProgram
 
             formChange.ChangeFIF(NonOpeForm, palNCMMain);
         }
+
+        private void NonCustomerMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

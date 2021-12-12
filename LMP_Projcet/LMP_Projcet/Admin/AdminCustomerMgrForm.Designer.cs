@@ -30,11 +30,6 @@ namespace LibraryMgrProgram
         private void InitializeComponent()
         {
             this.dgvACMCustomerList = new System.Windows.Forms.DataGridView();
-            this.CsNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CsName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoanPeriod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LoanNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tacAIOMain = new System.Windows.Forms.TabControl();
             this.CustomerView = new System.Windows.Forms.TabPage();
             this.grpACMView = new System.Windows.Forms.GroupBox();
@@ -65,9 +60,6 @@ namespace LibraryMgrProgram
             this.CustomerAdd = new System.Windows.Forms.TabPage();
             this.grpACMAdd = new System.Windows.Forms.GroupBox();
             this.txtACMAddrView1 = new System.Windows.Forms.TextBox();
-            this.grpcACMSex1 = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbACMWom1 = new System.Windows.Forms.RadioButton();
-            this.rdbACMMan1 = new System.Windows.Forms.RadioButton();
             this.comACMRankView1 = new System.Windows.Forms.ComboBox();
             this.txtACMNumView1 = new System.Windows.Forms.TextBox();
             this.txtACMNameView1 = new System.Windows.Forms.TextBox();
@@ -94,9 +86,6 @@ namespace LibraryMgrProgram
             this.CustomerModi = new System.Windows.Forms.TabPage();
             this.grpACMModi = new System.Windows.Forms.GroupBox();
             this.txtACMAddrView2 = new System.Windows.Forms.TextBox();
-            this.grpcACMSex2 = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbACMWom2 = new System.Windows.Forms.RadioButton();
-            this.rdbACMMan2 = new System.Windows.Forms.RadioButton();
             this.comACMRankView2 = new System.Windows.Forms.ComboBox();
             this.txtACMNumView2 = new System.Windows.Forms.TextBox();
             this.txtACMNameView2 = new System.Windows.Forms.TextBox();
@@ -123,6 +112,12 @@ namespace LibraryMgrProgram
             this.btnAIOMSearch = new System.Windows.Forms.Button();
             this.txtAIOMSearch = new System.Windows.Forms.TextBox();
             this.cboxAIOMSort = new System.Windows.Forms.ComboBox();
+            this.grpcACMSex1 = new LMP_Projcet.Methods.GroupBoxBorderChagne();
+            this.rdbACMWom1 = new System.Windows.Forms.RadioButton();
+            this.rdbACMMan1 = new System.Windows.Forms.RadioButton();
+            this.grpcACMSex2 = new LMP_Projcet.Methods.GroupBoxBorderChagne();
+            this.rdbACMWom2 = new System.Windows.Forms.RadioButton();
+            this.rdbACMMan2 = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMCustomerList)).BeginInit();
             this.tacAIOMain.SuspendLayout();
             this.CustomerView.SuspendLayout();
@@ -131,55 +126,28 @@ namespace LibraryMgrProgram
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg0)).BeginInit();
             this.CustomerAdd.SuspendLayout();
             this.grpACMAdd.SuspendLayout();
-            this.grpcACMSex1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg1)).BeginInit();
             this.CustomerModi.SuspendLayout();
             this.grpACMModi.SuspendLayout();
-            this.grpcACMSex2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg2)).BeginInit();
+            this.grpcACMSex1.SuspendLayout();
+            this.grpcACMSex2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvACMCustomerList
             // 
+            this.dgvACMCustomerList.AllowUserToAddRows = false;
+            this.dgvACMCustomerList.AllowUserToDeleteRows = false;
+            this.dgvACMCustomerList.BackgroundColor = System.Drawing.Color.White;
             this.dgvACMCustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvACMCustomerList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CsNumber,
-            this.CsName,
-            this.PhoneNumber,
-            this.LoanPeriod,
-            this.LoanNumber});
             this.dgvACMCustomerList.Location = new System.Drawing.Point(85, 40);
             this.dgvACMCustomerList.Name = "dgvACMCustomerList";
+            this.dgvACMCustomerList.ReadOnly = true;
             this.dgvACMCustomerList.RowTemplate.Height = 23;
             this.dgvACMCustomerList.Size = new System.Drawing.Size(686, 497);
             this.dgvACMCustomerList.TabIndex = 119;
-            // 
-            // CsNumber
-            // 
-            this.CsNumber.HeaderText = "회원번호";
-            this.CsNumber.Name = "CsNumber";
-            // 
-            // CsName
-            // 
-            this.CsName.HeaderText = "회원명";
-            this.CsName.Name = "CsName";
-            // 
-            // PhoneNumber
-            // 
-            this.PhoneNumber.HeaderText = "전화번호";
-            this.PhoneNumber.Name = "PhoneNumber";
-            // 
-            // LoanPeriod
-            // 
-            this.LoanPeriod.HeaderText = "등록일";
-            this.LoanPeriod.Name = "LoanPeriod";
-            // 
-            // LoanNumber
-            // 
-            this.LoanNumber.HeaderText = "대출권수";
-            this.LoanNumber.Name = "LoanNumber";
             // 
             // tacAIOMain
             // 
@@ -230,7 +198,7 @@ namespace LibraryMgrProgram
             this.grpACMView.Controls.Add(this.lbACMHP0);
             this.grpACMView.Controls.Add(this.lbACMNum0);
             this.grpACMView.Controls.Add(this.lbACMRank0);
-            this.grpACMView.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpACMView.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpACMView.Location = new System.Drawing.Point(6, 6);
             this.grpACMView.Name = "grpACMView";
             this.grpACMView.Size = new System.Drawing.Size(499, 497);
@@ -241,7 +209,7 @@ namespace LibraryMgrProgram
             // lbACMCustomerState0
             // 
             this.lbACMCustomerState0.AutoSize = true;
-            this.lbACMCustomerState0.Font = new System.Drawing.Font("굴림", 12F);
+            this.lbACMCustomerState0.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbACMCustomerState0.Location = new System.Drawing.Point(389, 182);
             this.lbACMCustomerState0.Name = "lbACMCustomerState0";
             this.lbACMCustomerState0.Size = new System.Drawing.Size(72, 16);
@@ -251,7 +219,7 @@ namespace LibraryMgrProgram
             // lbACMStatus0
             // 
             this.lbACMStatus0.AutoSize = true;
-            this.lbACMStatus0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMStatus0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMStatus0.Location = new System.Drawing.Point(16, 269);
             this.lbACMStatus0.Name = "lbACMStatus0";
             this.lbACMStatus0.Size = new System.Drawing.Size(59, 13);
@@ -290,7 +258,7 @@ namespace LibraryMgrProgram
             // lbACMSex0
             // 
             this.lbACMSex0.AutoSize = true;
-            this.lbACMSex0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMSex0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMSex0.Location = new System.Drawing.Point(44, 103);
             this.lbACMSex0.Name = "lbACMSex0";
             this.lbACMSex0.Size = new System.Drawing.Size(33, 13);
@@ -299,6 +267,7 @@ namespace LibraryMgrProgram
             // 
             // dgvACMStatus0
             // 
+            this.dgvACMStatus0.BackgroundColor = System.Drawing.Color.White;
             this.dgvACMStatus0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvACMStatus0.Location = new System.Drawing.Point(83, 269);
             this.dgvACMStatus0.Name = "dgvACMStatus0";
@@ -309,7 +278,7 @@ namespace LibraryMgrProgram
             // lbACMBirth0
             // 
             this.lbACMBirth0.AutoSize = true;
-            this.lbACMBirth0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMBirth0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMBirth0.Location = new System.Drawing.Point(18, 134);
             this.lbACMBirth0.Name = "lbACMBirth0";
             this.lbACMBirth0.Size = new System.Drawing.Size(59, 13);
@@ -336,7 +305,7 @@ namespace LibraryMgrProgram
             // lbACMMemo0
             // 
             this.lbACMMemo0.AutoSize = true;
-            this.lbACMMemo0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMMemo0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMMemo0.Location = new System.Drawing.Point(42, 165);
             this.lbACMMemo0.Name = "lbACMMemo0";
             this.lbACMMemo0.Size = new System.Drawing.Size(33, 13);
@@ -356,7 +325,7 @@ namespace LibraryMgrProgram
             // lbACMCount0
             // 
             this.lbACMCount0.AutoSize = true;
-            this.lbACMCount0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMCount0.Location = new System.Drawing.Point(209, 103);
             this.lbACMCount0.Name = "lbACMCount0";
             this.lbACMCount0.Size = new System.Drawing.Size(91, 13);
@@ -376,7 +345,7 @@ namespace LibraryMgrProgram
             // lbACMName0
             // 
             this.lbACMName0.AutoSize = true;
-            this.lbACMName0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMName0.Location = new System.Drawing.Point(29, 68);
             this.lbACMName0.Name = "lbACMName0";
             this.lbACMName0.Size = new System.Drawing.Size(46, 13);
@@ -395,7 +364,7 @@ namespace LibraryMgrProgram
             // lbACMAddr0
             // 
             this.lbACMAddr0.AutoSize = true;
-            this.lbACMAddr0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMAddr0.Location = new System.Drawing.Point(42, 231);
             this.lbACMAddr0.Name = "lbACMAddr0";
             this.lbACMAddr0.Size = new System.Drawing.Size(33, 13);
@@ -442,7 +411,7 @@ namespace LibraryMgrProgram
             // lbACMHP0
             // 
             this.lbACMHP0.AutoSize = true;
-            this.lbACMHP0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMHP0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMHP0.Location = new System.Drawing.Point(179, 68);
             this.lbACMHP0.Name = "lbACMHP0";
             this.lbACMHP0.Size = new System.Drawing.Size(59, 13);
@@ -452,7 +421,7 @@ namespace LibraryMgrProgram
             // lbACMNum0
             // 
             this.lbACMNum0.AutoSize = true;
-            this.lbACMNum0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMNum0.Location = new System.Drawing.Point(182, 33);
             this.lbACMNum0.Name = "lbACMNum0";
             this.lbACMNum0.Size = new System.Drawing.Size(59, 13);
@@ -462,7 +431,7 @@ namespace LibraryMgrProgram
             // lbACMRank0
             // 
             this.lbACMRank0.AutoSize = true;
-            this.lbACMRank0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMRank0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMRank0.Location = new System.Drawing.Point(44, 33);
             this.lbACMRank0.Name = "lbACMRank0";
             this.lbACMRank0.Size = new System.Drawing.Size(33, 13);
@@ -508,7 +477,7 @@ namespace LibraryMgrProgram
             this.grpACMAdd.Controls.Add(this.txtACMHP1);
             this.grpACMAdd.Controls.Add(this.lbACMNum1);
             this.grpACMAdd.Controls.Add(this.lbACMRank1);
-            this.grpACMAdd.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpACMAdd.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpACMAdd.Location = new System.Drawing.Point(6, 6);
             this.grpACMAdd.Name = "grpACMAdd";
             this.grpACMAdd.Size = new System.Drawing.Size(499, 497);
@@ -524,44 +493,16 @@ namespace LibraryMgrProgram
             this.txtACMAddrView1.Size = new System.Drawing.Size(394, 26);
             this.txtACMAddrView1.TabIndex = 163;
             // 
-            // grpcACMSex1
-            // 
-            this.grpcACMSex1.BorderColor = System.Drawing.Color.White;
-            this.grpcACMSex1.Controls.Add(this.rdbACMWom1);
-            this.grpcACMSex1.Controls.Add(this.rdbACMMan1);
-            this.grpcACMSex1.Location = new System.Drawing.Point(81, 89);
-            this.grpcACMSex1.Name = "grpcACMSex1";
-            this.grpcACMSex1.Size = new System.Drawing.Size(122, 37);
-            this.grpcACMSex1.TabIndex = 162;
-            this.grpcACMSex1.TabStop = false;
-            // 
-            // rdbACMWom1
-            // 
-            this.rdbACMWom1.AutoSize = true;
-            this.rdbACMWom1.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbACMWom1.Location = new System.Drawing.Point(63, 9);
-            this.rdbACMWom1.Name = "rdbACMWom1";
-            this.rdbACMWom1.Size = new System.Drawing.Size(53, 18);
-            this.rdbACMWom1.TabIndex = 161;
-            this.rdbACMWom1.TabStop = true;
-            this.rdbACMWom1.Text = "여자";
-            this.rdbACMWom1.UseVisualStyleBackColor = true;
-            // 
-            // rdbACMMan1
-            // 
-            this.rdbACMMan1.AutoSize = true;
-            this.rdbACMMan1.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbACMMan1.Location = new System.Drawing.Point(6, 10);
-            this.rdbACMMan1.Name = "rdbACMMan1";
-            this.rdbACMMan1.Size = new System.Drawing.Size(53, 18);
-            this.rdbACMMan1.TabIndex = 160;
-            this.rdbACMMan1.TabStop = true;
-            this.rdbACMMan1.Text = "남자";
-            this.rdbACMMan1.UseVisualStyleBackColor = true;
-            // 
             // comACMRankView1
             // 
             this.comACMRankView1.FormattingEnabled = true;
+            this.comACMRankView1.Items.AddRange(new object[] {
+            "M",
+            "N",
+            "1",
+            "2",
+            "3",
+            "F"});
             this.comACMRankView1.Location = new System.Drawing.Point(83, 27);
             this.comACMRankView1.Name = "comACMRankView1";
             this.comACMRankView1.Size = new System.Drawing.Size(65, 24);
@@ -615,7 +556,7 @@ namespace LibraryMgrProgram
             // lbACMCustomerState1
             // 
             this.lbACMCustomerState1.AutoSize = true;
-            this.lbACMCustomerState1.Font = new System.Drawing.Font("굴림", 12F);
+            this.lbACMCustomerState1.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbACMCustomerState1.Location = new System.Drawing.Point(389, 182);
             this.lbACMCustomerState1.Name = "lbACMCustomerState1";
             this.lbACMCustomerState1.Size = new System.Drawing.Size(72, 16);
@@ -625,7 +566,7 @@ namespace LibraryMgrProgram
             // lbACMStatus1
             // 
             this.lbACMStatus1.AutoSize = true;
-            this.lbACMStatus1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMStatus1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMStatus1.Location = new System.Drawing.Point(16, 269);
             this.lbACMStatus1.Name = "lbACMStatus1";
             this.lbACMStatus1.Size = new System.Drawing.Size(59, 13);
@@ -644,7 +585,7 @@ namespace LibraryMgrProgram
             // lbACMSex1
             // 
             this.lbACMSex1.AutoSize = true;
-            this.lbACMSex1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMSex1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMSex1.Location = new System.Drawing.Point(44, 103);
             this.lbACMSex1.Name = "lbACMSex1";
             this.lbACMSex1.Size = new System.Drawing.Size(33, 13);
@@ -663,7 +604,7 @@ namespace LibraryMgrProgram
             // lbACMBirth1
             // 
             this.lbACMBirth1.AutoSize = true;
-            this.lbACMBirth1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMBirth1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMBirth1.Location = new System.Drawing.Point(18, 137);
             this.lbACMBirth1.Name = "lbACMBirth1";
             this.lbACMBirth1.Size = new System.Drawing.Size(59, 13);
@@ -681,7 +622,7 @@ namespace LibraryMgrProgram
             // lbACMMemo1
             // 
             this.lbACMMemo1.AutoSize = true;
-            this.lbACMMemo1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMMemo1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMMemo1.Location = new System.Drawing.Point(42, 165);
             this.lbACMMemo1.Name = "lbACMMemo1";
             this.lbACMMemo1.Size = new System.Drawing.Size(33, 13);
@@ -701,7 +642,7 @@ namespace LibraryMgrProgram
             // lbACMCount1
             // 
             this.lbACMCount1.AutoSize = true;
-            this.lbACMCount1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMCount1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMCount1.Location = new System.Drawing.Point(209, 103);
             this.lbACMCount1.Name = "lbACMCount1";
             this.lbACMCount1.Size = new System.Drawing.Size(91, 13);
@@ -711,7 +652,7 @@ namespace LibraryMgrProgram
             // lbACMName1
             // 
             this.lbACMName1.AutoSize = true;
-            this.lbACMName1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMName1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMName1.Location = new System.Drawing.Point(29, 68);
             this.lbACMName1.Name = "lbACMName1";
             this.lbACMName1.Size = new System.Drawing.Size(46, 13);
@@ -721,7 +662,7 @@ namespace LibraryMgrProgram
             // lbACMAddr1
             // 
             this.lbACMAddr1.AutoSize = true;
-            this.lbACMAddr1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMAddr1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMAddr1.Location = new System.Drawing.Point(42, 231);
             this.lbACMAddr1.Name = "lbACMAddr1";
             this.lbACMAddr1.Size = new System.Drawing.Size(33, 13);
@@ -739,7 +680,7 @@ namespace LibraryMgrProgram
             // txtACMHP1
             // 
             this.txtACMHP1.AutoSize = true;
-            this.txtACMHP1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtACMHP1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtACMHP1.Location = new System.Drawing.Point(179, 68);
             this.txtACMHP1.Name = "txtACMHP1";
             this.txtACMHP1.Size = new System.Drawing.Size(59, 13);
@@ -749,7 +690,7 @@ namespace LibraryMgrProgram
             // lbACMNum1
             // 
             this.lbACMNum1.AutoSize = true;
-            this.lbACMNum1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMNum1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMNum1.Location = new System.Drawing.Point(182, 33);
             this.lbACMNum1.Name = "lbACMNum1";
             this.lbACMNum1.Size = new System.Drawing.Size(59, 13);
@@ -759,7 +700,7 @@ namespace LibraryMgrProgram
             // lbACMRank1
             // 
             this.lbACMRank1.AutoSize = true;
-            this.lbACMRank1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMRank1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMRank1.Location = new System.Drawing.Point(44, 33);
             this.lbACMRank1.Name = "lbACMRank1";
             this.lbACMRank1.Size = new System.Drawing.Size(33, 13);
@@ -804,7 +745,7 @@ namespace LibraryMgrProgram
             this.grpACMModi.Controls.Add(this.txtACMHP2);
             this.grpACMModi.Controls.Add(this.lbACMNum2);
             this.grpACMModi.Controls.Add(this.lbACMRank2);
-            this.grpACMModi.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpACMModi.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpACMModi.Location = new System.Drawing.Point(6, 6);
             this.grpACMModi.Name = "grpACMModi";
             this.grpACMModi.Size = new System.Drawing.Size(499, 497);
@@ -819,41 +760,6 @@ namespace LibraryMgrProgram
             this.txtACMAddrView2.Name = "txtACMAddrView2";
             this.txtACMAddrView2.Size = new System.Drawing.Size(394, 26);
             this.txtACMAddrView2.TabIndex = 164;
-            // 
-            // grpcACMSex2
-            // 
-            this.grpcACMSex2.BorderColor = System.Drawing.Color.White;
-            this.grpcACMSex2.Controls.Add(this.rdbACMWom2);
-            this.grpcACMSex2.Controls.Add(this.rdbACMMan2);
-            this.grpcACMSex2.Location = new System.Drawing.Point(81, 89);
-            this.grpcACMSex2.Name = "grpcACMSex2";
-            this.grpcACMSex2.Size = new System.Drawing.Size(122, 37);
-            this.grpcACMSex2.TabIndex = 162;
-            this.grpcACMSex2.TabStop = false;
-            // 
-            // rdbACMWom2
-            // 
-            this.rdbACMWom2.AutoSize = true;
-            this.rdbACMWom2.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbACMWom2.Location = new System.Drawing.Point(63, 9);
-            this.rdbACMWom2.Name = "rdbACMWom2";
-            this.rdbACMWom2.Size = new System.Drawing.Size(53, 18);
-            this.rdbACMWom2.TabIndex = 161;
-            this.rdbACMWom2.TabStop = true;
-            this.rdbACMWom2.Text = "여자";
-            this.rdbACMWom2.UseVisualStyleBackColor = true;
-            // 
-            // rdbACMMan2
-            // 
-            this.rdbACMMan2.AutoSize = true;
-            this.rdbACMMan2.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbACMMan2.Location = new System.Drawing.Point(6, 10);
-            this.rdbACMMan2.Name = "rdbACMMan2";
-            this.rdbACMMan2.Size = new System.Drawing.Size(53, 18);
-            this.rdbACMMan2.TabIndex = 160;
-            this.rdbACMMan2.TabStop = true;
-            this.rdbACMMan2.Text = "남자";
-            this.rdbACMMan2.UseVisualStyleBackColor = true;
             // 
             // comACMRankView2
             // 
@@ -911,7 +817,7 @@ namespace LibraryMgrProgram
             // lbACMCustomerState2
             // 
             this.lbACMCustomerState2.AutoSize = true;
-            this.lbACMCustomerState2.Font = new System.Drawing.Font("굴림", 12F);
+            this.lbACMCustomerState2.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbACMCustomerState2.Location = new System.Drawing.Point(389, 182);
             this.lbACMCustomerState2.Name = "lbACMCustomerState2";
             this.lbACMCustomerState2.Size = new System.Drawing.Size(72, 16);
@@ -921,7 +827,7 @@ namespace LibraryMgrProgram
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label2.Location = new System.Drawing.Point(16, 269);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 13);
@@ -940,7 +846,7 @@ namespace LibraryMgrProgram
             // lbACMSex2
             // 
             this.lbACMSex2.AutoSize = true;
-            this.lbACMSex2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMSex2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMSex2.Location = new System.Drawing.Point(44, 103);
             this.lbACMSex2.Name = "lbACMSex2";
             this.lbACMSex2.Size = new System.Drawing.Size(33, 13);
@@ -959,7 +865,7 @@ namespace LibraryMgrProgram
             // lbACMBirth2
             // 
             this.lbACMBirth2.AutoSize = true;
-            this.lbACMBirth2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMBirth2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMBirth2.Location = new System.Drawing.Point(18, 137);
             this.lbACMBirth2.Name = "lbACMBirth2";
             this.lbACMBirth2.Size = new System.Drawing.Size(59, 13);
@@ -977,7 +883,7 @@ namespace LibraryMgrProgram
             // lbACMMemo2
             // 
             this.lbACMMemo2.AutoSize = true;
-            this.lbACMMemo2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMMemo2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMMemo2.Location = new System.Drawing.Point(42, 165);
             this.lbACMMemo2.Name = "lbACMMemo2";
             this.lbACMMemo2.Size = new System.Drawing.Size(33, 13);
@@ -997,7 +903,7 @@ namespace LibraryMgrProgram
             // lbACMCount2
             // 
             this.lbACMCount2.AutoSize = true;
-            this.lbACMCount2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMCount2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMCount2.Location = new System.Drawing.Point(209, 103);
             this.lbACMCount2.Name = "lbACMCount2";
             this.lbACMCount2.Size = new System.Drawing.Size(91, 13);
@@ -1007,7 +913,7 @@ namespace LibraryMgrProgram
             // lbACMName2
             // 
             this.lbACMName2.AutoSize = true;
-            this.lbACMName2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMName2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMName2.Location = new System.Drawing.Point(29, 68);
             this.lbACMName2.Name = "lbACMName2";
             this.lbACMName2.Size = new System.Drawing.Size(46, 13);
@@ -1017,7 +923,7 @@ namespace LibraryMgrProgram
             // lbACMAddr2
             // 
             this.lbACMAddr2.AutoSize = true;
-            this.lbACMAddr2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMAddr2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMAddr2.Location = new System.Drawing.Point(42, 231);
             this.lbACMAddr2.Name = "lbACMAddr2";
             this.lbACMAddr2.Size = new System.Drawing.Size(33, 13);
@@ -1035,7 +941,7 @@ namespace LibraryMgrProgram
             // txtACMHP2
             // 
             this.txtACMHP2.AutoSize = true;
-            this.txtACMHP2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtACMHP2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtACMHP2.Location = new System.Drawing.Point(179, 68);
             this.txtACMHP2.Name = "txtACMHP2";
             this.txtACMHP2.Size = new System.Drawing.Size(59, 13);
@@ -1045,7 +951,7 @@ namespace LibraryMgrProgram
             // lbACMNum2
             // 
             this.lbACMNum2.AutoSize = true;
-            this.lbACMNum2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMNum2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMNum2.Location = new System.Drawing.Point(182, 33);
             this.lbACMNum2.Name = "lbACMNum2";
             this.lbACMNum2.Size = new System.Drawing.Size(59, 13);
@@ -1055,7 +961,7 @@ namespace LibraryMgrProgram
             // lbACMRank2
             // 
             this.lbACMRank2.AutoSize = true;
-            this.lbACMRank2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMRank2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbACMRank2.Location = new System.Drawing.Point(44, 33);
             this.lbACMRank2.Name = "lbACMRank2";
             this.lbACMRank2.Size = new System.Drawing.Size(33, 13);
@@ -1064,8 +970,8 @@ namespace LibraryMgrProgram
             // 
             // btnAIOMSearch
             // 
-            this.btnAIOMSearch.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnAIOMSearch.Location = new System.Drawing.Point(554, 15);
+            this.btnAIOMSearch.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOMSearch.Location = new System.Drawing.Point(697, 14);
             this.btnAIOMSearch.Name = "btnAIOMSearch";
             this.btnAIOMSearch.Size = new System.Drawing.Size(75, 23);
             this.btnAIOMSearch.TabIndex = 142;
@@ -1074,7 +980,7 @@ namespace LibraryMgrProgram
             // 
             // txtAIOMSearch
             // 
-            this.txtAIOMSearch.Location = new System.Drawing.Point(186, 14);
+            this.txtAIOMSearch.Location = new System.Drawing.Point(329, 13);
             this.txtAIOMSearch.Name = "txtAIOMSearch";
             this.txtAIOMSearch.Size = new System.Drawing.Size(362, 21);
             this.txtAIOMSearch.TabIndex = 143;
@@ -1088,11 +994,81 @@ namespace LibraryMgrProgram
             "대출기간",
             "전호번호",
             "생년월일"});
-            this.cboxAIOMSort.Location = new System.Drawing.Point(85, 15);
+            this.cboxAIOMSort.Location = new System.Drawing.Point(228, 14);
             this.cboxAIOMSort.Name = "cboxAIOMSort";
             this.cboxAIOMSort.Size = new System.Drawing.Size(95, 20);
             this.cboxAIOMSort.TabIndex = 144;
             this.cboxAIOMSort.Text = "회원명";
+            // 
+            // grpcACMSex1
+            // 
+            this.grpcACMSex1.BorderColor = System.Drawing.Color.White;
+            this.grpcACMSex1.Controls.Add(this.rdbACMWom1);
+            this.grpcACMSex1.Controls.Add(this.rdbACMMan1);
+            this.grpcACMSex1.Location = new System.Drawing.Point(81, 89);
+            this.grpcACMSex1.Name = "grpcACMSex1";
+            this.grpcACMSex1.Size = new System.Drawing.Size(122, 37);
+            this.grpcACMSex1.TabIndex = 162;
+            this.grpcACMSex1.TabStop = false;
+            // 
+            // rdbACMWom1
+            // 
+            this.rdbACMWom1.AutoSize = true;
+            this.rdbACMWom1.Font = new System.Drawing.Font("Gulim", 10F);
+            this.rdbACMWom1.Location = new System.Drawing.Point(63, 9);
+            this.rdbACMWom1.Name = "rdbACMWom1";
+            this.rdbACMWom1.Size = new System.Drawing.Size(53, 18);
+            this.rdbACMWom1.TabIndex = 161;
+            this.rdbACMWom1.TabStop = true;
+            this.rdbACMWom1.Text = "여자";
+            this.rdbACMWom1.UseVisualStyleBackColor = true;
+            // 
+            // rdbACMMan1
+            // 
+            this.rdbACMMan1.AutoSize = true;
+            this.rdbACMMan1.Font = new System.Drawing.Font("Gulim", 10F);
+            this.rdbACMMan1.Location = new System.Drawing.Point(6, 10);
+            this.rdbACMMan1.Name = "rdbACMMan1";
+            this.rdbACMMan1.Size = new System.Drawing.Size(53, 18);
+            this.rdbACMMan1.TabIndex = 160;
+            this.rdbACMMan1.TabStop = true;
+            this.rdbACMMan1.Text = "남자";
+            this.rdbACMMan1.UseVisualStyleBackColor = true;
+            // 
+            // grpcACMSex2
+            // 
+            this.grpcACMSex2.BorderColor = System.Drawing.Color.White;
+            this.grpcACMSex2.Controls.Add(this.rdbACMWom2);
+            this.grpcACMSex2.Controls.Add(this.rdbACMMan2);
+            this.grpcACMSex2.Location = new System.Drawing.Point(81, 89);
+            this.grpcACMSex2.Name = "grpcACMSex2";
+            this.grpcACMSex2.Size = new System.Drawing.Size(122, 37);
+            this.grpcACMSex2.TabIndex = 162;
+            this.grpcACMSex2.TabStop = false;
+            // 
+            // rdbACMWom2
+            // 
+            this.rdbACMWom2.AutoSize = true;
+            this.rdbACMWom2.Font = new System.Drawing.Font("Gulim", 10F);
+            this.rdbACMWom2.Location = new System.Drawing.Point(63, 9);
+            this.rdbACMWom2.Name = "rdbACMWom2";
+            this.rdbACMWom2.Size = new System.Drawing.Size(53, 18);
+            this.rdbACMWom2.TabIndex = 161;
+            this.rdbACMWom2.TabStop = true;
+            this.rdbACMWom2.Text = "여자";
+            this.rdbACMWom2.UseVisualStyleBackColor = true;
+            // 
+            // rdbACMMan2
+            // 
+            this.rdbACMMan2.AutoSize = true;
+            this.rdbACMMan2.Font = new System.Drawing.Font("Gulim", 10F);
+            this.rdbACMMan2.Location = new System.Drawing.Point(6, 10);
+            this.rdbACMMan2.Name = "rdbACMMan2";
+            this.rdbACMMan2.Size = new System.Drawing.Size(53, 18);
+            this.rdbACMMan2.TabIndex = 160;
+            this.rdbACMMan2.TabStop = true;
+            this.rdbACMMan2.Text = "남자";
+            this.rdbACMMan2.UseVisualStyleBackColor = true;
             // 
             // AdminCustomerMgrForm
             // 
@@ -1120,17 +1096,17 @@ namespace LibraryMgrProgram
             this.CustomerAdd.ResumeLayout(false);
             this.grpACMAdd.ResumeLayout(false);
             this.grpACMAdd.PerformLayout();
-            this.grpcACMSex1.ResumeLayout(false);
-            this.grpcACMSex1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg1)).EndInit();
             this.CustomerModi.ResumeLayout(false);
             this.grpACMModi.ResumeLayout(false);
             this.grpACMModi.PerformLayout();
-            this.grpcACMSex2.ResumeLayout(false);
-            this.grpcACMSex2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg2)).EndInit();
+            this.grpcACMSex1.ResumeLayout(false);
+            this.grpcACMSex1.PerformLayout();
+            this.grpcACMSex2.ResumeLayout(false);
+            this.grpcACMSex2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1138,11 +1114,6 @@ namespace LibraryMgrProgram
 
         #endregion
         private System.Windows.Forms.DataGridView dgvACMCustomerList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CsNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CsName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoanPeriod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn LoanNumber;
         private System.Windows.Forms.TabControl tacAIOMain;
         private System.Windows.Forms.TabPage CustomerView;
         private System.Windows.Forms.GroupBox grpACMView;

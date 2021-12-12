@@ -19,11 +19,11 @@ namespace LMP_Projcet.Methods
             string connStr = "Data Source = " + dbSource.Server
                 + ";Port = " + dbSource.Port
                 + ";Database = " + dbSource.Database
-                + ";User ID = " + dbSource.UserId
+                + ";UserID = " + dbSource.UserId
                 + ";Password = " + dbSource.Password + ";";
             try
             {
-                conn = new MySqlConnection(connStr);
+                conn = new MySqlConnection(connStr + ";allow zero datetime=yes");
                 conn.Open();
             }
             catch (MySqlException)
@@ -37,14 +37,13 @@ namespace LMP_Projcet.Methods
         {
             try
             {
-                selectCmd = "select * from lmp.book;";
 
                 MySqlCommand cmd = new MySqlCommand(selectCmd, conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
                 string result;
                 while (dbReader.Read())
                 {
-                    string name = dbReader["BName"] as String;
+                    string name = dbReader[0].ToString();
                     return result = name;
                 }
                 dbReader.Close();

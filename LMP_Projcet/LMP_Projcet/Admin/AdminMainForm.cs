@@ -28,6 +28,7 @@ namespace LibraryMgrProgram
         dbTest db = new dbTest();
         String sql = "";
 
+
         public AdminMainForm()
         {
             InitializeComponent();
@@ -69,6 +70,16 @@ namespace LibraryMgrProgram
             // 4단계
             sql = "select cName from Customer where CID = 'admin';";
             lbAMCustomer.Text = db.dbSelectCus(sql)+"님 환영합니다.";
+            bool color = LMP_Projcet.Properties.Settings.Default.myColor;
+            if(color == true)
+            {
+                this.BackColor = FontChangeForm.color;
+            }
+            else
+            {
+                
+            }
+            
         }
 
         private void lbAMHome_Click(object sender, EventArgs e)
@@ -100,6 +111,11 @@ namespace LibraryMgrProgram
         private void lbAMCusInfo_Click(object sender, EventArgs e)
         {
             formChange.ChangeFIF(aCusMgrForm, palAMMain);
+        }
+
+        private void AdminMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

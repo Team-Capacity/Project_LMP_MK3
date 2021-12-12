@@ -17,6 +17,7 @@ namespace LibraryMgrProgram
     public partial class AdminBookInfoForm : Form
     {
 
+        int i = 0;
         public AdminBookInfoForm()
         {
             InitializeComponent();
@@ -24,55 +25,13 @@ namespace LibraryMgrProgram
 
         dbTest db = new dbTest();
         MouseEvent me = new MouseEvent();
-        DataTable dbdataset;
-        BindingSource bSource;
-
-        string[] name = { "책 번호", "제목", "출판사", "저자", "갯수", "장르","출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "날짜", "설명" };
 
         private void AdminBookInfoForm_Load(object sender, EventArgs e)
         {
             string sql = "select * from LibaryProgram_DB.Book;";
-            reloadForm(sql);
+            me.reloadForm(sql,dgvABIBookList,i);
+            listDescription();
         }
-
-        private void reloadForm(string sqlQuery)
-        {
-            db.dbConnection();
-            MySqlCommand cmdDatabase = new MySqlCommand(sqlQuery, db.conn);
-
-            try
-            {
-                MySqlDataAdapter sda = new MySqlDataAdapter();
-                sda.SelectCommand = cmdDatabase;
-                dbdataset = new DataTable();
-                sda.Fill(dbdataset);
-                bSource = new BindingSource();
-                bSource.DataSource = dbdataset;
-                dgvABIBookList.DataSource = bSource;
-                sda.Update(dbdataset);
-
-
-                for (int i = 0; i < 13; i++)
-                {
-                    dgvABIBookList.Columns[i].HeaderText = name[i];
-                }
-                dgvABIBookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
-                dgvABIBookList.AllowUserToAddRows = false;
-
-                int count = dgvABIBookList.Rows.Count;
-                if (count < 20)
-                {
-                    for(int i = 0; i< 20 - count; i++)
-                    {
-                        dbdataset.Rows.Add(null, "", "", "", null, "", "", "", "", null, "", null, "");
-                    }
-                }
-            }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
-
-        }
-            
 
         private void btnABIImgUplode2_Click(object sender, EventArgs e)
         {
@@ -81,66 +40,71 @@ namespace LibraryMgrProgram
 
         private void btnABIOk2_Click(object sender, EventArgs e)
         {
-            DateTime ad = DateTime.Now;
-            try
-            {
-                db.dbConnection();
-                int number = 8;
-                string sql = "insert into Book(BNumber,BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, Bpage, BLocal, BDate, BContent) values("
-                    + number
-                    + ",'"+ txtABIBookName2.Text+ "'"
-                    + ",'"+ txtABICompany2.Text+ "'"
-                    + ",'"+ txtABIBookMaker2.Text+ "'"
+            DateTime now = DateTime.Now;
+            DateTime bookAddDay = Convert.ToDateTime(txtABIMakeDay2.Text);
+            
+            string sql = "insert into Book(BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, Bpage, BLocal, BDate, BContent,BAddDate) values("
+                    + "'" + txtABIBookName2.Text + "'"
+                    + ",'" + txtABICompany2.Text + "'"
+                    + ",'" + txtABIBookMaker2.Text + "'"
                     + "," + Int32.Parse(txtABIBookCount2.Text)
-                    + ",'"+ comABIBookger2.Text + "'"
-                    + ",'"+ txtAMIMakePlace2.Text+ "'"
-                    + ",'대한민국'"
-                    + ",'"+ txtABIISBN2.Text+ "'"
-                    + "," + Int32.Parse(txtAMIBookpage2.Text)
-                    + ",'"+ txtABIBLocation2.Text+ "'"
-                    + ",'"+ ad + "'"
-                    + ",'"+ rtxtABIBBookExp2.Text + "'"
-                    +");";
-
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("성공적으로 추가 되었습니다.");
-                    db.conn.Close();
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("DB수정에 실패하였습니다.");
-            }
+                    + ",'" + comABIBookger2.Text + "'"
+                    + ",'" + txtABIMakePlace2.Text + "'"
+                    + ",'" + txtABIArea2.Text + "'"
+                    + ",'" + txtABIISBN2.Text + "'"
+                    + "," + Int32.Parse(txtABIBookpage2.Text)
+                    + ",'" + txtABIBLocation2.Text + "'"
+                    // 이부분은 DateTime의 형태로 바꾸어주어야함
+                    + ",'"+ bookAddDay.Year+"/"+bookAddDay.Month+"/"+bookAddDay.Day + "'"
+                    + ",'" + rtxtABIBBookExp2.Text + "'"
+                    + ",'" + now.ToString("yy/dd/MM") + "'"
+                    + ");";
+            db.dbUpdate(sql);
+            string reloadSql = "select * from LibaryProgram_DB.Book;";
+            me.reloadForm(reloadSql, dgvABIBookList,i);
         }
 
+        // 도서 추가 초기화 버튼
         private void btnABIClear2_Click(object sender, EventArgs e)
         {
-            me.ftpList();
+            txtABIBookName2.Text = "";
+            txtABICompany2.Text = "";
+            txtABIBookMaker2.Text = "";
+            txtABIBookCount2.Text = "";
+            comABIBookger2.Text = "";
+            txtABIMakePlace2.Text = "";
+            txtABIISBN2.Text = "";
+            txtABIBookpage2.Text = "";
+            txtABIBLocation2.Text = "";
+            txtABIMakeDay2.Text = "";
+            rtxtABIBBookExp2.Text = "";
+            txtABIArea2.Text = "";
         }
 
+        // 검색 버튼 클릭시 이벤트
         private void btnABISer_Click(object sender, EventArgs e)
         {
             dgvABIBookList.Columns.Clear();
             if(txtABISerBar.Text == "")
             {
                 string sql = "select * from LibaryProgram_DB.Book;";
-                reloadForm(sql);
+                me.reloadForm(sql,dgvABIBookList,i);
             }
             else
             {
                 string sql = ("select * from Book where BName = '" + txtABISerBar.Text + "';").ToString();
-                reloadForm(sql);
+                me.reloadForm(sql, dgvABIBookList,i);
             }
         }
 
+        //셀 클릭 이벤트 처리
         private void dgvABIBookList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             listDescription();
         }
 
-        private void listDescription()
+        // 셀 클릭시 도서정보 조회
+        public void listDescription()
         {
             DataGridViewRow row = dgvABIBookList.SelectedRows[0];
             // 기본
@@ -155,10 +119,111 @@ namespace LibraryMgrProgram
             lbABIBLocation.Text = row.Cells[10].Value.ToString();
             lbABIMakeDay.Text = row.Cells[11].Value.ToString();
             lbABIBBookExp.Text = row.Cells[12].Value.ToString();
+            lbABIArea.Text = row.Cells[7].Value.ToString();
 
             // 추가
-            
+            txtABIBookName2.Text = row.Cells[1].Value.ToString();
+            txtABICompany2.Text = row.Cells[2].Value.ToString();
+            txtABIBookMaker2.Text = row.Cells[3].Value.ToString();
+            txtABIBookCount2.Text = row.Cells[4].Value.ToString();
+            comABIBookger2.Text = row.Cells[5].Value.ToString();
+            txtABIMakePlace2.Text = row.Cells[6].Value.ToString();
+            txtABIISBN2.Text = row.Cells[8].Value.ToString();
+            txtABIBookpage2.Text = row.Cells[9].Value.ToString();
+            txtABIBLocation2.Text = row.Cells[10].Value.ToString();
+            txtABIMakeDay2.Text = row.Cells[11].Value.ToString();
+            rtxtABIBBookExp2.Text = row.Cells[12].Value.ToString();
+            txtABIArea2.Text = row.Cells[7].Value.ToString();
             // 수정
+            txtABIBookName1.Text = row.Cells[1].Value.ToString();
+            txtABICompany1.Text = row.Cells[2].Value.ToString();
+            txtABIBookMaker1.Text = row.Cells[3].Value.ToString();
+            txtABIBookCount1.Text = row.Cells[4].Value.ToString();
+            comABIBookger1.Text = row.Cells[5].Value.ToString();
+            txtABIMakePlace1.Text = row.Cells[6].Value.ToString();
+            txtABIISBN1.Text = row.Cells[8].Value.ToString();
+            txtABIBookpage1.Text = row.Cells[9].Value.ToString();
+            txtABIBLocation1.Text = row.Cells[10].Value.ToString();
+            txtABIMakeDay1.Text = row.Cells[11].Value.ToString();
+            rtxtABIBBookExp1.Text = row.Cells[12].Value.ToString();
+            txtABIArea1.Text = row.Cells[7].Value.ToString();
+        }
+
+        // 도서 수정 초기화 버튼
+        private void btnABIClear1_Click(object sender, EventArgs e)
+        {
+            txtABIBookName1.Text = "";
+            txtABICompany1.Text = "";
+            txtABIBookMaker1.Text = "";
+            txtABIBookCount1.Text = "";
+            comABIBookger1.Text = "";
+            txtABIMakePlace1.Text = "";
+            txtABIISBN1.Text = "";
+            txtABIBookpage1.Text = "";
+            txtABIBLocation1.Text = "";
+            txtABIMakeDay1.Text = "";
+            rtxtABIBBookExp1.Text = "";
+            txtABIArea1.Text = "";
+        }
+
+        private void btnABIOk1_Click(object sender, EventArgs e)
+        {
+            db.dbConnection();
+            DataGridViewRow row = dgvABIBookList.SelectedRows[0];
+            int number = Int32.Parse(row.Cells[0].Value.ToString());
+
+            string mysql = "Update Book set BName = '" + txtABIBookName1.Text
+                    + "' ,BPublisher ='" + txtABICompany1.Text
+                    + "' ,BAuthor ='" + txtABIBookMaker1.Text
+                    + "' ,BCount =" + Int32.Parse(txtABIBookCount1.Text)
+                    + "  ,BGenre ='" + comABIBookger1.Text
+                    + "' ,BProduct ='" + txtABIMakePlace1.Text
+                    + "' ,Barea ='" + txtABIArea1.Text
+                    + "' ,BISBN ='" + txtABIISBN1.Text
+                    + "' ,Bpage = " + Int32.Parse(txtABIBookpage1.Text)
+                    + "  ,BLocal ='" + txtABIBLocation1.Text
+                    + "' ,BContent ='" + rtxtABIBBookExp1.Text + "'"
+                    + " where BNumber = " + number + ";";
+
+            try
+            {
+                MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공적으로 추가 되었습니다.");
+                    me.reloadForm("select * from LibaryProgram_DB.Book;", dgvABIBookList,i);
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnABIRemove_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow row = dgvABIBookList.SelectedRows[0];
+            int number = Int32.Parse(row.Cells[0].Value.ToString());
+            if (MessageBox.Show("정말로 삭제하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                db.dbConnection();
+                string mysql = "delete from Book where BNumber = " + number + ";";
+                try
+                {
+                    MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
+                    if (cmd.ExecuteNonQuery() == 1)
+                    {
+                        MessageBox.Show("성공적으로 삭제 되었습니다.");
+                        me.reloadForm("select * from LibaryProgram_DB.Book;", dgvABIBookList,i);
+                    }
+                }
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+
         }
     }
 }

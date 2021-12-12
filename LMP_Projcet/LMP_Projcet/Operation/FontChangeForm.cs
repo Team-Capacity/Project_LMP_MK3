@@ -17,6 +17,9 @@ namespace LibraryMgrProgram
     public partial class FontChangeForm : Form
     {
         public bool radioCheckedChanged = false;
+
+        public static Color color;
+
         public FontChangeForm()
         {
             InitializeComponent();
@@ -25,9 +28,6 @@ namespace LibraryMgrProgram
 
             this.rdoFCWhite.Click += new EventHandler(radioButton_Click);
             this.rdoFCBlack.Click += new EventHandler(radioButton_Click);
-
-           
-            
         }
 
         public void radioButton_Click(object sender, EventArgs e)
@@ -154,26 +154,27 @@ namespace LibraryMgrProgram
         
         public void btnFCSetting_Click(object sender, EventArgs e)
         {
-      
-            if(rdoFCBlack.Checked)
+
+            if (rdoFCBlack.Checked)
             {
-                this.BackColor = Color.Black;
-                CustomerMainForm cm = new CustomerMainForm();
-                cm.BackColor = Color.Black;
-              //  CustomerOperationForm.chkShow3 = false;
-               // this.Close();
-               
-              
-               
-            }
-            else if(rdoFCWhite.Checked)
-            {
-                this.BackColor = Color.White;
-                CustomerOperationForm.chkShow3 = false;
+                SetText("black");
+                color = Color.FromArgb(100, 100, 100);
+                LMP_Projcet.Properties.Settings.Default.myColor = true;
+                LMP_Projcet.Properties.Settings.Default.Save();
                 this.Close();
+                Application.Restart();
+            }
+            else
+            {
+                
             }
         }
-
-       
+        public void SetText(string str)
+        {
+            if (str == "black")
+            {
+                MessageBox.Show("확인용");
+            }
+        }
     }
 }

@@ -31,6 +31,8 @@ namespace LibraryMgrProgram
             this.tacABIMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.grpABIBookInfo = new System.Windows.Forms.GroupBox();
+            this.lbABIArea = new System.Windows.Forms.Label();
+            this.lbABIArea3 = new System.Windows.Forms.Label();
             this.ImgAMView4 = new System.Windows.Forms.PictureBox();
             this.lbABIBBookExp = new System.Windows.Forms.Label();
             this.lbABIBookCount = new System.Windows.Forms.Label();
@@ -58,10 +60,12 @@ namespace LibraryMgrProgram
             this.lbABIBookName3 = new System.Windows.Forms.Label();
             this.BookAdd = new System.Windows.Forms.TabPage();
             this.grpABIBookAdd = new System.Windows.Forms.GroupBox();
+            this.lbABIArea2 = new System.Windows.Forms.Label();
+            this.txtABIArea2 = new System.Windows.Forms.TextBox();
             this.txtABIMakeDay2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtAMIMakePlace2 = new System.Windows.Forms.TextBox();
-            this.txtAMIBookpage2 = new System.Windows.Forms.TextBox();
+            this.txtABIMakePlace2 = new System.Windows.Forms.TextBox();
+            this.txtABIBookpage2 = new System.Windows.Forms.TextBox();
             this.lbABIMakePlace2 = new System.Windows.Forms.Label();
             this.lbABIBookpage2 = new System.Windows.Forms.Label();
             this.comABIBookger2 = new System.Windows.Forms.ComboBox();
@@ -87,8 +91,10 @@ namespace LibraryMgrProgram
             this.lbABIBookName2 = new System.Windows.Forms.Label();
             this.BookEdit = new System.Windows.Forms.TabPage();
             this.grpABIBookModi = new System.Windows.Forms.GroupBox();
+            this.lbABIArea1 = new System.Windows.Forms.Label();
             this.ImgAMView5 = new System.Windows.Forms.PictureBox();
             this.txtABIMakeDay1 = new System.Windows.Forms.TextBox();
+            this.txtABIArea1 = new System.Windows.Forms.TextBox();
             this.lbABIMakeDay1 = new System.Windows.Forms.Label();
             this.txtABIMakePlace1 = new System.Windows.Forms.TextBox();
             this.txtABIBookpage1 = new System.Windows.Forms.TextBox();
@@ -157,6 +163,8 @@ namespace LibraryMgrProgram
             // grpABIBookInfo
             // 
             this.grpABIBookInfo.BackColor = System.Drawing.Color.White;
+            this.grpABIBookInfo.Controls.Add(this.lbABIArea);
+            this.grpABIBookInfo.Controls.Add(this.lbABIArea3);
             this.grpABIBookInfo.Controls.Add(this.ImgAMView4);
             this.grpABIBookInfo.Controls.Add(this.lbABIBBookExp);
             this.grpABIBookInfo.Controls.Add(this.lbABIBookCount);
@@ -190,6 +198,25 @@ namespace LibraryMgrProgram
             this.grpABIBookInfo.TabStop = false;
             this.grpABIBookInfo.Text = "도서 정보";
             // 
+            // lbABIArea
+            // 
+            this.lbABIArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbABIArea.Location = new System.Drawing.Point(83, 259);
+            this.lbABIArea.Name = "lbABIArea";
+            this.lbABIArea.Size = new System.Drawing.Size(220, 26);
+            this.lbABIArea.TabIndex = 44;
+            this.lbABIArea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbABIArea3
+            // 
+            this.lbABIArea3.AutoSize = true;
+            this.lbABIArea3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIArea3.Location = new System.Drawing.Point(6, 267);
+            this.lbABIArea3.Name = "lbABIArea3";
+            this.lbABIArea3.Size = new System.Drawing.Size(72, 13);
+            this.lbABIArea3.TabIndex = 43;
+            this.lbABIArea3.Text = "책발행주소";
+            // 
             // ImgAMView4
             // 
             this.ImgAMView4.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -203,9 +230,9 @@ namespace LibraryMgrProgram
             // lbABIBBookExp
             // 
             this.lbABIBBookExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbABIBBookExp.Location = new System.Drawing.Point(83, 284);
+            this.lbABIBBookExp.Location = new System.Drawing.Point(83, 292);
             this.lbABIBBookExp.Name = "lbABIBBookExp";
-            this.lbABIBBookExp.Size = new System.Drawing.Size(382, 162);
+            this.lbABIBBookExp.Size = new System.Drawing.Size(382, 154);
             this.lbABIBBookExp.TabIndex = 42;
             this.lbABIBBookExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -221,18 +248,18 @@ namespace LibraryMgrProgram
             // lbABIBookger
             // 
             this.lbABIBookger.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbABIBookger.Location = new System.Drawing.Point(83, 229);
+            this.lbABIBookger.Location = new System.Drawing.Point(201, 196);
             this.lbABIBookger.Name = "lbABIBookger";
-            this.lbABIBookger.Size = new System.Drawing.Size(117, 26);
+            this.lbABIBookger.Size = new System.Drawing.Size(102, 26);
             this.lbABIBookger.TabIndex = 40;
             this.lbABIBookger.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbABIMakePlace
             // 
             this.lbABIMakePlace.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbABIMakePlace.Location = new System.Drawing.Point(227, 197);
+            this.lbABIMakePlace.Location = new System.Drawing.Point(83, 229);
             this.lbABIMakePlace.Name = "lbABIMakePlace";
-            this.lbABIMakePlace.Size = new System.Drawing.Size(76, 26);
+            this.lbABIMakePlace.Size = new System.Drawing.Size(117, 26);
             this.lbABIMakePlace.TabIndex = 39;
             this.lbABIMakePlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -307,6 +334,7 @@ namespace LibraryMgrProgram
             this.btnABIRemove.TabIndex = 30;
             this.btnABIRemove.Text = "삭제";
             this.btnABIRemove.UseVisualStyleBackColor = true;
+            this.btnABIRemove.Click += new System.EventHandler(this.btnABIRemove_Click);
             // 
             // lbABIMakeDay3
             // 
@@ -322,11 +350,11 @@ namespace LibraryMgrProgram
             // 
             this.lbABIMakePlace3.AutoSize = true;
             this.lbABIMakePlace3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIMakePlace3.Location = new System.Drawing.Point(165, 205);
+            this.lbABIMakePlace3.Location = new System.Drawing.Point(18, 237);
             this.lbABIMakePlace3.Name = "lbABIMakePlace3";
             this.lbABIMakePlace3.Size = new System.Drawing.Size(59, 13);
             this.lbABIMakePlace3.TabIndex = 25;
-            this.lbABIMakePlace3.Text = "발행지역";
+            this.lbABIMakePlace3.Text = "출판지역";
             // 
             // lbABIBookPage3
             // 
@@ -342,7 +370,7 @@ namespace LibraryMgrProgram
             // 
             this.lbABIBookger3.AutoSize = true;
             this.lbABIBookger3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIBookger3.Location = new System.Drawing.Point(44, 236);
+            this.lbABIBookger3.Location = new System.Drawing.Point(162, 204);
             this.lbABIBookger3.Name = "lbABIBookger3";
             this.lbABIBookger3.Size = new System.Drawing.Size(33, 13);
             this.lbABIBookger3.TabIndex = 21;
@@ -372,7 +400,7 @@ namespace LibraryMgrProgram
             // 
             this.lbABIBookExp3.AutoSize = true;
             this.lbABIBookExp3.Font = new System.Drawing.Font("Gulim", 10F);
-            this.lbABIBookExp3.Location = new System.Drawing.Point(40, 284);
+            this.lbABIBookExp3.Location = new System.Drawing.Point(40, 292);
             this.lbABIBookExp3.Name = "lbABIBookExp3";
             this.lbABIBookExp3.Size = new System.Drawing.Size(35, 14);
             this.lbABIBookExp3.TabIndex = 10;
@@ -443,10 +471,12 @@ namespace LibraryMgrProgram
             // grpABIBookAdd
             // 
             this.grpABIBookAdd.BackColor = System.Drawing.Color.White;
+            this.grpABIBookAdd.Controls.Add(this.lbABIArea2);
+            this.grpABIBookAdd.Controls.Add(this.txtABIArea2);
             this.grpABIBookAdd.Controls.Add(this.txtABIMakeDay2);
             this.grpABIBookAdd.Controls.Add(this.label1);
-            this.grpABIBookAdd.Controls.Add(this.txtAMIMakePlace2);
-            this.grpABIBookAdd.Controls.Add(this.txtAMIBookpage2);
+            this.grpABIBookAdd.Controls.Add(this.txtABIMakePlace2);
+            this.grpABIBookAdd.Controls.Add(this.txtABIBookpage2);
             this.grpABIBookAdd.Controls.Add(this.lbABIMakePlace2);
             this.grpABIBookAdd.Controls.Add(this.lbABIBookpage2);
             this.grpABIBookAdd.Controls.Add(this.comABIBookger2);
@@ -478,12 +508,29 @@ namespace LibraryMgrProgram
             this.grpABIBookAdd.TabStop = false;
             this.grpABIBookAdd.Text = "도서 추가";
             // 
+            // lbABIArea2
+            // 
+            this.lbABIArea2.AutoSize = true;
+            this.lbABIArea2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIArea2.Location = new System.Drawing.Point(5, 266);
+            this.lbABIArea2.Name = "lbABIArea2";
+            this.lbABIArea2.Size = new System.Drawing.Size(72, 13);
+            this.lbABIArea2.TabIndex = 31;
+            this.lbABIArea2.Text = "책발행지역";
+            // 
+            // txtABIArea2
+            // 
+            this.txtABIArea2.Location = new System.Drawing.Point(83, 260);
+            this.txtABIArea2.Name = "txtABIArea2";
+            this.txtABIArea2.Size = new System.Drawing.Size(220, 26);
+            this.txtABIArea2.TabIndex = 11;
+            // 
             // txtABIMakeDay2
             // 
             this.txtABIMakeDay2.Location = new System.Drawing.Point(83, 132);
             this.txtABIMakeDay2.Name = "txtABIMakeDay2";
             this.txtABIMakeDay2.Size = new System.Drawing.Size(112, 26);
-            this.txtABIMakeDay2.TabIndex = 29;
+            this.txtABIMakeDay2.TabIndex = 4;
             // 
             // label1
             // 
@@ -495,29 +542,29 @@ namespace LibraryMgrProgram
             this.label1.TabIndex = 28;
             this.label1.Text = "출판날짜";
             // 
-            // txtAMIMakePlace2
+            // txtABIMakePlace2
             // 
-            this.txtAMIMakePlace2.Location = new System.Drawing.Point(230, 199);
-            this.txtAMIMakePlace2.Name = "txtAMIMakePlace2";
-            this.txtAMIMakePlace2.Size = new System.Drawing.Size(73, 26);
-            this.txtAMIMakePlace2.TabIndex = 27;
+            this.txtABIMakePlace2.Location = new System.Drawing.Point(83, 228);
+            this.txtABIMakePlace2.Name = "txtABIMakePlace2";
+            this.txtABIMakePlace2.Size = new System.Drawing.Size(117, 26);
+            this.txtABIMakePlace2.TabIndex = 9;
             // 
-            // txtAMIBookpage2
+            // txtABIBookpage2
             // 
-            this.txtAMIBookpage2.Location = new System.Drawing.Point(253, 132);
-            this.txtAMIBookpage2.Name = "txtAMIBookpage2";
-            this.txtAMIBookpage2.Size = new System.Drawing.Size(50, 26);
-            this.txtAMIBookpage2.TabIndex = 26;
+            this.txtABIBookpage2.Location = new System.Drawing.Point(253, 132);
+            this.txtABIBookpage2.Name = "txtABIBookpage2";
+            this.txtABIBookpage2.Size = new System.Drawing.Size(50, 26);
+            this.txtABIBookpage2.TabIndex = 5;
             // 
             // lbABIMakePlace2
             // 
             this.lbABIMakePlace2.AutoSize = true;
             this.lbABIMakePlace2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIMakePlace2.Location = new System.Drawing.Point(165, 205);
+            this.lbABIMakePlace2.Location = new System.Drawing.Point(18, 234);
             this.lbABIMakePlace2.Name = "lbABIMakePlace2";
             this.lbABIMakePlace2.Size = new System.Drawing.Size(59, 13);
             this.lbABIMakePlace2.TabIndex = 25;
-            this.lbABIMakePlace2.Text = "발행지역";
+            this.lbABIMakePlace2.Text = "출판지역";
             // 
             // lbABIBookpage2
             // 
@@ -532,16 +579,19 @@ namespace LibraryMgrProgram
             // comABIBookger2
             // 
             this.comABIBookger2.FormattingEnabled = true;
-            this.comABIBookger2.Location = new System.Drawing.Point(83, 230);
+            this.comABIBookger2.Items.AddRange(new object[] {
+            "교육",
+            "철학"});
+            this.comABIBookger2.Location = new System.Drawing.Point(201, 198);
             this.comABIBookger2.Name = "comABIBookger2";
-            this.comABIBookger2.Size = new System.Drawing.Size(117, 24);
-            this.comABIBookger2.TabIndex = 23;
+            this.comABIBookger2.Size = new System.Drawing.Size(102, 24);
+            this.comABIBookger2.TabIndex = 8;
             // 
             // lbABIBookger2
             // 
             this.lbABIBookger2.AutoSize = true;
             this.lbABIBookger2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIBookger2.Location = new System.Drawing.Point(44, 236);
+            this.lbABIBookger2.Location = new System.Drawing.Point(162, 204);
             this.lbABIBookger2.Name = "lbABIBookger2";
             this.lbABIBookger2.Size = new System.Drawing.Size(33, 13);
             this.lbABIBookger2.TabIndex = 21;
@@ -552,7 +602,7 @@ namespace LibraryMgrProgram
             this.txtABIBLocation2.Location = new System.Drawing.Point(83, 196);
             this.txtABIBLocation2.Name = "txtABIBLocation2";
             this.txtABIBLocation2.Size = new System.Drawing.Size(73, 26);
-            this.txtABIBLocation2.TabIndex = 20;
+            this.txtABIBLocation2.TabIndex = 7;
             // 
             // lbABIBLocation2
             // 
@@ -570,7 +620,7 @@ namespace LibraryMgrProgram
             this.btnABIImgUplode2.Location = new System.Drawing.Point(394, 221);
             this.btnABIImgUplode2.Name = "btnABIImgUplode2";
             this.btnABIImgUplode2.Size = new System.Drawing.Size(75, 23);
-            this.btnABIImgUplode2.TabIndex = 17;
+            this.btnABIImgUplode2.TabIndex = 15;
             this.btnABIImgUplode2.Text = "불러오기";
             this.btnABIImgUplode2.UseVisualStyleBackColor = true;
             this.btnABIImgUplode2.Click += new System.EventHandler(this.btnABIImgUplode2_Click);
@@ -587,16 +637,16 @@ namespace LibraryMgrProgram
             // 
             // txtABIBookCount2
             // 
-            this.txtABIBookCount2.Location = new System.Drawing.Point(245, 230);
+            this.txtABIBookCount2.Location = new System.Drawing.Point(245, 228);
             this.txtABIBookCount2.Name = "txtABIBookCount2";
             this.txtABIBookCount2.Size = new System.Drawing.Size(58, 26);
-            this.txtABIBookCount2.TabIndex = 15;
+            this.txtABIBookCount2.TabIndex = 10;
             // 
             // lbABIBookCount2
             // 
             this.lbABIBookCount2.AutoSize = true;
             this.lbABIBookCount2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIBookCount2.Location = new System.Drawing.Point(206, 237);
+            this.lbABIBookCount2.Location = new System.Drawing.Point(206, 234);
             this.lbABIBookCount2.Name = "lbABIBookCount2";
             this.lbABIBookCount2.Size = new System.Drawing.Size(33, 13);
             this.lbABIBookCount2.TabIndex = 14;
@@ -617,24 +667,24 @@ namespace LibraryMgrProgram
             this.btnABIOk2.Location = new System.Drawing.Point(390, 452);
             this.btnABIOk2.Name = "btnABIOk2";
             this.btnABIOk2.Size = new System.Drawing.Size(75, 23);
-            this.btnABIOk2.TabIndex = 12;
+            this.btnABIOk2.TabIndex = 14;
             this.btnABIOk2.Text = "확인";
             this.btnABIOk2.UseVisualStyleBackColor = true;
             this.btnABIOk2.Click += new System.EventHandler(this.btnABIOk2_Click);
             // 
             // rtxtABIBBookExp2
             // 
-            this.rtxtABIBBookExp2.Location = new System.Drawing.Point(83, 284);
+            this.rtxtABIBBookExp2.Location = new System.Drawing.Point(83, 292);
             this.rtxtABIBBookExp2.Name = "rtxtABIBBookExp2";
-            this.rtxtABIBBookExp2.Size = new System.Drawing.Size(382, 162);
-            this.rtxtABIBBookExp2.TabIndex = 11;
+            this.rtxtABIBBookExp2.Size = new System.Drawing.Size(382, 154);
+            this.rtxtABIBBookExp2.TabIndex = 12;
             this.rtxtABIBBookExp2.Text = "";
             // 
             // lbABIBookExp2
             // 
             this.lbABIBookExp2.AutoSize = true;
             this.lbABIBookExp2.Font = new System.Drawing.Font("Gulim", 10F);
-            this.lbABIBookExp2.Location = new System.Drawing.Point(40, 284);
+            this.lbABIBookExp2.Location = new System.Drawing.Point(42, 292);
             this.lbABIBookExp2.Name = "lbABIBookExp2";
             this.lbABIBookExp2.Size = new System.Drawing.Size(35, 14);
             this.lbABIBookExp2.TabIndex = 10;
@@ -645,14 +695,14 @@ namespace LibraryMgrProgram
             this.txtABICompany2.Location = new System.Drawing.Point(83, 100);
             this.txtABICompany2.Name = "txtABICompany2";
             this.txtABICompany2.Size = new System.Drawing.Size(220, 26);
-            this.txtABICompany2.TabIndex = 9;
+            this.txtABICompany2.TabIndex = 3;
             // 
             // txtABIBookMaker2
             // 
             this.txtABIBookMaker2.Location = new System.Drawing.Point(83, 68);
             this.txtABIBookMaker2.Name = "txtABIBookMaker2";
             this.txtABIBookMaker2.Size = new System.Drawing.Size(220, 26);
-            this.txtABIBookMaker2.TabIndex = 7;
+            this.txtABIBookMaker2.TabIndex = 2;
             // 
             // label12
             // 
@@ -688,7 +738,7 @@ namespace LibraryMgrProgram
             this.txtABIISBN2.Location = new System.Drawing.Point(83, 164);
             this.txtABIISBN2.Name = "txtABIISBN2";
             this.txtABIISBN2.Size = new System.Drawing.Size(220, 26);
-            this.txtABIISBN2.TabIndex = 3;
+            this.txtABIISBN2.TabIndex = 6;
             // 
             // label15
             // 
@@ -733,8 +783,10 @@ namespace LibraryMgrProgram
             // grpABIBookModi
             // 
             this.grpABIBookModi.BackColor = System.Drawing.Color.White;
+            this.grpABIBookModi.Controls.Add(this.lbABIArea1);
             this.grpABIBookModi.Controls.Add(this.ImgAMView5);
             this.grpABIBookModi.Controls.Add(this.txtABIMakeDay1);
+            this.grpABIBookModi.Controls.Add(this.txtABIArea1);
             this.grpABIBookModi.Controls.Add(this.lbABIMakeDay1);
             this.grpABIBookModi.Controls.Add(this.txtABIMakePlace1);
             this.grpABIBookModi.Controls.Add(this.txtABIBookpage1);
@@ -768,6 +820,16 @@ namespace LibraryMgrProgram
             this.grpABIBookModi.TabStop = false;
             this.grpABIBookModi.Text = "도서 수정";
             // 
+            // lbABIArea1
+            // 
+            this.lbABIArea1.AutoSize = true;
+            this.lbABIArea1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIArea1.Location = new System.Drawing.Point(5, 268);
+            this.lbABIArea1.Name = "lbABIArea1";
+            this.lbABIArea1.Size = new System.Drawing.Size(72, 13);
+            this.lbABIArea1.TabIndex = 33;
+            this.lbABIArea1.Text = "책발행지역";
+            // 
             // ImgAMView5
             // 
             this.ImgAMView5.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -783,7 +845,14 @@ namespace LibraryMgrProgram
             this.txtABIMakeDay1.Location = new System.Drawing.Point(83, 132);
             this.txtABIMakeDay1.Name = "txtABIMakeDay1";
             this.txtABIMakeDay1.Size = new System.Drawing.Size(112, 26);
-            this.txtABIMakeDay1.TabIndex = 29;
+            this.txtABIMakeDay1.TabIndex = 4;
+            // 
+            // txtABIArea1
+            // 
+            this.txtABIArea1.Location = new System.Drawing.Point(83, 262);
+            this.txtABIArea1.Name = "txtABIArea1";
+            this.txtABIArea1.Size = new System.Drawing.Size(220, 26);
+            this.txtABIArea1.TabIndex = 32;
             // 
             // lbABIMakeDay1
             // 
@@ -797,27 +866,27 @@ namespace LibraryMgrProgram
             // 
             // txtABIMakePlace1
             // 
-            this.txtABIMakePlace1.Location = new System.Drawing.Point(230, 199);
+            this.txtABIMakePlace1.Location = new System.Drawing.Point(83, 228);
             this.txtABIMakePlace1.Name = "txtABIMakePlace1";
-            this.txtABIMakePlace1.Size = new System.Drawing.Size(73, 26);
-            this.txtABIMakePlace1.TabIndex = 27;
+            this.txtABIMakePlace1.Size = new System.Drawing.Size(117, 26);
+            this.txtABIMakePlace1.TabIndex = 8;
             // 
             // txtABIBookpage1
             // 
             this.txtABIBookpage1.Location = new System.Drawing.Point(253, 132);
             this.txtABIBookpage1.Name = "txtABIBookpage1";
             this.txtABIBookpage1.Size = new System.Drawing.Size(50, 26);
-            this.txtABIBookpage1.TabIndex = 26;
+            this.txtABIBookpage1.TabIndex = 5;
             // 
             // lbABIMakePlace1
             // 
             this.lbABIMakePlace1.AutoSize = true;
             this.lbABIMakePlace1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIMakePlace1.Location = new System.Drawing.Point(165, 205);
+            this.lbABIMakePlace1.Location = new System.Drawing.Point(18, 236);
             this.lbABIMakePlace1.Name = "lbABIMakePlace1";
             this.lbABIMakePlace1.Size = new System.Drawing.Size(59, 13);
             this.lbABIMakePlace1.TabIndex = 25;
-            this.lbABIMakePlace1.Text = "발행지역";
+            this.lbABIMakePlace1.Text = "출판지역";
             // 
             // lbABIBookpage1
             // 
@@ -832,16 +901,16 @@ namespace LibraryMgrProgram
             // comABIBookger1
             // 
             this.comABIBookger1.FormattingEnabled = true;
-            this.comABIBookger1.Location = new System.Drawing.Point(83, 230);
+            this.comABIBookger1.Location = new System.Drawing.Point(201, 196);
             this.comABIBookger1.Name = "comABIBookger1";
-            this.comABIBookger1.Size = new System.Drawing.Size(117, 24);
+            this.comABIBookger1.Size = new System.Drawing.Size(102, 24);
             this.comABIBookger1.TabIndex = 23;
             // 
             // lbABIBookger1
             // 
             this.lbABIBookger1.AutoSize = true;
             this.lbABIBookger1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbABIBookger1.Location = new System.Drawing.Point(44, 236);
+            this.lbABIBookger1.Location = new System.Drawing.Point(162, 202);
             this.lbABIBookger1.Name = "lbABIBookger1";
             this.lbABIBookger1.Size = new System.Drawing.Size(33, 13);
             this.lbABIBookger1.TabIndex = 21;
@@ -852,7 +921,7 @@ namespace LibraryMgrProgram
             this.txtABIBLocation1.Location = new System.Drawing.Point(83, 196);
             this.txtABIBLocation1.Name = "txtABIBLocation1";
             this.txtABIBLocation1.Size = new System.Drawing.Size(73, 26);
-            this.txtABIBLocation1.TabIndex = 20;
+            this.txtABIBLocation1.TabIndex = 7;
             // 
             // lbABIBLocation1
             // 
@@ -899,6 +968,7 @@ namespace LibraryMgrProgram
             this.btnABIClear1.TabIndex = 13;
             this.btnABIClear1.Text = "초기화";
             this.btnABIClear1.UseVisualStyleBackColor = true;
+            this.btnABIClear1.Click += new System.EventHandler(this.btnABIClear1_Click);
             // 
             // btnABIOk1
             // 
@@ -908,10 +978,11 @@ namespace LibraryMgrProgram
             this.btnABIOk1.TabIndex = 12;
             this.btnABIOk1.Text = "확인";
             this.btnABIOk1.UseVisualStyleBackColor = true;
+            this.btnABIOk1.Click += new System.EventHandler(this.btnABIOk1_Click);
             // 
             // rtxtABIBBookExp1
             // 
-            this.rtxtABIBBookExp1.Location = new System.Drawing.Point(83, 284);
+            this.rtxtABIBBookExp1.Location = new System.Drawing.Point(83, 292);
             this.rtxtABIBBookExp1.Name = "rtxtABIBBookExp1";
             this.rtxtABIBBookExp1.Size = new System.Drawing.Size(382, 162);
             this.rtxtABIBBookExp1.TabIndex = 11;
@@ -921,7 +992,7 @@ namespace LibraryMgrProgram
             // 
             this.lbABIBookExp1.AutoSize = true;
             this.lbABIBookExp1.Font = new System.Drawing.Font("Gulim", 10F);
-            this.lbABIBookExp1.Location = new System.Drawing.Point(40, 284);
+            this.lbABIBookExp1.Location = new System.Drawing.Point(40, 292);
             this.lbABIBookExp1.Name = "lbABIBookExp1";
             this.lbABIBookExp1.Size = new System.Drawing.Size(35, 14);
             this.lbABIBookExp1.TabIndex = 10;
@@ -932,14 +1003,14 @@ namespace LibraryMgrProgram
             this.txtABICompany1.Location = new System.Drawing.Point(83, 100);
             this.txtABICompany1.Name = "txtABICompany1";
             this.txtABICompany1.Size = new System.Drawing.Size(220, 26);
-            this.txtABICompany1.TabIndex = 9;
+            this.txtABICompany1.TabIndex = 3;
             // 
             // txtABIBookMaker1
             // 
             this.txtABIBookMaker1.Location = new System.Drawing.Point(83, 68);
             this.txtABIBookMaker1.Name = "txtABIBookMaker1";
             this.txtABIBookMaker1.Size = new System.Drawing.Size(220, 26);
-            this.txtABIBookMaker1.TabIndex = 7;
+            this.txtABIBookMaker1.TabIndex = 2;
             // 
             // label8
             // 
@@ -975,7 +1046,7 @@ namespace LibraryMgrProgram
             this.txtABIISBN1.Location = new System.Drawing.Point(83, 164);
             this.txtABIISBN1.Name = "txtABIISBN1";
             this.txtABIISBN1.Size = new System.Drawing.Size(220, 26);
-            this.txtABIISBN1.TabIndex = 3;
+            this.txtABIISBN1.TabIndex = 6;
             // 
             // lbABIISBN1
             // 
@@ -1166,8 +1237,8 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.GroupBox grpABIBookAdd;
         private System.Windows.Forms.TextBox txtABIMakeDay2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAMIMakePlace2;
-        private System.Windows.Forms.TextBox txtAMIBookpage2;
+        private System.Windows.Forms.TextBox txtABIMakePlace2;
+        private System.Windows.Forms.TextBox txtABIBookpage2;
         private System.Windows.Forms.Label lbABIMakePlace2;
         private System.Windows.Forms.Label lbABIBookpage2;
         private System.Windows.Forms.ComboBox comABIBookger2;
@@ -1193,5 +1264,11 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label lbABIBookName2;
         private System.Windows.Forms.PictureBox ImgAMView4;
         private System.Windows.Forms.PictureBox ImgAMView5;
+        private System.Windows.Forms.Label lbABIArea2;
+        private System.Windows.Forms.TextBox txtABIArea2;
+        private System.Windows.Forms.Label lbABIArea;
+        private System.Windows.Forms.Label lbABIArea3;
+        private System.Windows.Forms.Label lbABIArea1;
+        private System.Windows.Forms.TextBox txtABIArea1;
     }
 }

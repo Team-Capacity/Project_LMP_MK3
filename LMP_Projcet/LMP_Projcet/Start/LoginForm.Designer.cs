@@ -54,7 +54,7 @@ namespace LMP_Projcet
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 30F);
+            this.label1.Font = new System.Drawing.Font("Gulim", 30F);
             this.label1.Location = new System.Drawing.Point(197, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 40);
@@ -64,7 +64,7 @@ namespace LMP_Projcet
             // labLogID
             // 
             this.labLogID.AutoSize = true;
-            this.labLogID.Font = new System.Drawing.Font("굴림", 10F);
+            this.labLogID.Font = new System.Drawing.Font("Gulim", 10F);
             this.labLogID.Location = new System.Drawing.Point(104, 190);
             this.labLogID.Name = "labLogID";
             this.labLogID.Size = new System.Drawing.Size(64, 14);
@@ -74,8 +74,8 @@ namespace LMP_Projcet
             // labLogPW
             // 
             this.labLogPW.AutoSize = true;
-            this.labLogPW.Font = new System.Drawing.Font("굴림", 10F);
-            this.labLogPW.Location = new System.Drawing.Point(90, 257);
+            this.labLogPW.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLogPW.Location = new System.Drawing.Point(90, 242);
             this.labLogPW.Name = "labLogPW";
             this.labLogPW.Size = new System.Drawing.Size(78, 14);
             this.labLogPW.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace LMP_Projcet
             // 
             // txtLFPW
             // 
-            this.txtLFPW.Location = new System.Drawing.Point(181, 255);
+            this.txtLFPW.Location = new System.Drawing.Point(181, 240);
             this.txtLFPW.Name = "txtLFPW";
             this.txtLFPW.PasswordChar = '*';
             this.txtLFPW.Size = new System.Drawing.Size(201, 21);
@@ -100,8 +100,8 @@ namespace LMP_Projcet
             // labLFSearch
             // 
             this.labLFSearch.AutoSize = true;
-            this.labLFSearch.Font = new System.Drawing.Font("굴림", 10F);
-            this.labLFSearch.Location = new System.Drawing.Point(81, 313);
+            this.labLFSearch.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLFSearch.Location = new System.Drawing.Point(81, 299);
             this.labLFSearch.Name = "labLFSearch";
             this.labLFSearch.Size = new System.Drawing.Size(144, 14);
             this.labLFSearch.TabIndex = 5;
@@ -111,8 +111,8 @@ namespace LMP_Projcet
             // labLFAddMem
             // 
             this.labLFAddMem.AutoSize = true;
-            this.labLFAddMem.Font = new System.Drawing.Font("굴림", 10F);
-            this.labLFAddMem.Location = new System.Drawing.Point(266, 313);
+            this.labLFAddMem.Font = new System.Drawing.Font("Gulim", 10F);
+            this.labLFAddMem.Location = new System.Drawing.Point(266, 299);
             this.labLFAddMem.Name = "labLFAddMem";
             this.labLFAddMem.Size = new System.Drawing.Size(63, 14);
             this.labLFAddMem.TabIndex = 6;
@@ -122,7 +122,7 @@ namespace LMP_Projcet
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 354);
+            this.label2.Location = new System.Drawing.Point(34, 340);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(401, 12);
             this.label2.TabIndex = 7;
@@ -130,8 +130,8 @@ namespace LMP_Projcet
             // 
             // btnLFLogin
             // 
-            this.btnLFLogin.Font = new System.Drawing.Font("굴림", 20F);
-            this.btnLFLogin.Location = new System.Drawing.Point(61, 408);
+            this.btnLFLogin.Font = new System.Drawing.Font("Gulim", 20F);
+            this.btnLFLogin.Location = new System.Drawing.Point(61, 375);
             this.btnLFLogin.Name = "btnLFLogin";
             this.btnLFLogin.Size = new System.Drawing.Size(150, 50);
             this.btnLFLogin.TabIndex = 8;
@@ -162,8 +162,8 @@ namespace LMP_Projcet
             // 
             // btnLFNonLogin
             // 
-            this.btnLFNonLogin.Font = new System.Drawing.Font("굴림", 20F);
-            this.btnLFNonLogin.Location = new System.Drawing.Point(242, 408);
+            this.btnLFNonLogin.Font = new System.Drawing.Font("Gulim", 20F);
+            this.btnLFNonLogin.Location = new System.Drawing.Point(242, 375);
             this.btnLFNonLogin.Name = "btnLFNonLogin";
             this.btnLFNonLogin.Size = new System.Drawing.Size(150, 50);
             this.btnLFNonLogin.TabIndex = 11;
@@ -198,13 +198,16 @@ namespace LMP_Projcet
             this.tableLayoutPanel1.Controls.Add(this.button3, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 2);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, -1);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(601, 35);
             this.tableLayoutPanel1.TabIndex = 132;
+            this.tableLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
+            this.tableLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseMove);
+            this.tableLayoutPanel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseUp);
             // 
             // button1
             // 
@@ -212,7 +215,7 @@ namespace LMP_Projcet
             this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("굴림", 10F);
+            this.button1.Font = new System.Drawing.Font("Gulim", 10F);
             this.button1.Location = new System.Drawing.Point(578, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 20);
@@ -227,7 +230,7 @@ namespace LMP_Projcet
             this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("굴림", 10F);
+            this.button2.Font = new System.Drawing.Font("Gulim", 10F);
             this.button2.Location = new System.Drawing.Point(552, 6);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(19, 20);
@@ -242,7 +245,7 @@ namespace LMP_Projcet
             this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("굴림", 10F);
+            this.button3.Font = new System.Drawing.Font("Gulim", 10F);
             this.button3.Location = new System.Drawing.Point(524, 6);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(20, 20);
@@ -254,7 +257,7 @@ namespace LMP_Projcet
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.Font = new System.Drawing.Font("굴림", 15F);
+            this.label3.Font = new System.Drawing.Font("Gulim", 15F);
             this.label3.Location = new System.Drawing.Point(3, 7);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(84, 23);
@@ -272,6 +275,7 @@ namespace LMP_Projcet
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Text = "로그인폼";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.LoginForm_Load);
             this.grpLogLogin.ResumeLayout(false);
             this.grpLogLogin.PerformLayout();

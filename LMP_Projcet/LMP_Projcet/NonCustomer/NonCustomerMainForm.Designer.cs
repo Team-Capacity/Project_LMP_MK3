@@ -81,7 +81,7 @@ namespace LibraryMgrProgram
             this.btnNCMMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCMMax.FlatAppearance.BorderSize = 0;
             this.btnNCMMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMMax.Font = new System.Drawing.Font("굴림", 15F);
+            this.btnNCMMax.Font = new System.Drawing.Font("Gulim", 15F);
             this.btnNCMMax.Location = new System.Drawing.Point(1336, 6);
             this.btnNCMMax.Name = "btnNCMMax";
             this.btnNCMMax.Size = new System.Drawing.Size(20, 20);
@@ -96,7 +96,7 @@ namespace LibraryMgrProgram
             this.btnNCMMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCMMin.FlatAppearance.BorderSize = 0;
             this.btnNCMMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMMin.Font = new System.Drawing.Font("굴림", 15F);
+            this.btnNCMMin.Font = new System.Drawing.Font("Gulim", 15F);
             this.btnNCMMin.Location = new System.Drawing.Point(1296, 6);
             this.btnNCMMin.Name = "btnNCMMin";
             this.btnNCMMin.Size = new System.Drawing.Size(20, 20);
@@ -111,7 +111,7 @@ namespace LibraryMgrProgram
             this.btnNCMClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCMClose.FlatAppearance.BorderSize = 0;
             this.btnNCMClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMClose.Font = new System.Drawing.Font("굴림", 15F);
+            this.btnNCMClose.Font = new System.Drawing.Font("Gulim", 15F);
             this.btnNCMClose.Location = new System.Drawing.Point(1376, 6);
             this.btnNCMClose.Name = "btnNCMClose";
             this.btnNCMClose.Size = new System.Drawing.Size(20, 20);
@@ -123,7 +123,7 @@ namespace LibraryMgrProgram
             // lbNCMLogin
             // 
             this.lbNCMLogin.AutoSize = true;
-            this.lbNCMLogin.Font = new System.Drawing.Font("굴림", 12F);
+            this.lbNCMLogin.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbNCMLogin.ForeColor = System.Drawing.Color.Black;
             this.lbNCMLogin.Location = new System.Drawing.Point(1316, 85);
             this.lbNCMLogin.Name = "lbNCMLogin";
@@ -136,7 +136,7 @@ namespace LibraryMgrProgram
             // 
             this.lbNCMOperation.AutoSize = true;
             this.lbNCMOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCMOperation.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbNCMOperation.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbNCMOperation.Location = new System.Drawing.Point(528, 135);
             this.lbNCMOperation.Name = "lbNCMOperation";
             this.lbNCMOperation.Size = new System.Drawing.Size(120, 27);
@@ -147,7 +147,7 @@ namespace LibraryMgrProgram
             // 
             this.lbNCMBookInfo.AutoSize = true;
             this.lbNCMBookInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCMBookInfo.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbNCMBookInfo.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbNCMBookInfo.Location = new System.Drawing.Point(328, 135);
             this.lbNCMBookInfo.Name = "lbNCMBookInfo";
             this.lbNCMBookInfo.Size = new System.Drawing.Size(93, 27);
@@ -203,7 +203,7 @@ namespace LibraryMgrProgram
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNCMHome.AutoSize = true;
             this.lbNCMHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbNCMHome.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbNCMHome.Font = new System.Drawing.Font("Gulim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbNCMHome.Location = new System.Drawing.Point(12, 135);
             this.lbNCMHome.Name = "lbNCMHome";
             this.lbNCMHome.Size = new System.Drawing.Size(209, 34);
@@ -244,6 +244,7 @@ namespace LibraryMgrProgram
             this.Name = "NonCustomerMainForm";
             this.RightToLeftLayout = true;
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NonCustomerMainForm_FormClosing);
             this.Load += new System.EventHandler(this.NonCustomerMainForm_Load);
             this.plnNCM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCM)).EndInit();

@@ -28,20 +28,20 @@ namespace LibraryMgrProgram
             string name = txtSerName.Text;
             string bir = txtSerBir.Text;
             string ph = txtSerPH.Text;
-            string ID = "select * from Customer where CID";
-            string sql = "select CID from Customer where CName = '" + name + "'" + "and CBirth = '" + bir + "';" +"and CPH = '" + ph + "';";
+            string sql = "select * from Customer where CName = '" + name + "'" + "and CBirth = '" + bir + "'" +"and CPH = '" + ph + "';";
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
-                while (dbReader.Read() == true)
+                while (dbReader.Read())
                 {
-                    name = dbReader["CName"] as String;
-                    bir = dbReader["CBirth"] as String;
-                    ph = dbReader["CPH"] as String;
+                    string serName = dbReader["CName"] as String;
+                    string serBir = dbReader["CBirth"] as String;
+                    string serPh = dbReader["CPH"] as String;
+                    string result = dbReader["CID"] as String;
 
-                    if (name.Equals(sql) == bir.Equals(sql) == ph.Equals(sql)){
-                        MessageBox.Show("");
+                    if (name.Equals(serName) && bir.Equals(serBir) && ph.Equals(serPh)){
+                        MessageBox.Show("아이디 : " + result);
                     }
                 }   
                     dbReader.Close();

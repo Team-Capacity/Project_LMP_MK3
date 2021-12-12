@@ -38,6 +38,7 @@ namespace LibraryMgrProgram
         CustomerOperationForm cof = new CustomerOperationForm();
         CustomerContentsForm ccf = new CustomerContentsForm();
         CustomerBookInfoForm cbi = new CustomerBookInfoForm();
+        public static string myname;
 
 
         private void plnCM_MouseDown(object sender, MouseEventArgs e)
@@ -67,13 +68,9 @@ namespace LibraryMgrProgram
 
         private void btnCMClose_Click_1(object sender, EventArgs e)
         {
-            mouseEvent.ButtonClose(this);
+            //mouseEvent.ButtonClose(this);
+            Application.Exit();
         }
-
-
-     
-
-
 
 
         //로그아웃 -> 로그인 화면으로 이동
@@ -84,37 +81,31 @@ namespace LibraryMgrProgram
             formChange.ChangeF(this,lf) ;
         }
 
+        dbTest db = new dbTest();
         //공지사항,추천도서,현황 기본으로 로드
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
-        
             formChange.ChangeFIF(ccf, palCMMain);
-          
+            db.dbConnection();
+            // 4단계
+            string sql = "select cName from Customer where CID = '9';";
+            lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
+            myname = lbCMCustomer.Text;
+
         }
 
         //회원정보 클릭시 내정보
         private void lbCMInfo_Click(object sender, EventArgs e)
         {
-
             formChange.ChangeFIF(cmi, palCMMain);
         }
 
 
         //환경설정 클릭시 이벤트
         private void lbCMOperation_Click(object sender, EventArgs e)
-        {
-           
-            formChange.ChangeFIF(cof, palCMMain);
-            
-            
-            
+        { 
+            formChange.ChangeFIF(cof, palCMMain);     
         }
-
-      
-
-   
-
-      
 
         private void plnCM_Paint(object sender, PaintEventArgs e)
         {
@@ -131,5 +122,9 @@ namespace LibraryMgrProgram
             
         }
 
+        private void CustomerMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

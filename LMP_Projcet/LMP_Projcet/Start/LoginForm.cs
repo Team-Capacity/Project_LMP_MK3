@@ -31,8 +31,8 @@ namespace LMP_Projcet
 
         private void btnLFNonLogin_Click(object sender, EventArgs e)
         {
-            NonCustomerMainForm nonCustomerMainForm = new NonCustomerMainForm();
-            nonCustomerMainForm.Show();
+            NonCustomerMainForm ncmf = new NonCustomerMainForm();
+            ncmf.Show();
             this.Hide();
         }
 
@@ -41,21 +41,6 @@ namespace LMP_Projcet
 
         }
 
-
-        private void btnLFMin_Click(object sender, EventArgs e)
-        {
-            mouseEvent.FormMinSize(this);
-        }
-
-        private void btnLFMax_Click(object sender, EventArgs e)
-        {
-            mouseEvent.FormMaxSize(this);
-        }
-
-        private void btnLFClose_Click(object sender, EventArgs e)
-        {
-            mouseEvent.ButtonClose(this);
-        }
 
         private void plnAM_MouseDown(object sender, MouseEventArgs e)
         {
@@ -114,13 +99,11 @@ namespace LMP_Projcet
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }
-                if (rank.Equals("2"))
+                }else if (rank.Equals("2"))
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }
-                if(rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
+                }else if(rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
                 {
                     CustomerMainForm cmf = new CustomerMainForm();
                     formChange.ChangeF(this, cmf);
@@ -147,6 +130,11 @@ namespace LMP_Projcet
         private void button3_Click(object sender, EventArgs e)
         {
             mouseEvent.FormMinSize(this);
+        }
+
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
