@@ -22,7 +22,6 @@ namespace LMP_Projcet.Start
     {
         int count = 0;
         dbTest db = new dbTest();
-        int count = 0;
         public MemberAddForm()
         {
             InitializeComponent();
