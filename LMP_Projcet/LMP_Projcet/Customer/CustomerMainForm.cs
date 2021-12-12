@@ -102,7 +102,7 @@ namespace LibraryMgrProgram
            
         
                 // 이렇게하면 회원은 무조건 hello가뜸
-                sql = "select cName from customer where CID = 'hello' ;";
+                sql = "select cName from Customer where CID = '9' ;";
 
     
             lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
