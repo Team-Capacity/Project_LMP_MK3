@@ -660,7 +660,6 @@ namespace LibraryMgrProgram
             this.btnABIClear2.TabIndex = 13;
             this.btnABIClear2.Text = "초기화";
             this.btnABIClear2.UseVisualStyleBackColor = true;
-            this.btnABIClear2.Click += new System.EventHandler(this.btnABIClear2_Click);
             // 
             // btnABIOk2
             // 

@@ -43,8 +43,8 @@ namespace LibraryMgrProgram
                     if (name.Equals(serName) && bir.Equals(serBir) && ph.Equals(serPh)){
                         MessageBox.Show("아이디 : " + result);
                     }
-                }   
-                    dbReader.Close();
+                }
+                dbReader.Close();
             }
             catch (Exception)
             {

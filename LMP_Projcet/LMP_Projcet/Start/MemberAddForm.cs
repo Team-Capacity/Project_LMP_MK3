@@ -15,10 +15,12 @@ using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace LMP_Projcet.Start
+    
 
 {
     public partial class MemberAddForm : Form
     {
+        int count = 0;
         dbTest db = new dbTest();
         int count = 0;
         public MemberAddForm()
@@ -30,6 +32,8 @@ namespace LMP_Projcet.Start
 
         private void MemberAddForm_Load(object sender, EventArgs e)
         {
+
+            TootMA.SetToolTip(txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
 
             //생년월일 콤보박스에 값 추가
             int choice;
@@ -55,6 +59,10 @@ namespace LMP_Projcet.Start
 
             txtMA_PwCheck.PasswordChar = '*';
             txtMA_PwCheck.MaxLength = 16;
+
+           
+
+
         }
 
 
@@ -141,8 +149,10 @@ namespace LMP_Projcet.Start
             }
         }
 
+
         private void btnMA_Join_Click(object sender, EventArgs e)
         {
+
             db.dbConnection();
             string id = txtMA_Id.Text;
             string pw = txtMA_Pw.Text;
@@ -152,22 +162,22 @@ namespace LMP_Projcet.Start
             string Year = cmbMA_Year.Text;
             string Month = cmbMA_Month.Text;
             string Day = cmbMA_Day.Text;
-            
 
-            if(count == 0)
+
+            if (count == 0)
             {
                 MessageBox.Show("중복확인버튼을 눌러주세요.");
                 return;
             }
 
-           
-            try
-            {
+            try {
                 if (!IsValName(txtMA_Name.Text))
                 {
                     MessageBox.Show("이름을 한글로 2~5글자로 입력해주세요");
                     return;
                 }
+               
+
                 if (!IsValidPassword(txtMA_Pw.Text))
                 {
                     MessageBox.Show("비밀번호는 8글자이상, 영문, 숫자, 특수문자를 포함해야합니다.");
@@ -191,16 +201,8 @@ namespace LMP_Projcet.Start
                     return;
                 }
 
-                if (!IsValDay(cmbMA_Day.Text))
-                {
+                if (!IsValDay(cmbMA_Day.Text)) {
                     MessageBox.Show("일 에 숫자와 1~2글자로입력해주세요");
-                    return;
-                }
-
-
-                if (!IsValPH(txtMA_Phone.Text))
-                {
-                    MessageBox.Show("핸드폰번호에 - 를 입력하여 번호를입력해주세요");
                     return;
                 }
 
@@ -210,35 +212,36 @@ namespace LMP_Projcet.Start
                     return;
                 }
 
+                if (!IsValPH(txtMA_Phone.Text))
+                {
+                    MessageBox.Show("핸드폰번호에 - 를 입력하여 번호를입력해주세요");
+                    return;
+                }
 
 
-                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CDate, CRank, CGender, CMemo, CLoanCot) values("
+
+                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CRank, CGender) values("
                 + ",'" + txtMA_Id.Text + "'"
                 + ",'" + txtMA_Pw.Text + "'"
                 + ",'" + txtMA_Name.Text + "'"
                 + "," + txtMA_Phone.Text + "'"
                 + ",'" + cmbMA_Year + "/" + cmbMA_Month + "/" + cmbMA_Day + "'"
                 + ",'"
-                + ",'"
-                + ",'3'"
-                + ","
-                + ",'"
-                + ",'";
+                + ",'" +'3'
+                + ",'" + grpcMA_Sex +"'";
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
 
-
+               
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("성공적으로 추가 되었습니다.");
                     db.conn.Close();
-                    count = 0;
                 }
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show("DB수정에 실패하였습니다.");
-                count = 0;
             }
         }
         public static bool IsValMonth(string Text)
@@ -286,9 +289,12 @@ namespace LMP_Projcet.Start
             return Pmatch.Success;
         }
 
+
         private void MemberAddForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+        
+
     }
 }

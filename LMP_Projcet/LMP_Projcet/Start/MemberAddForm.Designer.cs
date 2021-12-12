@@ -29,6 +29,7 @@ namespace LMP_Projcet.Start
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbMA_Join = new System.Windows.Forms.Label();
             this.btnMA_Cancel = new System.Windows.Forms.Button();
@@ -57,6 +58,7 @@ namespace LMP_Projcet.Start
             this.btnMAMax = new System.Windows.Forms.Button();
             this.btnMAMin = new System.Windows.Forms.Button();
             this.btnMAClose = new System.Windows.Forms.Button();
+            this.TootMA = new System.Windows.Forms.ToolTip(this.components);
             this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
             this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
             this.rdbMA_Man = new System.Windows.Forms.RadioButton();
@@ -267,6 +269,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Pw.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Pw.TabIndex = 15;
             this.txtMA_Pw.Text = "seethepw@123";
+            this.TootMA.SetToolTip(this.txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
             // 
             // lbMA_Birth
             // 
@@ -414,7 +417,7 @@ namespace LMP_Projcet.Start
             // rdbMA_Wom
             // 
             this.rdbMA_Wom.AutoSize = true;
-            this.rdbMA_Wom.Font = new System.Drawing.Font("Gulim", 10F);
+            this.rdbMA_Wom.Font = new System.Drawing.Font("굴림", 10F);
             this.rdbMA_Wom.Location = new System.Drawing.Point(63, 9);
             this.rdbMA_Wom.Name = "rdbMA_Wom";
             this.rdbMA_Wom.Size = new System.Drawing.Size(53, 18);
@@ -426,7 +429,7 @@ namespace LMP_Projcet.Start
             // rdbMA_Man
             // 
             this.rdbMA_Man.AutoSize = true;
-            this.rdbMA_Man.Font = new System.Drawing.Font("Gulim", 10F);
+            this.rdbMA_Man.Font = new System.Drawing.Font("굴림", 10F);
             this.rdbMA_Man.Location = new System.Drawing.Point(6, 10);
             this.rdbMA_Man.Name = "rdbMA_Man";
             this.rdbMA_Man.Size = new System.Drawing.Size(53, 18);
@@ -491,5 +494,6 @@ namespace LMP_Projcet.Start
         private System.Windows.Forms.Button btnMAMax;
         private System.Windows.Forms.Button btnMAMin;
         private System.Windows.Forms.Button btnMAClose;
+        private System.Windows.Forms.ToolTip TootMA;
     }
 }
