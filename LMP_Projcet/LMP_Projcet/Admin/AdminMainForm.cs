@@ -101,5 +101,7 @@ namespace LibraryMgrProgram
         {
             formChange.ChangeFIF(aCusMgrForm, palAMMain);
         }
+
+        
     }
 }

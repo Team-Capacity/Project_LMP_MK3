@@ -25,15 +25,16 @@ namespace LMP_Projcet.Customer
 
         DataTable dbdataset;
         BindingSource bSource;
-        dbConnect db = new dbConnect();
+        dbConnect dc = new dbConnect();
+        dbTest db = new dbTest();
 
         //Mysql 접근
-        private void reload()
+        private void reload(string sqlQuery)
         {
-            string constring = "datasource = 127.0.0.1; port = 3309; username = root; password=533939; Charset=utf8";
-            string sql = "select * from lmp.book;";
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDatabase = new MySqlCommand(sql, conDataBase);
+
+            db.dbConnection();
+            MySqlCommand cmdDatabase = new MySqlCommand(sqlQuery, db.conn);
+     
 
             try
             {
@@ -48,27 +49,24 @@ namespace LMP_Projcet.Customer
                 dgvCBIBookList.DataSource = bSource;
                 sda.Update(dbdataset);
 
-                dgvCBIBookList.Columns[0].HeaderText = "책 번호";
-
-                dgvCBIBookList.Columns[0].ReadOnly = true;
-
-
 
                 //DB book테이블 컬럼을 DataGridView로 출력하는 반복문
-                String[] name = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "날짜", "설명" };
-                for (int i = 0; i <= 12; i++)
+                String[] name = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "발행 날짜", "설명","책 추가 날짜" };
+                for (int i = 0; i <= 13; i++)
                 {
                     dgvCBIBookList.Columns[i].HeaderText = name[i];
                 }
 
+                dgvCBIBookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+
                 //나머지 컬럼 빈칸으로 보여지게 함.
                 for (int i = 0; i < 40; i++)
                 {
-                    dbdataset.Rows.Add(null, "", "", "", null, "", "", "", "", null, "", null, "");
+                    dbdataset.Rows.Add(null, "", "", "", null, "", "", "", "", null, "", null, "",null);
                 }
 
 
-                dgvCBIBookList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+           
 
 
 
@@ -80,18 +78,12 @@ namespace LMP_Projcet.Customer
         }
 
         //책 제목 OR 저자 검색시 DataGridView에 해당 조건에 맞는 내용만 보이게 하는 함수
-        private void Search()
+        private void Search(string sqlQuery)
         {
-            string constring = "datasource = 127.0.0.1; port = 3309; username = root; password=533939; Charset=utf8";
 
-
-
-            string sql = ("select * from lmp.Book where BName = '" + txtCBISerBar.Text + "' OR BAuthor = '" + txtCBISerBar.Text + "';").ToString();
-
-            MySqlConnection conDataBase = new MySqlConnection(constring);
-            MySqlCommand cmdDatabase = new MySqlCommand(sql, conDataBase);
-
-
+            db.dbConnection();
+            MySqlCommand cmdDatabase = new MySqlCommand(sqlQuery, db.conn);
+            
 
             try
             {
@@ -107,8 +99,8 @@ namespace LMP_Projcet.Customer
                 sda.Update(dbdataset);
 
                 //DB book테이블 컬럼을 DataGridView로 출력하는 반복문
-                String[] name = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "날짜", "설명" };
-                for (int i = 0; i <= 12; i++)
+                String[] name = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "발행 날짜", "설명", "책추가" };
+                for (int i = 0; i < 14; i++)
                 {
                     dgvCBIBookList.Columns[i].HeaderText = name[i];
                 }
@@ -124,15 +116,10 @@ namespace LMP_Projcet.Customer
             }
         }
 
-          
-
-
-
-
-
         private void CustomerBookInfoForm_Load(object sender, EventArgs e)
         {
-            reload();
+            String sqlQ = "select * from lmp.Book;";
+            reload(sqlQ);
         }
 
 
@@ -166,19 +153,22 @@ namespace LMP_Projcet.Customer
 
             if (txtCBISerBar.Text == "")
             {
-                reload();
+                String sqlQ = "select * from lmp.Book;";
+                reload(sqlQ);
             }
             //콤보박스 제목 누를 시 제목으로 책검색, 저자 누를시 저자이름으로 검색 결과 뜨도록 나옴
             else
             {
                 if(cmbCBISerList.SelectedItem.Equals("제목"))
                 {
-                    Search();
+                    string sql = ("select * from lmp.Book where BName = '" + txtCBISerBar.Text + "';").ToString();
+                    Search(sql);
                 }
 
                 else if (cmbCBISerList.SelectedItem.Equals("저자"))
                 {
-                   Search();
+                    string sql = ("select * from lmp.Book where BAuthor = '" + txtCBISerBar.Text + "';").ToString();
+                    Search(sql);
                 }
 
             }

@@ -73,18 +73,17 @@ namespace LibraryMgrProgram
             this.palCMMain.Name = "palCMMain";
             this.palCMMain.Size = new System.Drawing.Size(1376, 553);
             this.palCMMain.TabIndex = 131;
-           
             // 
             // lbCMCustomer
             // 
             this.lbCMCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCMCustomer.AutoSize = true;
-            this.lbCMCustomer.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbCMCustomer.Location = new System.Drawing.Point(1196, 56);
+            this.lbCMCustomer.Font = new System.Drawing.Font("굴림", 14F);
+            this.lbCMCustomer.Location = new System.Drawing.Point(1223, 56);
             this.lbCMCustomer.Name = "lbCMCustomer";
             this.lbCMCustomer.Size = new System.Drawing.Size(165, 19);
             this.lbCMCustomer.TabIndex = 142;
-            this.lbCMCustomer.Text = "xxx님 환영합니다.";
+            this.lbCMCustomer.Text = "000님 환영합니다.";
             // 
             // lbCMLoginOut
             // 
@@ -182,9 +181,9 @@ namespace LibraryMgrProgram
             this.picCMCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.picCMCustomer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picCMCustomer.Image = ((System.Drawing.Image)(resources.GetObject("picCMCustomer.Image")));
-            this.picCMCustomer.Location = new System.Drawing.Point(1090, 42);
+            this.picCMCustomer.Location = new System.Drawing.Point(1159, 42);
             this.picCMCustomer.Name = "picCMCustomer";
-            this.picCMCustomer.Size = new System.Drawing.Size(100, 70);
+            this.picCMCustomer.Size = new System.Drawing.Size(44, 33);
             this.picCMCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCMCustomer.TabIndex = 144;
             this.picCMCustomer.TabStop = false;
@@ -322,6 +321,7 @@ namespace LibraryMgrProgram
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CustomerMainForm_FormClosing);
             this.Load += new System.EventHandler(this.CustomerMainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).EndInit();

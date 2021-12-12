@@ -191,7 +191,6 @@ namespace LMP_Projcet.Customer
             this.txtCBISerBar.Name = "txtCBISerBar";
             this.txtCBISerBar.Size = new System.Drawing.Size(314, 21);
             this.txtCBISerBar.TabIndex = 42;
-        
             // 
             // btnCBISer
             // 

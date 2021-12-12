@@ -11,6 +11,7 @@ namespace LMP_Projcet.Methods
 {
     class dbTest
     {
+
         dbConnect dbSource = new dbConnect();
         public MySqlConnection conn = new MySqlConnection();
 
@@ -23,7 +24,7 @@ namespace LMP_Projcet.Methods
                 + ";Password = " + dbSource.Password + ";";
             try
             {
-                conn = new MySqlConnection(connStr);
+                conn = new MySqlConnection(connStr + ";allow zero datetime=yes");
                 conn.Open();
             }
             catch (MySqlException)
@@ -37,17 +38,18 @@ namespace LMP_Projcet.Methods
         {
             try
             {
-                selectCmd = "select * from lmp.book;";
+               
 
                 MySqlCommand cmd = new MySqlCommand(selectCmd, conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
                 string result;
                 while (dbReader.Read())
                 {
-                    string name = dbReader["BName"] as String;
+                    string name = dbReader["CName"] as String;
                     return result = name;
                 }
                 dbReader.Close();
+
                 return result = "Error";
             }
             catch (Exception)
@@ -57,12 +59,14 @@ namespace LMP_Projcet.Methods
             }
         }
 
+       
+
         public void dbUpdate(string updateCmd)
         {
             try
             {
                 MySqlCommand cmd = new MySqlCommand(updateCmd, conn);
-                if(cmd.ExecuteNonQuery() == 1)
+                if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("성공적으로 추가 되었습니다.");
                 }
@@ -72,5 +76,6 @@ namespace LMP_Projcet.Methods
                 MessageBox.Show("DB수정에 실패하였습니다.");
             }
         }
+
     }
 }

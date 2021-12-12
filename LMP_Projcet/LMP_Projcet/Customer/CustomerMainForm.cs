@@ -38,7 +38,12 @@ namespace LibraryMgrProgram
         CustomerOperationForm cof = new CustomerOperationForm();
         CustomerContentsForm ccf = new CustomerContentsForm();
         CustomerBookInfoForm cbi = new CustomerBookInfoForm();
+        LoginForm lf = new LoginForm();
 
+        dbTest db = new dbTest();
+        String sql = "";
+
+        public static string myname;
 
         private void plnCM_MouseDown(object sender, MouseEventArgs e)
         {
@@ -67,7 +72,7 @@ namespace LibraryMgrProgram
 
         private void btnCMClose_Click_1(object sender, EventArgs e)
         {
-            mouseEvent.ButtonClose(this);
+            formChange.ChangeF(this, lf);
         }
 
 
@@ -80,16 +85,37 @@ namespace LibraryMgrProgram
         private void lbCMLogOut_Click_1(object sender, EventArgs e)
         {
             
-            LoginForm lf = new LoginForm();
+            
             formChange.ChangeF(this,lf) ;
         }
+
+     
+   
+
+
 
         //공지사항,추천도서,현황 기본으로 로드
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
         
             formChange.ChangeFIF(ccf, palCMMain);
-          
+            db.dbConnection();
+        
+            // 4단계
+            
+        
+           
+        
+                // 이렇게하면 회원은 무조건 hello가뜸
+                sql = "select cName from customer where CID = 'hello' ;";
+
+    
+            lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
+        
+            myname = lbCMCustomer.Text;
+
+
+
         }
 
         //회원정보 클릭시 내정보
@@ -131,5 +157,9 @@ namespace LibraryMgrProgram
             
         }
 
+        private void CustomerMainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

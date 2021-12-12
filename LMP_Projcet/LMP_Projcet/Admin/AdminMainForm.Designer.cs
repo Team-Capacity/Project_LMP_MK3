@@ -164,6 +164,7 @@ namespace LibraryMgrProgram
             this.lbAMCustomer.Size = new System.Drawing.Size(165, 19);
             this.lbAMCustomer.TabIndex = 120;
             this.lbAMCustomer.Text = "000님 환영합니다.";
+           
             // 
             // palAMMain
             // 

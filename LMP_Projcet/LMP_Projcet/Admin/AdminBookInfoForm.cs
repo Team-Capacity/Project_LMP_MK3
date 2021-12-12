@@ -117,7 +117,7 @@ namespace LibraryMgrProgram
 
         private void btnABIClear2_Click(object sender, EventArgs e)
         {
-            me.ftpList();
+           // me.ftpList();
         }
 
         private void btnABISer_Click(object sender, EventArgs e)

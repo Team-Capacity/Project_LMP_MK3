@@ -94,44 +94,56 @@ namespace LMP_Projcet
 
         }
 
+    
         private void btnLFLogin_Click(object sender, EventArgs e)
         {
-            db.dbConnection();
-            string id = txtLFID.Text;
-            string password = txtLFPW.Text;
+          
+                db.dbConnection();
+                string id = txtLFID.Text;
+                string password = txtLFPW.Text;
 
-            string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
-            string rank = "";
-            try
-            {
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                MySqlDataReader dbReader = cmd.ExecuteReader();
-                while (dbReader.Read())
+                string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+                string rank = "";
+                try
                 {
-                    rank = dbReader["CRank"] as String;
+                    MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                    MySqlDataReader dbReader = cmd.ExecuteReader();
+                    while (dbReader.Read())
+                    {
+                        rank = dbReader["CRank"] as String;
+                    }
+                    if (rank.Equals("1"))
+                    {
+                        AdminMainForm amf = new AdminMainForm();
+                        formChange.ChangeF(this, amf);
+                    }
+                    if (rank.Equals("2"))
+                    {
+                        AdminMainForm amf = new AdminMainForm();
+                        formChange.ChangeF(this, amf);
+                    }
+                    if (rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
+                    {
+                        CustomerMainForm cmf = new CustomerMainForm();
+                        formChange.ChangeF(this, cmf);
+                    }
+
+
+                    dbReader.Close();
                 }
-                if (rank.Equals("1"))
+                catch (Exception)
                 {
-                    AdminMainForm amf = new AdminMainForm();
-                    formChange.ChangeF(this, amf);
+                    MessageBox.Show("select문에 실패하였습니다.");
+                    throw;
                 }
-                if (rank.Equals("2"))
-                {
-                    AdminMainForm amf = new AdminMainForm();
-                    formChange.ChangeF(this, amf);
-                }
-                if(rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
-                {
-                    CustomerMainForm cmf = new CustomerMainForm();
-                    formChange.ChangeF(this, cmf);
-                }
-                dbReader.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("select문에 실패하였습니다.");
-                throw;
-            }
+           
+
+            //데이터베이스에 없는 아이디 비밀번호로 로그인시 에러 메시지 뜨게
+           
+          
+
+        
+
         }
 
         private void button1_Click(object sender, EventArgs e)
