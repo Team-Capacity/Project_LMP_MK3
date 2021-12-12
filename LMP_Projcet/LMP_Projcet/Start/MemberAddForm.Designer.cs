@@ -29,13 +29,11 @@ namespace LMP_Projcet.Start
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lbMA_Join = new System.Windows.Forms.Label();
             this.btnMA_Cancel = new System.Windows.Forms.Button();
             this.btnMA_Join = new System.Windows.Forms.Button();
-            this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
-            this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.lbMA_Name = new System.Windows.Forms.Label();
             this.lbMA_Sex = new System.Windows.Forms.Label();
             this.cmbMA_Day = new System.Windows.Forms.ComboBox();
@@ -60,9 +58,13 @@ namespace LMP_Projcet.Start
             this.btnMAMax = new System.Windows.Forms.Button();
             this.btnMAMin = new System.Windows.Forms.Button();
             this.btnMAClose = new System.Windows.Forms.Button();
+            this.TootMA = new System.Windows.Forms.ToolTip(this.components);
+            this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
+            this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
+            this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
-            this.grpcMA_Sex.SuspendLayout();
             this.plnMA.SuspendLayout();
+            this.grpcMA_Sex.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -131,41 +133,6 @@ namespace LMP_Projcet.Start
             this.btnMA_Join.Text = "회원가입";
             this.btnMA_Join.UseVisualStyleBackColor = true;
             this.btnMA_Join.Click += new System.EventHandler(this.btnMA_Join_Click);
-            // 
-            // grpcMA_Sex
-            // 
-            this.grpcMA_Sex.BorderColor = System.Drawing.Color.White;
-            this.grpcMA_Sex.Controls.Add(this.rdbMA_Wom);
-            this.grpcMA_Sex.Controls.Add(this.rdbMA_Man);
-            this.grpcMA_Sex.Location = new System.Drawing.Point(168, 280);
-            this.grpcMA_Sex.Name = "grpcMA_Sex";
-            this.grpcMA_Sex.Size = new System.Drawing.Size(122, 37);
-            this.grpcMA_Sex.TabIndex = 166;
-            this.grpcMA_Sex.TabStop = false;
-            // 
-            // rdbMA_Wom
-            // 
-            this.rdbMA_Wom.AutoSize = true;
-            this.rdbMA_Wom.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbMA_Wom.Location = new System.Drawing.Point(63, 9);
-            this.rdbMA_Wom.Name = "rdbMA_Wom";
-            this.rdbMA_Wom.Size = new System.Drawing.Size(53, 18);
-            this.rdbMA_Wom.TabIndex = 161;
-            this.rdbMA_Wom.TabStop = true;
-            this.rdbMA_Wom.Text = "여자";
-            this.rdbMA_Wom.UseVisualStyleBackColor = true;
-            // 
-            // rdbMA_Man
-            // 
-            this.rdbMA_Man.AutoSize = true;
-            this.rdbMA_Man.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbMA_Man.Location = new System.Drawing.Point(6, 10);
-            this.rdbMA_Man.Name = "rdbMA_Man";
-            this.rdbMA_Man.Size = new System.Drawing.Size(53, 18);
-            this.rdbMA_Man.TabIndex = 160;
-            this.rdbMA_Man.TabStop = true;
-            this.rdbMA_Man.Text = "남자";
-            this.rdbMA_Man.UseVisualStyleBackColor = true;
             // 
             // lbMA_Name
             // 
@@ -302,6 +269,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Pw.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Pw.TabIndex = 15;
             this.txtMA_Pw.Text = "seethepw@123";
+            this.TootMA.SetToolTip(this.txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
             // 
             // lbMA_Birth
             // 
@@ -435,6 +403,41 @@ namespace LMP_Projcet.Start
             this.btnMAClose.UseVisualStyleBackColor = false;
             this.btnMAClose.Click += new System.EventHandler(this.btnMAClose_Click);
             // 
+            // grpcMA_Sex
+            // 
+            this.grpcMA_Sex.BorderColor = System.Drawing.Color.White;
+            this.grpcMA_Sex.Controls.Add(this.rdbMA_Wom);
+            this.grpcMA_Sex.Controls.Add(this.rdbMA_Man);
+            this.grpcMA_Sex.Location = new System.Drawing.Point(168, 280);
+            this.grpcMA_Sex.Name = "grpcMA_Sex";
+            this.grpcMA_Sex.Size = new System.Drawing.Size(122, 37);
+            this.grpcMA_Sex.TabIndex = 166;
+            this.grpcMA_Sex.TabStop = false;
+            // 
+            // rdbMA_Wom
+            // 
+            this.rdbMA_Wom.AutoSize = true;
+            this.rdbMA_Wom.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbMA_Wom.Location = new System.Drawing.Point(63, 9);
+            this.rdbMA_Wom.Name = "rdbMA_Wom";
+            this.rdbMA_Wom.Size = new System.Drawing.Size(53, 18);
+            this.rdbMA_Wom.TabIndex = 161;
+            this.rdbMA_Wom.TabStop = true;
+            this.rdbMA_Wom.Text = "여자";
+            this.rdbMA_Wom.UseVisualStyleBackColor = true;
+            // 
+            // rdbMA_Man
+            // 
+            this.rdbMA_Man.AutoSize = true;
+            this.rdbMA_Man.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbMA_Man.Location = new System.Drawing.Point(6, 10);
+            this.rdbMA_Man.Name = "rdbMA_Man";
+            this.rdbMA_Man.Size = new System.Drawing.Size(53, 18);
+            this.rdbMA_Man.TabIndex = 160;
+            this.rdbMA_Man.TabStop = true;
+            this.rdbMA_Man.Text = "남자";
+            this.rdbMA_Man.UseVisualStyleBackColor = true;
+            // 
             // MemberAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -446,12 +449,13 @@ namespace LMP_Projcet.Start
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MemberAddForm";
             this.Text = "MemberAddForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MemberAddForm_FormClosing);
             this.Load += new System.EventHandler(this.MemberAddForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.plnMA.ResumeLayout(false);
             this.grpcMA_Sex.ResumeLayout(false);
             this.grpcMA_Sex.PerformLayout();
-            this.plnMA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -490,5 +494,6 @@ namespace LMP_Projcet.Start
         private System.Windows.Forms.Button btnMAMax;
         private System.Windows.Forms.Button btnMAMin;
         private System.Windows.Forms.Button btnMAClose;
+        private System.Windows.Forms.ToolTip TootMA;
     }
 }

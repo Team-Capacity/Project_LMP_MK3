@@ -115,11 +115,11 @@ namespace LibraryMgrProgram
             }
         }
 
-        private void btnABIClear2_Click(object sender, EventArgs e)
+      /*  private void btnABIClear2_Click(object sender, EventArgs e)
         {
             me.ftpList();
         }
-
+*/
         private void btnABISer_Click(object sender, EventArgs e)
         {
             dgvABIBookList.Columns.Clear();

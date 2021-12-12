@@ -119,7 +119,7 @@ namespace LibraryMgrProgram
             imageBox.Image.Save(savePath + "\\" + saveName + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
 
-        public void ftpList()
+      /*  public void ftpList()
         {
             string ftpURL = db.Server;
             string ftpUser = db.Id;
@@ -141,7 +141,7 @@ namespace LibraryMgrProgram
             }
 
 
-        }
+        }*/
 
     }
 }
