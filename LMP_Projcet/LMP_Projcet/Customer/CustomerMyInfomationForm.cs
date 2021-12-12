@@ -1,4 +1,5 @@
-﻿using LMP_Projcet.Methods;
+﻿using LibraryMgrProgram;
+using LMP_Projcet.Methods;
 using LMP_Projcet.Methods.DB;
 using MySql.Data.MySqlClient;
 using System;
@@ -32,13 +33,16 @@ namespace LMP_Projcet.Customer
 
         private void CustomerMyInfomationForm_Load(object sender, EventArgs e)
         {
+
+          
             db.dbConnection();
             string thismyName = CustomerMainForm.myname;
-            string myName = thismyName.Substring(0,thismyName.Length-8);
-            string sql = "select * from Customer where CName = '"+ myName +"';";
-            MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-            MessageBox.Show("일단 ");
+            string myName = thismyName.Substring(0, thismyName.Length - 8);
+            string sql = "select * from Customer where CName = '" + myName + "';";
+            MySqlCommand cmd = new MySqlCommand(sql, db.conn); 
             MySqlDataReader reader = cmd.ExecuteReader();
+
+
             int number = 0;
             string name = "";
             string ph = "";
@@ -52,16 +56,22 @@ namespace LMP_Projcet.Customer
             while (reader.Read())
             {
                 number = Int32.Parse(reader[0].ToString());
-                name = reader[3].ToString();
-                ph = reader[4].ToString();
-                birth = reader[5].ToString();
-                address = reader[6].ToString();
-                rank = reader[8].ToString();
-                gender = reader[9].ToString();
-                memo = reader[10].ToString();
-                loancnt = Int32.Parse(reader[11].ToString());
+                rank = reader[1].ToString();
+                name = reader[4].ToString();
+                loancnt = Int32.Parse(reader[5].ToString());
+                ph = reader[6].ToString();
+                birth = reader[7].ToString();
+                address = reader[8].ToString();          
+                gender = reader[10].ToString();
+                memo = reader[11].ToString();
+            
+
+
+
+
             }
             reader.Close();
+
 
             lbCMINumView.Text = number.ToString();
             lbCMIMyName.Text = name;
@@ -69,14 +79,25 @@ namespace LMP_Projcet.Customer
             lbCMIMan.Text = gender;
             lbCMICountView.Text = loancnt.ToString();
             lbCMIMyBirth.Text = birth;
-            txtCMIMemoView.Text = memo;
+            lbCMIMemoView.Text = memo;
             lbCMIAddrView.Text = address;
-            if(rank.Equals('3'))
+
+            if (rank.Equals('3'))
             {
-                
+
             }
+          
+
         }
-       
+
+
+        private void reload(string sqlQuery)
+        {
+           
+        }
+
+
+
 
 
 

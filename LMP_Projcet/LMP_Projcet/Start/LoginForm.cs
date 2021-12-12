@@ -79,11 +79,13 @@ namespace LMP_Projcet
 
         }
 
+    
         private void btnLFLogin_Click(object sender, EventArgs e)
         {
-            db.dbConnection();
-            string id = txtLFID.Text;
-            string password = txtLFPW.Text;
+          
+                db.dbConnection();
+                string id = txtLFID.Text;
+                string password = txtLFPW.Text;
 
             string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
             string rank = "";

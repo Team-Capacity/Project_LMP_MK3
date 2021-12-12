@@ -30,6 +30,9 @@ namespace LMP_Projcet.Customer
         private void InitializeComponent()
         {
             this.gBCEEdit = new System.Windows.Forms.GroupBox();
+            this.grpcCESex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
+            this.rdbCMWom = new System.Windows.Forms.RadioButton();
+            this.rdbCMMan = new System.Windows.Forms.RadioButton();
             this.lbCECustomerState = new System.Windows.Forms.Label();
             this.txtCEMemoView = new System.Windows.Forms.TextBox();
             this.btnCELoad = new System.Windows.Forms.Button();
@@ -60,14 +63,11 @@ namespace LMP_Projcet.Customer
             this.btnCEMax = new System.Windows.Forms.Button();
             this.btnCEMin = new System.Windows.Forms.Button();
             this.btnCEClose = new System.Windows.Forms.Button();
-            this.grpcCESex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbCMWom = new System.Windows.Forms.RadioButton();
-            this.rdbCMMan = new System.Windows.Forms.RadioButton();
             this.gBCEEdit.SuspendLayout();
+            this.grpcCESex.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCERankView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).BeginInit();
             this.plnCE.SuspendLayout();
-            this.grpcCESex.SuspendLayout();
             this.SuspendLayout();
             // 
             // gBCEEdit
@@ -104,6 +104,41 @@ namespace LMP_Projcet.Customer
             this.gBCEEdit.Size = new System.Drawing.Size(920, 500);
             this.gBCEEdit.TabIndex = 20;
             this.gBCEEdit.TabStop = false;
+            // 
+            // grpcCESex
+            // 
+            this.grpcCESex.BorderColor = System.Drawing.Color.White;
+            this.grpcCESex.Controls.Add(this.rdbCMWom);
+            this.grpcCESex.Controls.Add(this.rdbCMMan);
+            this.grpcCESex.Location = new System.Drawing.Point(219, 159);
+            this.grpcCESex.Name = "grpcCESex";
+            this.grpcCESex.Size = new System.Drawing.Size(122, 37);
+            this.grpcCESex.TabIndex = 164;
+            this.grpcCESex.TabStop = false;
+            // 
+            // rdbCMWom
+            // 
+            this.rdbCMWom.AutoSize = true;
+            this.rdbCMWom.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbCMWom.Location = new System.Drawing.Point(63, 9);
+            this.rdbCMWom.Name = "rdbCMWom";
+            this.rdbCMWom.Size = new System.Drawing.Size(53, 18);
+            this.rdbCMWom.TabIndex = 161;
+            this.rdbCMWom.TabStop = true;
+            this.rdbCMWom.Text = "여자";
+            this.rdbCMWom.UseVisualStyleBackColor = true;
+            // 
+            // rdbCMMan
+            // 
+            this.rdbCMMan.AutoSize = true;
+            this.rdbCMMan.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbCMMan.Location = new System.Drawing.Point(6, 10);
+            this.rdbCMMan.Name = "rdbCMMan";
+            this.rdbCMMan.Size = new System.Drawing.Size(53, 18);
+            this.rdbCMMan.TabIndex = 160;
+            this.rdbCMMan.TabStop = true;
+            this.rdbCMMan.Text = "남자";
+            this.rdbCMMan.UseVisualStyleBackColor = true;
             // 
             // lbCECustomerState
             // 
@@ -299,7 +334,6 @@ namespace LMP_Projcet.Customer
             this.txtCEMyBirth.Name = "txtCEMyBirth";
             this.txtCEMyBirth.Size = new System.Drawing.Size(117, 29);
             this.txtCEMyBirth.TabIndex = 9;
-            this.txtCEMyBirth.Text = "1997.11.07";
             // 
             // txtCEHPView
             // 
@@ -308,7 +342,6 @@ namespace LMP_Projcet.Customer
             this.txtCEHPView.Name = "txtCEHPView";
             this.txtCEHPView.Size = new System.Drawing.Size(139, 29);
             this.txtCEHPView.TabIndex = 11;
-            this.txtCEHPView.Text = "010-5720-3562";
             // 
             // btnCECancel
             // 
@@ -329,7 +362,6 @@ namespace LMP_Projcet.Customer
             this.txtCEMyAddrView.Name = "txtCEMyAddrView";
             this.txtCEMyAddrView.Size = new System.Drawing.Size(567, 33);
             this.txtCEMyAddrView.TabIndex = 10;
-            this.txtCEMyAddrView.Text = "서울시 노원구 공릉동 동일로 192나길 101동 신원아파트";
             // 
             // txtCEMyName
             // 
@@ -338,7 +370,6 @@ namespace LMP_Projcet.Customer
             this.txtCEMyName.Name = "txtCEMyName";
             this.txtCEMyName.Size = new System.Drawing.Size(90, 29);
             this.txtCEMyName.TabIndex = 1;
-            this.txtCEMyName.Text = "이상훈";
             // 
             // lbCEAddr
             // 
@@ -440,41 +471,6 @@ namespace LMP_Projcet.Customer
             this.btnCEClose.UseVisualStyleBackColor = false;
             this.btnCEClose.Click += new System.EventHandler(this.btnCEClose_Click_1);
             // 
-            // grpcCESex
-            // 
-            this.grpcCESex.BorderColor = System.Drawing.Color.White;
-            this.grpcCESex.Controls.Add(this.rdbCMWom);
-            this.grpcCESex.Controls.Add(this.rdbCMMan);
-            this.grpcCESex.Location = new System.Drawing.Point(219, 159);
-            this.grpcCESex.Name = "grpcCESex";
-            this.grpcCESex.Size = new System.Drawing.Size(122, 37);
-            this.grpcCESex.TabIndex = 164;
-            this.grpcCESex.TabStop = false;
-            // 
-            // rdbCMWom
-            // 
-            this.rdbCMWom.AutoSize = true;
-            this.rdbCMWom.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbCMWom.Location = new System.Drawing.Point(63, 9);
-            this.rdbCMWom.Name = "rdbCMWom";
-            this.rdbCMWom.Size = new System.Drawing.Size(53, 18);
-            this.rdbCMWom.TabIndex = 161;
-            this.rdbCMWom.TabStop = true;
-            this.rdbCMWom.Text = "여자";
-            this.rdbCMWom.UseVisualStyleBackColor = true;
-            // 
-            // rdbCMMan
-            // 
-            this.rdbCMMan.AutoSize = true;
-            this.rdbCMMan.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbCMMan.Location = new System.Drawing.Point(6, 10);
-            this.rdbCMMan.Name = "rdbCMMan";
-            this.rdbCMMan.Size = new System.Drawing.Size(53, 18);
-            this.rdbCMMan.TabIndex = 160;
-            this.rdbCMMan.TabStop = true;
-            this.rdbCMMan.Text = "남자";
-            this.rdbCMMan.UseVisualStyleBackColor = true;
-            // 
             // CustomerEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -490,11 +486,11 @@ namespace LMP_Projcet.Customer
             this.Load += new System.EventHandler(this.CustomerEditForm_Load);
             this.gBCEEdit.ResumeLayout(false);
             this.gBCEEdit.PerformLayout();
+            this.grpcCESex.ResumeLayout(false);
+            this.grpcCESex.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCERankView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).EndInit();
             this.plnCE.ResumeLayout(false);
-            this.grpcCESex.ResumeLayout(false);
-            this.grpcCESex.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

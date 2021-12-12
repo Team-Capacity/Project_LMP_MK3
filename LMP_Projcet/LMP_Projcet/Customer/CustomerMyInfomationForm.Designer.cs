@@ -40,8 +40,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIMyBirth = new System.Windows.Forms.Label();
             this.lbCMIHPView = new System.Windows.Forms.Label();
             this.GBCusEdit = new System.Windows.Forms.GroupBox();
-            this.dgvCMIMyList = new System.Windows.Forms.DataGridView();
-            this.txtCMIMemoView = new System.Windows.Forms.TextBox();
+            this.lbCMIMemoView = new System.Windows.Forms.Label();
             this.lbCMIMemo = new System.Windows.Forms.Label();
             this.lbCMICustomerState = new System.Windows.Forms.Label();
             this.lbCMIRank = new System.Windows.Forms.Label();
@@ -54,8 +53,8 @@ namespace LMP_Projcet.Customer
             this.label1 = new System.Windows.Forms.Label();
             this.lbCMIInfo = new System.Windows.Forms.Label();
             this.picCMIRankView = new System.Windows.Forms.PictureBox();
+            this.txtCMIMyList = new System.Windows.Forms.TextBox();
             this.GBCusEdit.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCMIMyList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMIRankView)).BeginInit();
             this.SuspendLayout();
@@ -175,8 +174,7 @@ namespace LMP_Projcet.Customer
             // GBCusEdit
             // 
             this.GBCusEdit.BackColor = System.Drawing.Color.White;
-            this.GBCusEdit.Controls.Add(this.dgvCMIMyList);
-            this.GBCusEdit.Controls.Add(this.txtCMIMemoView);
+            this.GBCusEdit.Controls.Add(this.lbCMIMemoView);
             this.GBCusEdit.Controls.Add(this.lbCMIMemo);
             this.GBCusEdit.Controls.Add(this.lbCMICustomerState);
             this.GBCusEdit.Controls.Add(this.lbCMIRank);
@@ -199,6 +197,7 @@ namespace LMP_Projcet.Customer
             this.GBCusEdit.Controls.Add(this.lbCMIMyName);
             this.GBCusEdit.Controls.Add(this.lbCMIAddrView);
             this.GBCusEdit.Controls.Add(this.lbCMIAddr);
+            this.GBCusEdit.Controls.Add(this.txtCMIMyList);
             this.GBCusEdit.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.GBCusEdit.ForeColor = System.Drawing.Color.Black;
             this.GBCusEdit.Location = new System.Drawing.Point(102, 35);
@@ -207,22 +206,14 @@ namespace LMP_Projcet.Customer
             this.GBCusEdit.TabIndex = 175;
             this.GBCusEdit.TabStop = false;
             // 
-            // dgvCMIMyList
+            // lbCMIMemoView
             // 
-            this.dgvCMIMyList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCMIMyList.Location = new System.Drawing.Point(31, 60);
-            this.dgvCMIMyList.Name = "dgvCMIMyList";
-            this.dgvCMIMyList.RowTemplate.Height = 23;
-            this.dgvCMIMyList.Size = new System.Drawing.Size(463, 403);
-            this.dgvCMIMyList.TabIndex = 176;
-            // 
-            // txtCMIMemoView
-            // 
-            this.txtCMIMemoView.Location = new System.Drawing.Point(624, 243);
-            this.txtCMIMemoView.Multiline = true;
-            this.txtCMIMemoView.Name = "txtCMIMemoView";
-            this.txtCMIMemoView.Size = new System.Drawing.Size(293, 89);
-            this.txtCMIMemoView.TabIndex = 187;
+            this.lbCMIMemoView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCMIMemoView.Location = new System.Drawing.Point(621, 243);
+            this.lbCMIMemoView.Name = "lbCMIMemoView";
+            this.lbCMIMemoView.Size = new System.Drawing.Size(293, 89);
+            this.lbCMIMemoView.TabIndex = 189;
+            this.lbCMIMemoView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbCMIMemo
             // 
@@ -245,7 +236,6 @@ namespace LMP_Projcet.Customer
             this.lbCMICustomerState.Size = new System.Drawing.Size(85, 19);
             this.lbCMICustomerState.TabIndex = 185;
             this.lbCMICustomerState.Text = "대출가능";
-     
             // 
             // lbCMIRank
             // 
@@ -352,6 +342,14 @@ namespace LMP_Projcet.Customer
             this.picCMIRankView.TabIndex = 177;
             this.picCMIRankView.TabStop = false;
             // 
+            // txtCMIMyList
+            // 
+            this.txtCMIMyList.Location = new System.Drawing.Point(31, 60);
+            this.txtCMIMyList.Multiline = true;
+            this.txtCMIMyList.Name = "txtCMIMyList";
+            this.txtCMIMyList.Size = new System.Drawing.Size(463, 403);
+            this.txtCMIMyList.TabIndex = 188;
+            // 
             // CustomerMyInfomationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -366,7 +364,6 @@ namespace LMP_Projcet.Customer
             this.Load += new System.EventHandler(this.CustomerMyInfomationForm_Load);
             this.GBCusEdit.ResumeLayout(false);
             this.GBCusEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCMIMyList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMIRankView)).EndInit();
             this.ResumeLayout(false);
@@ -396,8 +393,8 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Label lbCMINumView;
         private System.Windows.Forms.Label lbCMIRank;
         private System.Windows.Forms.Label lbCMICustomerState;
-        private System.Windows.Forms.TextBox txtCMIMemoView;
         private System.Windows.Forms.Label lbCMIMemo;
-        private System.Windows.Forms.DataGridView dgvCMIMyList;
+        private System.Windows.Forms.TextBox txtCMIMyList;
+        private System.Windows.Forms.Label lbCMIMemoView;
     }
 }
