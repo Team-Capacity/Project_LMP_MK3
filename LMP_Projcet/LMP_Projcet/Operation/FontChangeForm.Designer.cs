@@ -28,10 +28,6 @@ namespace LibraryMgrProgram
         /// </summary>
         private void InitializeComponent()
         {
-            this.plnFC = new System.Windows.Forms.TableLayoutPanel();
-            this.btnFCMax = new System.Windows.Forms.Button();
-            this.btnFCMin = new System.Windows.Forms.Button();
-            this.btnFCClose = new System.Windows.Forms.Button();
             this.rdoFCBasic = new System.Windows.Forms.RadioButton();
             this.rdoFCSetting = new System.Windows.Forms.RadioButton();
             this.grpFCSetting = new System.Windows.Forms.GroupBox();
@@ -54,80 +50,15 @@ namespace LibraryMgrProgram
             this.lbFCEnglish = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.plnFC.SuspendLayout();
+            this.plnFC = new System.Windows.Forms.TableLayoutPanel();
+            this.btnFCClose = new System.Windows.Forms.Button();
+            this.btnFCMax = new System.Windows.Forms.Button();
+            this.btnFCMin = new System.Windows.Forms.Button();
             this.grpFCSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFCWhite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFCBlack)).BeginInit();
+            this.plnFC.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // plnFC
-            // 
-            this.plnFC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.plnFC.AutoSize = true;
-            this.plnFC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.plnFC.ColumnCount = 3;
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnFC.Controls.Add(this.btnFCMax, 1, 1);
-            this.plnFC.Controls.Add(this.btnFCMin, 0, 1);
-            this.plnFC.Controls.Add(this.btnFCClose, 2, 1);
-            this.plnFC.Location = new System.Drawing.Point(0, -3);
-            this.plnFC.Name = "plnFC";
-            this.plnFC.RowCount = 2;
-            this.plnFC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.plnFC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnFC.Size = new System.Drawing.Size(1031, 39);
-            this.plnFC.TabIndex = 40;
-            this.plnFC.Paint += new System.Windows.Forms.PaintEventHandler(this.plnFC_Paint);
-            this.plnFC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseDown);
-            this.plnFC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseMove);
-            // 
-            // btnFCMax
-            // 
-            this.btnFCMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFCMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFCMax.FlatAppearance.BorderSize = 0;
-            this.btnFCMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFCMax.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnFCMax.Location = new System.Drawing.Point(968, 6);
-            this.btnFCMax.Name = "btnFCMax";
-            this.btnFCMax.Size = new System.Drawing.Size(20, 20);
-            this.btnFCMax.TabIndex = 3;
-            this.btnFCMax.Text = "🗖";
-            this.btnFCMax.UseVisualStyleBackColor = false;
-            this.btnFCMax.Click += new System.EventHandler(this.btnFCMax_Click_1);
-            // 
-            // btnFCMin
-            // 
-            this.btnFCMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFCMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFCMin.FlatAppearance.BorderSize = 0;
-            this.btnFCMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFCMin.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnFCMin.Location = new System.Drawing.Point(928, 6);
-            this.btnFCMin.Name = "btnFCMin";
-            this.btnFCMin.Size = new System.Drawing.Size(20, 20);
-            this.btnFCMin.TabIndex = 2;
-            this.btnFCMin.Text = "🗕";
-            this.btnFCMin.UseVisualStyleBackColor = false;
-            this.btnFCMin.Click += new System.EventHandler(this.btnFCMin_Click);
-            // 
-            // btnFCClose
-            // 
-            this.btnFCClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFCClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFCClose.FlatAppearance.BorderSize = 0;
-            this.btnFCClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFCClose.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnFCClose.Location = new System.Drawing.Point(1008, 6);
-            this.btnFCClose.Name = "btnFCClose";
-            this.btnFCClose.Size = new System.Drawing.Size(20, 20);
-            this.btnFCClose.TabIndex = 1;
-            this.btnFCClose.Text = "🗙";
-            this.btnFCClose.UseVisualStyleBackColor = false;
-            this.btnFCClose.Click += new System.EventHandler(this.btnFCClose_Click);
             // 
             // rdoFCBasic
             // 
@@ -205,7 +136,6 @@ namespace LibraryMgrProgram
             this.rdoFCBlack.TabStop = true;
             this.rdoFCBlack.Text = "다크";
             this.rdoFCBlack.UseVisualStyleBackColor = true;
-         
             // 
             // rdoFCWhite
             // 
@@ -375,17 +305,87 @@ namespace LibraryMgrProgram
             this.comboBox1.Size = new System.Drawing.Size(30, 20);
             this.comboBox1.TabIndex = 19;
             // 
+            // plnFC
+            // 
+            this.plnFC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnFC.AutoSize = true;
+            this.plnFC.BackColor = System.Drawing.Color.Silver;
+            this.plnFC.ColumnCount = 4;
+            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnFC.Controls.Add(this.btnFCClose, 3, 1);
+            this.plnFC.Controls.Add(this.btnFCMax, 2, 1);
+            this.plnFC.Controls.Add(this.btnFCMin, 1, 1);
+            this.plnFC.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnFC.Location = new System.Drawing.Point(0, -3);
+            this.plnFC.Name = "plnFC";
+            this.plnFC.RowCount = 2;
+            this.plnFC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnFC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnFC.Size = new System.Drawing.Size(1031, 39);
+            this.plnFC.TabIndex = 150;
+            this.plnFC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseDown);
+            this.plnFC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseMove);
+            this.plnFC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseUp);
+            // 
+            // btnFCClose
+            // 
+            this.btnFCClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFCClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFCClose.FlatAppearance.BorderSize = 0;
+            this.btnFCClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFCClose.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnFCClose.Location = new System.Drawing.Point(1008, 6);
+            this.btnFCClose.Name = "btnFCClose";
+            this.btnFCClose.Size = new System.Drawing.Size(20, 20);
+            this.btnFCClose.TabIndex = 1;
+            this.btnFCClose.Text = "🗙";
+            this.btnFCClose.UseVisualStyleBackColor = false;
+            // 
+            // btnFCMax
+            // 
+            this.btnFCMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFCMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFCMax.FlatAppearance.BorderSize = 0;
+            this.btnFCMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFCMax.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnFCMax.Location = new System.Drawing.Point(982, 6);
+            this.btnFCMax.Name = "btnFCMax";
+            this.btnFCMax.Size = new System.Drawing.Size(19, 20);
+            this.btnFCMax.TabIndex = 3;
+            this.btnFCMax.Text = "🗖";
+            this.btnFCMax.UseVisualStyleBackColor = false;
+            this.btnFCMax.Click += new System.EventHandler(this.btnFCMax_Click);
+            // 
+            // btnFCMin
+            // 
+            this.btnFCMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFCMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnFCMin.FlatAppearance.BorderSize = 0;
+            this.btnFCMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFCMin.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnFCMin.Location = new System.Drawing.Point(954, 6);
+            this.btnFCMin.Name = "btnFCMin";
+            this.btnFCMin.Size = new System.Drawing.Size(20, 20);
+            this.btnFCMin.TabIndex = 2;
+            this.btnFCMin.Text = "🗕";
+            this.btnFCMin.UseVisualStyleBackColor = false;
+            this.btnFCMin.Click += new System.EventHandler(this.btnFCMin_Click_1);
+            // 
             // FontChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1027, 561);
+            this.Controls.Add(this.plnFC);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.rdoFCBasic);
             this.Controls.Add(this.rdoFCSetting);
             this.Controls.Add(this.grpFCSetting);
-            this.Controls.Add(this.plnFC);
             this.Controls.Add(this.lstboxFCSizelist);
             this.Controls.Add(this.lbFCSize);
             this.Controls.Add(this.cmbFCEn_Sel);
@@ -395,21 +395,17 @@ namespace LibraryMgrProgram
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Font";
             this.Load += new System.EventHandler(this.FontChangeForm_Load);
-            this.plnFC.ResumeLayout(false);
             this.grpFCSetting.ResumeLayout(false);
             this.grpFCSetting.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFCWhite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFCBlack)).EndInit();
+            this.plnFC.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TableLayoutPanel plnFC;
-        private System.Windows.Forms.Button btnFCMax;
-        private System.Windows.Forms.Button btnFCMin;
-        private System.Windows.Forms.Button btnFCClose;
         private System.Windows.Forms.ListBox lstboxFCSizelist;
         private System.Windows.Forms.Label lbFCSize;
         private System.Windows.Forms.Label lbFCStyle;
@@ -432,5 +428,9 @@ namespace LibraryMgrProgram
         public System.Windows.Forms.ComboBox cmbFCKo_Sel;
         public System.Windows.Forms.Label lbFCKorea;
         public System.Windows.Forms.ListBox lstFCListChoice;
+        private System.Windows.Forms.TableLayoutPanel plnFC;
+        private System.Windows.Forms.Button btnFCClose;
+        private System.Windows.Forms.Button btnFCMax;
+        private System.Windows.Forms.Button btnFCMin;
     }
 }

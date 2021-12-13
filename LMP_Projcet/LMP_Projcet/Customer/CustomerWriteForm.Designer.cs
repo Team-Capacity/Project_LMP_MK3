@@ -41,11 +41,11 @@ namespace LMP_Projcet.Customer
             this.lbCWContent = new System.Windows.Forms.Label();
             this.lbCWTitle = new System.Windows.Forms.Label();
             this.txtCWTitle = new System.Windows.Forms.TextBox();
+            this.lbCWLogo = new System.Windows.Forms.Label();
             this.plnCW = new System.Windows.Forms.TableLayoutPanel();
+            this.btnCWClose = new System.Windows.Forms.Button();
             this.btnCWMax = new System.Windows.Forms.Button();
             this.btnCWMin = new System.Windows.Forms.Button();
-            this.btnCWClose = new System.Windows.Forms.Button();
-            this.lbCWLogo = new System.Windows.Forms.Label();
             this.grpCWSuggest.SuspendLayout();
             this.plnCW.SuspendLayout();
             this.SuspendLayout();
@@ -183,76 +183,6 @@ namespace LMP_Projcet.Customer
             this.txtCWTitle.Size = new System.Drawing.Size(483, 21);
             this.txtCWTitle.TabIndex = 2;
             // 
-            // plnCW
-            // 
-            this.plnCW.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.plnCW.AutoSize = true;
-            this.plnCW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.plnCW.ColumnCount = 3;
-            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnCW.Controls.Add(this.btnCWMax, 1, 1);
-            this.plnCW.Controls.Add(this.btnCWMin, 0, 1);
-            this.plnCW.Controls.Add(this.btnCWClose, 2, 1);
-            this.plnCW.Location = new System.Drawing.Point(-1, -4);
-            this.plnCW.Name = "plnCW";
-            this.plnCW.RowCount = 2;
-            this.plnCW.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.plnCW.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnCW.Size = new System.Drawing.Size(839, 39);
-            this.plnCW.TabIndex = 40;
-            this.plnCW.Paint += new System.Windows.Forms.PaintEventHandler(this.plnCus_Paint_1);
-            this.plnCW.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseDown);
-            this.plnCW.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseMove);
-            this.plnCW.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseUp);
-            // 
-            // btnCWMax
-            // 
-            this.btnCWMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCWMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCWMax.FlatAppearance.BorderSize = 0;
-            this.btnCWMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCWMax.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnCWMax.Location = new System.Drawing.Point(776, 6);
-            this.btnCWMax.Name = "btnCWMax";
-            this.btnCWMax.Size = new System.Drawing.Size(20, 20);
-            this.btnCWMax.TabIndex = 3;
-            this.btnCWMax.Text = "🗖";
-            this.btnCWMax.UseVisualStyleBackColor = false;
-            this.btnCWMax.Click += new System.EventHandler(this.btnCusMax_Click);
-            // 
-            // btnCWMin
-            // 
-            this.btnCWMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCWMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCWMin.FlatAppearance.BorderSize = 0;
-            this.btnCWMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCWMin.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnCWMin.Location = new System.Drawing.Point(736, 6);
-            this.btnCWMin.Name = "btnCWMin";
-            this.btnCWMin.Size = new System.Drawing.Size(20, 20);
-            this.btnCWMin.TabIndex = 2;
-            this.btnCWMin.Text = "🗕";
-            this.btnCWMin.UseVisualStyleBackColor = false;
-            this.btnCWMin.Click += new System.EventHandler(this.btnCusMin_Click);
-            // 
-            // btnCWClose
-            // 
-            this.btnCWClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCWClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnCWClose.FlatAppearance.BorderSize = 0;
-            this.btnCWClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCWClose.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnCWClose.Location = new System.Drawing.Point(816, 6);
-            this.btnCWClose.Name = "btnCWClose";
-            this.btnCWClose.Size = new System.Drawing.Size(20, 20);
-            this.btnCWClose.TabIndex = 1;
-            this.btnCWClose.Text = "🗙";
-            this.btnCWClose.UseVisualStyleBackColor = false;
-            this.btnCWClose.Click += new System.EventHandler(this.btnCusClose_Click);
-            // 
             // lbCWLogo
             // 
             this.lbCWLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -265,14 +195,85 @@ namespace LMP_Projcet.Customer
             this.lbCWLogo.TabIndex = 41;
             this.lbCWLogo.Text = "CAPA 도서관";
             // 
+            // plnCW
+            // 
+            this.plnCW.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnCW.AutoSize = true;
+            this.plnCW.BackColor = System.Drawing.Color.Silver;
+            this.plnCW.ColumnCount = 4;
+            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnCW.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnCW.Controls.Add(this.btnCWClose, 3, 1);
+            this.plnCW.Controls.Add(this.btnCWMax, 2, 1);
+            this.plnCW.Controls.Add(this.btnCWMin, 1, 1);
+            this.plnCW.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnCW.Location = new System.Drawing.Point(-1, -4);
+            this.plnCW.Name = "plnCW";
+            this.plnCW.RowCount = 2;
+            this.plnCW.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnCW.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnCW.Size = new System.Drawing.Size(839, 39);
+            this.plnCW.TabIndex = 148;
+            this.plnCW.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseDown);
+            this.plnCW.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseMove);
+            this.plnCW.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseUp);
+            // 
+            // btnCWClose
+            // 
+            this.btnCWClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCWClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCWClose.FlatAppearance.BorderSize = 0;
+            this.btnCWClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCWClose.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCWClose.Location = new System.Drawing.Point(816, 6);
+            this.btnCWClose.Name = "btnCWClose";
+            this.btnCWClose.Size = new System.Drawing.Size(20, 20);
+            this.btnCWClose.TabIndex = 1;
+            this.btnCWClose.Text = "🗙";
+            this.btnCWClose.UseVisualStyleBackColor = false;
+            this.btnCWClose.Click += new System.EventHandler(this.btnCWClose_Click);
+            // 
+            // btnCWMax
+            // 
+            this.btnCWMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCWMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCWMax.FlatAppearance.BorderSize = 0;
+            this.btnCWMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCWMax.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCWMax.Location = new System.Drawing.Point(790, 6);
+            this.btnCWMax.Name = "btnCWMax";
+            this.btnCWMax.Size = new System.Drawing.Size(19, 20);
+            this.btnCWMax.TabIndex = 3;
+            this.btnCWMax.Text = "🗖";
+            this.btnCWMax.UseVisualStyleBackColor = false;
+            this.btnCWMax.Click += new System.EventHandler(this.btnCWMax_Click);
+            // 
+            // btnCWMin
+            // 
+            this.btnCWMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCWMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnCWMin.FlatAppearance.BorderSize = 0;
+            this.btnCWMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCWMin.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCWMin.Location = new System.Drawing.Point(762, 6);
+            this.btnCWMin.Name = "btnCWMin";
+            this.btnCWMin.Size = new System.Drawing.Size(20, 20);
+            this.btnCWMin.TabIndex = 2;
+            this.btnCWMin.Text = "🗕";
+            this.btnCWMin.UseVisualStyleBackColor = false;
+            this.btnCWMin.Click += new System.EventHandler(this.btnCWMin_Click);
+            // 
             // CustomerWriteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(836, 617);
-            this.Controls.Add(this.lbCWLogo);
             this.Controls.Add(this.plnCW);
+            this.Controls.Add(this.lbCWLogo);
             this.Controls.Add(this.grpCWSuggest);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerWriteForm";
@@ -297,14 +298,14 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Label lbCWTitle;
         private System.Windows.Forms.Label lbCWNotice;
         private System.Windows.Forms.TextBox txtCWTitle;
-        private System.Windows.Forms.TableLayoutPanel plnCW;
-        private System.Windows.Forms.Button btnCWMax;
-        private System.Windows.Forms.Button btnCWMin;
-        private System.Windows.Forms.Button btnCWClose;
         private System.Windows.Forms.Label lbCWLogo;
         private System.Windows.Forms.Label lbCWDate;
         private System.Windows.Forms.Label lbCWToday;
         private System.Windows.Forms.Label lbCWMyCusNum;
         private System.Windows.Forms.Label lbCWCusNum;
+        private System.Windows.Forms.TableLayoutPanel plnCW;
+        private System.Windows.Forms.Button btnCWClose;
+        private System.Windows.Forms.Button btnCWMax;
+        private System.Windows.Forms.Button btnCWMin;
     }
 }

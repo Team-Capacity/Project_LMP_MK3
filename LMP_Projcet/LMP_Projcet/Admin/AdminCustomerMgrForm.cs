@@ -30,7 +30,7 @@ namespace LibraryMgrProgram
 
         private void AdminCustomerMgrForm_Load(object sender, EventArgs e)
         {
-            string sql = "select CNumber, CRank, CID, CPW, CName, CLoanCot, CPH, CBirth, CAddress, CDate, CGender from LibaryProgram_DB.Customer;";
+            string sql = "select CNumber, CRank, CID, CPW, CName, CLoanCot, CPH, CBirth, CAddress, CDate, CGender from lmp.Customer;";
             me.reloadForm(sql, dgvACMCustomerList,i);
         }
 

@@ -44,23 +44,23 @@ namespace LMP_Projcet.Customer
             mouseEvent.PlanMouseUp();
         }  
 
-        private void btnCusMin_Click(object sender, EventArgs e)
+     
+        private void btnCWMin_Click(object sender, EventArgs e)
         {
             mouseEvent.FormMinSize(this);
         }
 
-        private void btnCusMax_Click(object sender, EventArgs e)
+        private void btnCWMax_Click(object sender, EventArgs e)
         {
             mouseEvent.FormMaxSize(this);
         }
 
-        private void btnCusClose_Click(object sender, EventArgs e)
+        private void btnCWClose_Click(object sender, EventArgs e)
         {
             CustomerOperationForm.chkShow2 = false;
             mouseEvent.ButtonClose(this);
         }
 
-      
 
 
 
@@ -70,13 +70,10 @@ namespace LMP_Projcet.Customer
 
 
 
-        private void plnCus_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
 
 
-       
+
+
 
         private void btnCusWriteOk_Click(object sender, EventArgs e)
         {
@@ -123,6 +120,6 @@ namespace LMP_Projcet.Customer
           
         }
 
-       
+        
     }
 }

@@ -17,5 +17,9 @@ namespace LibraryMgrProgram
             InitializeComponent();
         }
 
+        private void AdminInputOutputForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

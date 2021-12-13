@@ -156,7 +156,7 @@ namespace LibraryMgrProgram
             // 
             // btnAIOLone
             // 
-            this.btnAIOLone.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOLone.Font = new System.Drawing.Font("굴림", 10F);
             this.btnAIOLone.Location = new System.Drawing.Point(401, 224);
             this.btnAIOLone.Name = "btnAIOLone";
             this.btnAIOLone.Size = new System.Drawing.Size(75, 23);
@@ -304,7 +304,7 @@ namespace LibraryMgrProgram
             // 
             // btnAIOMSearch
             // 
-            this.btnAIOMSearch.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOMSearch.Font = new System.Drawing.Font("굴림", 10F);
             this.btnAIOMSearch.Location = new System.Drawing.Point(554, 14);
             this.btnAIOMSearch.Name = "btnAIOMSearch";
             this.btnAIOMSearch.Size = new System.Drawing.Size(75, 23);
@@ -358,7 +358,7 @@ namespace LibraryMgrProgram
             this.grpAIOLone.Controls.Add(this.lbAIOBNameView0);
             this.grpAIOLone.Controls.Add(this.lbAIOBAuthor0);
             this.grpAIOLone.Controls.Add(this.lbAIOBISBNView0);
-            this.grpAIOLone.Font = new System.Drawing.Font("Gulim", 12F);
+            this.grpAIOLone.Font = new System.Drawing.Font("굴림", 12F);
             this.grpAIOLone.Location = new System.Drawing.Point(7, 247);
             this.grpAIOLone.Name = "grpAIOLone";
             this.grpAIOLone.Size = new System.Drawing.Size(498, 253);
@@ -386,7 +386,7 @@ namespace LibraryMgrProgram
             // lbAIOBAddr0
             // 
             this.lbAIOBAddr0.AutoSize = true;
-            this.lbAIOBAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAddr0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAddr0.Location = new System.Drawing.Point(182, 30);
             this.lbAIOBAddr0.Name = "lbAIOBAddr0";
             this.lbAIOBAddr0.Size = new System.Drawing.Size(59, 13);
@@ -406,7 +406,7 @@ namespace LibraryMgrProgram
             // lbAIOBCount0
             // 
             this.lbAIOBCount0.AutoSize = true;
-            this.lbAIOBCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBCount0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBCount0.Location = new System.Drawing.Point(268, 139);
             this.lbAIOBCount0.Name = "lbAIOBCount0";
             this.lbAIOBCount0.Size = new System.Drawing.Size(33, 13);
@@ -442,7 +442,7 @@ namespace LibraryMgrProgram
             // lbAIOBName0
             // 
             this.lbAIOBName0.AutoSize = true;
-            this.lbAIOBName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBName0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBName0.Location = new System.Drawing.Point(14, 68);
             this.lbAIOBName0.Name = "lbAIOBName0";
             this.lbAIOBName0.Size = new System.Drawing.Size(50, 13);
@@ -452,7 +452,7 @@ namespace LibraryMgrProgram
             // lbAIOBNum0
             // 
             this.lbAIOBNum0.AutoSize = true;
-            this.lbAIOBNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBNum0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBNum0.Location = new System.Drawing.Point(14, 30);
             this.lbAIOBNum0.Name = "lbAIOBNum0";
             this.lbAIOBNum0.Size = new System.Drawing.Size(59, 13);
@@ -462,7 +462,7 @@ namespace LibraryMgrProgram
             // lbAIOBISBN0
             // 
             this.lbAIOBISBN0.AutoSize = true;
-            this.lbAIOBISBN0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBISBN0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBISBN0.Location = new System.Drawing.Point(198, 178);
             this.lbAIOBISBN0.Name = "lbAIOBISBN0";
             this.lbAIOBISBN0.Size = new System.Drawing.Size(37, 13);
@@ -481,7 +481,7 @@ namespace LibraryMgrProgram
             // lbAIOBPubli0
             // 
             this.lbAIOBPubli0.AutoSize = true;
-            this.lbAIOBPubli0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPubli0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPubli0.Location = new System.Drawing.Point(14, 139);
             this.lbAIOBPubli0.Name = "lbAIOBPubli0";
             this.lbAIOBPubli0.Size = new System.Drawing.Size(46, 13);
@@ -500,7 +500,7 @@ namespace LibraryMgrProgram
             // lbAIOBTime0
             // 
             this.lbAIOBTime0.AutoSize = true;
-            this.lbAIOBTime0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBTime0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBTime0.Location = new System.Drawing.Point(14, 178);
             this.lbAIOBTime0.Name = "lbAIOBTime0";
             this.lbAIOBTime0.Size = new System.Drawing.Size(59, 13);
@@ -520,7 +520,7 @@ namespace LibraryMgrProgram
             // lbAIOBPage0
             // 
             this.lbAIOBPage0.AutoSize = true;
-            this.lbAIOBPage0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPage0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPage0.Location = new System.Drawing.Point(255, 104);
             this.lbAIOBPage0.Name = "lbAIOBPage0";
             this.lbAIOBPage0.Size = new System.Drawing.Size(46, 13);
@@ -539,7 +539,7 @@ namespace LibraryMgrProgram
             // lbAIOBAuthor0
             // 
             this.lbAIOBAuthor0.AutoSize = true;
-            this.lbAIOBAuthor0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAuthor0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAuthor0.Location = new System.Drawing.Point(16, 104);
             this.lbAIOBAuthor0.Name = "lbAIOBAuthor0";
             this.lbAIOBAuthor0.Size = new System.Drawing.Size(33, 13);
@@ -579,7 +579,7 @@ namespace LibraryMgrProgram
             this.grpAIOMem0.Controls.Add(this.lbAIOMHP0);
             this.grpAIOMem0.Controls.Add(this.lbAIOMNum0);
             this.grpAIOMem0.Controls.Add(this.lbAIOMRank0);
-            this.grpAIOMem0.Font = new System.Drawing.Font("Gulim", 12F);
+            this.grpAIOMem0.Font = new System.Drawing.Font("굴림", 12F);
             this.grpAIOMem0.Location = new System.Drawing.Point(6, 6);
             this.grpAIOMem0.Name = "grpAIOMem0";
             this.grpAIOMem0.Size = new System.Drawing.Size(499, 235);
@@ -590,7 +590,7 @@ namespace LibraryMgrProgram
             // lbAIOCustomerState0
             // 
             this.lbAIOCustomerState0.AutoSize = true;
-            this.lbAIOCustomerState0.Font = new System.Drawing.Font("Gulim", 12F);
+            this.lbAIOCustomerState0.Font = new System.Drawing.Font("굴림", 12F);
             this.lbAIOCustomerState0.Location = new System.Drawing.Point(386, 168);
             this.lbAIOCustomerState0.Name = "lbAIOCustomerState0";
             this.lbAIOCustomerState0.Size = new System.Drawing.Size(72, 16);
@@ -610,7 +610,7 @@ namespace LibraryMgrProgram
             // lbAIOSex0
             // 
             this.lbAIOSex0.AutoSize = true;
-            this.lbAIOSex0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOSex0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOSex0.Location = new System.Drawing.Point(20, 65);
             this.lbAIOSex0.Name = "lbAIOSex0";
             this.lbAIOSex0.Size = new System.Drawing.Size(33, 13);
@@ -630,7 +630,7 @@ namespace LibraryMgrProgram
             // lbAIOBirth0
             // 
             this.lbAIOBirth0.AutoSize = true;
-            this.lbAIOBirth0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBirth0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBirth0.Location = new System.Drawing.Point(133, 65);
             this.lbAIOBirth0.Name = "lbAIOBirth0";
             this.lbAIOBirth0.Size = new System.Drawing.Size(59, 13);
@@ -657,7 +657,7 @@ namespace LibraryMgrProgram
             // lbAIOMMemo0
             // 
             this.lbAIOMMemo0.AutoSize = true;
-            this.lbAIOMMemo0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMMemo0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMMemo0.Location = new System.Drawing.Point(20, 139);
             this.lbAIOMMemo0.Name = "lbAIOMMemo0";
             this.lbAIOMMemo0.Size = new System.Drawing.Size(33, 13);
@@ -677,7 +677,7 @@ namespace LibraryMgrProgram
             // lbAIOMCount0
             // 
             this.lbAIOMCount0.AutoSize = true;
-            this.lbAIOMCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMCount0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMCount0.Location = new System.Drawing.Point(207, 102);
             this.lbAIOMCount0.Name = "lbAIOMCount0";
             this.lbAIOMCount0.Size = new System.Drawing.Size(91, 13);
@@ -697,7 +697,7 @@ namespace LibraryMgrProgram
             // lbAIOMName0
             // 
             this.lbAIOMName0.AutoSize = true;
-            this.lbAIOMName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMName0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMName0.Location = new System.Drawing.Point(149, 30);
             this.lbAIOMName0.Name = "lbAIOMName0";
             this.lbAIOMName0.Size = new System.Drawing.Size(46, 13);
@@ -717,7 +717,7 @@ namespace LibraryMgrProgram
             // lbAIOMAddr0
             // 
             this.lbAIOMAddr0.AutoSize = true;
-            this.lbAIOMAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMAddr0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMAddr0.Location = new System.Drawing.Point(20, 205);
             this.lbAIOMAddr0.Name = "lbAIOMAddr0";
             this.lbAIOMAddr0.Size = new System.Drawing.Size(33, 13);
@@ -764,7 +764,7 @@ namespace LibraryMgrProgram
             // lbAIOMHP0
             // 
             this.lbAIOMHP0.AutoSize = true;
-            this.lbAIOMHP0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMHP0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMHP0.Location = new System.Drawing.Point(18, 104);
             this.lbAIOMHP0.Name = "lbAIOMHP0";
             this.lbAIOMHP0.Size = new System.Drawing.Size(59, 13);
@@ -774,7 +774,7 @@ namespace LibraryMgrProgram
             // lbAIOMNum0
             // 
             this.lbAIOMNum0.AutoSize = true;
-            this.lbAIOMNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMNum0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMNum0.Location = new System.Drawing.Point(18, 30);
             this.lbAIOMNum0.Name = "lbAIOMNum0";
             this.lbAIOMNum0.Size = new System.Drawing.Size(59, 13);
@@ -784,7 +784,7 @@ namespace LibraryMgrProgram
             // lbAIOMRank0
             // 
             this.lbAIOMRank0.AutoSize = true;
-            this.lbAIOMRank0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMRank0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMRank0.Location = new System.Drawing.Point(284, 30);
             this.lbAIOMRank0.Name = "lbAIOMRank0";
             this.lbAIOMRank0.Size = new System.Drawing.Size(33, 13);
@@ -828,7 +828,7 @@ namespace LibraryMgrProgram
             this.grpAIOReturn.Controls.Add(this.lbAIOBNameView1);
             this.grpAIOReturn.Controls.Add(this.lbAIOBAuthor1);
             this.grpAIOReturn.Controls.Add(this.lbAIOBISBNView1);
-            this.grpAIOReturn.Font = new System.Drawing.Font("Gulim", 12F);
+            this.grpAIOReturn.Font = new System.Drawing.Font("굴림", 12F);
             this.grpAIOReturn.Location = new System.Drawing.Point(7, 247);
             this.grpAIOReturn.Name = "grpAIOReturn";
             this.grpAIOReturn.Size = new System.Drawing.Size(498, 253);
@@ -846,7 +846,7 @@ namespace LibraryMgrProgram
             // 
             // btnAIOExtension
             // 
-            this.btnAIOExtension.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOExtension.Font = new System.Drawing.Font("굴림", 10F);
             this.btnAIOExtension.Location = new System.Drawing.Point(319, 224);
             this.btnAIOExtension.Name = "btnAIOExtension";
             this.btnAIOExtension.Size = new System.Drawing.Size(75, 23);
@@ -866,7 +866,7 @@ namespace LibraryMgrProgram
             // lbAIOBAddr1
             // 
             this.lbAIOBAddr1.AutoSize = true;
-            this.lbAIOBAddr1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAddr1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAddr1.Location = new System.Drawing.Point(182, 30);
             this.lbAIOBAddr1.Name = "lbAIOBAddr1";
             this.lbAIOBAddr1.Size = new System.Drawing.Size(59, 13);
@@ -886,7 +886,7 @@ namespace LibraryMgrProgram
             // lbAIOBCount1
             // 
             this.lbAIOBCount1.AutoSize = true;
-            this.lbAIOBCount1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBCount1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBCount1.Location = new System.Drawing.Point(268, 139);
             this.lbAIOBCount1.Name = "lbAIOBCount1";
             this.lbAIOBCount1.Size = new System.Drawing.Size(33, 13);
@@ -922,7 +922,7 @@ namespace LibraryMgrProgram
             // lbAIOBName1
             // 
             this.lbAIOBName1.AutoSize = true;
-            this.lbAIOBName1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBName1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBName1.Location = new System.Drawing.Point(14, 68);
             this.lbAIOBName1.Name = "lbAIOBName1";
             this.lbAIOBName1.Size = new System.Drawing.Size(50, 13);
@@ -932,7 +932,7 @@ namespace LibraryMgrProgram
             // lbAIOBNum1
             // 
             this.lbAIOBNum1.AutoSize = true;
-            this.lbAIOBNum1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBNum1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBNum1.Location = new System.Drawing.Point(14, 30);
             this.lbAIOBNum1.Name = "lbAIOBNum1";
             this.lbAIOBNum1.Size = new System.Drawing.Size(59, 13);
@@ -942,7 +942,7 @@ namespace LibraryMgrProgram
             // lbAIOBISBN1
             // 
             this.lbAIOBISBN1.AutoSize = true;
-            this.lbAIOBISBN1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBISBN1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBISBN1.Location = new System.Drawing.Point(198, 178);
             this.lbAIOBISBN1.Name = "lbAIOBISBN1";
             this.lbAIOBISBN1.Size = new System.Drawing.Size(37, 13);
@@ -951,7 +951,7 @@ namespace LibraryMgrProgram
             // 
             // btnAIOReturn
             // 
-            this.btnAIOReturn.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOReturn.Font = new System.Drawing.Font("굴림", 10F);
             this.btnAIOReturn.Location = new System.Drawing.Point(400, 224);
             this.btnAIOReturn.Name = "btnAIOReturn";
             this.btnAIOReturn.Size = new System.Drawing.Size(75, 23);
@@ -971,7 +971,7 @@ namespace LibraryMgrProgram
             // lbAIOBPubli1
             // 
             this.lbAIOBPubli1.AutoSize = true;
-            this.lbAIOBPubli1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPubli1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPubli1.Location = new System.Drawing.Point(14, 139);
             this.lbAIOBPubli1.Name = "lbAIOBPubli1";
             this.lbAIOBPubli1.Size = new System.Drawing.Size(46, 13);
@@ -990,7 +990,7 @@ namespace LibraryMgrProgram
             // lbAIOBTime1
             // 
             this.lbAIOBTime1.AutoSize = true;
-            this.lbAIOBTime1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBTime1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBTime1.Location = new System.Drawing.Point(14, 178);
             this.lbAIOBTime1.Name = "lbAIOBTime1";
             this.lbAIOBTime1.Size = new System.Drawing.Size(59, 13);
@@ -1010,7 +1010,7 @@ namespace LibraryMgrProgram
             // lbAIOBPage1
             // 
             this.lbAIOBPage1.AutoSize = true;
-            this.lbAIOBPage1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPage1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPage1.Location = new System.Drawing.Point(255, 104);
             this.lbAIOBPage1.Name = "lbAIOBPage1";
             this.lbAIOBPage1.Size = new System.Drawing.Size(46, 13);
@@ -1029,7 +1029,7 @@ namespace LibraryMgrProgram
             // lbAIOBAuthor1
             // 
             this.lbAIOBAuthor1.AutoSize = true;
-            this.lbAIOBAuthor1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAuthor1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAuthor1.Location = new System.Drawing.Point(16, 104);
             this.lbAIOBAuthor1.Name = "lbAIOBAuthor1";
             this.lbAIOBAuthor1.Size = new System.Drawing.Size(33, 13);
@@ -1069,7 +1069,7 @@ namespace LibraryMgrProgram
             this.grpAIOMem1.Controls.Add(this.lbAIOMHP1);
             this.grpAIOMem1.Controls.Add(this.lbAIOMNum1);
             this.grpAIOMem1.Controls.Add(this.lbAIOMRank1);
-            this.grpAIOMem1.Font = new System.Drawing.Font("Gulim", 12F);
+            this.grpAIOMem1.Font = new System.Drawing.Font("굴림", 12F);
             this.grpAIOMem1.Location = new System.Drawing.Point(6, 6);
             this.grpAIOMem1.Name = "grpAIOMem1";
             this.grpAIOMem1.Size = new System.Drawing.Size(499, 235);
@@ -1080,7 +1080,7 @@ namespace LibraryMgrProgram
             // lbAIOCustomerState1
             // 
             this.lbAIOCustomerState1.AutoSize = true;
-            this.lbAIOCustomerState1.Font = new System.Drawing.Font("Gulim", 12F);
+            this.lbAIOCustomerState1.Font = new System.Drawing.Font("굴림", 12F);
             this.lbAIOCustomerState1.Location = new System.Drawing.Point(386, 168);
             this.lbAIOCustomerState1.Name = "lbAIOCustomerState1";
             this.lbAIOCustomerState1.Size = new System.Drawing.Size(72, 16);
@@ -1100,7 +1100,7 @@ namespace LibraryMgrProgram
             // lbAIOSex1
             // 
             this.lbAIOSex1.AutoSize = true;
-            this.lbAIOSex1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOSex1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOSex1.Location = new System.Drawing.Point(18, 65);
             this.lbAIOSex1.Name = "lbAIOSex1";
             this.lbAIOSex1.Size = new System.Drawing.Size(33, 13);
@@ -1137,7 +1137,7 @@ namespace LibraryMgrProgram
             // lbAIOBirth1
             // 
             this.lbAIOBirth1.AutoSize = true;
-            this.lbAIOBirth1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBirth1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBirth1.Location = new System.Drawing.Point(133, 65);
             this.lbAIOBirth1.Name = "lbAIOBirth1";
             this.lbAIOBirth1.Size = new System.Drawing.Size(59, 13);
@@ -1147,7 +1147,7 @@ namespace LibraryMgrProgram
             // lbAIOMMemo1
             // 
             this.lbAIOMMemo1.AutoSize = true;
-            this.lbAIOMMemo1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMMemo1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMMemo1.Location = new System.Drawing.Point(20, 139);
             this.lbAIOMMemo1.Name = "lbAIOMMemo1";
             this.lbAIOMMemo1.Size = new System.Drawing.Size(33, 13);
@@ -1166,7 +1166,7 @@ namespace LibraryMgrProgram
             // lbAIOMCount1
             // 
             this.lbAIOMCount1.AutoSize = true;
-            this.lbAIOMCount1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMCount1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMCount1.Location = new System.Drawing.Point(207, 102);
             this.lbAIOMCount1.Name = "lbAIOMCount1";
             this.lbAIOMCount1.Size = new System.Drawing.Size(91, 13);
@@ -1186,7 +1186,7 @@ namespace LibraryMgrProgram
             // lbAIOMName1
             // 
             this.lbAIOMName1.AutoSize = true;
-            this.lbAIOMName1.Font = new System.Drawing.Font("Gulim", 9.75F);
+            this.lbAIOMName1.Font = new System.Drawing.Font("굴림", 9.75F);
             this.lbAIOMName1.Location = new System.Drawing.Point(149, 30);
             this.lbAIOMName1.Name = "lbAIOMName1";
             this.lbAIOMName1.Size = new System.Drawing.Size(46, 13);
@@ -1205,7 +1205,7 @@ namespace LibraryMgrProgram
             // lbAIOMAddr1
             // 
             this.lbAIOMAddr1.AutoSize = true;
-            this.lbAIOMAddr1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMAddr1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMAddr1.Location = new System.Drawing.Point(20, 205);
             this.lbAIOMAddr1.Name = "lbAIOMAddr1";
             this.lbAIOMAddr1.Size = new System.Drawing.Size(33, 13);
@@ -1251,7 +1251,7 @@ namespace LibraryMgrProgram
             // lbAIOMHP1
             // 
             this.lbAIOMHP1.AutoSize = true;
-            this.lbAIOMHP1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMHP1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMHP1.Location = new System.Drawing.Point(18, 104);
             this.lbAIOMHP1.Name = "lbAIOMHP1";
             this.lbAIOMHP1.Size = new System.Drawing.Size(59, 13);
@@ -1261,7 +1261,7 @@ namespace LibraryMgrProgram
             // lbAIOMNum1
             // 
             this.lbAIOMNum1.AutoSize = true;
-            this.lbAIOMNum1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMNum1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMNum1.Location = new System.Drawing.Point(18, 30);
             this.lbAIOMNum1.Name = "lbAIOMNum1";
             this.lbAIOMNum1.Size = new System.Drawing.Size(59, 13);
@@ -1271,7 +1271,7 @@ namespace LibraryMgrProgram
             // lbAIOMRank1
             // 
             this.lbAIOMRank1.AutoSize = true;
-            this.lbAIOMRank1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMRank1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMRank1.Location = new System.Drawing.Point(284, 30);
             this.lbAIOMRank1.Name = "lbAIOMRank1";
             this.lbAIOMRank1.Size = new System.Drawing.Size(33, 13);
@@ -1280,7 +1280,7 @@ namespace LibraryMgrProgram
             // 
             // btnAIOBSearch
             // 
-            this.btnAIOBSearch.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOBSearch.Font = new System.Drawing.Font("굴림", 10F);
             this.btnAIOBSearch.Location = new System.Drawing.Point(554, 290);
             this.btnAIOBSearch.Name = "btnAIOBSearch";
             this.btnAIOBSearch.Size = new System.Drawing.Size(75, 23);
@@ -1306,6 +1306,7 @@ namespace LibraryMgrProgram
             this.Name = "AdminInputOutputForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form4";
+            this.Load += new System.EventHandler(this.AdminInputOutputForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gdvAIOBView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gdvAIOMView)).EndInit();
             this.tacAIOMain.ResumeLayout(false);

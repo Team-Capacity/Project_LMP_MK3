@@ -22,6 +22,7 @@ namespace LMP_Projcet
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
+        public static string name;
 
         public LoginForm()
         {
@@ -83,11 +84,12 @@ namespace LMP_Projcet
         private void btnLFLogin_Click(object sender, EventArgs e)
         {
           
-                db.dbConnection();
-                string id = txtLFID.Text;
-                string password = txtLFPW.Text;
+               db.dbConnection();
+               string id = txtLFID.Text;
+               string password = txtLFPW.Text;
+            
 
-            string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+            string sql = "select CRank, CName from lmp.Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
             string rank = "";
             try
             {
@@ -96,16 +98,19 @@ namespace LMP_Projcet
                 while (dbReader.Read())
                 {
                     rank = dbReader["CRank"] as String;
+                    name = dbReader["Cname"] as String;
                 }
-                if (rank.Equals("1"))
+                if (rank.Equals("M"))
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }else if (rank.Equals("2"))
+                  
+                }
+                else if (rank.Equals("N"))
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }else if(rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
+                }else if(rank.Equals("1") || rank.Equals("2") || rank.Equals("3"))
                 {
                     CustomerMainForm cmf = new CustomerMainForm();
                     formChange.ChangeF(this, cmf);

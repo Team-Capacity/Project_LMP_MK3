@@ -44,6 +44,24 @@ namespace LibraryMgrProgram
         String sql = "";
 
         public static string myname;
+    
+
+        private void btnCMMin_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMinSize(this);
+        }
+
+        private void btnCMMax_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMaxSize(this);
+        }
+
+        private void btnCMClose_Click(object sender, EventArgs e)
+        {
+            //mouseEvent.ButtonClose(this);
+            Application.Exit();
+        }
+
 
         private void plnCM_MouseDown(object sender, MouseEventArgs e)
         {
@@ -60,21 +78,9 @@ namespace LibraryMgrProgram
             mouseEvent.PlanMouseUp();
         }
 
-        private void btnCMMin_Click_1(object sender, EventArgs e)
-        {
-            mouseEvent.FormMinSize(this);
-        }
+       
 
-        private void btnCMMax_Click_1(object sender, EventArgs e)
-        {
-            mouseEvent.FormMaxSize(this);
-        }
-
-        private void btnCMClose_Click_1(object sender, EventArgs e)
-        {
-            //mouseEvent.ButtonClose(this);
-            Application.Exit();
-        }
+   
 
 
         //로그아웃 -> 로그인 화면으로 이동
@@ -94,28 +100,29 @@ namespace LibraryMgrProgram
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
             formChange.ChangeFIF(ccf, palCMMain);
-            db.dbConnection();
-        
-            // 4단계
-            
-        
-           
-        
-                // 이렇게하면 회원은 무조건 hello가뜸
-                sql = "select cName from Customer where CID = '9' ;";
-
-    
-            lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
-        
+            lbCMCustomer.Text = LoginForm.name + "님 환영합니다.";
             myname = lbCMCustomer.Text;
+
+
+            /*
+            // 이렇게하면 회원은 무조건 hello가뜸
+            sql = "select cName from Customer where CID =  '2';";
+            db.dbConnection();
+           // string sql = "select * from Customer where CName = '" + myName + "';";
+
+            lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
+            */
+        
 
 
 
         }
 
+        CustomerEditForm ce = new CustomerEditForm();
         //회원정보 클릭시 내정보
         private void lbCMInfo_Click(object sender, EventArgs e)
         {
+           ce.change();
             formChange.ChangeFIF(cmi, palCMMain);
         }
 
@@ -136,14 +143,13 @@ namespace LibraryMgrProgram
             formChange.ChangeFIF(cbi, palCMMain);
         }
 
-        private void lbCMHome_Click(object sender, EventArgs e)
-        {
-            
-        }
+      
 
         private void CustomerMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+       
     }
 }
