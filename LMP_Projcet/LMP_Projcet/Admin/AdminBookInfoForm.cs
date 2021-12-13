@@ -40,10 +40,9 @@ namespace LibraryMgrProgram
 
         private void btnABIOk2_Click(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
             DateTime bookAddDay = Convert.ToDateTime(txtABIMakeDay2.Text);
             
-            string sql = "insert into Book(BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, Bpage, BLocal, BDate, BContent,BAddDate) values("
+            string sql = "insert into Book(BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, Bpage, BLocal, BDate, BContent) values("
                     + "'" + txtABIBookName2.Text + "'"
                     + ",'" + txtABICompany2.Text + "'"
                     + ",'" + txtABIBookMaker2.Text + "'"
@@ -57,7 +56,6 @@ namespace LibraryMgrProgram
                     // 이부분은 DateTime의 형태로 바꾸어주어야함
                     + ",'"+ bookAddDay.Year+"/"+bookAddDay.Month+"/"+bookAddDay.Day + "'"
                     + ",'" + rtxtABIBBookExp2.Text + "'"
-                    + ",'" + now.ToString("yy/dd/MM") + "'"
                     + ");";
             db.dbUpdate(sql);
             string reloadSql = "select * from LibaryProgram_DB.Book;";

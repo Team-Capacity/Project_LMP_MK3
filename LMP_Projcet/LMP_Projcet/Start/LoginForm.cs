@@ -22,6 +22,7 @@ namespace LMP_Projcet
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
+        public static string name = "";
 
         public LoginForm()
         {
@@ -83,11 +84,10 @@ namespace LMP_Projcet
         private void btnLFLogin_Click(object sender, EventArgs e)
         {
           
-                db.dbConnection();
-                string id = txtLFID.Text;
-                string password = txtLFPW.Text;
-
-            string sql = "select CRank from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+            db.dbConnection();
+            string id = txtLFID.Text;
+            string password = txtLFPW.Text;
+            string sql = "select CRank, CName from LibaryProgram_DB.Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
             string rank = "";
             try
             {
@@ -96,19 +96,25 @@ namespace LMP_Projcet
                 while (dbReader.Read())
                 {
                     rank = dbReader["CRank"] as String;
+                    name = dbReader["CName"] as String;
                 }
-                if (rank.Equals("1"))
+                if (rank.Equals("M"))
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }else if (rank.Equals("2"))
+
+                }else if (rank.Equals("N"))
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }else if(rank.Equals("3") || rank.Equals("4") || rank.Equals("5"))
+                }else if(rank.Equals("1") || rank.Equals("2") || rank.Equals("3"))
                 {
                     CustomerMainForm cmf = new CustomerMainForm();
                     formChange.ChangeF(this, cmf);
+                }
+                else
+                {
+                    MessageBox.Show("블랙리스트에 선정된 회원이므로 접속이 제한되었습니다.");
                 }
                 dbReader.Close();
             }

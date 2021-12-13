@@ -66,10 +66,7 @@ namespace LibraryMgrProgram
         private void AdminMainForm_Load(object sender, EventArgs e)
         {
             formChange.ChangeFIF(aConForm, palAMMain);
-            db.dbConnection();
-            // 4단계
-            sql = "select cName from Customer where CID = 'admin';";
-            lbAMCustomer.Text = db.dbSelectCus(sql)+"님 환영합니다.";
+            lbAMCustomer.Text = LoginForm.name+"님 환영합니다.";
             bool color = LMP_Projcet.Properties.Settings.Default.myColor;
             if(color == true)
             {

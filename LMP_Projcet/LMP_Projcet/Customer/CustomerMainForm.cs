@@ -94,23 +94,8 @@ namespace LibraryMgrProgram
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
             formChange.ChangeFIF(ccf, palCMMain);
-            db.dbConnection();
-        
-            // 4단계
-            
-        
-           
-        
-                // 이렇게하면 회원은 무조건 hello가뜸
-                sql = "select cName from Customer where CID = '9' ;";
-
-    
-            lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
-        
+            lbCMCustomer.Text = LoginForm.name + "님 환영합니다.";
             myname = lbCMCustomer.Text;
-
-
-
         }
 
         //회원정보 클릭시 내정보
