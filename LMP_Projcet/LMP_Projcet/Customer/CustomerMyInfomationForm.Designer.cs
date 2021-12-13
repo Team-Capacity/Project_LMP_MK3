@@ -376,11 +376,7 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Label lbCMISex;
         private System.Windows.Forms.Label lbCMIBirth;
         private System.Windows.Forms.Label lbCMIHP;
-        private System.Windows.Forms.Label lbCMIMyName;
-        private System.Windows.Forms.Label lbCMIAddrView;
         private System.Windows.Forms.Label lbCMIMan;
-        private System.Windows.Forms.Label lbCMIMyBirth;
-        private System.Windows.Forms.Label lbCMIHPView;
         private System.Windows.Forms.PictureBox picCMICustomerImg;
         private System.Windows.Forms.GroupBox GBCusEdit;
         private System.Windows.Forms.Label label1;
@@ -395,6 +391,10 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Label lbCMICustomerState;
         private System.Windows.Forms.Label lbCMIMemo;
         private System.Windows.Forms.TextBox txtCMIMyList;
-        private System.Windows.Forms.Label lbCMIMemoView;
+        public System.Windows.Forms.Label lbCMIAddrView;
+        public System.Windows.Forms.Label lbCMIMyBirth;
+        public System.Windows.Forms.Label lbCMIHPView;
+        public System.Windows.Forms.Label lbCMIMemoView;
+        public System.Windows.Forms.Label lbCMIMyName;
     }
 }

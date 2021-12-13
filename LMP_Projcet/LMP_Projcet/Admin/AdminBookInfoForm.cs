@@ -28,7 +28,7 @@ namespace LibraryMgrProgram
 
         private void AdminBookInfoForm_Load(object sender, EventArgs e)
         {
-            string sql = "select * from LibaryProgram_DB.Book;";
+            string sql = "select * from lmp.Book;";
             me.reloadForm(sql,dgvABIBookList,i);
             listDescription();
         }
@@ -58,7 +58,7 @@ namespace LibraryMgrProgram
                     + ",'" + rtxtABIBBookExp2.Text + "'"
                     + ");";
             db.dbUpdate(sql);
-            string reloadSql = "select * from LibaryProgram_DB.Book;";
+            string reloadSql = "select * from lmp.Book;";
             me.reloadForm(reloadSql, dgvABIBookList,i);
         }
 
@@ -85,12 +85,12 @@ namespace LibraryMgrProgram
             dgvABIBookList.Columns.Clear();
             if(txtABISerBar.Text == "")
             {
-                string sql = "select * from LibaryProgram_DB.Book;";
+                string sql = "select * from lmp.Book;";
                 me.reloadForm(sql,dgvABIBookList,i);
             }
             else
             {
-                string sql = ("select * from Book where BName = '" + txtABISerBar.Text + "';").ToString();
+                string sql = ("select * from lmp.Book where BName = '" + txtABISerBar.Text + "';").ToString();
                 me.reloadForm(sql, dgvABIBookList,i);
             }
         }
@@ -189,7 +189,7 @@ namespace LibraryMgrProgram
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("성공적으로 추가 되었습니다.");
-                    me.reloadForm("select * from LibaryProgram_DB.Book;", dgvABIBookList,i);
+                    me.reloadForm("select * from lmp.Book.;", dgvABIBookList,i);
                 }
             }
             catch (MySqlException ex)
@@ -212,7 +212,7 @@ namespace LibraryMgrProgram
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("성공적으로 삭제 되었습니다.");
-                        me.reloadForm("select * from LibaryProgram_DB.Book;", dgvABIBookList,i);
+                        me.reloadForm("select * from lmp.Book;", dgvABIBookList,i);
                     }
                 }
                 catch (MySqlException ex)
@@ -223,5 +223,7 @@ namespace LibraryMgrProgram
 
 
         }
+
+     
     }
 }

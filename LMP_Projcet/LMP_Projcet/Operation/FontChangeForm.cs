@@ -67,28 +67,23 @@ namespace LibraryMgrProgram
             mouseEvent.PlanMouseUp();
         }
 
-        private void btnFCMin_Click(object sender, EventArgs e)
+     
+        private void btnFCMin_Click_1(object sender, EventArgs e)
         {
             mouseEvent.FormMinSize(this);
         }
 
-        private void btnFCMax_Click_1(object sender, EventArgs e)
+        private void btnFCMax_Click(object sender, EventArgs e)
         {
             mouseEvent.FormMaxSize(this);
         }
 
-     
-        private void btnFCClose_Click(object sender, EventArgs e, bool chkShow)
+        private void btnFCClose_Click_1(object sender, EventArgs e, bool chkShow) 
         {
-
             chkShow = false;
-
-
-
             this.Close();
 
-           //mouseEvent.ButtonClose(this);
-
+            //mouseEvent.ButtonClose(this);
         }
 
 
@@ -176,5 +171,7 @@ namespace LibraryMgrProgram
                 MessageBox.Show("확인용");
             }
         }
+
+       
     }
 }

@@ -152,7 +152,7 @@ namespace LMP_Projcet.Customer
             this.cmbCBISerList.Items.AddRange(new object[] {
             "제목",
             "저자"});
-            this.cmbCBISerList.Location = new System.Drawing.Point(274, 13);
+            this.cmbCBISerList.Location = new System.Drawing.Point(276, 11);
             this.cmbCBISerList.Name = "cmbCBISerList";
             this.cmbCBISerList.Size = new System.Drawing.Size(121, 20);
             this.cmbCBISerList.TabIndex = 39;
@@ -161,7 +161,7 @@ namespace LMP_Projcet.Customer
             // grpCBIBookList
             // 
             this.grpCBIBookList.Controls.Add(this.dgvCBIBookList);
-            this.grpCBIBookList.Location = new System.Drawing.Point(44, 38);
+            this.grpCBIBookList.Location = new System.Drawing.Point(46, 36);
             this.grpCBIBookList.Name = "grpCBIBookList";
             this.grpCBIBookList.Size = new System.Drawing.Size(765, 460);
             this.grpCBIBookList.TabIndex = 43;
@@ -184,17 +184,18 @@ namespace LMP_Projcet.Customer
             this.dgvCBIBookList.Size = new System.Drawing.Size(745, 434);
             this.dgvCBIBookList.TabIndex = 0;
             this.dgvCBIBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCBIBookList_CellClick);
+          
             // 
             // txtCBISerBar
             // 
-            this.txtCBISerBar.Location = new System.Drawing.Point(401, 12);
+            this.txtCBISerBar.Location = new System.Drawing.Point(403, 10);
             this.txtCBISerBar.Name = "txtCBISerBar";
             this.txtCBISerBar.Size = new System.Drawing.Size(314, 21);
             this.txtCBISerBar.TabIndex = 42;
             // 
             // btnCBISer
             // 
-            this.btnCBISer.Location = new System.Drawing.Point(721, 10);
+            this.btnCBISer.Location = new System.Drawing.Point(723, 8);
             this.btnCBISer.Name = "btnCBISer";
             this.btnCBISer.Size = new System.Drawing.Size(75, 23);
             this.btnCBISer.TabIndex = 41;

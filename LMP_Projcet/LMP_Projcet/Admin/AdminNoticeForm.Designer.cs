@@ -56,7 +56,7 @@ namespace LibraryMgrProgram
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
-            this.lvANList.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lvANList.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lvANList.FullRowSelect = true;
             this.lvANList.GridLines = true;
             this.lvANList.HideSelection = false;
@@ -121,7 +121,7 @@ namespace LibraryMgrProgram
             // 
             // btnANDel
             // 
-            this.btnANDel.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnANDel.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnANDel.Location = new System.Drawing.Point(968, 511);
             this.btnANDel.Name = "btnANDel";
             this.btnANDel.Size = new System.Drawing.Size(92, 30);
@@ -131,7 +131,7 @@ namespace LibraryMgrProgram
             // 
             // btnANModi
             // 
-            this.btnANModi.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnANModi.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnANModi.Location = new System.Drawing.Point(868, 511);
             this.btnANModi.Name = "btnANModi";
             this.btnANModi.Size = new System.Drawing.Size(92, 30);
@@ -141,7 +141,7 @@ namespace LibraryMgrProgram
             // 
             // btnANAdd
             // 
-            this.btnANAdd.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnANAdd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnANAdd.Location = new System.Drawing.Point(768, 511);
             this.btnANAdd.Name = "btnANAdd";
             this.btnANAdd.Size = new System.Drawing.Size(92, 30);
@@ -152,7 +152,7 @@ namespace LibraryMgrProgram
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label2.Font = new System.Drawing.Font("굴림", 15F);
             this.label2.Location = new System.Drawing.Point(247, 52);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
@@ -199,7 +199,7 @@ namespace LibraryMgrProgram
             this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFMax.FlatAppearance.BorderSize = 0;
             this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMax.Font = new System.Drawing.Font("굴림", 10F);
             this.btnLFMax.Location = new System.Drawing.Point(1068, 6);
             this.btnLFMax.Name = "btnLFMax";
             this.btnLFMax.Size = new System.Drawing.Size(19, 20);
@@ -214,7 +214,7 @@ namespace LibraryMgrProgram
             this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFMin.FlatAppearance.BorderSize = 0;
             this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMin.Font = new System.Drawing.Font("굴림", 10F);
             this.btnLFMin.Location = new System.Drawing.Point(1042, 6);
             this.btnLFMin.Name = "btnLFMin";
             this.btnLFMin.Size = new System.Drawing.Size(20, 20);
@@ -229,7 +229,7 @@ namespace LibraryMgrProgram
             this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFClose.FlatAppearance.BorderSize = 0;
             this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFClose.Font = new System.Drawing.Font("굴림", 10F);
             this.btnLFClose.Location = new System.Drawing.Point(1095, 6);
             this.btnLFClose.Name = "btnLFClose";
             this.btnLFClose.Size = new System.Drawing.Size(20, 20);
@@ -257,6 +257,7 @@ namespace LibraryMgrProgram
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminNoticeForm";
             this.Text = "공지사항";
+            this.Load += new System.EventHandler(this.AdminNoticeForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

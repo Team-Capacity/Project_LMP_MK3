@@ -55,5 +55,10 @@ namespace LibraryMgrProgram
         {
             mouseEvent.ButtonClose(this);
         }
+
+        private void AdminNoticeForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

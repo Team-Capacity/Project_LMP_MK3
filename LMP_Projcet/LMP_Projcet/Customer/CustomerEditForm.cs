@@ -22,7 +22,7 @@ namespace LMP_Projcet.Customer
 
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
-
+        CustomerMyInfomationForm cmi = new CustomerMyInfomationForm();
 
 
 
@@ -40,15 +40,20 @@ namespace LMP_Projcet.Customer
             this.Close();
         }
 
+
+       
         private void CustomerEditForm_Load(object sender, EventArgs e)
         {
+          
             db.dbConnection();
+          
+
             string thismyName = CustomerMainForm.myname;
             string myName = thismyName.Substring(0, thismyName.Length - 8);
             string sql = "select * from Customer where CName = '" + myName + "';";
+
             MySqlCommand cmd = new MySqlCommand(sql, db.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
-
 
             int number = 0;
             string name = "";
@@ -71,7 +76,10 @@ namespace LMP_Projcet.Customer
                 memo = reader[11].ToString();
 
             }
+
             reader.Close();
+          
+
 
 
             lbCEMyNum.Text = number.ToString();
@@ -86,6 +94,24 @@ namespace LMP_Projcet.Customer
             {
 
             }
+            
+        }
+
+
+        private void btnCEMin_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMinSize(this);
+        }
+
+        private void btnCEMax_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMaxSize(this);
+        }
+
+        private void btnCEClose_Click(object sender, EventArgs e)
+        {
+            CustomerMyInfomationForm.chkShow = false;
+            mouseEvent.ButtonClose(this);
         }
 
         private void plnCE_MouseDown(object sender, MouseEventArgs e)
@@ -103,24 +129,7 @@ namespace LMP_Projcet.Customer
             mouseEvent.PlanMouseUp();
         }
 
-        private void btnCEMin_Click_1(object sender, EventArgs e)
-        {
-            mouseEvent.FormMinSize(this);
-        }
-
-        private void btnCEMax_Click_1(object sender, EventArgs e)
-        {
-            mouseEvent.FormMaxSize(this);
-        }
-
-        private void btnCEClose_Click_1(object sender, EventArgs e)
-        {
-            CustomerMyInfomationForm.chkShow = false;
-            mouseEvent.ButtonClose(this);
-
-        }
-
-
+  
 
         private void plnCM_Paint(object sender, PaintEventArgs e)
         {
@@ -162,38 +171,53 @@ namespace LMP_Projcet.Customer
 
 
 
-        //저장버튼 클릭
-        private void btnCESave_Click(object sender, EventArgs e)
-        {
+
        
-            string myConnection = "datasource = localhost; port = 3309; username = root; password = ";
-            string Query = "update lmp.customer set (Cname = '" + this.txtCEMyName + "', CPH = '" + this.txtCEHPView + "'," +
-                "CBirth = '" + this.txtCEMyBirth + "', CAddress = '" + this.txtCEMyAddrView + "', CGender = '" + this.rdbCMWom + "'," +
-                "CGender = '" + this.rdbCMWom + "', CMemo = '" + this.txtCEMemoView + "');";
+        public void change()
+        {
+            cmi.lbCMIMyName.Text = txtCEMyName.Text;
+            cmi.lbCMIHPView.Text = txtCEHPView.Text;
+            cmi.lbCMIMyBirth.Text = txtCEMyBirth.Text;
+            cmi.lbCMIMemoView.Text = txtCEMemoView.Text;
+            cmi.lbCMIAddrView.Text = txtCEMyAddrView.Text;
+       
+        }
 
-
-            MySqlConnection myConn = new MySqlConnection(myConnection);
-
-            MySqlCommand SelectCommand = new MySqlCommand(Query, myConn);
-
-            MySqlDataReader myReader;
+        public void btnCESave_Click(object sender, EventArgs e)
+        {
+            db.dbConnection();
+            string Query2 = "Update customer set CName = '" + txtCEMyName.Text
+                    + "', CPH = '" + txtCEHPView.Text
+                    + "', CBirth = '" + txtCEMyBirth.Text
+                    + "', CAddress = '" + txtCEMyAddrView.Text
+                    + "', CMemo = '" + txtCEMemoView + "'"
+                    + "   where CName = '" + LoginForm.name +  "';";
+  
+            MySqlCommand SelectCommand = new MySqlCommand(Query2, db.conn);
+            MySqlDataReader reader;
+         
 
             try
             {
-                myConn.Open();
 
-                myReader = SelectCommand.ExecuteReader();
-                MessageBox.Show("수정됨");
-
-                while(myReader.Read())
-                {
-
-                }
+              
+                reader = SelectCommand.ExecuteReader();
+                MessageBox.Show("수정이 완료되었습니다.");            
+                reader.Close();
+               
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+
+            change();
+         
+
+
+
+
+
         }
 
     }
