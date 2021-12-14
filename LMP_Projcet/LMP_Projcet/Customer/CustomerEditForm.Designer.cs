@@ -109,7 +109,7 @@ namespace LMP_Projcet.Customer
             // lbCEMan
             // 
             this.lbCEMan.AutoSize = true;
-            this.lbCEMan.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEMan.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEMan.ForeColor = System.Drawing.Color.Black;
             this.lbCEMan.Location = new System.Drawing.Point(222, 168);
             this.lbCEMan.Name = "lbCEMan";
@@ -120,7 +120,7 @@ namespace LMP_Projcet.Customer
             // lbCECustomerState
             // 
             this.lbCECustomerState.AutoSize = true;
-            this.lbCECustomerState.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCECustomerState.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCECustomerState.ForeColor = System.Drawing.Color.Black;
             this.lbCECustomerState.Location = new System.Drawing.Point(413, 216);
             this.lbCECustomerState.Name = "lbCECustomerState";
@@ -138,7 +138,7 @@ namespace LMP_Projcet.Customer
             // 
             // btnCELoad
             // 
-            this.btnCELoad.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCELoad.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCELoad.Location = new System.Drawing.Point(700, 229);
             this.btnCELoad.Name = "btnCELoad";
             this.btnCELoad.Size = new System.Drawing.Size(117, 33);
@@ -150,7 +150,7 @@ namespace LMP_Projcet.Customer
             // lbCEMemo
             // 
             this.lbCEMemo.AutoSize = true;
-            this.lbCEMemo.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEMemo.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEMemo.ForeColor = System.Drawing.Color.Black;
             this.lbCEMemo.Location = new System.Drawing.Point(164, 271);
             this.lbCEMemo.Name = "lbCEMemo";
@@ -161,7 +161,7 @@ namespace LMP_Projcet.Customer
             // lbCENum
             // 
             this.lbCENum.AutoSize = true;
-            this.lbCENum.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCENum.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCENum.ForeColor = System.Drawing.Color.Black;
             this.lbCENum.Location = new System.Drawing.Point(369, 72);
             this.lbCENum.Name = "lbCENum";
@@ -172,7 +172,7 @@ namespace LMP_Projcet.Customer
             // lbCECustomerState2
             // 
             this.lbCECustomerState2.AutoSize = true;
-            this.lbCECustomerState2.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCECustomerState2.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCECustomerState2.ForeColor = System.Drawing.Color.Black;
             this.lbCECustomerState2.Location = new System.Drawing.Point(509, 216);
             this.lbCECustomerState2.Name = "lbCECustomerState2";
@@ -183,7 +183,7 @@ namespace LMP_Projcet.Customer
             // lbCEMyNum
             // 
             this.lbCEMyNum.AutoSize = true;
-            this.lbCEMyNum.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEMyNum.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEMyNum.ForeColor = System.Drawing.Color.Black;
             this.lbCEMyNum.Location = new System.Drawing.Point(472, 72);
             this.lbCEMyNum.Name = "lbCEMyNum";
@@ -194,7 +194,7 @@ namespace LMP_Projcet.Customer
             // lbCESEX
             // 
             this.lbCESEX.AutoSize = true;
-            this.lbCESEX.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCESEX.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCESEX.Location = new System.Drawing.Point(169, 168);
             this.lbCESEX.Name = "lbCESEX";
             this.lbCESEX.Size = new System.Drawing.Size(47, 19);
@@ -204,7 +204,7 @@ namespace LMP_Projcet.Customer
             // lbCEPossbile
             // 
             this.lbCEPossbile.AutoSize = true;
-            this.lbCEPossbile.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEPossbile.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEPossbile.ForeColor = System.Drawing.Color.Black;
             this.lbCEPossbile.Location = new System.Drawing.Point(369, 168);
             this.lbCEPossbile.Name = "lbCEPossbile";
@@ -215,7 +215,7 @@ namespace LMP_Projcet.Customer
             // lbCEMyPossbile
             // 
             this.lbCEMyPossbile.AutoSize = true;
-            this.lbCEMyPossbile.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEMyPossbile.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEMyPossbile.ForeColor = System.Drawing.Color.Black;
             this.lbCEMyPossbile.Location = new System.Drawing.Point(515, 168);
             this.lbCEMyPossbile.Name = "lbCEMyPossbile";
@@ -227,7 +227,7 @@ namespace LMP_Projcet.Customer
             // lbCERank
             // 
             this.lbCERank.AutoSize = true;
-            this.lbCERank.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCERank.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCERank.ForeColor = System.Drawing.Color.Black;
             this.lbCERank.Location = new System.Drawing.Point(169, 72);
             this.lbCERank.Name = "lbCERank";
@@ -245,7 +245,7 @@ namespace LMP_Projcet.Customer
             // 
             // btnCEDel
             // 
-            this.btnCEDel.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCEDel.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCEDel.Location = new System.Drawing.Point(673, 442);
             this.btnCEDel.Name = "btnCEDel";
             this.btnCEDel.Size = new System.Drawing.Size(117, 33);
@@ -267,7 +267,7 @@ namespace LMP_Projcet.Customer
             // label3
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label3.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Font = new System.Drawing.Font("Gulim", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label3.Location = new System.Drawing.Point(-250, 38);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(1212, 10);
@@ -276,7 +276,7 @@ namespace LMP_Projcet.Customer
             // lbCEMyInfoEdit
             // 
             this.lbCEMyInfoEdit.AutoSize = true;
-            this.lbCEMyInfoEdit.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEMyInfoEdit.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEMyInfoEdit.Location = new System.Drawing.Point(334, 0);
             this.lbCEMyInfoEdit.Name = "lbCEMyInfoEdit";
             this.lbCEMyInfoEdit.Size = new System.Drawing.Size(150, 21);
@@ -286,7 +286,7 @@ namespace LMP_Projcet.Customer
             // lbCEBirth
             // 
             this.lbCEBirth.AutoSize = true;
-            this.lbCEBirth.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEBirth.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEBirth.Location = new System.Drawing.Point(131, 217);
             this.lbCEBirth.Name = "lbCEBirth";
             this.lbCEBirth.Size = new System.Drawing.Size(85, 19);
@@ -295,7 +295,7 @@ namespace LMP_Projcet.Customer
             // 
             // btnCESave
             // 
-            this.btnCESave.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCESave.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCESave.Location = new System.Drawing.Point(307, 442);
             this.btnCESave.Name = "btnCESave";
             this.btnCESave.Size = new System.Drawing.Size(76, 33);
@@ -306,7 +306,7 @@ namespace LMP_Projcet.Customer
             // 
             // txtCEMyBirth
             // 
-            this.txtCEMyBirth.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCEMyBirth.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCEMyBirth.Location = new System.Drawing.Point(223, 214);
             this.txtCEMyBirth.Name = "txtCEMyBirth";
             this.txtCEMyBirth.Size = new System.Drawing.Size(117, 29);
@@ -314,7 +314,7 @@ namespace LMP_Projcet.Customer
             // 
             // txtCEHPView
             // 
-            this.txtCEHPView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCEHPView.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCEHPView.Location = new System.Drawing.Point(476, 117);
             this.txtCEHPView.Name = "txtCEHPView";
             this.txtCEHPView.Size = new System.Drawing.Size(139, 29);
@@ -322,7 +322,7 @@ namespace LMP_Projcet.Customer
             // 
             // btnCECancel
             // 
-            this.btnCECancel.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnCECancel.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnCECancel.Location = new System.Drawing.Point(476, 442);
             this.btnCECancel.Name = "btnCECancel";
             this.btnCECancel.Size = new System.Drawing.Size(76, 33);
@@ -333,7 +333,7 @@ namespace LMP_Projcet.Customer
             // 
             // txtCEMyAddrView
             // 
-            this.txtCEMyAddrView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCEMyAddrView.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCEMyAddrView.Location = new System.Drawing.Point(223, 369);
             this.txtCEMyAddrView.Multiline = true;
             this.txtCEMyAddrView.Name = "txtCEMyAddrView";
@@ -342,7 +342,7 @@ namespace LMP_Projcet.Customer
             // 
             // txtCEMyName
             // 
-            this.txtCEMyName.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtCEMyName.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.txtCEMyName.Location = new System.Drawing.Point(223, 117);
             this.txtCEMyName.Name = "txtCEMyName";
             this.txtCEMyName.Size = new System.Drawing.Size(90, 29);
@@ -351,7 +351,7 @@ namespace LMP_Projcet.Customer
             // lbCEAddr
             // 
             this.lbCEAddr.AutoSize = true;
-            this.lbCEAddr.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEAddr.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEAddr.Location = new System.Drawing.Point(164, 372);
             this.lbCEAddr.Name = "lbCEAddr";
             this.lbCEAddr.Size = new System.Drawing.Size(47, 19);
@@ -361,7 +361,7 @@ namespace LMP_Projcet.Customer
             // lbCEHP
             // 
             this.lbCEHP.AutoSize = true;
-            this.lbCEHP.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEHP.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEHP.Location = new System.Drawing.Point(369, 120);
             this.lbCEHP.Name = "lbCEHP";
             this.lbCEHP.Size = new System.Drawing.Size(85, 19);
@@ -371,7 +371,7 @@ namespace LMP_Projcet.Customer
             // lbCEName
             // 
             this.lbCEName.AutoSize = true;
-            this.lbCEName.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCEName.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCEName.Location = new System.Drawing.Point(169, 120);
             this.lbCEName.Name = "lbCEName";
             this.lbCEName.Size = new System.Drawing.Size(47, 19);
@@ -392,7 +392,7 @@ namespace LMP_Projcet.Customer
             // rdbCMWom
             // 
             this.rdbCMWom.AutoSize = true;
-            this.rdbCMWom.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbCMWom.Font = new System.Drawing.Font("Gulim", 10F);
             this.rdbCMWom.Location = new System.Drawing.Point(63, 9);
             this.rdbCMWom.Name = "rdbCMWom";
             this.rdbCMWom.Size = new System.Drawing.Size(53, 18);
@@ -404,7 +404,7 @@ namespace LMP_Projcet.Customer
             // rdbCMMan
             // 
             this.rdbCMMan.AutoSize = true;
-            this.rdbCMMan.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbCMMan.Font = new System.Drawing.Font("Gulim", 10F);
             this.rdbCMMan.Location = new System.Drawing.Point(6, 10);
             this.rdbCMMan.Name = "rdbCMMan";
             this.rdbCMMan.Size = new System.Drawing.Size(53, 18);
@@ -445,7 +445,7 @@ namespace LMP_Projcet.Customer
             this.btnCEClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCEClose.FlatAppearance.BorderSize = 0;
             this.btnCEClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCEClose.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCEClose.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCEClose.Location = new System.Drawing.Point(1197, 7);
             this.btnCEClose.Name = "btnCEClose";
             this.btnCEClose.Size = new System.Drawing.Size(20, 20);
@@ -460,7 +460,7 @@ namespace LMP_Projcet.Customer
             this.btnCEMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCEMax.FlatAppearance.BorderSize = 0;
             this.btnCEMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCEMax.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCEMax.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCEMax.Location = new System.Drawing.Point(1171, 7);
             this.btnCEMax.Name = "btnCEMax";
             this.btnCEMax.Size = new System.Drawing.Size(19, 20);
@@ -475,7 +475,7 @@ namespace LMP_Projcet.Customer
             this.btnCEMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCEMin.FlatAppearance.BorderSize = 0;
             this.btnCEMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCEMin.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCEMin.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCEMin.Location = new System.Drawing.Point(1143, 7);
             this.btnCEMin.Name = "btnCEMin";
             this.btnCEMin.Size = new System.Drawing.Size(20, 20);

@@ -238,6 +238,7 @@ namespace LMP_Projcet.Admin
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminSuggestionForm";
             this.Text = "AdminSuggestionForm";
+            this.Load += new System.EventHandler(this.AdminSuggestionForm_Load);
             this.plnAM.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

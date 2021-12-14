@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LMP_Projcet.Methods;
 
 namespace LMP_Projcet.Customer
 {
@@ -23,6 +24,7 @@ namespace LMP_Projcet.Customer
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
         CustomerMyInfomationForm cmi = new CustomerMyInfomationForm();
+        FormChange fc = new FormChange();
 
 
 
@@ -192,18 +194,15 @@ namespace LMP_Projcet.Customer
                     + "', CAddress = '" + txtCEMyAddrView.Text
                     + "', CMemo = '" + txtCEMemoView + "'"
                     + "   where CName = '" + LoginForm.name +  "';";
-  
-            MySqlCommand SelectCommand = new MySqlCommand(Query2, db.conn);
-            MySqlDataReader reader;
-         
-
             try
             {
 
-              
+                MySqlCommand SelectCommand = new MySqlCommand(Query2, db.conn);
+                MySqlDataReader reader;
                 reader = SelectCommand.ExecuteReader();
                 MessageBox.Show("수정이 완료되었습니다.");            
                 reader.Close();
+                
                
             }
             catch (Exception ex)

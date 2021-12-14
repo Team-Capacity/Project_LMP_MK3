@@ -29,21 +29,12 @@ namespace LibraryMgrProgram
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminInputOutputForm));
             this.btnAIOLone = new System.Windows.Forms.Button();
             this.txtAIOBSearch = new System.Windows.Forms.TextBox();
             this.gdvAIOBView = new System.Windows.Forms.DataGridView();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboxAIOBSort = new System.Windows.Forms.ComboBox();
             this.gdvAIOMView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cboxAIOMSort = new System.Windows.Forms.ComboBox();
             this.txtAIOMSearch = new System.Windows.Forms.TextBox();
             this.btnAIOMSearch = new System.Windows.Forms.Button();
@@ -156,144 +147,87 @@ namespace LibraryMgrProgram
             // 
             // btnAIOLone
             // 
-            this.btnAIOLone.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnAIOLone.Location = new System.Drawing.Point(401, 224);
+            this.btnAIOLone.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOLone.Location = new System.Drawing.Point(401, 211);
             this.btnAIOLone.Name = "btnAIOLone";
             this.btnAIOLone.Size = new System.Drawing.Size(75, 23);
             this.btnAIOLone.TabIndex = 0;
             this.btnAIOLone.Text = "대출";
             this.btnAIOLone.UseVisualStyleBackColor = true;
+            this.btnAIOLone.Click += new System.EventHandler(this.btnAIOLone_Click);
             // 
             // txtAIOBSearch
             // 
-            this.txtAIOBSearch.Location = new System.Drawing.Point(186, 290);
+            this.txtAIOBSearch.Location = new System.Drawing.Point(186, 281);
             this.txtAIOBSearch.Name = "txtAIOBSearch";
             this.txtAIOBSearch.Size = new System.Drawing.Size(362, 21);
             this.txtAIOBSearch.TabIndex = 2;
             // 
             // gdvAIOBView
             // 
+            this.gdvAIOBView.AllowUserToAddRows = false;
+            this.gdvAIOBView.AllowUserToDeleteRows = false;
+            this.gdvAIOBView.AllowUserToResizeColumns = false;
+            this.gdvAIOBView.AllowUserToResizeRows = false;
             this.gdvAIOBView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gdvAIOBView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gdvAIOBView.BackgroundColor = System.Drawing.Color.White;
             this.gdvAIOBView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdvAIOBView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column3,
-            this.Column2,
-            this.Column5,
-            this.Column4,
-            this.Column6});
-            this.gdvAIOBView.Location = new System.Drawing.Point(85, 316);
+            this.gdvAIOBView.Location = new System.Drawing.Point(85, 307);
             this.gdvAIOBView.Name = "gdvAIOBView";
+            this.gdvAIOBView.ReadOnly = true;
             this.gdvAIOBView.RowHeadersVisible = false;
             this.gdvAIOBView.RowTemplate.Height = 23;
-            this.gdvAIOBView.Size = new System.Drawing.Size(686, 223);
+            this.gdvAIOBView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gdvAIOBView.Size = new System.Drawing.Size(686, 233);
             this.gdvAIOBView.TabIndex = 3;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "도서번호";
-            this.Column3.Name = "Column3";
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "도서명";
-            this.Column2.Name = "Column2";
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "저자";
-            this.Column5.Name = "Column5";
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "출판사";
-            this.Column4.Name = "Column4";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "장르";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 54;
+            this.gdvAIOBView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvAIOBView_CellContentClick);
             // 
             // cboxAIOBSort
             // 
             this.cboxAIOBSort.FormattingEnabled = true;
             this.cboxAIOBSort.Items.AddRange(new object[] {
-            "도서명",
-            "도서번호",
-            "출판사",
+            "제목",
             "저자",
             "장르"});
-            this.cboxAIOBSort.Location = new System.Drawing.Point(85, 290);
+            this.cboxAIOBSort.Location = new System.Drawing.Point(85, 281);
             this.cboxAIOBSort.Name = "cboxAIOBSort";
             this.cboxAIOBSort.Size = new System.Drawing.Size(95, 20);
             this.cboxAIOBSort.TabIndex = 8;
-            this.cboxAIOBSort.Text = "도서명";
+            this.cboxAIOBSort.Text = "제목";
             // 
             // gdvAIOMView
             // 
+            this.gdvAIOMView.AllowUserToAddRows = false;
+            this.gdvAIOMView.AllowUserToDeleteRows = false;
+            this.gdvAIOMView.AllowUserToResizeColumns = false;
+            this.gdvAIOMView.AllowUserToResizeRows = false;
             this.gdvAIOMView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.gdvAIOMView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.gdvAIOMView.BackgroundColor = System.Drawing.Color.White;
             this.gdvAIOMView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdvAIOMView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn4,
-            this.Column7,
-            this.dataGridViewTextBoxColumn5});
             this.gdvAIOMView.Location = new System.Drawing.Point(85, 40);
             this.gdvAIOMView.Name = "gdvAIOMView";
+            this.gdvAIOMView.ReadOnly = true;
             this.gdvAIOMView.RowHeadersVisible = false;
             this.gdvAIOMView.RowTemplate.Height = 23;
+            this.gdvAIOMView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gdvAIOMView.Size = new System.Drawing.Size(686, 223);
             this.gdvAIOMView.TabIndex = 9;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn3.HeaderText = "회원번호";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "회원명";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn4.HeaderText = "대출현황";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "회원등급";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 78;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn5.HeaderText = "전화번호";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.gdvAIOMView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gdvAIOMView_CellContentClick);
             // 
             // cboxAIOMSort
             // 
             this.cboxAIOMSort.FormattingEnabled = true;
             this.cboxAIOMSort.Items.AddRange(new object[] {
-            "회원명",
-            "회원번호",
-            "대출기간",
-            "전호번호",
+            "이름",
+            "아이디",
             "생년월일"});
             this.cboxAIOMSort.Location = new System.Drawing.Point(85, 17);
             this.cboxAIOMSort.Name = "cboxAIOMSort";
             this.cboxAIOMSort.Size = new System.Drawing.Size(95, 20);
             this.cboxAIOMSort.TabIndex = 12;
-            this.cboxAIOMSort.Text = "회원명";
+            this.cboxAIOMSort.Text = "이름";
             // 
             // txtAIOMSearch
             // 
@@ -304,13 +238,14 @@ namespace LibraryMgrProgram
             // 
             // btnAIOMSearch
             // 
-            this.btnAIOMSearch.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnAIOMSearch.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnAIOMSearch.Location = new System.Drawing.Point(554, 14);
             this.btnAIOMSearch.Name = "btnAIOMSearch";
             this.btnAIOMSearch.Size = new System.Drawing.Size(75, 23);
             this.btnAIOMSearch.TabIndex = 10;
             this.btnAIOMSearch.Text = "회원검색";
             this.btnAIOMSearch.UseVisualStyleBackColor = true;
+            this.btnAIOMSearch.Click += new System.EventHandler(this.btnAIOMSearch_Click);
             // 
             // tacAIOMain
             // 
@@ -321,6 +256,7 @@ namespace LibraryMgrProgram
             this.tacAIOMain.SelectedIndex = 0;
             this.tacAIOMain.Size = new System.Drawing.Size(517, 532);
             this.tacAIOMain.TabIndex = 35;
+            this.tacAIOMain.SelectedIndexChanged += new System.EventHandler(this.tacAIOMain_SelectedIndexChanged);
             // 
             // BookLone
             // 
@@ -339,6 +275,7 @@ namespace LibraryMgrProgram
             this.grpAIOLone.BackColor = System.Drawing.Color.White;
             this.grpAIOLone.Controls.Add(this.picAIOBookImg0);
             this.grpAIOLone.Controls.Add(this.lbAIOBAddrView0);
+            this.grpAIOLone.Controls.Add(this.btnAIOLone);
             this.grpAIOLone.Controls.Add(this.lbAIOBAddr0);
             this.grpAIOLone.Controls.Add(this.lbAIOBCountView0);
             this.grpAIOLone.Controls.Add(this.lbAIOBCount0);
@@ -348,7 +285,6 @@ namespace LibraryMgrProgram
             this.grpAIOLone.Controls.Add(this.lbAIOBName0);
             this.grpAIOLone.Controls.Add(this.lbAIOBNum0);
             this.grpAIOLone.Controls.Add(this.lbAIOBISBN0);
-            this.grpAIOLone.Controls.Add(this.btnAIOLone);
             this.grpAIOLone.Controls.Add(this.lbAIOBPubliView0);
             this.grpAIOLone.Controls.Add(this.lbAIOBPubli0);
             this.grpAIOLone.Controls.Add(this.lbAIOBAuthorView0);
@@ -358,7 +294,7 @@ namespace LibraryMgrProgram
             this.grpAIOLone.Controls.Add(this.lbAIOBNameView0);
             this.grpAIOLone.Controls.Add(this.lbAIOBAuthor0);
             this.grpAIOLone.Controls.Add(this.lbAIOBISBNView0);
-            this.grpAIOLone.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpAIOLone.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpAIOLone.Location = new System.Drawing.Point(7, 247);
             this.grpAIOLone.Name = "grpAIOLone";
             this.grpAIOLone.Size = new System.Drawing.Size(498, 253);
@@ -368,9 +304,11 @@ namespace LibraryMgrProgram
             // 
             // picAIOBookImg0
             // 
+            this.picAIOBookImg0.Image = ((System.Drawing.Image)(resources.GetObject("picAIOBookImg0.Image")));
             this.picAIOBookImg0.Location = new System.Drawing.Point(367, 22);
             this.picAIOBookImg0.Name = "picAIOBookImg0";
             this.picAIOBookImg0.Size = new System.Drawing.Size(108, 130);
+            this.picAIOBookImg0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAIOBookImg0.TabIndex = 49;
             this.picAIOBookImg0.TabStop = false;
             // 
@@ -386,7 +324,7 @@ namespace LibraryMgrProgram
             // lbAIOBAddr0
             // 
             this.lbAIOBAddr0.AutoSize = true;
-            this.lbAIOBAddr0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAddr0.Location = new System.Drawing.Point(182, 30);
             this.lbAIOBAddr0.Name = "lbAIOBAddr0";
             this.lbAIOBAddr0.Size = new System.Drawing.Size(59, 13);
@@ -406,7 +344,7 @@ namespace LibraryMgrProgram
             // lbAIOBCount0
             // 
             this.lbAIOBCount0.AutoSize = true;
-            this.lbAIOBCount0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBCount0.Location = new System.Drawing.Point(268, 139);
             this.lbAIOBCount0.Name = "lbAIOBCount0";
             this.lbAIOBCount0.Size = new System.Drawing.Size(33, 13);
@@ -418,7 +356,7 @@ namespace LibraryMgrProgram
             this.lbAIOBTimeView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbAIOBTimeView0.Location = new System.Drawing.Point(79, 170);
             this.lbAIOBTimeView0.Name = "lbAIOBTimeView0";
-            this.lbAIOBTimeView0.Size = new System.Drawing.Size(112, 26);
+            this.lbAIOBTimeView0.Size = new System.Drawing.Size(218, 26);
             this.lbAIOBTimeView0.TabIndex = 42;
             this.lbAIOBTimeView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -442,7 +380,7 @@ namespace LibraryMgrProgram
             // lbAIOBName0
             // 
             this.lbAIOBName0.AutoSize = true;
-            this.lbAIOBName0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBName0.Location = new System.Drawing.Point(14, 68);
             this.lbAIOBName0.Name = "lbAIOBName0";
             this.lbAIOBName0.Size = new System.Drawing.Size(50, 13);
@@ -452,7 +390,7 @@ namespace LibraryMgrProgram
             // lbAIOBNum0
             // 
             this.lbAIOBNum0.AutoSize = true;
-            this.lbAIOBNum0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBNum0.Location = new System.Drawing.Point(14, 30);
             this.lbAIOBNum0.Name = "lbAIOBNum0";
             this.lbAIOBNum0.Size = new System.Drawing.Size(59, 13);
@@ -462,8 +400,8 @@ namespace LibraryMgrProgram
             // lbAIOBISBN0
             // 
             this.lbAIOBISBN0.AutoSize = true;
-            this.lbAIOBISBN0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbAIOBISBN0.Location = new System.Drawing.Point(198, 178);
+            this.lbAIOBISBN0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBISBN0.Location = new System.Drawing.Point(19, 216);
             this.lbAIOBISBN0.Name = "lbAIOBISBN0";
             this.lbAIOBISBN0.Size = new System.Drawing.Size(37, 13);
             this.lbAIOBISBN0.TabIndex = 2;
@@ -481,7 +419,7 @@ namespace LibraryMgrProgram
             // lbAIOBPubli0
             // 
             this.lbAIOBPubli0.AutoSize = true;
-            this.lbAIOBPubli0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPubli0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPubli0.Location = new System.Drawing.Point(14, 139);
             this.lbAIOBPubli0.Name = "lbAIOBPubli0";
             this.lbAIOBPubli0.Size = new System.Drawing.Size(46, 13);
@@ -500,7 +438,7 @@ namespace LibraryMgrProgram
             // lbAIOBTime0
             // 
             this.lbAIOBTime0.AutoSize = true;
-            this.lbAIOBTime0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBTime0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBTime0.Location = new System.Drawing.Point(14, 178);
             this.lbAIOBTime0.Name = "lbAIOBTime0";
             this.lbAIOBTime0.Size = new System.Drawing.Size(59, 13);
@@ -520,7 +458,7 @@ namespace LibraryMgrProgram
             // lbAIOBPage0
             // 
             this.lbAIOBPage0.AutoSize = true;
-            this.lbAIOBPage0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPage0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPage0.Location = new System.Drawing.Point(255, 104);
             this.lbAIOBPage0.Name = "lbAIOBPage0";
             this.lbAIOBPage0.Size = new System.Drawing.Size(46, 13);
@@ -539,7 +477,7 @@ namespace LibraryMgrProgram
             // lbAIOBAuthor0
             // 
             this.lbAIOBAuthor0.AutoSize = true;
-            this.lbAIOBAuthor0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAuthor0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAuthor0.Location = new System.Drawing.Point(16, 104);
             this.lbAIOBAuthor0.Name = "lbAIOBAuthor0";
             this.lbAIOBAuthor0.Size = new System.Drawing.Size(33, 13);
@@ -549,9 +487,9 @@ namespace LibraryMgrProgram
             // lbAIOBISBNView0
             // 
             this.lbAIOBISBNView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbAIOBISBNView0.Location = new System.Drawing.Point(241, 170);
+            this.lbAIOBISBNView0.Location = new System.Drawing.Point(79, 208);
             this.lbAIOBISBNView0.Name = "lbAIOBISBNView0";
-            this.lbAIOBISBNView0.Size = new System.Drawing.Size(234, 26);
+            this.lbAIOBISBNView0.Size = new System.Drawing.Size(237, 26);
             this.lbAIOBISBNView0.TabIndex = 33;
             this.lbAIOBISBNView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -579,7 +517,7 @@ namespace LibraryMgrProgram
             this.grpAIOMem0.Controls.Add(this.lbAIOMHP0);
             this.grpAIOMem0.Controls.Add(this.lbAIOMNum0);
             this.grpAIOMem0.Controls.Add(this.lbAIOMRank0);
-            this.grpAIOMem0.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpAIOMem0.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpAIOMem0.Location = new System.Drawing.Point(6, 6);
             this.grpAIOMem0.Name = "grpAIOMem0";
             this.grpAIOMem0.Size = new System.Drawing.Size(499, 235);
@@ -590,8 +528,8 @@ namespace LibraryMgrProgram
             // lbAIOCustomerState0
             // 
             this.lbAIOCustomerState0.AutoSize = true;
-            this.lbAIOCustomerState0.Font = new System.Drawing.Font("굴림", 12F);
-            this.lbAIOCustomerState0.Location = new System.Drawing.Point(386, 168);
+            this.lbAIOCustomerState0.Font = new System.Drawing.Font("Gulim", 12F);
+            this.lbAIOCustomerState0.Location = new System.Drawing.Point(385, 155);
             this.lbAIOCustomerState0.Name = "lbAIOCustomerState0";
             this.lbAIOCustomerState0.Size = new System.Drawing.Size(72, 16);
             this.lbAIOCustomerState0.TabIndex = 151;
@@ -604,14 +542,13 @@ namespace LibraryMgrProgram
             this.lbAIOSexView0.Name = "lbAIOSexView0";
             this.lbAIOSexView0.Size = new System.Drawing.Size(44, 26);
             this.lbAIOSexView0.TabIndex = 150;
-            this.lbAIOSexView0.Text = "남자";
             this.lbAIOSexView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOSex0
             // 
             this.lbAIOSex0.AutoSize = true;
-            this.lbAIOSex0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbAIOSex0.Location = new System.Drawing.Point(20, 65);
+            this.lbAIOSex0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOSex0.Location = new System.Drawing.Point(18, 65);
             this.lbAIOSex0.Name = "lbAIOSex0";
             this.lbAIOSex0.Size = new System.Drawing.Size(33, 13);
             this.lbAIOSex0.TabIndex = 149;
@@ -624,13 +561,12 @@ namespace LibraryMgrProgram
             this.lbAIOBirthView0.Name = "lbAIOBirthView0";
             this.lbAIOBirthView0.Size = new System.Drawing.Size(160, 26);
             this.lbAIOBirthView0.TabIndex = 148;
-            this.lbAIOBirthView0.Text = "0000년00월00일";
             this.lbAIOBirthView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOBirth0
             // 
             this.lbAIOBirth0.AutoSize = true;
-            this.lbAIOBirth0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBirth0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBirth0.Location = new System.Drawing.Point(133, 65);
             this.lbAIOBirth0.Name = "lbAIOBirth0";
             this.lbAIOBirth0.Size = new System.Drawing.Size(59, 13);
@@ -639,9 +575,11 @@ namespace LibraryMgrProgram
             // 
             // picAIOCustomerImg0
             // 
+            this.picAIOCustomerImg0.Image = ((System.Drawing.Image)(resources.GetObject("picAIOCustomerImg0.Image")));
             this.picAIOCustomerImg0.Location = new System.Drawing.Point(367, 22);
             this.picAIOCustomerImg0.Name = "picAIOCustomerImg0";
             this.picAIOCustomerImg0.Size = new System.Drawing.Size(108, 130);
+            this.picAIOCustomerImg0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAIOCustomerImg0.TabIndex = 50;
             this.picAIOCustomerImg0.TabStop = false;
             // 
@@ -657,7 +595,7 @@ namespace LibraryMgrProgram
             // lbAIOMMemo0
             // 
             this.lbAIOMMemo0.AutoSize = true;
-            this.lbAIOMMemo0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMMemo0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMMemo0.Location = new System.Drawing.Point(20, 139);
             this.lbAIOMMemo0.Name = "lbAIOMMemo0";
             this.lbAIOMMemo0.Size = new System.Drawing.Size(33, 13);
@@ -671,13 +609,12 @@ namespace LibraryMgrProgram
             this.lbAIOMCountView0.Name = "lbAIOMCountView0";
             this.lbAIOMCountView0.Size = new System.Drawing.Size(59, 26);
             this.lbAIOMCountView0.TabIndex = 38;
-            this.lbAIOMCountView0.Text = "00/00";
             this.lbAIOMCountView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMCount0
             // 
             this.lbAIOMCount0.AutoSize = true;
-            this.lbAIOMCount0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMCount0.Location = new System.Drawing.Point(207, 102);
             this.lbAIOMCount0.Name = "lbAIOMCount0";
             this.lbAIOMCount0.Size = new System.Drawing.Size(91, 13);
@@ -691,13 +628,12 @@ namespace LibraryMgrProgram
             this.lbAIOMNameView0.Name = "lbAIOMNameView0";
             this.lbAIOMNameView0.Size = new System.Drawing.Size(75, 26);
             this.lbAIOMNameView0.TabIndex = 36;
-            this.lbAIOMNameView0.Text = "남궁새콤";
             this.lbAIOMNameView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMName0
             // 
             this.lbAIOMName0.AutoSize = true;
-            this.lbAIOMName0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMName0.Location = new System.Drawing.Point(149, 30);
             this.lbAIOMName0.Name = "lbAIOMName0";
             this.lbAIOMName0.Size = new System.Drawing.Size(46, 13);
@@ -711,13 +647,12 @@ namespace LibraryMgrProgram
             this.lbAIOMAddrView0.Name = "lbAIOMAddrView0";
             this.lbAIOMAddrView0.Size = new System.Drawing.Size(394, 26);
             this.lbAIOMAddrView0.TabIndex = 34;
-            this.lbAIOMAddrView0.Text = "서울시 종로구 숭인2동 000-00 ~~타운 `~~ 000호";
             this.lbAIOMAddrView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMAddr0
             // 
             this.lbAIOMAddr0.AutoSize = true;
-            this.lbAIOMAddr0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMAddr0.Location = new System.Drawing.Point(20, 205);
             this.lbAIOMAddr0.Name = "lbAIOMAddr0";
             this.lbAIOMAddr0.Size = new System.Drawing.Size(33, 13);
@@ -731,7 +666,6 @@ namespace LibraryMgrProgram
             this.lbAIOMHPView0.Name = "lbAIOMHPView0";
             this.lbAIOMHPView0.Size = new System.Drawing.Size(118, 26);
             this.lbAIOMHPView0.TabIndex = 32;
-            this.lbAIOMHPView0.Text = "010-0000-0000";
             this.lbAIOMHPView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMNumView0
@@ -741,7 +675,6 @@ namespace LibraryMgrProgram
             this.lbAIOMNumView0.Name = "lbAIOMNumView0";
             this.lbAIOMNumView0.Size = new System.Drawing.Size(56, 26);
             this.lbAIOMNumView0.TabIndex = 31;
-            this.lbAIOMNumView0.Text = "00001";
             this.lbAIOMNumView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMRankView0
@@ -764,7 +697,7 @@ namespace LibraryMgrProgram
             // lbAIOMHP0
             // 
             this.lbAIOMHP0.AutoSize = true;
-            this.lbAIOMHP0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMHP0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMHP0.Location = new System.Drawing.Point(18, 104);
             this.lbAIOMHP0.Name = "lbAIOMHP0";
             this.lbAIOMHP0.Size = new System.Drawing.Size(59, 13);
@@ -774,7 +707,7 @@ namespace LibraryMgrProgram
             // lbAIOMNum0
             // 
             this.lbAIOMNum0.AutoSize = true;
-            this.lbAIOMNum0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMNum0.Location = new System.Drawing.Point(18, 30);
             this.lbAIOMNum0.Name = "lbAIOMNum0";
             this.lbAIOMNum0.Size = new System.Drawing.Size(59, 13);
@@ -784,7 +717,7 @@ namespace LibraryMgrProgram
             // lbAIOMRank0
             // 
             this.lbAIOMRank0.AutoSize = true;
-            this.lbAIOMRank0.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMRank0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMRank0.Location = new System.Drawing.Point(284, 30);
             this.lbAIOMRank0.Name = "lbAIOMRank0";
             this.lbAIOMRank0.Size = new System.Drawing.Size(33, 13);
@@ -828,7 +761,7 @@ namespace LibraryMgrProgram
             this.grpAIOReturn.Controls.Add(this.lbAIOBNameView1);
             this.grpAIOReturn.Controls.Add(this.lbAIOBAuthor1);
             this.grpAIOReturn.Controls.Add(this.lbAIOBISBNView1);
-            this.grpAIOReturn.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpAIOReturn.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpAIOReturn.Location = new System.Drawing.Point(7, 247);
             this.grpAIOReturn.Name = "grpAIOReturn";
             this.grpAIOReturn.Size = new System.Drawing.Size(498, 253);
@@ -838,21 +771,24 @@ namespace LibraryMgrProgram
             // 
             // picAIOBookImg1
             // 
+            this.picAIOBookImg1.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
             this.picAIOBookImg1.Location = new System.Drawing.Point(367, 22);
             this.picAIOBookImg1.Name = "picAIOBookImg1";
             this.picAIOBookImg1.Size = new System.Drawing.Size(108, 130);
+            this.picAIOBookImg1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAIOBookImg1.TabIndex = 50;
             this.picAIOBookImg1.TabStop = false;
             // 
             // btnAIOExtension
             // 
-            this.btnAIOExtension.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnAIOExtension.Location = new System.Drawing.Point(319, 224);
+            this.btnAIOExtension.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOExtension.Location = new System.Drawing.Point(320, 211);
             this.btnAIOExtension.Name = "btnAIOExtension";
             this.btnAIOExtension.Size = new System.Drawing.Size(75, 23);
             this.btnAIOExtension.TabIndex = 49;
             this.btnAIOExtension.Text = "연장";
             this.btnAIOExtension.UseVisualStyleBackColor = true;
+            this.btnAIOExtension.Click += new System.EventHandler(this.btnAIOExtension_Click);
             // 
             // lbAIOBAddrView1
             // 
@@ -866,7 +802,7 @@ namespace LibraryMgrProgram
             // lbAIOBAddr1
             // 
             this.lbAIOBAddr1.AutoSize = true;
-            this.lbAIOBAddr1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAddr1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAddr1.Location = new System.Drawing.Point(182, 30);
             this.lbAIOBAddr1.Name = "lbAIOBAddr1";
             this.lbAIOBAddr1.Size = new System.Drawing.Size(59, 13);
@@ -886,7 +822,7 @@ namespace LibraryMgrProgram
             // lbAIOBCount1
             // 
             this.lbAIOBCount1.AutoSize = true;
-            this.lbAIOBCount1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBCount1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBCount1.Location = new System.Drawing.Point(268, 139);
             this.lbAIOBCount1.Name = "lbAIOBCount1";
             this.lbAIOBCount1.Size = new System.Drawing.Size(33, 13);
@@ -898,7 +834,7 @@ namespace LibraryMgrProgram
             this.lbAIOBTimeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lbAIOBTimeView1.Location = new System.Drawing.Point(79, 170);
             this.lbAIOBTimeView1.Name = "lbAIOBTimeView1";
-            this.lbAIOBTimeView1.Size = new System.Drawing.Size(112, 26);
+            this.lbAIOBTimeView1.Size = new System.Drawing.Size(218, 26);
             this.lbAIOBTimeView1.TabIndex = 42;
             this.lbAIOBTimeView1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -922,7 +858,7 @@ namespace LibraryMgrProgram
             // lbAIOBName1
             // 
             this.lbAIOBName1.AutoSize = true;
-            this.lbAIOBName1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBName1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBName1.Location = new System.Drawing.Point(14, 68);
             this.lbAIOBName1.Name = "lbAIOBName1";
             this.lbAIOBName1.Size = new System.Drawing.Size(50, 13);
@@ -932,7 +868,7 @@ namespace LibraryMgrProgram
             // lbAIOBNum1
             // 
             this.lbAIOBNum1.AutoSize = true;
-            this.lbAIOBNum1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBNum1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBNum1.Location = new System.Drawing.Point(14, 30);
             this.lbAIOBNum1.Name = "lbAIOBNum1";
             this.lbAIOBNum1.Size = new System.Drawing.Size(59, 13);
@@ -942,8 +878,8 @@ namespace LibraryMgrProgram
             // lbAIOBISBN1
             // 
             this.lbAIOBISBN1.AutoSize = true;
-            this.lbAIOBISBN1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbAIOBISBN1.Location = new System.Drawing.Point(198, 178);
+            this.lbAIOBISBN1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBISBN1.Location = new System.Drawing.Point(19, 216);
             this.lbAIOBISBN1.Name = "lbAIOBISBN1";
             this.lbAIOBISBN1.Size = new System.Drawing.Size(37, 13);
             this.lbAIOBISBN1.TabIndex = 2;
@@ -951,13 +887,14 @@ namespace LibraryMgrProgram
             // 
             // btnAIOReturn
             // 
-            this.btnAIOReturn.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnAIOReturn.Location = new System.Drawing.Point(400, 224);
+            this.btnAIOReturn.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOReturn.Location = new System.Drawing.Point(401, 211);
             this.btnAIOReturn.Name = "btnAIOReturn";
             this.btnAIOReturn.Size = new System.Drawing.Size(75, 23);
             this.btnAIOReturn.TabIndex = 0;
             this.btnAIOReturn.Text = "반납";
             this.btnAIOReturn.UseVisualStyleBackColor = true;
+            this.btnAIOReturn.Click += new System.EventHandler(this.btnAIOReturn_Click);
             // 
             // lbAIOBPubliView1
             // 
@@ -971,7 +908,7 @@ namespace LibraryMgrProgram
             // lbAIOBPubli1
             // 
             this.lbAIOBPubli1.AutoSize = true;
-            this.lbAIOBPubli1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPubli1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPubli1.Location = new System.Drawing.Point(14, 139);
             this.lbAIOBPubli1.Name = "lbAIOBPubli1";
             this.lbAIOBPubli1.Size = new System.Drawing.Size(46, 13);
@@ -990,7 +927,7 @@ namespace LibraryMgrProgram
             // lbAIOBTime1
             // 
             this.lbAIOBTime1.AutoSize = true;
-            this.lbAIOBTime1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBTime1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBTime1.Location = new System.Drawing.Point(14, 178);
             this.lbAIOBTime1.Name = "lbAIOBTime1";
             this.lbAIOBTime1.Size = new System.Drawing.Size(59, 13);
@@ -1010,7 +947,7 @@ namespace LibraryMgrProgram
             // lbAIOBPage1
             // 
             this.lbAIOBPage1.AutoSize = true;
-            this.lbAIOBPage1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBPage1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBPage1.Location = new System.Drawing.Point(255, 104);
             this.lbAIOBPage1.Name = "lbAIOBPage1";
             this.lbAIOBPage1.Size = new System.Drawing.Size(46, 13);
@@ -1029,7 +966,7 @@ namespace LibraryMgrProgram
             // lbAIOBAuthor1
             // 
             this.lbAIOBAuthor1.AutoSize = true;
-            this.lbAIOBAuthor1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBAuthor1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBAuthor1.Location = new System.Drawing.Point(16, 104);
             this.lbAIOBAuthor1.Name = "lbAIOBAuthor1";
             this.lbAIOBAuthor1.Size = new System.Drawing.Size(33, 13);
@@ -1039,9 +976,9 @@ namespace LibraryMgrProgram
             // lbAIOBISBNView1
             // 
             this.lbAIOBISBNView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbAIOBISBNView1.Location = new System.Drawing.Point(241, 170);
+            this.lbAIOBISBNView1.Location = new System.Drawing.Point(79, 208);
             this.lbAIOBISBNView1.Name = "lbAIOBISBNView1";
-            this.lbAIOBISBNView1.Size = new System.Drawing.Size(234, 26);
+            this.lbAIOBISBNView1.Size = new System.Drawing.Size(237, 26);
             this.lbAIOBISBNView1.TabIndex = 33;
             this.lbAIOBISBNView1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -1069,7 +1006,7 @@ namespace LibraryMgrProgram
             this.grpAIOMem1.Controls.Add(this.lbAIOMHP1);
             this.grpAIOMem1.Controls.Add(this.lbAIOMNum1);
             this.grpAIOMem1.Controls.Add(this.lbAIOMRank1);
-            this.grpAIOMem1.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpAIOMem1.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpAIOMem1.Location = new System.Drawing.Point(6, 6);
             this.grpAIOMem1.Name = "grpAIOMem1";
             this.grpAIOMem1.Size = new System.Drawing.Size(499, 235);
@@ -1080,8 +1017,8 @@ namespace LibraryMgrProgram
             // lbAIOCustomerState1
             // 
             this.lbAIOCustomerState1.AutoSize = true;
-            this.lbAIOCustomerState1.Font = new System.Drawing.Font("굴림", 12F);
-            this.lbAIOCustomerState1.Location = new System.Drawing.Point(386, 168);
+            this.lbAIOCustomerState1.Font = new System.Drawing.Font("Gulim", 12F);
+            this.lbAIOCustomerState1.Location = new System.Drawing.Point(385, 155);
             this.lbAIOCustomerState1.Name = "lbAIOCustomerState1";
             this.lbAIOCustomerState1.Size = new System.Drawing.Size(72, 16);
             this.lbAIOCustomerState1.TabIndex = 152;
@@ -1094,13 +1031,12 @@ namespace LibraryMgrProgram
             this.lbAIOSexView1.Name = "lbAIOSexView1";
             this.lbAIOSexView1.Size = new System.Drawing.Size(44, 26);
             this.lbAIOSexView1.TabIndex = 155;
-            this.lbAIOSexView1.Text = "남자";
-            this.lbAIOSexView1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbAIOSexView1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbAIOSex1
             // 
             this.lbAIOSex1.AutoSize = true;
-            this.lbAIOSex1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOSex1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOSex1.Location = new System.Drawing.Point(18, 65);
             this.lbAIOSex1.Name = "lbAIOSex1";
             this.lbAIOSex1.Size = new System.Drawing.Size(33, 13);
@@ -1109,20 +1045,21 @@ namespace LibraryMgrProgram
             // 
             // picAIOCustomerImg1
             // 
+            this.picAIOCustomerImg1.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
             this.picAIOCustomerImg1.Location = new System.Drawing.Point(367, 22);
             this.picAIOCustomerImg1.Name = "picAIOCustomerImg1";
             this.picAIOCustomerImg1.Size = new System.Drawing.Size(108, 130);
+            this.picAIOCustomerImg1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAIOCustomerImg1.TabIndex = 152;
             this.picAIOCustomerImg1.TabStop = false;
             // 
             // lbAIOBirthView1
             // 
             this.lbAIOBirthView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbAIOBirthView1.Location = new System.Drawing.Point(204, 57);
+            this.lbAIOBirthView1.Location = new System.Drawing.Point(203, 57);
             this.lbAIOBirthView1.Name = "lbAIOBirthView1";
             this.lbAIOBirthView1.Size = new System.Drawing.Size(160, 26);
             this.lbAIOBirthView1.TabIndex = 153;
-            this.lbAIOBirthView1.Text = "0000년00월00일";
             this.lbAIOBirthView1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMMemoView1
@@ -1137,7 +1074,7 @@ namespace LibraryMgrProgram
             // lbAIOBirth1
             // 
             this.lbAIOBirth1.AutoSize = true;
-            this.lbAIOBirth1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOBirth1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOBirth1.Location = new System.Drawing.Point(133, 65);
             this.lbAIOBirth1.Name = "lbAIOBirth1";
             this.lbAIOBirth1.Size = new System.Drawing.Size(59, 13);
@@ -1147,7 +1084,7 @@ namespace LibraryMgrProgram
             // lbAIOMMemo1
             // 
             this.lbAIOMMemo1.AutoSize = true;
-            this.lbAIOMMemo1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMMemo1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMMemo1.Location = new System.Drawing.Point(20, 139);
             this.lbAIOMMemo1.Name = "lbAIOMMemo1";
             this.lbAIOMMemo1.Size = new System.Drawing.Size(33, 13);
@@ -1166,7 +1103,7 @@ namespace LibraryMgrProgram
             // lbAIOMCount1
             // 
             this.lbAIOMCount1.AutoSize = true;
-            this.lbAIOMCount1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMCount1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMCount1.Location = new System.Drawing.Point(207, 102);
             this.lbAIOMCount1.Name = "lbAIOMCount1";
             this.lbAIOMCount1.Size = new System.Drawing.Size(91, 13);
@@ -1180,13 +1117,12 @@ namespace LibraryMgrProgram
             this.lbAIOMNameView1.Name = "lbAIOMNameView1";
             this.lbAIOMNameView1.Size = new System.Drawing.Size(75, 26);
             this.lbAIOMNameView1.TabIndex = 36;
-            this.lbAIOMNameView1.Text = "알라뽕딸라";
             this.lbAIOMNameView1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMName1
             // 
             this.lbAIOMName1.AutoSize = true;
-            this.lbAIOMName1.Font = new System.Drawing.Font("굴림", 9.75F);
+            this.lbAIOMName1.Font = new System.Drawing.Font("Gulim", 9.75F);
             this.lbAIOMName1.Location = new System.Drawing.Point(149, 30);
             this.lbAIOMName1.Name = "lbAIOMName1";
             this.lbAIOMName1.Size = new System.Drawing.Size(46, 13);
@@ -1205,7 +1141,7 @@ namespace LibraryMgrProgram
             // lbAIOMAddr1
             // 
             this.lbAIOMAddr1.AutoSize = true;
-            this.lbAIOMAddr1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMAddr1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMAddr1.Location = new System.Drawing.Point(20, 205);
             this.lbAIOMAddr1.Name = "lbAIOMAddr1";
             this.lbAIOMAddr1.Size = new System.Drawing.Size(33, 13);
@@ -1219,7 +1155,6 @@ namespace LibraryMgrProgram
             this.lbAIOMHPView1.Name = "lbAIOMHPView1";
             this.lbAIOMHPView1.Size = new System.Drawing.Size(118, 26);
             this.lbAIOMHPView1.TabIndex = 32;
-            this.lbAIOMHPView1.Text = "010-0000-0000";
             this.lbAIOMHPView1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbAIOMNumView1
@@ -1251,7 +1186,7 @@ namespace LibraryMgrProgram
             // lbAIOMHP1
             // 
             this.lbAIOMHP1.AutoSize = true;
-            this.lbAIOMHP1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMHP1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMHP1.Location = new System.Drawing.Point(18, 104);
             this.lbAIOMHP1.Name = "lbAIOMHP1";
             this.lbAIOMHP1.Size = new System.Drawing.Size(59, 13);
@@ -1261,7 +1196,7 @@ namespace LibraryMgrProgram
             // lbAIOMNum1
             // 
             this.lbAIOMNum1.AutoSize = true;
-            this.lbAIOMNum1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMNum1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMNum1.Location = new System.Drawing.Point(18, 30);
             this.lbAIOMNum1.Name = "lbAIOMNum1";
             this.lbAIOMNum1.Size = new System.Drawing.Size(59, 13);
@@ -1271,7 +1206,7 @@ namespace LibraryMgrProgram
             // lbAIOMRank1
             // 
             this.lbAIOMRank1.AutoSize = true;
-            this.lbAIOMRank1.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbAIOMRank1.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbAIOMRank1.Location = new System.Drawing.Point(284, 30);
             this.lbAIOMRank1.Name = "lbAIOMRank1";
             this.lbAIOMRank1.Size = new System.Drawing.Size(33, 13);
@@ -1280,13 +1215,14 @@ namespace LibraryMgrProgram
             // 
             // btnAIOBSearch
             // 
-            this.btnAIOBSearch.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnAIOBSearch.Location = new System.Drawing.Point(554, 290);
+            this.btnAIOBSearch.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnAIOBSearch.Location = new System.Drawing.Point(554, 281);
             this.btnAIOBSearch.Name = "btnAIOBSearch";
             this.btnAIOBSearch.Size = new System.Drawing.Size(75, 23);
             this.btnAIOBSearch.TabIndex = 42;
             this.btnAIOBSearch.Text = "도서검색";
             this.btnAIOBSearch.UseVisualStyleBackColor = true;
+            this.btnAIOBSearch.Click += new System.EventHandler(this.btnAIOBSearch_Click);
             // 
             // AdminInputOutputForm
             // 
@@ -1363,16 +1299,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label lbAIOMRank0;
         private System.Windows.Forms.Label lbAIOBNumView0;
         private System.Windows.Forms.Label lbAIOBNum0;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.GroupBox grpAIOLone;
         private System.Windows.Forms.Button btnAIOBSearch;
         private System.Windows.Forms.Label label84;

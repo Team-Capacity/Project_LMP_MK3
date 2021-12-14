@@ -28,7 +28,7 @@ namespace LibraryMgrProgram
 
         private void AdminBookInfoForm_Load(object sender, EventArgs e)
         {
-            string sql = "select * from lmp.Book;";
+            string sql = "select * from Book;";
             me.reloadForm(sql,dgvABIBookList,i);
             listDescription();
         }
@@ -53,12 +53,11 @@ namespace LibraryMgrProgram
                     + ",'" + txtABIISBN2.Text + "'"
                     + "," + Int32.Parse(txtABIBookpage2.Text)
                     + ",'" + txtABIBLocation2.Text + "'"
-                    // 이부분은 DateTime의 형태로 바꾸어주어야함
                     + ",'"+ bookAddDay.Year+"/"+bookAddDay.Month+"/"+bookAddDay.Day + "'"
                     + ",'" + rtxtABIBBookExp2.Text + "'"
                     + ");";
             db.dbUpdate(sql);
-            string reloadSql = "select * from lmp.Book;";
+            string reloadSql = "select * from Book;";
             me.reloadForm(reloadSql, dgvABIBookList,i);
         }
 
@@ -82,16 +81,41 @@ namespace LibraryMgrProgram
         // 검색 버튼 클릭시 이벤트
         private void btnABISer_Click(object sender, EventArgs e)
         {
-            dgvABIBookList.Columns.Clear();
-            if(txtABISerBar.Text == "")
+            try
             {
-                string sql = "select * from lmp.Book;";
-                me.reloadForm(sql,dgvABIBookList,i);
+                dgvABIBookList.Columns.Clear();
+                if (txtABISerBar.Text == "")
+                {
+                    string sql = "select * from Book;";
+                    me.reloadForm(sql, dgvABIBookList, i);
+                }
+                else
+                {
+                    if (cmbABISerList.SelectedItem.Equals("제목"))
+                    {
+                        string sql = ("select * from Book where BName Like '%" + txtABISerBar.Text + "%';").ToString();
+                        me.reloadForm(sql, dgvABIBookList, 0);
+                        listDescription();
+                    }
+                    else if (cmbABISerList.SelectedItem.Equals("저자"))
+                    {
+                        string sql = ("select * from Book where BAuthor Like '%" + txtABISerBar.Text + "%';").ToString();
+                        me.reloadForm(sql, dgvABIBookList, 0);
+                        listDescription();
+                    }
+                    else if (cmbABISerList.SelectedItem.Equals("장르"))
+                    {
+                        string sql = ("select * from Book where BGenre Like '%" + txtABISerBar.Text + "%';").ToString();
+                        me.reloadForm(sql, dgvABIBookList, 0);
+                        listDescription();
+                    }
+                }
             }
-            else
+            catch (Exception)
             {
-                string sql = ("select * from lmp.Book where BName = '" + txtABISerBar.Text + "';").ToString();
-                me.reloadForm(sql, dgvABIBookList,i);
+                MessageBox.Show("검색내용이 없습니다.");
+                string sql = "select * from Book;";
+                me.reloadForm(sql, dgvABIBookList, i);
             }
         }
 
@@ -105,6 +129,8 @@ namespace LibraryMgrProgram
         public void listDescription()
         {
             DataGridViewRow row = dgvABIBookList.SelectedRows[0];
+            //dgvABIBookList.Columns[1].Width = 200;
+
             // 기본
             lbABIBookName.Text = row.Cells[1].Value.ToString();
             lbABICompany.Text = row.Cells[2].Value.ToString();
@@ -119,7 +145,7 @@ namespace LibraryMgrProgram
             lbABIBBookExp.Text = row.Cells[12].Value.ToString();
             lbABIArea.Text = row.Cells[7].Value.ToString();
 
-            // 추가
+/*            // 추가
             txtABIBookName2.Text = row.Cells[1].Value.ToString();
             txtABICompany2.Text = row.Cells[2].Value.ToString();
             txtABIBookMaker2.Text = row.Cells[3].Value.ToString();
@@ -131,7 +157,7 @@ namespace LibraryMgrProgram
             txtABIBLocation2.Text = row.Cells[10].Value.ToString();
             txtABIMakeDay2.Text = row.Cells[11].Value.ToString();
             rtxtABIBBookExp2.Text = row.Cells[12].Value.ToString();
-            txtABIArea2.Text = row.Cells[7].Value.ToString();
+            txtABIArea2.Text = row.Cells[7].Value.ToString();*/
             // 수정
             txtABIBookName1.Text = row.Cells[1].Value.ToString();
             txtABICompany1.Text = row.Cells[2].Value.ToString();
@@ -162,6 +188,7 @@ namespace LibraryMgrProgram
             txtABIMakeDay1.Text = "";
             rtxtABIBBookExp1.Text = "";
             txtABIArea1.Text = "";
+            listDescription();
         }
 
         private void btnABIOk1_Click(object sender, EventArgs e)
@@ -224,6 +251,20 @@ namespace LibraryMgrProgram
 
         }
 
-     
+        private void btnABIClear2_Click_1(object sender, EventArgs e)
+        {
+            txtABIBookName1.Text = "";
+            txtABICompany1.Text = "";
+            txtABIBookMaker1.Text = "";
+            txtABIBookCount1.Text = "";
+            comABIBookger1.Text = "";
+            txtABIMakePlace1.Text = "";
+            txtABIISBN1.Text = "";
+            txtABIBookpage1.Text = "";
+            txtABIBLocation1.Text = "";
+            txtABIMakeDay1.Text = "";
+            rtxtABIBBookExp1.Text = "";
+            txtABIArea1.Text = "";
+        }
     }
 }

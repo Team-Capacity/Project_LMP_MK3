@@ -154,7 +154,7 @@ namespace LibraryMgrProgram
             DataTable dbdataset;
             BindingSource bSource;
             string[] Bname = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "발행 날짜", "메모", "책추가" };
-            string[] Cname = { "회원번호", "등급", "id" , "pw", "이름" ,"대출권수", "전화번호","생년월일" , "주소" , "가입날짜","성별"};
+            string[] Cname = { "회원번호", "등급", "id" , "pw", "이름" ,"대출권수","누적권수", "전화번호","생년월일" , "주소" , "가입날짜","성별","메모"};
 
             //데이터가 하나도 없을 경우를 만들어 두지 않았음
             try
@@ -175,17 +175,14 @@ namespace LibraryMgrProgram
                     {
                         dgv.Columns[i].HeaderText = Bname[i];
                     }
-                }
-                // 1일때 회원 출력(그리드뷰)
-                else if (chkBookCus ==1)
+                }else if (chkBookCus ==1)
                 {
-                    for (int i = 0; i < 14; i++)
+                    for (int i = 0; i < 13; i++)
                     {
                         dgv.Columns[i].HeaderText = Cname[i];
                     }
                 }
                 dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-
                 dgv.AllowUserToAddRows = false;
 
             }

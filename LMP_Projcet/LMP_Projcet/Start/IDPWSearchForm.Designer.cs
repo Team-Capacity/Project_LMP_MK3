@@ -57,7 +57,7 @@ namespace LibraryMgrProgram
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
             this.label1.Location = new System.Drawing.Point(17, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 20);
@@ -83,7 +83,7 @@ namespace LibraryMgrProgram
             // 
             // btnSerOK
             // 
-            this.btnSerOK.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnSerOK.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnSerOK.Location = new System.Drawing.Point(134, 156);
             this.btnSerOK.Name = "btnSerOK";
             this.btnSerOK.Size = new System.Drawing.Size(112, 30);
@@ -158,7 +158,7 @@ namespace LibraryMgrProgram
             // 
             // btnSerPwOK
             // 
-            this.btnSerPwOK.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnSerPwOK.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnSerPwOK.Location = new System.Drawing.Point(134, 156);
             this.btnSerPwOK.Name = "btnSerPwOK";
             this.btnSerPwOK.Size = new System.Drawing.Size(112, 30);
@@ -218,7 +218,7 @@ namespace LibraryMgrProgram
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("굴림", 15F);
+            this.label5.Font = new System.Drawing.Font("Gulim", 15F);
             this.label5.Location = new System.Drawing.Point(17, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 20);
@@ -232,7 +232,7 @@ namespace LibraryMgrProgram
             this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFClose.FlatAppearance.BorderSize = 0;
             this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFClose.Font = new System.Drawing.Font("굴림", 15F);
+            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 15F);
             this.btnLFClose.Location = new System.Drawing.Point(747, 6);
             this.btnLFClose.Name = "btnLFClose";
             this.btnLFClose.Size = new System.Drawing.Size(34, 25);
