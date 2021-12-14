@@ -12,6 +12,7 @@ using LMP_Projcet;
 using LMP_Projcet.NonCustomer;
 using LMP_Projcet.Methods;
 using LMP_Projcet.NonCustomer;
+using LMP_Projcet.Customer;
 
 namespace LibraryMgrProgram
 {
@@ -21,13 +22,15 @@ namespace LibraryMgrProgram
         {
             InitializeComponent();
         }
-        NonCustomerOperationForm NonOpeForm = new NonCustomerOperationForm();
-        NonCustomerBookInfoForm NonBookForm = new NonCustomerBookInfoForm();
+        NonCustomerOperationForm1 no = new NonCustomerOperationForm1();
+        CustomerBookInfoForm cbi = new CustomerBookInfoForm();
         MouseEvent mouseEvent = new MouseEvent();
         FormChange formChange = new FormChange();
 
       
         NonCustomerContentsForm ncc = new NonCustomerContentsForm();
+
+        
 
         private void lbCMInfo_Click(object sender, EventArgs e)
         {
@@ -90,20 +93,25 @@ namespace LibraryMgrProgram
             formChange.ChangeFIF(ncc, palNCMMain);
         }
 
-        private void lbNCMBookInfo_Click(object sender, EventArgs e)
-        {
-            formChange.ChangeFIF(NonBookForm, palNCMMain);
-        }
-
-        private void lbNCMOperation_Click(object sender, EventArgs e)
-        {
-
-            formChange.ChangeFIF(NonOpeForm, palNCMMain);
-        }
-
+   
+   
         private void NonCustomerMainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
+        NonCustomerOperationForm1 no1 = new NonCustomerOperationForm1();
+
+        private void lbNCMOperation_Click_1(object sender, EventArgs e)
+        {
+            formChange.ChangeFIF(no1, palNCMMain);
+        }
+
+        private void lbNCMBookInfo_Click_1(object sender, EventArgs e)
+        {
+            formChange.ChangeFIF(cbi, palNCMMain);
+        }
+
+      
     }
 }

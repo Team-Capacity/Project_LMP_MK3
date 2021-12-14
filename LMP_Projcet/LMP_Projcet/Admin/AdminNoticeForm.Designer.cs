@@ -29,11 +29,6 @@ namespace LibraryMgrProgram
         /// </summary>
         private void InitializeComponent()
         {
-            this.lvANList = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.comANSerList = new System.Windows.Forms.ComboBox();
             this.txtANInput = new System.Windows.Forms.TextBox();
             this.btnANListFind = new System.Windows.Forms.Button();
@@ -41,58 +36,25 @@ namespace LibraryMgrProgram
             this.btnANModi = new System.Windows.Forms.Button();
             this.btnANAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.lbANNoticeView = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btnLFMax = new System.Windows.Forms.Button();
             this.btnLFMin = new System.Windows.Forms.Button();
             this.btnLFClose = new System.Windows.Forms.Button();
+            this.dgvANList = new System.Windows.Forms.DataGridView();
+            this.lbANNoticeCont = new System.Windows.Forms.Label();
+            this.lbANNoticeView = new System.Windows.Forms.Label();
+            this.txtANNoticeCont = new System.Windows.Forms.TextBox();
+            this.txtANNoticeView = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvANList)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lvANList
-            // 
-            this.lvANList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lvANList.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lvANList.FullRowSelect = true;
-            this.lvANList.GridLines = true;
-            this.lvANList.HideSelection = false;
-            this.lvANList.Location = new System.Drawing.Point(558, 93);
-            this.lvANList.Name = "lvANList";
-            this.lvANList.Size = new System.Drawing.Size(501, 412);
-            this.lvANList.TabIndex = 5;
-            this.lvANList.UseCompatibleStateImageBehavior = false;
-            this.lvANList.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "번호";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "제목";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 81;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "내용";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 254;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "날짜";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 100;
             // 
             // comANSerList
             // 
             this.comANSerList.FormattingEnabled = true;
-            this.comANSerList.Location = new System.Drawing.Point(558, 67);
+            this.comANSerList.Items.AddRange(new object[] {
+            "제목"});
+            this.comANSerList.Location = new System.Drawing.Point(588, 77);
             this.comANSerList.Name = "comANSerList";
             this.comANSerList.Size = new System.Drawing.Size(121, 20);
             this.comANSerList.TabIndex = 33;
@@ -100,7 +62,7 @@ namespace LibraryMgrProgram
             // 
             // txtANInput
             // 
-            this.txtANInput.Location = new System.Drawing.Point(685, 67);
+            this.txtANInput.Location = new System.Drawing.Point(715, 77);
             this.txtANInput.Multiline = true;
             this.txtANInput.Name = "txtANInput";
             this.txtANInput.Size = new System.Drawing.Size(252, 20);
@@ -112,61 +74,56 @@ namespace LibraryMgrProgram
             this.btnANListFind.FlatAppearance.BorderSize = 0;
             this.btnANListFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnANListFind.ForeColor = System.Drawing.Color.White;
-            this.btnANListFind.Location = new System.Drawing.Point(943, 67);
+            this.btnANListFind.Location = new System.Drawing.Point(973, 77);
             this.btnANListFind.Name = "btnANListFind";
             this.btnANListFind.Size = new System.Drawing.Size(75, 20);
             this.btnANListFind.TabIndex = 31;
             this.btnANListFind.Text = "검 색";
             this.btnANListFind.UseVisualStyleBackColor = false;
+            this.btnANListFind.Click += new System.EventHandler(this.btnANListFind_Click);
             // 
             // btnANDel
             // 
             this.btnANDel.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnANDel.Location = new System.Drawing.Point(968, 511);
+            this.btnANDel.Location = new System.Drawing.Point(880, 511);
             this.btnANDel.Name = "btnANDel";
             this.btnANDel.Size = new System.Drawing.Size(92, 30);
             this.btnANDel.TabIndex = 30;
             this.btnANDel.Text = "삭제";
             this.btnANDel.UseVisualStyleBackColor = true;
+            this.btnANDel.Click += new System.EventHandler(this.btnANDel_Click);
             // 
             // btnANModi
             // 
             this.btnANModi.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnANModi.Location = new System.Drawing.Point(868, 511);
+            this.btnANModi.Location = new System.Drawing.Point(780, 511);
             this.btnANModi.Name = "btnANModi";
             this.btnANModi.Size = new System.Drawing.Size(92, 30);
             this.btnANModi.TabIndex = 29;
             this.btnANModi.Text = "수정";
             this.btnANModi.UseVisualStyleBackColor = true;
+            this.btnANModi.Click += new System.EventHandler(this.btnANModi_Click);
             // 
             // btnANAdd
             // 
             this.btnANAdd.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnANAdd.Location = new System.Drawing.Point(768, 511);
+            this.btnANAdd.Location = new System.Drawing.Point(680, 511);
             this.btnANAdd.Name = "btnANAdd";
             this.btnANAdd.Size = new System.Drawing.Size(92, 30);
             this.btnANAdd.TabIndex = 28;
             this.btnANAdd.Text = "추가";
             this.btnANAdd.UseVisualStyleBackColor = true;
+            this.btnANAdd.Click += new System.EventHandler(this.btnANAdd_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("굴림", 15F);
-            this.label2.Location = new System.Drawing.Point(247, 52);
+            this.label2.Location = new System.Drawing.Point(273, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 20);
             this.label2.TabIndex = 34;
             this.label2.Text = "공지사항";
-            // 
-            // lbANNoticeView
-            // 
-            this.lbANNoticeView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbANNoticeView.Location = new System.Drawing.Point(53, 90);
-            this.lbANNoticeView.Name = "lbANNoticeView";
-            this.lbANNoticeView.Size = new System.Drawing.Size(480, 451);
-            this.lbANNoticeView.TabIndex = 35;
-            this.lbANNoticeView.Text = "공지사항 내용";
             // 
             // tableLayoutPanel1
             // 
@@ -187,7 +144,7 @@ namespace LibraryMgrProgram
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1118, 35);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1163, 35);
             this.tableLayoutPanel1.TabIndex = 131;
             this.tableLayoutPanel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
             this.tableLayoutPanel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseMove);
@@ -200,7 +157,7 @@ namespace LibraryMgrProgram
             this.btnLFMax.FlatAppearance.BorderSize = 0;
             this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLFMax.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnLFMax.Location = new System.Drawing.Point(1068, 6);
+            this.btnLFMax.Location = new System.Drawing.Point(1113, 6);
             this.btnLFMax.Name = "btnLFMax";
             this.btnLFMax.Size = new System.Drawing.Size(19, 20);
             this.btnLFMax.TabIndex = 3;
@@ -215,7 +172,7 @@ namespace LibraryMgrProgram
             this.btnLFMin.FlatAppearance.BorderSize = 0;
             this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLFMin.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnLFMin.Location = new System.Drawing.Point(1042, 6);
+            this.btnLFMin.Location = new System.Drawing.Point(1087, 6);
             this.btnLFMin.Name = "btnLFMin";
             this.btnLFMin.Size = new System.Drawing.Size(20, 20);
             this.btnLFMin.TabIndex = 2;
@@ -230,7 +187,7 @@ namespace LibraryMgrProgram
             this.btnLFClose.FlatAppearance.BorderSize = 0;
             this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLFClose.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnLFClose.Location = new System.Drawing.Point(1095, 6);
+            this.btnLFClose.Location = new System.Drawing.Point(1140, 6);
             this.btnLFClose.Name = "btnLFClose";
             this.btnLFClose.Size = new System.Drawing.Size(20, 20);
             this.btnLFClose.TabIndex = 1;
@@ -238,14 +195,73 @@ namespace LibraryMgrProgram
             this.btnLFClose.UseVisualStyleBackColor = false;
             this.btnLFClose.Click += new System.EventHandler(this.btnLFClose_Click);
             // 
+            // dgvANList
+            // 
+            this.dgvANList.AllowUserToAddRows = false;
+            this.dgvANList.AllowUserToDeleteRows = false;
+            this.dgvANList.AllowUserToResizeColumns = false;
+            this.dgvANList.AllowUserToResizeRows = false;
+            this.dgvANList.BackgroundColor = System.Drawing.Color.White;
+            this.dgvANList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvANList.Location = new System.Drawing.Point(584, 112);
+            this.dgvANList.Name = "dgvANList";
+            this.dgvANList.ReadOnly = true;
+            this.dgvANList.RowHeadersVisible = false;
+            this.dgvANList.RowHeadersWidth = 200;
+            this.dgvANList.RowTemplate.Height = 23;
+            this.dgvANList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvANList.Size = new System.Drawing.Size(478, 386);
+            this.dgvANList.TabIndex = 154;
+            this.dgvANList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvANList_CellClick);
+            // 
+            // lbANNoticeCont
+            // 
+            this.lbANNoticeCont.AutoSize = true;
+            this.lbANNoticeCont.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbANNoticeCont.Location = new System.Drawing.Point(33, 112);
+            this.lbANNoticeCont.Name = "lbANNoticeCont";
+            this.lbANNoticeCont.Size = new System.Drawing.Size(62, 21);
+            this.lbANNoticeCont.TabIndex = 158;
+            this.lbANNoticeCont.Text = "내용:";
+            // 
+            // lbANNoticeView
+            // 
+            this.lbANNoticeView.AutoSize = true;
+            this.lbANNoticeView.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbANNoticeView.Location = new System.Drawing.Point(33, 80);
+            this.lbANNoticeView.Name = "lbANNoticeView";
+            this.lbANNoticeView.Size = new System.Drawing.Size(70, 21);
+            this.lbANNoticeView.TabIndex = 157;
+            this.lbANNoticeView.Text = "제목: ";
+            // 
+            // txtANNoticeCont
+            // 
+            this.txtANNoticeCont.BackColor = System.Drawing.Color.White;
+            this.txtANNoticeCont.Location = new System.Drawing.Point(101, 112);
+            this.txtANNoticeCont.Multiline = true;
+            this.txtANNoticeCont.Name = "txtANNoticeCont";
+            this.txtANNoticeCont.Size = new System.Drawing.Size(447, 386);
+            this.txtANNoticeCont.TabIndex = 159;
+            // 
+            // txtANNoticeView
+            // 
+            this.txtANNoticeView.BackColor = System.Drawing.Color.White;
+            this.txtANNoticeView.Location = new System.Drawing.Point(104, 77);
+            this.txtANNoticeView.Multiline = true;
+            this.txtANNoticeView.Name = "txtANNoticeView";
+            this.txtANNoticeView.Size = new System.Drawing.Size(445, 29);
+            this.txtANNoticeView.TabIndex = 160;
+            // 
             // AdminNoticeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1112, 553);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.ClientSize = new System.Drawing.Size(1157, 553);
+            this.Controls.Add(this.lbANNoticeCont);
             this.Controls.Add(this.lbANNoticeView);
+            this.Controls.Add(this.dgvANList);
+            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.comANSerList);
             this.Controls.Add(this.txtANInput);
@@ -253,23 +269,20 @@ namespace LibraryMgrProgram
             this.Controls.Add(this.btnANDel);
             this.Controls.Add(this.btnANModi);
             this.Controls.Add(this.btnANAdd);
-            this.Controls.Add(this.lvANList);
+            this.Controls.Add(this.txtANNoticeView);
+            this.Controls.Add(this.txtANNoticeCont);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminNoticeForm";
             this.Text = "공지사항";
             this.Load += new System.EventHandler(this.AdminNoticeForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvANList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListView lvANList;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ComboBox comANSerList;
         private System.Windows.Forms.TextBox txtANInput;
         private System.Windows.Forms.Button btnANListFind;
@@ -277,10 +290,14 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnANModi;
         private System.Windows.Forms.Button btnANAdd;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lbANNoticeView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnLFMax;
         private System.Windows.Forms.Button btnLFMin;
         private System.Windows.Forms.Button btnLFClose;
+        private System.Windows.Forms.Label lbANNoticeCont;
+        private System.Windows.Forms.Label lbANNoticeView;
+        private System.Windows.Forms.TextBox txtANNoticeCont;
+        private System.Windows.Forms.TextBox txtANNoticeView;
+        public System.Windows.Forms.DataGridView dgvANList;
     }
 }

@@ -78,14 +78,14 @@ namespace LibraryMgrProgram
             mouseEvent.FormMaxSize(this);
         }
 
-        private void btnFCClose_Click_1(object sender, EventArgs e, bool chkShow) 
+
+  
+
+        private void btnFCClose_Click_1(object sender, EventArgs e)
         {
-            chkShow = false;
+            CustomerOperationForm.chkShow3 = false;
             this.Close();
-
-            //mouseEvent.ButtonClose(this);
         }
-
 
 
         private void plnFC_Paint(object sender, PaintEventArgs e)
@@ -98,13 +98,7 @@ namespace LibraryMgrProgram
 
 
        
-        private void btnFCClose_Click(object sender, EventArgs e)
-        {
-
-            CustomerOperationForm.chkShow3 = false;
-            this.Close();
-
-        }
+     
 
 
        
@@ -158,11 +152,15 @@ namespace LibraryMgrProgram
                 LMP_Projcet.Properties.Settings.Default.Save();
                 this.Close();
                 Application.Restart();
+
+
             }
             else
             {
                 
             }
+
+
         }
         public void SetText(string str)
         {

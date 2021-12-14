@@ -32,20 +32,19 @@ namespace LMP_Projcet.Customer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerOperationForm));
             this.grpCOColor = new System.Windows.Forms.GroupBox();
             this.lbCOColor = new System.Windows.Forms.Label();
-            this.picCOColor = new System.Windows.Forms.PictureBox();
             this.grpCOSuggest = new System.Windows.Forms.GroupBox();
             this.lbCOSuggest = new System.Windows.Forms.Label();
-            this.picCOSuggest = new System.Windows.Forms.PictureBox();
             this.grpCOBookInfo = new System.Windows.Forms.GroupBox();
             this.lbCONotice = new System.Windows.Forms.Label();
             this.picCONotice = new System.Windows.Forms.PictureBox();
-            this.fDCO = new System.Windows.Forms.FontDialog();
+            this.picCOColor = new System.Windows.Forms.PictureBox();
+            this.picCOSuggest = new System.Windows.Forms.PictureBox();
             this.grpCOColor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).BeginInit();
             this.grpCOSuggest.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).BeginInit();
             this.grpCOBookInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCONotice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCOColor
@@ -58,7 +57,6 @@ namespace LMP_Projcet.Customer
             this.grpCOColor.Size = new System.Drawing.Size(210, 97);
             this.grpCOColor.TabIndex = 130;
             this.grpCOColor.TabStop = false;
-        
             // 
             // lbCOColor
             // 
@@ -71,16 +69,6 @@ namespace LMP_Projcet.Customer
             this.lbCOColor.TabIndex = 124;
             this.lbCOColor.Text = "색상/글꼴";
             this.lbCOColor.Click += new System.EventHandler(this.lbCOColor_Click);
-            // 
-            // picCOColor
-            // 
-            this.picCOColor.Image = ((System.Drawing.Image)(resources.GetObject("picCOColor.Image")));
-            this.picCOColor.Location = new System.Drawing.Point(6, 20);
-            this.picCOColor.Name = "picCOColor";
-            this.picCOColor.Size = new System.Drawing.Size(100, 77);
-            this.picCOColor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCOColor.TabIndex = 125;
-            this.picCOColor.TabStop = false;
             // 
             // grpCOSuggest
             // 
@@ -104,16 +92,6 @@ namespace LMP_Projcet.Customer
             this.lbCOSuggest.TabIndex = 127;
             this.lbCOSuggest.Text = "건의하기";
             this.lbCOSuggest.Click += new System.EventHandler(this.lbCOSuggest_Click);
-            // 
-            // picCOSuggest
-            // 
-            this.picCOSuggest.Image = ((System.Drawing.Image)(resources.GetObject("picCOSuggest.Image")));
-            this.picCOSuggest.Location = new System.Drawing.Point(13, 20);
-            this.picCOSuggest.Name = "picCOSuggest";
-            this.picCOSuggest.Size = new System.Drawing.Size(100, 77);
-            this.picCOSuggest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCOSuggest.TabIndex = 128;
-            this.picCOSuggest.TabStop = false;
             // 
             // grpCOBookInfo
             // 
@@ -149,6 +127,26 @@ namespace LMP_Projcet.Customer
             this.picCONotice.TabIndex = 128;
             this.picCONotice.TabStop = false;
             // 
+            // picCOColor
+            // 
+            this.picCOColor.Image = ((System.Drawing.Image)(resources.GetObject("picCOColor.Image")));
+            this.picCOColor.Location = new System.Drawing.Point(6, 20);
+            this.picCOColor.Name = "picCOColor";
+            this.picCOColor.Size = new System.Drawing.Size(100, 77);
+            this.picCOColor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCOColor.TabIndex = 125;
+            this.picCOColor.TabStop = false;
+            // 
+            // picCOSuggest
+            // 
+            this.picCOSuggest.Image = ((System.Drawing.Image)(resources.GetObject("picCOSuggest.Image")));
+            this.picCOSuggest.Location = new System.Drawing.Point(13, 20);
+            this.picCOSuggest.Name = "picCOSuggest";
+            this.picCOSuggest.Size = new System.Drawing.Size(100, 77);
+            this.picCOSuggest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCOSuggest.TabIndex = 128;
+            this.picCOSuggest.TabStop = false;
+            // 
             // CustomerOperationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -165,13 +163,13 @@ namespace LMP_Projcet.Customer
             this.Load += new System.EventHandler(this.CustomerOperationForm_Load);
             this.grpCOColor.ResumeLayout(false);
             this.grpCOColor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).EndInit();
             this.grpCOSuggest.ResumeLayout(false);
             this.grpCOSuggest.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).EndInit();
             this.grpCOBookInfo.ResumeLayout(false);
             this.grpCOBookInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCONotice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -187,6 +185,5 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.GroupBox grpCOBookInfo;
         private System.Windows.Forms.Label lbCONotice;
         private System.Windows.Forms.PictureBox picCONotice;
-        private System.Windows.Forms.FontDialog fDCO;
     }
 }

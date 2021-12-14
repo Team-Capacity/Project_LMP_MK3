@@ -43,7 +43,7 @@ namespace LMP_Projcet.Start
             TtMA.ReshowDelay = 100;
             //생년월일 콤보박스에 값 추가
             int choice;
-            for (choice = 1920; choice < 2021; choice++)
+            for (choice = 1920; choice < 2100; choice++)
             {
                 cmbMA_Year.Items.Add(choice);
             }

@@ -36,6 +36,9 @@ namespace LMP_Projcet.Start
             this.lbMA_Join = new System.Windows.Forms.Label();
             this.btnMA_Cancel = new System.Windows.Forms.Button();
             this.btnMA_Join = new System.Windows.Forms.Button();
+            this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
+            this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
+            this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.lbMA_Name = new System.Windows.Forms.Label();
             this.lbMA_Sex = new System.Windows.Forms.Label();
             this.cmbMA_Day = new System.Windows.Forms.ComboBox();
@@ -64,8 +67,8 @@ namespace LMP_Projcet.Start
             this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
             this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
-            this.plnMA.SuspendLayout();
             this.grpcMA_Sex.SuspendLayout();
+            this.plnMA.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -458,9 +461,9 @@ namespace LMP_Projcet.Start
             this.Load += new System.EventHandler(this.MemberAddForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.plnMA.ResumeLayout(false);
             this.grpcMA_Sex.ResumeLayout(false);
             this.grpcMA_Sex.PerformLayout();
+            this.plnMA.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

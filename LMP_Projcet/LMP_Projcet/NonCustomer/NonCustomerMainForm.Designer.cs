@@ -43,6 +43,7 @@ namespace LibraryMgrProgram
             this.picNCMBookInfo = new System.Windows.Forms.PictureBox();
             this.lbNCMHome = new System.Windows.Forms.Label();
             this.picNCMLogo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.plnNCM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNCM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMOperation)).BeginInit();
@@ -81,7 +82,7 @@ namespace LibraryMgrProgram
             this.btnNCMMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCMMax.FlatAppearance.BorderSize = 0;
             this.btnNCMMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMMax.Font = new System.Drawing.Font("Gulim", 15F);
+            this.btnNCMMax.Font = new System.Drawing.Font("굴림", 15F);
             this.btnNCMMax.Location = new System.Drawing.Point(1336, 6);
             this.btnNCMMax.Name = "btnNCMMax";
             this.btnNCMMax.Size = new System.Drawing.Size(20, 20);
@@ -96,7 +97,7 @@ namespace LibraryMgrProgram
             this.btnNCMMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCMMin.FlatAppearance.BorderSize = 0;
             this.btnNCMMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMMin.Font = new System.Drawing.Font("Gulim", 15F);
+            this.btnNCMMin.Font = new System.Drawing.Font("굴림", 15F);
             this.btnNCMMin.Location = new System.Drawing.Point(1296, 6);
             this.btnNCMMin.Name = "btnNCMMin";
             this.btnNCMMin.Size = new System.Drawing.Size(20, 20);
@@ -111,7 +112,7 @@ namespace LibraryMgrProgram
             this.btnNCMClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnNCMClose.FlatAppearance.BorderSize = 0;
             this.btnNCMClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMClose.Font = new System.Drawing.Font("Gulim", 15F);
+            this.btnNCMClose.Font = new System.Drawing.Font("굴림", 15F);
             this.btnNCMClose.Location = new System.Drawing.Point(1376, 6);
             this.btnNCMClose.Name = "btnNCMClose";
             this.btnNCMClose.Size = new System.Drawing.Size(20, 20);
@@ -123,7 +124,7 @@ namespace LibraryMgrProgram
             // lbNCMLogin
             // 
             this.lbNCMLogin.AutoSize = true;
-            this.lbNCMLogin.Font = new System.Drawing.Font("Gulim", 12F);
+            this.lbNCMLogin.Font = new System.Drawing.Font("굴림", 12F);
             this.lbNCMLogin.ForeColor = System.Drawing.Color.Black;
             this.lbNCMLogin.Location = new System.Drawing.Point(1316, 85);
             this.lbNCMLogin.Name = "lbNCMLogin";
@@ -136,23 +137,25 @@ namespace LibraryMgrProgram
             // 
             this.lbNCMOperation.AutoSize = true;
             this.lbNCMOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCMOperation.Font = new System.Drawing.Font("Gulim", 20F);
+            this.lbNCMOperation.Font = new System.Drawing.Font("굴림", 20F);
             this.lbNCMOperation.Location = new System.Drawing.Point(528, 135);
             this.lbNCMOperation.Name = "lbNCMOperation";
             this.lbNCMOperation.Size = new System.Drawing.Size(120, 27);
             this.lbNCMOperation.TabIndex = 148;
             this.lbNCMOperation.Text = "환경설정";
+            this.lbNCMOperation.Click += new System.EventHandler(this.lbNCMOperation_Click_1);
             // 
             // lbNCMBookInfo
             // 
             this.lbNCMBookInfo.AutoSize = true;
             this.lbNCMBookInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCMBookInfo.Font = new System.Drawing.Font("Gulim", 20F);
+            this.lbNCMBookInfo.Font = new System.Drawing.Font("굴림", 20F);
             this.lbNCMBookInfo.Location = new System.Drawing.Point(328, 135);
             this.lbNCMBookInfo.Name = "lbNCMBookInfo";
             this.lbNCMBookInfo.Size = new System.Drawing.Size(93, 27);
             this.lbNCMBookInfo.TabIndex = 146;
             this.lbNCMBookInfo.Text = "책정보";
+            this.lbNCMBookInfo.Click += new System.EventHandler(this.lbNCMBookInfo_Click_1);
             // 
             // dgvNCM
             // 
@@ -203,7 +206,7 @@ namespace LibraryMgrProgram
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNCMHome.AutoSize = true;
             this.lbNCMHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbNCMHome.Font = new System.Drawing.Font("Gulim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbNCMHome.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbNCMHome.Location = new System.Drawing.Point(12, 135);
             this.lbNCMHome.Name = "lbNCMHome";
             this.lbNCMHome.Size = new System.Drawing.Size(209, 34);
@@ -223,6 +226,17 @@ namespace LibraryMgrProgram
             this.picNCMLogo.TabIndex = 154;
             this.picNCMLogo.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 23);
+            this.label1.TabIndex = 167;
+            this.label1.Text = "메인폼";
+            // 
             // NonCustomerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -230,6 +244,7 @@ namespace LibraryMgrProgram
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lbNCMHome);
             this.Controls.Add(this.picNCMLogo);
             this.Controls.Add(this.dgvNCM);
@@ -271,5 +286,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Panel palNCMMain;
         private System.Windows.Forms.Label lbNCMHome;
         private System.Windows.Forms.PictureBox picNCMLogo;
+        private System.Windows.Forms.Label label1;
     }
 }

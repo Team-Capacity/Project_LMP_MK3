@@ -18,7 +18,7 @@ namespace LMP_Projcet.Customer
     {
 
         FormChange formChange = new FormChange();
-      
+        FontChangeForm fc;
 
         public static bool chkShow1 = false;  // chkShow를 같이 쓰면 공지사항 클릭했을때 다른 (색상/글꼴,건의사항)버튼 이벤트가 발생 안함
         public static bool chkShow2 = false;
@@ -88,7 +88,7 @@ namespace LMP_Projcet.Customer
 
 
 
-        FontChangeForm fc;
+
      
      
 
