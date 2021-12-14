@@ -19,7 +19,6 @@ namespace LMP_Projcet.Admin
         dbTest db = new dbTest();
 
         MouseEvent mouseEvent = new MouseEvent();
-        dbTest db = new dbTest();
         public AdminSuggestionForm()
         {
             InitializeComponent();
@@ -95,7 +94,7 @@ namespace LMP_Projcet.Admin
             lvASList.FullRowSelect = true;
             db.dbConnection();
 
-            string sql = "SELECT * FROM ysw.questionlist order by QNumber desc;";
+            string sql = "SELECT * FROM QuestionList order by QNumber desc;";
             MySqlCommand cmd = new MySqlCommand(sql, db.conn);
 
             lvASList.Items.Clear();
@@ -125,7 +124,7 @@ namespace LMP_Projcet.Admin
 
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                string sql = "delete from ysw.questionlist where QNumber = " + a + ";";
+                string sql = "delete from QuestionList where QNumber = " + a + ";";
 
                 try
                 {

@@ -36,9 +36,6 @@ namespace LMP_Projcet.Start
             this.lbMA_Join = new System.Windows.Forms.Label();
             this.btnMA_Cancel = new System.Windows.Forms.Button();
             this.btnMA_Join = new System.Windows.Forms.Button();
-            this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
-            this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.lbMA_Name = new System.Windows.Forms.Label();
             this.lbMA_Sex = new System.Windows.Forms.Label();
             this.cmbMA_Day = new System.Windows.Forms.ComboBox();

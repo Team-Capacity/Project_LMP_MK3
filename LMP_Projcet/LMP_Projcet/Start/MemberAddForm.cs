@@ -140,6 +140,10 @@ namespace LMP_Projcet.Start
                     {
                         MessageBox.Show("중복된 아이디입니다.");
                     }
+                    else if (id.Equals(""))
+                    {
+                        MessageBox.Show("아이디를 입력하여 주세요.");
+                    }
                     else
                     {
                         MessageBox.Show("사용가능한 아이디입니다.");

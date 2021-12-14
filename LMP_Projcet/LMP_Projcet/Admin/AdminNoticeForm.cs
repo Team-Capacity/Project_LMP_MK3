@@ -64,7 +64,7 @@ namespace LibraryMgrProgram
         //공지사항 db쪽 내용 가져옴
         private void select1()
         {
-            string sql = "select * from lmp.noticelist ORDER BY NNumber DESC;";
+            string sql = "select * from NoticeList ORDER BY NNumber DESC;";
             mouseEvent.reloadForm(sql, dgvANList, 2);
 
 
@@ -77,7 +77,7 @@ namespace LibraryMgrProgram
         private void select2()
         {
             db.dbConnection();
-            string sql2 = "select NName, NContent from lmp.noticelist order by NNumber desc limit 1;";
+            string sql2 = "select NName, NContent from NoticeList order by NNumber desc limit 1;";
 
 
             MySqlCommand cmd = new MySqlCommand(sql2, db.conn);
@@ -105,13 +105,8 @@ namespace LibraryMgrProgram
 
         public void AdminNoticeForm_Load(object sender, EventArgs e)
         {
-
             select1();
             select2();
-
-       
-
-
         }
 
      
@@ -145,7 +140,7 @@ namespace LibraryMgrProgram
         {
             if (comANSerList.SelectedItem.Equals("제목"))
             {
-                string sql = ("select * from lmp.noticelist where NName Like '%" + txtANInput.Text + "%';").ToString();
+                string sql = ("select * from NoticeList where NName Like '%" + txtANInput.Text + "%';").ToString();
                 mouseEvent.reloadForm(sql, dgvANList, 2);
             }
         }
@@ -158,14 +153,14 @@ namespace LibraryMgrProgram
             {
                 
                     string Date = DateTime.Now.ToString("yyyy-MM-dd");
-                    string sql = "insert into noticelist(NName , NContent , NDate) values("
+                    string sql = "insert into NoticeList(NName , NContent , NDate) values("
                             + "'" + txtANNoticeView.Text + "'"
                             + ",'" + txtANNoticeCont.Text + "'"
                             + ",'" + Date + "'"
                             + ");";
 
                     db.dbUpdate(sql);
-                    string reloadSql = "select * from lmp.noticelist ORDER BY NNumber DESC;";
+                    string reloadSql = "select * from NoticeList ORDER BY NNumber DESC;";
                     mouseEvent.reloadForm(reloadSql, dgvANList, 2);
                                    
               
@@ -209,7 +204,7 @@ namespace LibraryMgrProgram
             DataGridViewRow row = dgvANList.SelectedRows[0];
             int number = Int32.Parse(row.Cells[0].Value.ToString());
 
-            string mysql = "Update noticelist set NName = '" + txtANNoticeView.Text
+            string mysql = "Update NoticeList set NName = '" + txtANNoticeView.Text
                     + "', NContent = '" + txtANNoticeCont.Text + "'"
                     + " where NNumber = " + number +";";
 
@@ -219,7 +214,7 @@ namespace LibraryMgrProgram
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("성공적으로 수정이 되었습니다.");
-                    mouseEvent.reloadForm("select * from lmp.noticelist ORDER BY NNumber DESC;", dgvANList, 2);
+                    mouseEvent.reloadForm("select * from NoticeList ORDER BY NNumber DESC;", dgvANList, 2);
                 }
             }
             catch (MySqlException ex)
@@ -237,14 +232,14 @@ namespace LibraryMgrProgram
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 db.dbConnection();
-                string mysql = "delete from noticelist where NNumber = " + number + ";";
+                string mysql = "delete from NoticeList where NNumber = " + number + ";";
                 try
                 {
                     MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("성공적으로 삭제 되었습니다.");
-                        mouseEvent.reloadForm("select * from lmp.noticelist ORDER BY NNumber DESC;", dgvANList, 2);
+                        mouseEvent.reloadForm("select * from NoticeList ORDER BY NNumber DESC;", dgvANList, 2);
                     }
                 }
                 catch (MySqlException ex)

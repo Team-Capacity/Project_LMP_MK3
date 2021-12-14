@@ -68,7 +68,7 @@ namespace LMP_Projcet.Customer
         //DB쪽 내용 Datagridview쪽으로 옮겨와지게함
         private void select1()
         {
-            string sql = "select * from lmp.noticelist ORDER BY NNumber DESC;";
+            string sql = "select * from NoticeList ORDER BY NNumber DESC;";
             me.reloadForm(sql, dgvCNList, 2);
 
 
@@ -82,7 +82,7 @@ namespace LMP_Projcet.Customer
         private void select2()
         {
             db.dbConnection();
-            string sql2 = "select NName, NContent from lmp.noticelist order by NNumber desc limit 1;";
+            string sql2 = "select NName, NContent from NoticeList order by NNumber desc limit 1;";
 
 
             MySqlCommand cmd = new MySqlCommand(sql2, db.conn);
@@ -150,7 +150,7 @@ namespace LMP_Projcet.Customer
         {
             if (cmbCNSerList.SelectedItem.Equals("제목"))
             {
-                string sql = ("select * from lmp.noticelist where NName Like '%" + txtCNInput.Text + "%';").ToString();
+                string sql = ("select * from NoticeList where NName Like '%" + txtCNInput.Text + "%';").ToString();
                 me.reloadForm(sql, dgvCNList, 2);
             }
         }

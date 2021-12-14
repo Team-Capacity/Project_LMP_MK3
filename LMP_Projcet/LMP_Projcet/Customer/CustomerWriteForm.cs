@@ -62,7 +62,7 @@ namespace LMP_Projcet.Customer
         private void btnCusWriteOk_Click(object sender, EventArgs e)
         {
 
-            string sql = "insert into questionlist(QName,QWriter,QContent) values("
+            string sql = "insert into QuestionList(QName,QWriter,QContent) values("
                     + "'" + txtCWTitle.Text + "'"
                     + ",'" + lbCWMyCusName.Text + "'"
                     + ",'" + txtCWContent.Text + "'"

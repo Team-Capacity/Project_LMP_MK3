@@ -31,6 +31,7 @@ namespace LibraryMgrProgram
             string bir = txtSerBir.Text;
             string ph = txtSerPH.Text;
             string sql = "select * from Customer where CName = '" + name + "'" + "and CBirth = '" + bir + "'" +"and CPH = '" + ph + "';";
+            string result = "";
             try
             {
                 if (txtSerName.Text == "")

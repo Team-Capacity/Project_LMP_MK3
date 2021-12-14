@@ -32,7 +32,7 @@ namespace LMP_Projcet.Customer
         
         private void CustomerBookInfoForm_Load(object sender, EventArgs e)
         {
-            string sql = "select * from lmp.Book;";
+            string sql = "select * from Book;";
             me.reloadForm(sql, dgvCBIBookList, 0);
          
             Discrption();
@@ -54,7 +54,7 @@ namespace LMP_Projcet.Customer
 
             if (txtCBISerBar.Text == "")
             {
-                string sql = "select * from lmp.Book;";
+                string sql = "select * from Book;";
                 me.reloadForm(sql, dgvCBIBookList, 0);
             }
             //콤보박스 제목 누를 시 제목으로 책검색, 저자 누를시 저자이름으로 검색 결과 뜨도록 나옴
@@ -63,18 +63,18 @@ namespace LMP_Projcet.Customer
                 dgvCBIBookList.Columns.Clear();
                 if (cmbCBISerList.SelectedItem.Equals("제목"))
                 {
-                    string sql = ("select * from lmp.Book where BName Like '%" + txtCBISerBar.Text + "%';").ToString();
+                    string sql = ("select * from Book where BName Like '%" + txtCBISerBar.Text + "%';").ToString();
                     me.reloadForm(sql, dgvCBIBookList, 0);
                 }
 
                 else if (cmbCBISerList.SelectedItem.Equals("저자"))
                 {
-                    string sql = ("select * from lmp.Book where BAuthor Like '%" + txtCBISerBar.Text + "%';").ToString();
+                    string sql = ("select * from Book where BAuthor Like '%" + txtCBISerBar.Text + "%';").ToString();
                     me.reloadForm(sql, dgvCBIBookList, 0);
                 }
                 else if (cmbCBISerList.SelectedItem.Equals("장르"))
                 {
-                    string sql = ("select * from lmp.Book where BGenre Like '%" + txtCBISerBar.Text + "%';").ToString();
+                    string sql = ("select * from Book where BGenre Like '%" + txtCBISerBar.Text + "%';").ToString();
                     me.reloadForm(sql, dgvCBIBookList, 0);
                 }
             }

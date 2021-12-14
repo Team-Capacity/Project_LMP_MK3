@@ -25,7 +25,7 @@ namespace LibraryMgrProgram.CustomerForm
         {    
 
             db.dbConnection();
-            string sql = "select NContent from lmp.noticelist order by NNumber desc limit 1;";
+            string sql = "select NContent from NoticeList order by NNumber desc limit 1;";
             
 
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
