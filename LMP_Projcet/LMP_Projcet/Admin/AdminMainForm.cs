@@ -26,7 +26,6 @@ namespace LibraryMgrProgram
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
-        String sql = "";
 
 
         public AdminMainForm()

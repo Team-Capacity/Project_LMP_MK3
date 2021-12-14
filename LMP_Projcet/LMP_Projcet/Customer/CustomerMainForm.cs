@@ -41,6 +41,7 @@ namespace LibraryMgrProgram
         LoginForm lf = new LoginForm();
 
         dbTest db = new dbTest();
+        String sql = "";
 
         public static string myname;
     
@@ -100,6 +101,18 @@ namespace LibraryMgrProgram
         {
             formChange.ChangeFIF(ccf, palCMMain);
             lbCMCustomer.Text = LoginForm.name + "님 환영합니다.";
+            myname = lbCMCustomer.Text;
+
+
+            /*
+            // 이렇게하면 회원은 무조건 hello가뜸
+            sql = "select cName from Customer where CID =  '2';";
+            db.dbConnection();
+           // string sql = "select * from Customer where CName = '" + myName + "';";
+
+            lbCMCustomer.Text = db.dbSelectCus(sql) + "님 환영합니다.";
+            */
+        
             myname = lbCMCustomer.Text;
         }
 

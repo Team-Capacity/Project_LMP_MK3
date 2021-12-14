@@ -119,7 +119,7 @@ namespace LMP_Projcet.Admin
             this.grpAOSuggestionBox.BackColor = System.Drawing.Color.White;
             this.grpAOSuggestionBox.Controls.Add(this.lbAOSuggestionBox);
             this.grpAOSuggestionBox.Controls.Add(this.picAOSuggestionBox);
-            this.grpAOSuggestionBox.Location = new System.Drawing.Point(577, 224);
+            this.grpAOSuggestionBox.Location = new System.Drawing.Point(607, 224);
             this.grpAOSuggestionBox.Name = "grpAOSuggestionBox";
             this.grpAOSuggestionBox.Size = new System.Drawing.Size(168, 105);
             this.grpAOSuggestionBox.TabIndex = 140;

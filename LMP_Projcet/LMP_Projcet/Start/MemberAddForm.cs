@@ -216,31 +216,11 @@ namespace LMP_Projcet.Start
                     MessageBox.Show("핸드폰번호에 - 를 입력하여 번호를입력해주세요");
                     return;
                 }
-
-
-
-                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CRank, CGender) values("
-                + ",'" + txtMA_Id.Text + "'"
-                + ",'" + txtMA_Pw.Text + "'"
-                + ",'" + txtMA_Name.Text + "'"
-                + "," + txtMA_Phone.Text + "'"
-                + ",'" + cmbMA_Year + "/" + cmbMA_Month + "/" + cmbMA_Day + "'"
-                + ",'"
-                + ",'" +'3'
-                + ",'" + grpcMA_Sex +"'";
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                MySqlDataReader dbReader = cmd.ExecuteReader();
-
-               
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("성공적으로 추가 되었습니다.");
-                    db.conn.Close();
-                }
+                Test();
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("DB수정에 실패하였습니다.");
+                MessageBox.Show("회원추가에 실패하였습니다.");
             }
         }
         public static bool IsValMonth(string Text)
@@ -287,13 +267,30 @@ namespace LMP_Projcet.Start
             Match Pmatch = Pregex.Match(Text);
             return Pmatch.Success;
         }
-
-
         private void MemberAddForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
         
-
+        public void Test()
+        {
+            string gender = "";
+            if (rdbMA_Man.Checked)
+            {
+                gender = "남자";
+            }
+            else
+            {
+                gender = "여성";
+            }
+            string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CGender) values("
+                + "'" + txtMA_Id.Text + "'"
+                + ",'" + txtMA_Pw.Text + "'"
+                + ",'" + txtMA_Name.Text + "'"
+                + ",'" + txtMA_Phone.Text + "'"
+                + ",'" + cmbMA_Year.Text + "/" + cmbMA_Month.Text + "/" + cmbMA_Day.Text + "'"
+                + ",'" + gender + "');";
+            db.dbUpdate(sql);
+        }
     }
 }

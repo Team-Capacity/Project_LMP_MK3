@@ -48,6 +48,7 @@ namespace LMP_Projcet.Methods
                     return result = name;
                 }
                 dbReader.Close();
+                conn.Close();
 
                 return result = "Error";
             }
@@ -58,17 +59,37 @@ namespace LMP_Projcet.Methods
             }
         }
 
-       
+        public string dbSelect(string select ,string from ,string where)
+        {
+            try
+            {
+                string sql = "select " + select + " from " + from + "where " + where +";";
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                MySqlDataReader dbReader = cmd.ExecuteReader();
+                string result = "";
+                while (dbReader.Read())
+                {
+                    result = dbReader[0].ToString();
+                }
+                return result;
+                dbReader.Close();
+                conn.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
 
         public void dbUpdate(string updateCmd)
         {
             try
             {
+                dbConnection();
                 MySqlCommand cmd = new MySqlCommand(updateCmd, conn);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("성공적으로 추가 되었습니다.");
-                }
+                conn.Close();
             }
             catch (MySqlException e)
             {
