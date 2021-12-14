@@ -29,6 +29,7 @@ namespace LibraryMgrProgram
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.grpSerID = new System.Windows.Forms.GroupBox();
             this.btnSerOK = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@ namespace LibraryMgrProgram
             this.label5 = new System.Windows.Forms.Label();
             this.btnLFClose = new System.Windows.Forms.Button();
             this.plnAM = new System.Windows.Forms.TableLayoutPanel();
+            this.Ttse = new System.Windows.Forms.ToolTip(this.components);
             this.grpSerID.SuspendLayout();
             this.grpSerPW.SuspendLayout();
             this.plnAM.SuspendLayout();
@@ -87,7 +89,7 @@ namespace LibraryMgrProgram
             this.btnSerOK.Location = new System.Drawing.Point(134, 156);
             this.btnSerOK.Name = "btnSerOK";
             this.btnSerOK.Size = new System.Drawing.Size(112, 30);
-            this.btnSerOK.TabIndex = 6;
+            this.btnSerOK.TabIndex = 4;
             this.btnSerOK.Text = "확인";
             this.btnSerOK.UseVisualStyleBackColor = true;
             this.btnSerOK.Click += new System.EventHandler(this.btnSerOK_Click);
@@ -97,21 +99,21 @@ namespace LibraryMgrProgram
             this.txtSerBir.Location = new System.Drawing.Point(90, 116);
             this.txtSerBir.Name = "txtSerBir";
             this.txtSerBir.Size = new System.Drawing.Size(238, 21);
-            this.txtSerBir.TabIndex = 5;
+            this.txtSerBir.TabIndex = 3;
             // 
             // txtSerPH
             // 
             this.txtSerPH.Location = new System.Drawing.Point(90, 84);
             this.txtSerPH.Name = "txtSerPH";
             this.txtSerPH.Size = new System.Drawing.Size(238, 21);
-            this.txtSerPH.TabIndex = 4;
+            this.txtSerPH.TabIndex = 2;
             // 
             // txtSerName
             // 
             this.txtSerName.Location = new System.Drawing.Point(90, 51);
             this.txtSerName.Name = "txtSerName";
             this.txtSerName.Size = new System.Drawing.Size(238, 21);
-            this.txtSerName.TabIndex = 2;
+            this.txtSerName.TabIndex = 1;
             // 
             // labSerBir
             // 
@@ -162,7 +164,7 @@ namespace LibraryMgrProgram
             this.btnSerPwOK.Location = new System.Drawing.Point(134, 156);
             this.btnSerPwOK.Name = "btnSerPwOK";
             this.btnSerPwOK.Size = new System.Drawing.Size(112, 30);
-            this.btnSerPwOK.TabIndex = 6;
+            this.btnSerPwOK.TabIndex = 9;
             this.btnSerPwOK.Text = "확인";
             this.btnSerPwOK.UseVisualStyleBackColor = true;
             this.btnSerPwOK.Click += new System.EventHandler(this.btnSerPwOK_Click);
@@ -172,21 +174,21 @@ namespace LibraryMgrProgram
             this.txtSerPwBir.Location = new System.Drawing.Point(90, 116);
             this.txtSerPwBir.Name = "txtSerPwBir";
             this.txtSerPwBir.Size = new System.Drawing.Size(238, 21);
-            this.txtSerPwBir.TabIndex = 5;
+            this.txtSerPwBir.TabIndex = 7;
             // 
             // txtSerPwName
             // 
             this.txtSerPwName.Location = new System.Drawing.Point(90, 84);
             this.txtSerPwName.Name = "txtSerPwName";
             this.txtSerPwName.Size = new System.Drawing.Size(238, 21);
-            this.txtSerPwName.TabIndex = 4;
+            this.txtSerPwName.TabIndex = 6;
             // 
             // txtSerID
             // 
             this.txtSerID.Location = new System.Drawing.Point(90, 51);
             this.txtSerID.Name = "txtSerID";
             this.txtSerID.Size = new System.Drawing.Size(238, 21);
-            this.txtSerID.TabIndex = 2;
+            this.txtSerID.TabIndex = 5;
             // 
             // labSerPwBir
             // 
@@ -275,6 +277,7 @@ namespace LibraryMgrProgram
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IDPWSearchForm";
             this.Text = "아이디/비밀번호 찾기";
+            this.Load += new System.EventHandler(this.IDPWSearchForm_Load);
             this.grpSerID.ResumeLayout(false);
             this.grpSerID.PerformLayout();
             this.grpSerPW.ResumeLayout(false);
@@ -307,5 +310,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnLFClose;
         private System.Windows.Forms.TableLayoutPanel plnAM;
+        private System.Windows.Forms.ToolTip Ttse;
     }
 }

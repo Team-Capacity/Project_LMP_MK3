@@ -31,6 +31,8 @@ namespace LMP_Projcet.Start
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblMA_Address = new System.Windows.Forms.Label();
+            this.txtAM_Address = new System.Windows.Forms.TextBox();
             this.lbMA_Join = new System.Windows.Forms.Label();
             this.btnMA_Cancel = new System.Windows.Forms.Button();
             this.btnMA_Join = new System.Windows.Forms.Button();
@@ -43,7 +45,6 @@ namespace LMP_Projcet.Start
             this.cmbMA_Month = new System.Windows.Forms.ComboBox();
             this.lbMA_Month = new System.Windows.Forms.Label();
             this.lbMA_Year = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.lbMA_Phone = new System.Windows.Forms.Label();
             this.btnMA_IdCheck = new System.Windows.Forms.Button();
             this.txtMA_PwCheck = new System.Windows.Forms.TextBox();
@@ -58,7 +59,7 @@ namespace LMP_Projcet.Start
             this.btnMAMax = new System.Windows.Forms.Button();
             this.btnMAMin = new System.Windows.Forms.Button();
             this.btnMAClose = new System.Windows.Forms.Button();
-            this.TootMA = new System.Windows.Forms.ToolTip(this.components);
+            this.TtMA = new System.Windows.Forms.ToolTip(this.components);
             this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
             this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
             this.rdbMA_Man = new System.Windows.Forms.RadioButton();
@@ -70,6 +71,8 @@ namespace LMP_Projcet.Start
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.groupBox1.Controls.Add(this.lblMA_Address);
+            this.groupBox1.Controls.Add(this.txtAM_Address);
             this.groupBox1.Controls.Add(this.lbMA_Join);
             this.groupBox1.Controls.Add(this.btnMA_Cancel);
             this.groupBox1.Controls.Add(this.btnMA_Join);
@@ -83,7 +86,6 @@ namespace LMP_Projcet.Start
             this.groupBox1.Controls.Add(this.cmbMA_Month);
             this.groupBox1.Controls.Add(this.lbMA_Month);
             this.groupBox1.Controls.Add(this.lbMA_Year);
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lbMA_Phone);
             this.groupBox1.Controls.Add(this.btnMA_IdCheck);
             this.groupBox1.Controls.Add(this.txtMA_PwCheck);
@@ -101,10 +103,30 @@ namespace LMP_Projcet.Start
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // lblMA_Address
+            // 
+            this.lblMA_Address.AutoSize = true;
+            this.lblMA_Address.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lblMA_Address.Location = new System.Drawing.Point(105, 219);
+            this.lblMA_Address.Name = "lblMA_Address";
+            this.lblMA_Address.Size = new System.Drawing.Size(42, 16);
+            this.lblMA_Address.TabIndex = 180;
+            this.lblMA_Address.Text = "주소";
+            // 
+            // txtAM_Address
+            // 
+            this.txtAM_Address.Font = new System.Drawing.Font("굴림", 12F);
+            this.txtAM_Address.Location = new System.Drawing.Point(168, 216);
+            this.txtAM_Address.Multiline = true;
+            this.txtAM_Address.Name = "txtAM_Address";
+            this.txtAM_Address.Size = new System.Drawing.Size(257, 25);
+            this.txtAM_Address.TabIndex = 5;
+            this.TtMA.SetToolTip(this.txtAM_Address, "시/도 구/군 면/동으로 작성해주세요 ex)서울특별시 강북구 미아동");
+            // 
             // lbMA_Join
             // 
             this.lbMA_Join.AutoSize = true;
-            this.lbMA_Join.Font = new System.Drawing.Font("Gulim", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Join.Font = new System.Drawing.Font("굴림", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbMA_Join.ForeColor = System.Drawing.Color.Black;
             this.lbMA_Join.Location = new System.Drawing.Point(81, 0);
             this.lbMA_Join.Name = "lbMA_Join";
@@ -114,22 +136,22 @@ namespace LMP_Projcet.Start
             // 
             // btnMA_Cancel
             // 
-            this.btnMA_Cancel.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMA_Cancel.Location = new System.Drawing.Point(249, 389);
+            this.btnMA_Cancel.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMA_Cancel.Location = new System.Drawing.Point(249, 402);
             this.btnMA_Cancel.Name = "btnMA_Cancel";
             this.btnMA_Cancel.Size = new System.Drawing.Size(96, 36);
-            this.btnMA_Cancel.TabIndex = 178;
+            this.btnMA_Cancel.TabIndex = 13;
             this.btnMA_Cancel.Text = "취소";
             this.btnMA_Cancel.UseVisualStyleBackColor = true;
             this.btnMA_Cancel.Click += new System.EventHandler(this.btnMA_Cancel_Click);
             // 
             // btnMA_Join
             // 
-            this.btnMA_Join.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnMA_Join.Location = new System.Drawing.Point(95, 389);
+            this.btnMA_Join.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMA_Join.Location = new System.Drawing.Point(95, 402);
             this.btnMA_Join.Name = "btnMA_Join";
             this.btnMA_Join.Size = new System.Drawing.Size(96, 36);
-            this.btnMA_Join.TabIndex = 177;
+            this.btnMA_Join.TabIndex = 12;
             this.btnMA_Join.Text = "회원가입";
             this.btnMA_Join.UseVisualStyleBackColor = true;
             this.btnMA_Join.Click += new System.EventHandler(this.btnMA_Join_Click);
@@ -137,8 +159,8 @@ namespace LMP_Projcet.Start
             // lbMA_Name
             // 
             this.lbMA_Name.AutoSize = true;
-            this.lbMA_Name.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Name.Location = new System.Drawing.Point(105, 53);
+            this.lbMA_Name.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Name.Location = new System.Drawing.Point(105, 45);
             this.lbMA_Name.Name = "lbMA_Name";
             this.lbMA_Name.Size = new System.Drawing.Size(42, 16);
             this.lbMA_Name.TabIndex = 170;
@@ -147,8 +169,8 @@ namespace LMP_Projcet.Start
             // lbMA_Sex
             // 
             this.lbMA_Sex.AutoSize = true;
-            this.lbMA_Sex.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Sex.Location = new System.Drawing.Point(105, 289);
+            this.lbMA_Sex.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Sex.Location = new System.Drawing.Point(105, 302);
             this.lbMA_Sex.Name = "lbMA_Sex";
             this.lbMA_Sex.Size = new System.Drawing.Size(42, 16);
             this.lbMA_Sex.TabIndex = 165;
@@ -157,26 +179,25 @@ namespace LMP_Projcet.Start
             // cmbMA_Day
             // 
             this.cmbMA_Day.FormattingEnabled = true;
-            this.cmbMA_Day.Location = new System.Drawing.Point(350, 243);
+            this.cmbMA_Day.Location = new System.Drawing.Point(350, 256);
             this.cmbMA_Day.Name = "cmbMA_Day";
             this.cmbMA_Day.Size = new System.Drawing.Size(38, 20);
-            this.cmbMA_Day.TabIndex = 175;
+            this.cmbMA_Day.TabIndex = 8;
             // 
             // txtMA_Name
             // 
-            this.txtMA_Name.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtMA_Name.Location = new System.Drawing.Point(168, 50);
+            this.txtMA_Name.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMA_Name.Location = new System.Drawing.Point(168, 42);
             this.txtMA_Name.Multiline = true;
             this.txtMA_Name.Name = "txtMA_Name";
             this.txtMA_Name.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Name.TabIndex = 0;
-            this.txtMA_Name.Text = "최대다섯글";
             // 
             // lbMA_Day
             // 
             this.lbMA_Day.AutoSize = true;
-            this.lbMA_Day.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Day.Location = new System.Drawing.Point(392, 243);
+            this.lbMA_Day.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Day.Location = new System.Drawing.Point(392, 256);
             this.lbMA_Day.Name = "lbMA_Day";
             this.lbMA_Day.Size = new System.Drawing.Size(28, 19);
             this.lbMA_Day.TabIndex = 176;
@@ -185,27 +206,24 @@ namespace LMP_Projcet.Start
             // cmbMA_Year
             // 
             this.cmbMA_Year.FormattingEnabled = true;
-            this.cmbMA_Year.Items.AddRange(new object[] {
-            "1980",
-            "1981"});
-            this.cmbMA_Year.Location = new System.Drawing.Point(168, 243);
+            this.cmbMA_Year.Location = new System.Drawing.Point(168, 256);
             this.cmbMA_Year.Name = "cmbMA_Year";
             this.cmbMA_Year.Size = new System.Drawing.Size(72, 20);
-            this.cmbMA_Year.TabIndex = 174;
+            this.cmbMA_Year.TabIndex = 6;
             // 
             // cmbMA_Month
             // 
             this.cmbMA_Month.FormattingEnabled = true;
-            this.cmbMA_Month.Location = new System.Drawing.Point(273, 243);
+            this.cmbMA_Month.Location = new System.Drawing.Point(273, 256);
             this.cmbMA_Month.Name = "cmbMA_Month";
             this.cmbMA_Month.Size = new System.Drawing.Size(38, 20);
-            this.cmbMA_Month.TabIndex = 176;
+            this.cmbMA_Month.TabIndex = 7;
             // 
             // lbMA_Month
             // 
             this.lbMA_Month.AutoSize = true;
-            this.lbMA_Month.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Month.Location = new System.Drawing.Point(312, 243);
+            this.lbMA_Month.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Month.Location = new System.Drawing.Point(312, 256);
             this.lbMA_Month.Name = "lbMA_Month";
             this.lbMA_Month.Size = new System.Drawing.Size(28, 19);
             this.lbMA_Month.TabIndex = 175;
@@ -214,28 +232,18 @@ namespace LMP_Projcet.Start
             // lbMA_Year
             // 
             this.lbMA_Year.AutoSize = true;
-            this.lbMA_Year.Font = new System.Drawing.Font("Gulim", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Year.Location = new System.Drawing.Point(240, 243);
+            this.lbMA_Year.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Year.Location = new System.Drawing.Point(240, 256);
             this.lbMA_Year.Name = "lbMA_Year";
             this.lbMA_Year.Size = new System.Drawing.Size(28, 19);
             this.lbMA_Year.TabIndex = 174;
             this.lbMA_Year.Text = "년";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gulim", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(48, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(371, 11);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "*특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.";
-            // 
             // lbMA_Phone
             // 
             this.lbMA_Phone.AutoSize = true;
-            this.lbMA_Phone.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Phone.Location = new System.Drawing.Point(71, 337);
+            this.lbMA_Phone.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Phone.Location = new System.Drawing.Point(71, 350);
             this.lbMA_Phone.Name = "lbMA_Phone";
             this.lbMA_Phone.Size = new System.Drawing.Size(76, 16);
             this.lbMA_Phone.TabIndex = 173;
@@ -243,39 +251,38 @@ namespace LMP_Projcet.Start
             // 
             // btnMA_IdCheck
             // 
-            this.btnMA_IdCheck.Location = new System.Drawing.Point(350, 94);
+            this.btnMA_IdCheck.Location = new System.Drawing.Point(350, 86);
             this.btnMA_IdCheck.Name = "btnMA_IdCheck";
             this.btnMA_IdCheck.Size = new System.Drawing.Size(75, 23);
-            this.btnMA_IdCheck.TabIndex = 13;
+            this.btnMA_IdCheck.TabIndex = 2;
             this.btnMA_IdCheck.Text = "중복확인";
             this.btnMA_IdCheck.UseVisualStyleBackColor = true;
             this.btnMA_IdCheck.Click += new System.EventHandler(this.btnMA_IdCheck_Click);
             // 
             // txtMA_PwCheck
             // 
-            this.txtMA_PwCheck.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtMA_PwCheck.Location = new System.Drawing.Point(168, 200);
+            this.txtMA_PwCheck.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMA_PwCheck.Location = new System.Drawing.Point(168, 171);
             this.txtMA_PwCheck.Multiline = true;
             this.txtMA_PwCheck.Name = "txtMA_PwCheck";
             this.txtMA_PwCheck.Size = new System.Drawing.Size(162, 25);
-            this.txtMA_PwCheck.TabIndex = 17;
+            this.txtMA_PwCheck.TabIndex = 4;
             // 
             // txtMA_Pw
             // 
-            this.txtMA_Pw.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtMA_Pw.Location = new System.Drawing.Point(168, 137);
+            this.txtMA_Pw.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMA_Pw.Location = new System.Drawing.Point(168, 129);
             this.txtMA_Pw.Multiline = true;
             this.txtMA_Pw.Name = "txtMA_Pw";
             this.txtMA_Pw.Size = new System.Drawing.Size(162, 25);
-            this.txtMA_Pw.TabIndex = 15;
-            this.txtMA_Pw.Text = "seethepw@123";
-            this.TootMA.SetToolTip(this.txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
+            this.txtMA_Pw.TabIndex = 3;
+            this.TtMA.SetToolTip(this.txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
             // 
             // lbMA_Birth
             // 
             this.lbMA_Birth.AutoSize = true;
-            this.lbMA_Birth.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Birth.Location = new System.Drawing.Point(71, 243);
+            this.lbMA_Birth.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Birth.Location = new System.Drawing.Point(71, 256);
             this.lbMA_Birth.Name = "lbMA_Birth";
             this.lbMA_Birth.Size = new System.Drawing.Size(76, 16);
             this.lbMA_Birth.TabIndex = 172;
@@ -284,8 +291,8 @@ namespace LMP_Projcet.Start
             // lbMA_PwCheck
             // 
             this.lbMA_PwCheck.AutoSize = true;
-            this.lbMA_PwCheck.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_PwCheck.Location = new System.Drawing.Point(31, 203);
+            this.lbMA_PwCheck.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_PwCheck.Location = new System.Drawing.Point(31, 174);
             this.lbMA_PwCheck.Name = "lbMA_PwCheck";
             this.lbMA_PwCheck.Size = new System.Drawing.Size(116, 16);
             this.lbMA_PwCheck.TabIndex = 169;
@@ -294,8 +301,8 @@ namespace LMP_Projcet.Start
             // lbMA_Pw
             // 
             this.lbMA_Pw.AutoSize = true;
-            this.lbMA_Pw.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Pw.Location = new System.Drawing.Point(71, 140);
+            this.lbMA_Pw.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Pw.Location = new System.Drawing.Point(71, 132);
             this.lbMA_Pw.Name = "lbMA_Pw";
             this.lbMA_Pw.Size = new System.Drawing.Size(76, 16);
             this.lbMA_Pw.TabIndex = 168;
@@ -303,19 +310,18 @@ namespace LMP_Projcet.Start
             // 
             // txtMA_Id
             // 
-            this.txtMA_Id.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtMA_Id.Location = new System.Drawing.Point(168, 94);
+            this.txtMA_Id.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMA_Id.Location = new System.Drawing.Point(168, 86);
             this.txtMA_Id.Multiline = true;
             this.txtMA_Id.Name = "txtMA_Id";
             this.txtMA_Id.Size = new System.Drawing.Size(162, 25);
-            this.txtMA_Id.TabIndex = 12;
-            this.txtMA_Id.Text = "goodmoment12";
+            this.txtMA_Id.TabIndex = 1;
             // 
             // lbMA_Id
             // 
             this.lbMA_Id.AutoSize = true;
-            this.lbMA_Id.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbMA_Id.Location = new System.Drawing.Point(88, 97);
+            this.lbMA_Id.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbMA_Id.Location = new System.Drawing.Point(88, 89);
             this.lbMA_Id.Name = "lbMA_Id";
             this.lbMA_Id.Size = new System.Drawing.Size(59, 16);
             this.lbMA_Id.TabIndex = 167;
@@ -323,13 +329,12 @@ namespace LMP_Projcet.Start
             // 
             // txtMA_Phone
             // 
-            this.txtMA_Phone.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtMA_Phone.Location = new System.Drawing.Point(168, 334);
+            this.txtMA_Phone.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtMA_Phone.Location = new System.Drawing.Point(168, 347);
             this.txtMA_Phone.Multiline = true;
             this.txtMA_Phone.Name = "txtMA_Phone";
             this.txtMA_Phone.Size = new System.Drawing.Size(162, 25);
-            this.txtMA_Phone.TabIndex = 10;
-            this.txtMA_Phone.Text = "010-5720-3562";
+            this.txtMA_Phone.TabIndex = 11;
             // 
             // plnMA
             // 
@@ -364,7 +369,7 @@ namespace LMP_Projcet.Start
             this.btnMAMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMAMax.FlatAppearance.BorderSize = 0;
             this.btnMAMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMAMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnMAMax.Font = new System.Drawing.Font("굴림", 10F);
             this.btnMAMax.Location = new System.Drawing.Point(617, 6);
             this.btnMAMax.Name = "btnMAMax";
             this.btnMAMax.Size = new System.Drawing.Size(19, 20);
@@ -379,7 +384,7 @@ namespace LMP_Projcet.Start
             this.btnMAMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMAMin.FlatAppearance.BorderSize = 0;
             this.btnMAMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMAMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnMAMin.Font = new System.Drawing.Font("굴림", 10F);
             this.btnMAMin.Location = new System.Drawing.Point(591, 6);
             this.btnMAMin.Name = "btnMAMin";
             this.btnMAMin.Size = new System.Drawing.Size(20, 20);
@@ -394,7 +399,7 @@ namespace LMP_Projcet.Start
             this.btnMAClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnMAClose.FlatAppearance.BorderSize = 0;
             this.btnMAClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMAClose.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnMAClose.Font = new System.Drawing.Font("굴림", 10F);
             this.btnMAClose.Location = new System.Drawing.Point(644, 6);
             this.btnMAClose.Name = "btnMAClose";
             this.btnMAClose.Size = new System.Drawing.Size(20, 20);
@@ -408,7 +413,7 @@ namespace LMP_Projcet.Start
             this.grpcMA_Sex.BorderColor = System.Drawing.Color.White;
             this.grpcMA_Sex.Controls.Add(this.rdbMA_Wom);
             this.grpcMA_Sex.Controls.Add(this.rdbMA_Man);
-            this.grpcMA_Sex.Location = new System.Drawing.Point(168, 280);
+            this.grpcMA_Sex.Location = new System.Drawing.Point(168, 293);
             this.grpcMA_Sex.Name = "grpcMA_Sex";
             this.grpcMA_Sex.Size = new System.Drawing.Size(122, 37);
             this.grpcMA_Sex.TabIndex = 166;
@@ -421,7 +426,7 @@ namespace LMP_Projcet.Start
             this.rdbMA_Wom.Location = new System.Drawing.Point(63, 9);
             this.rdbMA_Wom.Name = "rdbMA_Wom";
             this.rdbMA_Wom.Size = new System.Drawing.Size(53, 18);
-            this.rdbMA_Wom.TabIndex = 161;
+            this.rdbMA_Wom.TabIndex = 10;
             this.rdbMA_Wom.TabStop = true;
             this.rdbMA_Wom.Text = "여자";
             this.rdbMA_Wom.UseVisualStyleBackColor = true;
@@ -433,7 +438,7 @@ namespace LMP_Projcet.Start
             this.rdbMA_Man.Location = new System.Drawing.Point(6, 10);
             this.rdbMA_Man.Name = "rdbMA_Man";
             this.rdbMA_Man.Size = new System.Drawing.Size(53, 18);
-            this.rdbMA_Man.TabIndex = 160;
+            this.rdbMA_Man.TabIndex = 9;
             this.rdbMA_Man.TabStop = true;
             this.rdbMA_Man.Text = "남자";
             this.rdbMA_Man.UseVisualStyleBackColor = true;
@@ -479,7 +484,6 @@ namespace LMP_Projcet.Start
         private System.Windows.Forms.ComboBox cmbMA_Month;
         private System.Windows.Forms.Label lbMA_Month;
         private System.Windows.Forms.Label lbMA_Year;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbMA_Phone;
         private System.Windows.Forms.Button btnMA_IdCheck;
         private System.Windows.Forms.TextBox txtMA_PwCheck;
@@ -494,6 +498,8 @@ namespace LMP_Projcet.Start
         private System.Windows.Forms.Button btnMAMax;
         private System.Windows.Forms.Button btnMAMin;
         private System.Windows.Forms.Button btnMAClose;
-        private System.Windows.Forms.ToolTip TootMA;
+        private System.Windows.Forms.ToolTip TtMA;
+        private System.Windows.Forms.Label lblMA_Address;
+        private System.Windows.Forms.TextBox txtAM_Address;
     }
 }
