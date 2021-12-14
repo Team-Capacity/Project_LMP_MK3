@@ -64,6 +64,7 @@ namespace LMP_Projcet.Methods
         {
             try
             {
+                dbConnection();
                 MySqlCommand cmd = new MySqlCommand(updateCmd, conn);
                 if (cmd.ExecuteNonQuery() == 1)
                 {

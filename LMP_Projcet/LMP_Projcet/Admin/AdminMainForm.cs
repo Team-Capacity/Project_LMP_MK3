@@ -67,16 +67,12 @@ namespace LibraryMgrProgram
         {
             formChange.ChangeFIF(aConForm, palAMMain);
             lbAMCustomer.Text = LoginForm.name+"님 환영합니다.";
+
             bool color = LMP_Projcet.Properties.Settings.Default.myColor;
-            if(color == true)
+            if(color == false)
             {
                 this.BackColor = FontChangeForm.color;
             }
-            else
-            {
-                
-            }
-            
         }
 
         private void lbAMHome_Click(object sender, EventArgs e)
