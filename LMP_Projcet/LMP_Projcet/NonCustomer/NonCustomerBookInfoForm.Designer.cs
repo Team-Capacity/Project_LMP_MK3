@@ -450,6 +450,7 @@ namespace LMP_Projcet.NonCustomer
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NonCustomerBookInfoForm";
             this.Text = "NonCustomerBookForm";
+            this.Load += new System.EventHandler(this.NonCustomerBookInfoForm_Load);
             this.grpNCBIBookInfo.ResumeLayout(false);
             this.grpNCBIBookInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgNCBIView)).EndInit();

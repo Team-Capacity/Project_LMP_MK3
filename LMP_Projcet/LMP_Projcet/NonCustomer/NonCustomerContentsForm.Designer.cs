@@ -31,7 +31,6 @@ namespace LibraryMgrProgram.NonCustomerForm
         {
             this.lbNCCBestBook = new System.Windows.Forms.Label();
             this.lbNCCNotic = new System.Windows.Forms.Label();
-            this.dgvNCCNotice = new System.Windows.Forms.DataGridView();
             this.picNCCBookView2 = new System.Windows.Forms.PictureBox();
             this.picNCCBookView1 = new System.Windows.Forms.PictureBox();
             this.picNCCBookView0 = new System.Windows.Forms.PictureBox();
@@ -51,7 +50,7 @@ namespace LibraryMgrProgram.NonCustomerForm
             this.lbNCCAuthor5 = new System.Windows.Forms.Label();
             this.lbNCCBookName5 = new System.Windows.Forms.Label();
             this.txtNCCBook = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNCCNotice)).BeginInit();
+            this.txtNCCNotice = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picNCCBookView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCCBookView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCCBookView0)).BeginInit();
@@ -81,17 +80,6 @@ namespace LibraryMgrProgram.NonCustomerForm
             this.lbNCCNotic.Size = new System.Drawing.Size(133, 30);
             this.lbNCCNotic.TabIndex = 28;
             this.lbNCCNotic.Text = "공지사항";
-            // 
-            // dgvNCCNotice
-            // 
-            this.dgvNCCNotice.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvNCCNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNCCNotice.Location = new System.Drawing.Point(116, 62);
-            this.dgvNCCNotice.Name = "dgvNCCNotice";
-            this.dgvNCCNotice.RowTemplate.Height = 23;
-            this.dgvNCCNotice.Size = new System.Drawing.Size(450, 479);
-            this.dgvNCCNotice.TabIndex = 30;
-            this.dgvNCCNotice.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // picNCCBookView2
             // 
@@ -259,6 +247,16 @@ namespace LibraryMgrProgram.NonCustomerForm
             this.txtNCCBook.TabIndex = 49;
             this.txtNCCBook.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // txtNCCNotice
+            // 
+            this.txtNCCNotice.Location = new System.Drawing.Point(116, 62);
+            this.txtNCCNotice.Multiline = true;
+            this.txtNCCNotice.Name = "txtNCCNotice";
+            this.txtNCCNotice.ReadOnly = true;
+            this.txtNCCNotice.Size = new System.Drawing.Size(450, 482);
+            this.txtNCCNotice.TabIndex = 50;
+            this.txtNCCNotice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // NonCustomerContentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -285,13 +283,13 @@ namespace LibraryMgrProgram.NonCustomerForm
             this.Controls.Add(this.picNCCBookView1);
             this.Controls.Add(this.picNCCBookView0);
             this.Controls.Add(this.lbNCCBestBook);
-            this.Controls.Add(this.dgvNCCNotice);
             this.Controls.Add(this.txtNCCBook);
+            this.Controls.Add(this.txtNCCNotice);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NonCustomerContentsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "NonCustomerContentsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNCCNotice)).EndInit();
+            this.Load += new System.EventHandler(this.NonCustomerContentsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picNCCBookView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCCBookView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCCBookView0)).EndInit();
@@ -310,7 +308,6 @@ namespace LibraryMgrProgram.NonCustomerForm
         private System.Windows.Forms.PictureBox picNCCBookView0;
         private System.Windows.Forms.Label lbNCCBestBook;
         private System.Windows.Forms.Label lbNCCNotic;
-        private System.Windows.Forms.DataGridView dgvNCCNotice;
         private System.Windows.Forms.PictureBox picNCCBookView5;
         private System.Windows.Forms.PictureBox picNCCBookView4;
         private System.Windows.Forms.PictureBox picNCCBookView3;
@@ -327,5 +324,6 @@ namespace LibraryMgrProgram.NonCustomerForm
         private System.Windows.Forms.Label lbNCCAuthor5;
         private System.Windows.Forms.Label lbNCCBookName5;
         private System.Windows.Forms.TextBox txtNCCBook;
+        private System.Windows.Forms.TextBox txtNCCNotice;
     }
 }

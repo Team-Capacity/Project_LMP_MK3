@@ -15,21 +15,27 @@ namespace LMP_Projcet.Customer
 {
     public partial class CustomerEditForm : Form
     {
+        
+
         public CustomerEditForm()
         {
             InitializeComponent();
+           
         }
 
+     
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
         CustomerMyInfomationForm cmi = new CustomerMyInfomationForm();
+        FormChange fc = new FormChange();
+        LoginForm lf = new LoginForm();
 
 
 
 
         private void btnCusDel_Click(object sender, EventArgs e)
         {
-
+           
         }
 
 
@@ -97,7 +103,6 @@ namespace LMP_Projcet.Customer
             
         }
 
-
         private void btnCEMin_Click(object sender, EventArgs e)
         {
             mouseEvent.FormMinSize(this);
@@ -130,7 +135,6 @@ namespace LMP_Projcet.Customer
         }
 
   
-
         private void plnCM_Paint(object sender, PaintEventArgs e)
         {
 
@@ -165,14 +169,10 @@ namespace LMP_Projcet.Customer
 
 
 
-
-
         }
 
 
-
-
-       
+        //변경된 값 customerMyInformation으로 넘기기
         public void change()
         {
             cmi.lbCMIMyName.Text = txtCEMyName.Text;
@@ -180,9 +180,9 @@ namespace LMP_Projcet.Customer
             cmi.lbCMIMyBirth.Text = txtCEMyBirth.Text;
             cmi.lbCMIMemoView.Text = txtCEMemoView.Text;
             cmi.lbCMIAddrView.Text = txtCEMyAddrView.Text;
-       
+    
         }
-
+      
         public void btnCESave_Click(object sender, EventArgs e)
         {
             db.dbConnection();
@@ -190,20 +190,20 @@ namespace LMP_Projcet.Customer
                     + "', CPH = '" + txtCEHPView.Text
                     + "', CBirth = '" + txtCEMyBirth.Text
                     + "', CAddress = '" + txtCEMyAddrView.Text
-                    + "', CMemo = '" + txtCEMemoView + "'"
+                    + "', CMemo = '" + txtCEMemoView.Text + "'"
                     + "   where CName = '" + LoginForm.name +  "';";
   
-            MySqlCommand SelectCommand = new MySqlCommand(Query2, db.conn);
-            MySqlDataReader reader;
-         
 
             try
             {
 
-              
+                MySqlCommand SelectCommand = new MySqlCommand(Query2, db.conn);
+                MySqlDataReader reader;
                 reader = SelectCommand.ExecuteReader();
                 MessageBox.Show("수정이 완료되었습니다.");            
                 reader.Close();
+                db.conn.Close();
+       
                
             }
             catch (Exception ex)
@@ -212,11 +212,7 @@ namespace LMP_Projcet.Customer
             }
 
             change();
-         
-
-
-
-
+   
 
         }
 

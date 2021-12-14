@@ -32,8 +32,9 @@ namespace LMP_Projcet.Customer
         
         private void CustomerBookInfoForm_Load(object sender, EventArgs e)
         {
-            string sql = "select * from Book;";
+            string sql = "select * from lmp.Book;";
             me.reloadForm(sql, dgvCBIBookList, 0);
+         
             Discrption();
         }
 
@@ -53,7 +54,7 @@ namespace LMP_Projcet.Customer
 
             if (txtCBISerBar.Text == "")
             {
-                string sql = "select * from Book;";
+                string sql = "select * from lmp.Book;";
                 me.reloadForm(sql, dgvCBIBookList, 0);
             }
             //콤보박스 제목 누를 시 제목으로 책검색, 저자 누를시 저자이름으로 검색 결과 뜨도록 나옴
@@ -62,13 +63,18 @@ namespace LMP_Projcet.Customer
                 dgvCBIBookList.Columns.Clear();
                 if (cmbCBISerList.SelectedItem.Equals("제목"))
                 {
-                    string sql = ("select * from lmp.Book where BName = '" + txtCBISerBar.Text + "';").ToString();
+                    string sql = ("select * from lmp.Book where BName Like '%" + txtCBISerBar.Text + "%';").ToString();
                     me.reloadForm(sql, dgvCBIBookList, 0);
                 }
 
                 else if (cmbCBISerList.SelectedItem.Equals("저자"))
                 {
-                    string sql = ("select * from lmp.Book where BAuthor = '" + txtCBISerBar.Text + "';").ToString();
+                    string sql = ("select * from lmp.Book where BAuthor Like '%" + txtCBISerBar.Text + "%';").ToString();
+                    me.reloadForm(sql, dgvCBIBookList, 0);
+                }
+                else if (cmbCBISerList.SelectedItem.Equals("장르"))
+                {
+                    string sql = ("select * from lmp.Book where BGenre Like '%" + txtCBISerBar.Text + "%';").ToString();
                     me.reloadForm(sql, dgvCBIBookList, 0);
                 }
             }
@@ -78,18 +84,28 @@ namespace LMP_Projcet.Customer
         {
             // 조회부분
             DataGridViewRow row = dgvCBIBookList.SelectedRows[0];
+
             lbCBIBookName2.Text = row.Cells[1].Value.ToString();
             lbCBICompany.Text = row.Cells[2].Value.ToString();
             lbCBIBookMaker2.Text = row.Cells[3].Value.ToString();
             lbCBIBookCount2.Text = row.Cells[4].Value.ToString();
             lbCBIBookger2.Text = row.Cells[5].Value.ToString();
             lbCBIMakePlace2.Text = row.Cells[6].Value.ToString();
+            lbCBIArea2.Text = row.Cells[7].Value.ToString();
             lbCBIISBN2.Text = row.Cells[8].Value.ToString();
             lbCBIBookPage2.Text = row.Cells[9].Value.ToString();
             lbCBIBLocation2.Text = row.Cells[10].Value.ToString();
             lbCBIMakeDay2.Text = row.Cells[11].Value.ToString();
             lbCBIBBookExp.Text = row.Cells[12].Value.ToString();
+
+            //여러개의 열이나 행을 선택하지 못하도록 막음
+            dgvCBIBookList.MultiSelect = false;
+
+
+
         }
+
+    
     }
 }
 

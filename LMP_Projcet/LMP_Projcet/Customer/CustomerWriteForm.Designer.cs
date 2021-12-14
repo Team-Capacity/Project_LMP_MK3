@@ -46,6 +46,7 @@ namespace LMP_Projcet.Customer
             this.btnCWClose = new System.Windows.Forms.Button();
             this.btnCWMax = new System.Windows.Forms.Button();
             this.btnCWMin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.grpCWSuggest.SuspendLayout();
             this.plnCW.SuspendLayout();
             this.SuspendLayout();
@@ -215,7 +216,7 @@ namespace LMP_Projcet.Customer
             this.plnCW.RowCount = 2;
             this.plnCW.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.plnCW.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnCW.Size = new System.Drawing.Size(839, 39);
+            this.plnCW.Size = new System.Drawing.Size(839, 35);
             this.plnCW.TabIndex = 148;
             this.plnCW.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseDown);
             this.plnCW.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnCus_MouseMove);
@@ -266,12 +267,24 @@ namespace LMP_Projcet.Customer
             this.btnCWMin.UseVisualStyleBackColor = false;
             this.btnCWMin.Click += new System.EventHandler(this.btnCWMin_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 23);
+            this.label1.TabIndex = 167;
+            this.label1.Text = "건의작성폼";
+            // 
             // CustomerWriteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(836, 617);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.plnCW);
             this.Controls.Add(this.lbCWLogo);
             this.Controls.Add(this.grpCWSuggest);
@@ -307,5 +320,6 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Button btnCWClose;
         private System.Windows.Forms.Button btnCWMax;
         private System.Windows.Forms.Button btnCWMin;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -36,7 +36,7 @@ namespace LMP_Projcet.Start
 
             //생년월일 콤보박스에 값 추가
             int choice;
-            for (choice = 1980; choice < 2100; choice++)
+            for (choice = 1920; choice < 2100; choice++)
             {
                 cmbMA_Year.Items.Add(choice);
             }
@@ -293,7 +293,7 @@ namespace LMP_Projcet.Start
         {
             Application.Exit();
         }
-        
 
+       
     }
 }

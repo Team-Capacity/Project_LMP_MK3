@@ -344,6 +344,7 @@ namespace LibraryMgrProgram
             this.btnFCClose.TabIndex = 1;
             this.btnFCClose.Text = "🗙";
             this.btnFCClose.UseVisualStyleBackColor = false;
+            this.btnFCClose.Click += new System.EventHandler(this.btnFCClose_Click_1);
             // 
             // btnFCMax
             // 

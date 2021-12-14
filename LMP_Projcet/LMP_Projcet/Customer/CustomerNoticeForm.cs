@@ -57,43 +57,102 @@ namespace LMP_Projcet.Customer
             mouseEvent.ButtonClose(this);
         }
 
-
-
-
-
         private void plnCN_Paint(object sender, PaintEventArgs e)
         {
 
         }
-        
+
+        MouseEvent me = new MouseEvent();
+
+     
+        //DB쪽 내용 Datagridview쪽으로 옮겨와지게함
+        private void select1()
+        {
+            string sql = "select * from lmp.noticelist ORDER BY NNumber DESC;";
+            me.reloadForm(sql, dgvCNList, 2);
+
+
+            DataGridViewColumn column = dgvCNList.Columns[2];
+            dgvCNList.Columns[0].Width = 100;
+            dgvCNList.Columns[2].Width = 200;
+
+        }
+
+        //공지사항 들어가자마자 가장 최신 공지사항이 뜨게 함.
+        private void select2()
+        {
+            db.dbConnection();
+            string sql2 = "select NName, NContent from lmp.noticelist order by NNumber desc limit 1;";
+
+
+            MySqlCommand cmd = new MySqlCommand(sql2, db.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            string content = "";
+            string name = "";
+
+            while (reader.Read())
+            {
+
+                name = reader[0].ToString();
+                content = reader[1].ToString();
+            }
+
+            reader.Close();
+
+            lbCNNoticeView2.Text = name;
+            lbCNNoticeView4.Text = content;
+            lbCNNoticeView2.Font = new Font("맑은 고딕", 15, FontStyle.Bold);
+            lbCNNoticeView4.Font = new Font("맑은 고딕", 25, FontStyle.Bold);
+        }
 
         private void CustomerNoticeForm_Load(object sender, EventArgs e)
         {
-            db.dbConnection();
-            string sql = "select * from lmp.noticelist;";
-            MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-        
 
-            lvCNList.Items.Clear();
-            MySqlDataReader reader = cmd.ExecuteReader();
-            while(reader.Read())
-            {
-                ListViewItem item = new ListViewItem(reader["NNumber"].ToString());
-                item.SubItems.Add(reader["NName"].ToString());
-                item.SubItems.Add(reader["NContent"].ToString());
-                item.SubItems.Add(reader["NDate"].ToString());
-                
-
-                lvCNList.Items.Add(item);
-            }
-            reader.Close();
-
-
-
+            select1();
+            select2();
 
 
         }
 
-     
+        private void dgvCNList_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            Discrption();
+        }
+
+        
+        public void Discrption()
+        {
+            try
+            {
+              
+
+                // 조회부분
+                DataGridViewRow row = dgvCNList.SelectedRows[0];
+                lbCNNoticeView2.Text = row.Cells[1].Value.ToString();
+                lbCNNoticeView4.Text = row.Cells[2].Value.ToString();
+                
+                lbCNNoticeView2.Font = new Font("맑은고딕", 15, FontStyle.Bold);
+                lbCNNoticeView4.Font = new Font("맑은고딕", 25, FontStyle.Bold);
+
+                dgvCNList.MultiSelect = false;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+          
+         
+        }
+
+        private void btnCNListFind_Click(object sender, EventArgs e)
+        {
+            if (cmbCNSerList.SelectedItem.Equals("제목"))
+            {
+                string sql = ("select * from lmp.noticelist where NName Like '%" + txtCNInput.Text + "%';").ToString();
+                me.reloadForm(sql, dgvCNList, 2);
+            }
+        }
     }
 }

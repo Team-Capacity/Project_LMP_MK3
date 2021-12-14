@@ -87,7 +87,7 @@ namespace LMP_Projcet
             db.dbConnection();
             string id = txtLFID.Text;
             string password = txtLFPW.Text;
-            string sql = "select CRank, CName from LibaryProgram_DB.Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+            string sql = "select CRank, CName from lmp.Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
             string rank = "";
             try
             {

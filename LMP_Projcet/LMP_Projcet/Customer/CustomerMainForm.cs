@@ -34,7 +34,8 @@ namespace LibraryMgrProgram
         MouseEvent mouseEvent = new MouseEvent();
         FormChange formChange = new FormChange();
 
-        CustomerMyInfomationForm cmi = new CustomerMyInfomationForm();
+        CustomerContentsForm cc = new CustomerContentsForm();
+        public CustomerMyInfomationForm cmi = new CustomerMyInfomationForm();
         CustomerOperationForm cof = new CustomerOperationForm();
         CustomerContentsForm ccf = new CustomerContentsForm();
         CustomerBookInfoForm cbi = new CustomerBookInfoForm();
@@ -98,9 +99,14 @@ namespace LibraryMgrProgram
         //공지사항,추천도서,현황 기본으로 로드
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
+           
+
             formChange.ChangeFIF(ccf, palCMMain);
             lbCMCustomer.Text = LoginForm.name + "님 환영합니다.";
             myname = lbCMCustomer.Text;
+
+         
+
         }
 
         CustomerEditForm ce = new CustomerEditForm();
@@ -135,6 +141,10 @@ namespace LibraryMgrProgram
             Application.Exit();
         }
 
-       
+    
+        private void lbCMHome_Click(object sender, EventArgs e)
+        {
+            formChange.ChangeFIF(cc, palCMMain);
+        }
     }
 }

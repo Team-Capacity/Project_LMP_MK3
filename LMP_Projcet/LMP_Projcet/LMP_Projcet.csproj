@@ -203,17 +203,11 @@
     <Compile Include="NonCustomer\NonCustomerMainForm.Designer.cs">
       <DependentUpon>NonCustomerMainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NonCustomer\NonCustomerNoticeForm.cs">
+    <Compile Include="NonCustomer\NonCustomerOperationForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NonCustomer\NonCustomerNoticeForm.Designer.cs">
-      <DependentUpon>NonCustomerNoticeForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="NonCustomer\NonCustomerOperationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="NonCustomer\NonCustomerOperationForm.Designer.cs">
-      <DependentUpon>NonCustomerOperationForm.cs</DependentUpon>
+    <Compile Include="NonCustomer\NonCustomerOperationForm1.Designer.cs">
+      <DependentUpon>NonCustomerOperationForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Operation\FontChangeForm.cs">
       <SubType>Form</SubType>
@@ -304,11 +298,8 @@
     <EmbeddedResource Include="NonCustomer\NonCustomerMainForm.resx">
       <DependentUpon>NonCustomerMainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NonCustomer\NonCustomerNoticeForm.resx">
-      <DependentUpon>NonCustomerNoticeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NonCustomer\NonCustomerOperationForm.resx">
-      <DependentUpon>NonCustomerOperationForm.cs</DependentUpon>
+    <EmbeddedResource Include="NonCustomer\NonCustomerOperationForm1.resx">
+      <DependentUpon>NonCustomerOperationForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Operation\FontChangeForm.resx">
       <DependentUpon>FontChangeForm.cs</DependentUpon>

@@ -57,17 +57,14 @@ namespace LMP_Projcet.Customer
             this.lbCEAddr = new System.Windows.Forms.Label();
             this.lbCEHP = new System.Windows.Forms.Label();
             this.lbCEName = new System.Windows.Forms.Label();
-            this.grpcCESex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbCMWom = new System.Windows.Forms.RadioButton();
-            this.rdbCMMan = new System.Windows.Forms.RadioButton();
             this.plnCE = new System.Windows.Forms.TableLayoutPanel();
             this.btnCEClose = new System.Windows.Forms.Button();
             this.btnCEMax = new System.Windows.Forms.Button();
             this.btnCEMin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gBCEEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCERankView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).BeginInit();
-            this.grpcCESex.SuspendLayout();
             this.plnCE.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -378,41 +375,6 @@ namespace LMP_Projcet.Customer
             this.lbCEName.TabIndex = 1;
             this.lbCEName.Text = "이름";
             // 
-            // grpcCESex
-            // 
-            this.grpcCESex.BorderColor = System.Drawing.Color.White;
-            this.grpcCESex.Controls.Add(this.rdbCMWom);
-            this.grpcCESex.Controls.Add(this.rdbCMMan);
-            this.grpcCESex.Location = new System.Drawing.Point(12, 83);
-            this.grpcCESex.Name = "grpcCESex";
-            this.grpcCESex.Size = new System.Drawing.Size(122, 37);
-            this.grpcCESex.TabIndex = 164;
-            this.grpcCESex.TabStop = false;
-            // 
-            // rdbCMWom
-            // 
-            this.rdbCMWom.AutoSize = true;
-            this.rdbCMWom.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbCMWom.Location = new System.Drawing.Point(63, 9);
-            this.rdbCMWom.Name = "rdbCMWom";
-            this.rdbCMWom.Size = new System.Drawing.Size(53, 18);
-            this.rdbCMWom.TabIndex = 161;
-            this.rdbCMWom.TabStop = true;
-            this.rdbCMWom.Text = "여자";
-            this.rdbCMWom.UseVisualStyleBackColor = true;
-            // 
-            // rdbCMMan
-            // 
-            this.rdbCMMan.AutoSize = true;
-            this.rdbCMMan.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbCMMan.Location = new System.Drawing.Point(6, 10);
-            this.rdbCMMan.Name = "rdbCMMan";
-            this.rdbCMMan.Size = new System.Drawing.Size(53, 18);
-            this.rdbCMMan.TabIndex = 160;
-            this.rdbCMMan.TabStop = true;
-            this.rdbCMMan.Text = "남자";
-            this.rdbCMMan.UseVisualStyleBackColor = true;
-            // 
             // plnCE
             // 
             this.plnCE.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -433,7 +395,7 @@ namespace LMP_Projcet.Customer
             this.plnCE.RowCount = 2;
             this.plnCE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.plnCE.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnCE.Size = new System.Drawing.Size(1220, 48);
+            this.plnCE.Size = new System.Drawing.Size(1220, 35);
             this.plnCE.TabIndex = 165;
             this.plnCE.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnCE_MouseDown);
             this.plnCE.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnCE_MouseMove);
@@ -446,7 +408,7 @@ namespace LMP_Projcet.Customer
             this.btnCEClose.FlatAppearance.BorderSize = 0;
             this.btnCEClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCEClose.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnCEClose.Location = new System.Drawing.Point(1197, 7);
+            this.btnCEClose.Location = new System.Drawing.Point(1197, 6);
             this.btnCEClose.Name = "btnCEClose";
             this.btnCEClose.Size = new System.Drawing.Size(20, 20);
             this.btnCEClose.TabIndex = 1;
@@ -461,7 +423,7 @@ namespace LMP_Projcet.Customer
             this.btnCEMax.FlatAppearance.BorderSize = 0;
             this.btnCEMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCEMax.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnCEMax.Location = new System.Drawing.Point(1171, 7);
+            this.btnCEMax.Location = new System.Drawing.Point(1171, 6);
             this.btnCEMax.Name = "btnCEMax";
             this.btnCEMax.Size = new System.Drawing.Size(19, 20);
             this.btnCEMax.TabIndex = 3;
@@ -476,7 +438,7 @@ namespace LMP_Projcet.Customer
             this.btnCEMin.FlatAppearance.BorderSize = 0;
             this.btnCEMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCEMin.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnCEMin.Location = new System.Drawing.Point(1143, 7);
+            this.btnCEMin.Location = new System.Drawing.Point(1143, 6);
             this.btnCEMin.Name = "btnCEMin";
             this.btnCEMin.Size = new System.Drawing.Size(20, 20);
             this.btnCEMin.TabIndex = 2;
@@ -484,14 +446,25 @@ namespace LMP_Projcet.Customer
             this.btnCEMin.UseVisualStyleBackColor = false;
             this.btnCEMin.Click += new System.EventHandler(this.btnCEMin_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(112, 23);
+            this.label1.TabIndex = 166;
+            this.label1.Text = "정보수정폼";
+            // 
             // CustomerEditForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1219, 603);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.plnCE);
-            this.Controls.Add(this.grpcCESex);
             this.Controls.Add(this.gBCEEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerEditForm";
@@ -502,8 +475,6 @@ namespace LMP_Projcet.Customer
             this.gBCEEdit.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCERankView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).EndInit();
-            this.grpcCESex.ResumeLayout(false);
-            this.grpcCESex.PerformLayout();
             this.plnCE.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -538,14 +509,12 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.TextBox txtCEMemoView;
         private System.Windows.Forms.Label lbCEMemo;
         private System.Windows.Forms.Label lbCECustomerState;
-        private Methods.GroupBoxBorderChagne grpcCESex;
-        private System.Windows.Forms.RadioButton rdbCMWom;
-        private System.Windows.Forms.RadioButton rdbCMMan;
         private System.Windows.Forms.Label lbCEMan;
         private System.Windows.Forms.TableLayoutPanel plnCE;
         private System.Windows.Forms.Button btnCEClose;
         private System.Windows.Forms.Button btnCEMax;
         private System.Windows.Forms.Button btnCEMin;
         public System.Windows.Forms.TextBox txtCEMyName;
+        private System.Windows.Forms.Label label1;
     }
 }

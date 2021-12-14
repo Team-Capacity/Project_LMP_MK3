@@ -58,11 +58,14 @@ namespace LMP_Projcet.Customer
             this.lbABIBookCount = new System.Windows.Forms.Label();
             this.lbABIBBookExp = new System.Windows.Forms.Label();
             this.grpCBIBookInfo = new System.Windows.Forms.GroupBox();
+            this.lbCBIArea2 = new System.Windows.Forms.Label();
+            this.lbCBIMakePlace2 = new System.Windows.Forms.Label();
             this.lbCBIBBookExp = new System.Windows.Forms.Label();
             this.lbCBIBookCount2 = new System.Windows.Forms.Label();
+            this.lbCBIArea = new System.Windows.Forms.Label();
             this.lbCBIBookger2 = new System.Windows.Forms.Label();
-            this.lbCBIMakePlace2 = new System.Windows.Forms.Label();
             this.lbCBIBLocation2 = new System.Windows.Forms.Label();
+            this.lbCBIMakePlace = new System.Windows.Forms.Label();
             this.lbCBIBookPage2 = new System.Windows.Forms.Label();
             this.lbCBIISBN2 = new System.Windows.Forms.Label();
             this.lbCBIMakeDay2 = new System.Windows.Forms.Label();
@@ -70,7 +73,6 @@ namespace LMP_Projcet.Customer
             this.lbCBIBookMaker2 = new System.Windows.Forms.Label();
             this.lbCBIBookName2 = new System.Windows.Forms.Label();
             this.lbCBIMakeDay = new System.Windows.Forms.Label();
-            this.lbCBIMakePlace = new System.Windows.Forms.Label();
             this.lbCBIBookPage = new System.Windows.Forms.Label();
             this.lbCBIBookger = new System.Windows.Forms.Label();
             this.lbCBIBLocation = new System.Windows.Forms.Label();
@@ -151,7 +153,8 @@ namespace LMP_Projcet.Customer
             this.cmbCBISerList.FormattingEnabled = true;
             this.cmbCBISerList.Items.AddRange(new object[] {
             "제목",
-            "저자"});
+            "저자",
+            "장르"});
             this.cmbCBISerList.Location = new System.Drawing.Point(276, 11);
             this.cmbCBISerList.Name = "cmbCBISerList";
             this.cmbCBISerList.Size = new System.Drawing.Size(121, 20);
@@ -181,10 +184,11 @@ namespace LMP_Projcet.Customer
             this.dgvCBIBookList.ReadOnly = true;
             this.dgvCBIBookList.RowHeadersVisible = false;
             this.dgvCBIBookList.RowTemplate.Height = 23;
+            this.dgvCBIBookList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCBIBookList.Size = new System.Drawing.Size(745, 434);
             this.dgvCBIBookList.TabIndex = 0;
             this.dgvCBIBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCBIBookList_CellClick);
-          
+        
             // 
             // txtCBISerBar
             // 
@@ -415,11 +419,14 @@ namespace LMP_Projcet.Customer
             // grpCBIBookInfo
             // 
             this.grpCBIBookInfo.BackColor = System.Drawing.Color.White;
+            this.grpCBIBookInfo.Controls.Add(this.lbCBIArea2);
+            this.grpCBIBookInfo.Controls.Add(this.lbCBIMakePlace2);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBBookExp);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookCount2);
+            this.grpCBIBookInfo.Controls.Add(this.lbCBIArea);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookger2);
-            this.grpCBIBookInfo.Controls.Add(this.lbCBIMakePlace2);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBLocation2);
+            this.grpCBIBookInfo.Controls.Add(this.lbCBIMakePlace);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookPage2);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIISBN2);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIMakeDay2);
@@ -427,7 +434,6 @@ namespace LMP_Projcet.Customer
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookMaker2);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookName2);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIMakeDay);
-            this.grpCBIBookInfo.Controls.Add(this.lbCBIMakePlace);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookPage);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookger);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBLocation);
@@ -447,41 +453,60 @@ namespace LMP_Projcet.Customer
             this.grpCBIBookInfo.TabStop = false;
             this.grpCBIBookInfo.Text = "도서 정보";
             // 
+            // lbCBIArea2
+            // 
+            this.lbCBIArea2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCBIArea2.Location = new System.Drawing.Point(83, 259);
+            this.lbCBIArea2.Name = "lbCBIArea2";
+            this.lbCBIArea2.Size = new System.Drawing.Size(287, 26);
+            this.lbCBIArea2.TabIndex = 46;
+            this.lbCBIArea2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbCBIMakePlace2
+            // 
+            this.lbCBIMakePlace2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCBIMakePlace2.Location = new System.Drawing.Point(83, 229);
+            this.lbCBIMakePlace2.Name = "lbCBIMakePlace2";
+            this.lbCBIMakePlace2.Size = new System.Drawing.Size(382, 26);
+            this.lbCBIMakePlace2.TabIndex = 39;
+            this.lbCBIMakePlace2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // lbCBIBBookExp
             // 
             this.lbCBIBBookExp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCBIBBookExp.Location = new System.Drawing.Point(29, 284);
+            this.lbCBIBBookExp.Location = new System.Drawing.Point(83, 292);
             this.lbCBIBBookExp.Name = "lbCBIBBookExp";
-            this.lbCBIBBookExp.Size = new System.Drawing.Size(436, 162);
+            this.lbCBIBBookExp.Size = new System.Drawing.Size(382, 154);
             this.lbCBIBBookExp.TabIndex = 42;
             this.lbCBIBBookExp.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbCBIBookCount2
             // 
             this.lbCBIBookCount2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCBIBookCount2.Location = new System.Drawing.Point(245, 229);
+            this.lbCBIBookCount2.Location = new System.Drawing.Point(407, 259);
             this.lbCBIBookCount2.Name = "lbCBIBookCount2";
             this.lbCBIBookCount2.Size = new System.Drawing.Size(58, 26);
             this.lbCBIBookCount2.TabIndex = 41;
-            this.lbCBIBookCount2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIBookCount2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbCBIArea
+            // 
+            this.lbCBIArea.AutoSize = true;
+            this.lbCBIArea.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIArea.Location = new System.Drawing.Point(6, 267);
+            this.lbCBIArea.Name = "lbCBIArea";
+            this.lbCBIArea.Size = new System.Drawing.Size(72, 13);
+            this.lbCBIArea.TabIndex = 45;
+            this.lbCBIArea.Text = "책발행주소";
             // 
             // lbCBIBookger2
             // 
             this.lbCBIBookger2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCBIBookger2.Location = new System.Drawing.Point(83, 229);
+            this.lbCBIBookger2.Location = new System.Drawing.Point(201, 196);
             this.lbCBIBookger2.Name = "lbCBIBookger2";
-            this.lbCBIBookger2.Size = new System.Drawing.Size(117, 26);
+            this.lbCBIBookger2.Size = new System.Drawing.Size(102, 26);
             this.lbCBIBookger2.TabIndex = 40;
-            this.lbCBIBookger2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbCBIMakePlace2
-            // 
-            this.lbCBIMakePlace2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCBIMakePlace2.Location = new System.Drawing.Point(227, 197);
-            this.lbCBIMakePlace2.Name = "lbCBIMakePlace2";
-            this.lbCBIMakePlace2.Size = new System.Drawing.Size(76, 26);
-            this.lbCBIMakePlace2.TabIndex = 39;
-            this.lbCBIMakePlace2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIBookger2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBIBLocation2
             // 
@@ -490,7 +515,17 @@ namespace LMP_Projcet.Customer
             this.lbCBIBLocation2.Name = "lbCBIBLocation2";
             this.lbCBIBLocation2.Size = new System.Drawing.Size(76, 26);
             this.lbCBIBLocation2.TabIndex = 38;
-            this.lbCBIBLocation2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIBLocation2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbCBIMakePlace
+            // 
+            this.lbCBIMakePlace.AutoSize = true;
+            this.lbCBIMakePlace.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIMakePlace.Location = new System.Drawing.Point(18, 237);
+            this.lbCBIMakePlace.Name = "lbCBIMakePlace";
+            this.lbCBIMakePlace.Size = new System.Drawing.Size(59, 13);
+            this.lbCBIMakePlace.TabIndex = 25;
+            this.lbCBIMakePlace.Text = "출판지역";
             // 
             // lbCBIBookPage2
             // 
@@ -499,7 +534,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIBookPage2.Name = "lbCBIBookPage2";
             this.lbCBIBookPage2.Size = new System.Drawing.Size(50, 26);
             this.lbCBIBookPage2.TabIndex = 37;
-            this.lbCBIBookPage2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIBookPage2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBIISBN2
             // 
@@ -508,7 +543,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIISBN2.Name = "lbCBIISBN2";
             this.lbCBIISBN2.Size = new System.Drawing.Size(220, 26);
             this.lbCBIISBN2.TabIndex = 36;
-            this.lbCBIISBN2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIISBN2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBIMakeDay2
             // 
@@ -517,7 +552,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIMakeDay2.Name = "lbCBIMakeDay2";
             this.lbCBIMakeDay2.Size = new System.Drawing.Size(112, 26);
             this.lbCBIMakeDay2.TabIndex = 35;
-            this.lbCBIMakeDay2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIMakeDay2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBICompany
             // 
@@ -526,7 +561,7 @@ namespace LMP_Projcet.Customer
             this.lbCBICompany.Name = "lbCBICompany";
             this.lbCBICompany.Size = new System.Drawing.Size(220, 26);
             this.lbCBICompany.TabIndex = 34;
-            this.lbCBICompany.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBICompany.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBIBookMaker2
             // 
@@ -535,7 +570,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIBookMaker2.Name = "lbCBIBookMaker2";
             this.lbCBIBookMaker2.Size = new System.Drawing.Size(220, 26);
             this.lbCBIBookMaker2.TabIndex = 33;
-            this.lbCBIBookMaker2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIBookMaker2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBIBookName2
             // 
@@ -544,7 +579,7 @@ namespace LMP_Projcet.Customer
             this.lbCBIBookName2.Name = "lbCBIBookName2";
             this.lbCBIBookName2.Size = new System.Drawing.Size(220, 26);
             this.lbCBIBookName2.TabIndex = 32;
-            this.lbCBIBookName2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbCBIBookName2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbCBIMakeDay
             // 
@@ -555,16 +590,6 @@ namespace LMP_Projcet.Customer
             this.lbCBIMakeDay.Size = new System.Drawing.Size(59, 13);
             this.lbCBIMakeDay.TabIndex = 28;
             this.lbCBIMakeDay.Text = "출판날짜";
-            // 
-            // lbCBIMakePlace
-            // 
-            this.lbCBIMakePlace.AutoSize = true;
-            this.lbCBIMakePlace.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbCBIMakePlace.Location = new System.Drawing.Point(165, 205);
-            this.lbCBIMakePlace.Name = "lbCBIMakePlace";
-            this.lbCBIMakePlace.Size = new System.Drawing.Size(59, 13);
-            this.lbCBIMakePlace.TabIndex = 25;
-            this.lbCBIMakePlace.Text = "발행지역";
             // 
             // lbCBIBookPage
             // 
@@ -580,7 +605,7 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCBIBookger.AutoSize = true;
             this.lbCBIBookger.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbCBIBookger.Location = new System.Drawing.Point(44, 236);
+            this.lbCBIBookger.Location = new System.Drawing.Point(162, 204);
             this.lbCBIBookger.Name = "lbCBIBookger";
             this.lbCBIBookger.Size = new System.Drawing.Size(33, 13);
             this.lbCBIBookger.TabIndex = 21;
@@ -610,7 +635,7 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCBIBookCount.AutoSize = true;
             this.lbCBIBookCount.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbCBIBookCount.Location = new System.Drawing.Point(206, 237);
+            this.lbCBIBookCount.Location = new System.Drawing.Point(368, 267);
             this.lbCBIBookCount.Name = "lbCBIBookCount";
             this.lbCBIBookCount.Size = new System.Drawing.Size(33, 13);
             this.lbCBIBookCount.TabIndex = 14;
@@ -620,7 +645,7 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCBIBookExp.AutoSize = true;
             this.lbCBIBookExp.Font = new System.Drawing.Font("굴림", 10F);
-            this.lbCBIBookExp.Location = new System.Drawing.Point(31, 267);
+            this.lbCBIBookExp.Location = new System.Drawing.Point(40, 292);
             this.lbCBIBookExp.Name = "lbCBIBookExp";
             this.lbCBIBookExp.Size = new System.Drawing.Size(35, 14);
             this.lbCBIBookExp.TabIndex = 10;
@@ -1296,5 +1321,7 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Label lbABIBookCountResult;
         private System.Windows.Forms.TabControl tacCBIMain;
         private System.Windows.Forms.TabPage CBIInfo;
+        private System.Windows.Forms.Label lbCBIArea2;
+        private System.Windows.Forms.Label lbCBIArea;
     }
 }

@@ -18,5 +18,10 @@ namespace LMP_Projcet.NonCustomer
         {
             InitializeComponent();
         }
+
+        private void NonCustomerBookInfoForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

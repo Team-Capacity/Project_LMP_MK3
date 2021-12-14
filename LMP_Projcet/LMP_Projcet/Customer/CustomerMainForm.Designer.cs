@@ -49,6 +49,7 @@ namespace LibraryMgrProgram
             this.btnCMClose = new System.Windows.Forms.Button();
             this.btnCMMax = new System.Windows.Forms.Button();
             this.btnCMMin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCustomer)).BeginInit();
@@ -161,6 +162,7 @@ namespace LibraryMgrProgram
             this.lbCMHome.Size = new System.Drawing.Size(209, 34);
             this.lbCMHome.TabIndex = 145;
             this.lbCMHome.Text = "CAPA 도서관";
+            this.lbCMHome.Click += new System.EventHandler(this.lbCMHome_Click);
             // 
             // picCMLogo
             // 
@@ -294,6 +296,17 @@ namespace LibraryMgrProgram
             this.btnCMMin.UseVisualStyleBackColor = false;
             this.btnCMMin.Click += new System.EventHandler(this.btnCMMin_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 23);
+            this.label1.TabIndex = 148;
+            this.label1.Text = "메인폼";
+            // 
             // CustomerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -301,6 +314,7 @@ namespace LibraryMgrProgram
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.plnCM);
             this.Controls.Add(this.lbCMHome);
             this.Controls.Add(this.picCMLogo);
@@ -353,5 +367,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnCMMax;
         private System.Windows.Forms.Button btnCMMin;
         public System.Windows.Forms.Panel palCMMain;
+        private System.Windows.Forms.Label label1;
     }
 }
