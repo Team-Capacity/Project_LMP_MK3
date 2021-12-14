@@ -15,7 +15,7 @@ using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
 
 namespace LMP_Projcet.Start
-    
+
 
 {
     public partial class MemberAddForm : Form
@@ -32,11 +32,18 @@ namespace LMP_Projcet.Start
         private void MemberAddForm_Load(object sender, EventArgs e)
         {
 
-            TootMA.SetToolTip(txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
+            TtMA.SetToolTip(txtMA_Name, "2~5글자 한글로만 작성해주세요");
+            TtMA.SetToolTip(txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
+            TtMA.SetToolTip(txtAM_Address, "ex)서울특별시 강북구 미아동");
+            TtMA.SetToolTip(txtMA_Phone, "번호중간에 - 를 입력해주세요.");
 
+            //처음 표시되는 시간
+            TtMA.InitialDelay = 100;
+            //다시 표시되는 시간
+            TtMA.ReshowDelay = 100;
             //생년월일 콤보박스에 값 추가
             int choice;
-            for (choice = 1980; choice < 2100; choice++)
+            for (choice = 1920; choice < 2021; choice++)
             {
                 cmbMA_Year.Items.Add(choice);
             }
@@ -59,7 +66,7 @@ namespace LMP_Projcet.Start
             txtMA_PwCheck.PasswordChar = '*';
             txtMA_PwCheck.MaxLength = 16;
 
-           
+
 
 
         }
@@ -111,7 +118,7 @@ namespace LMP_Projcet.Start
 
         private void btnMA_Cancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
             new LoginForm().Show();
         }
 
@@ -161,6 +168,7 @@ namespace LMP_Projcet.Start
             string Year = cmbMA_Year.Text;
             string Month = cmbMA_Month.Text;
             string Day = cmbMA_Day.Text;
+            string Address = txtAM_Address.Text;
 
 
             if (count == 0)
@@ -169,13 +177,15 @@ namespace LMP_Projcet.Start
                 return;
             }
 
-            try {
+            try
+            {
+
                 if (!IsValName(txtMA_Name.Text))
                 {
                     MessageBox.Show("이름을 한글로 2~5글자로 입력해주세요");
                     return;
                 }
-               
+
 
                 if (!IsValidPassword(txtMA_Pw.Text))
                 {
@@ -188,20 +198,27 @@ namespace LMP_Projcet.Start
                     MessageBox.Show("비밀번호가 일치하지 않습니다. 확인 후 다시 입력해주세요.");
                     return;
                 }
+                if (!IsValAddress(txtAM_Address.Text))
+                {
+                    MessageBox.Show("시/도 구/군 면/동으로 작성해주세요.");
+                    return;
+                }
+
                 if (!IsValYear(cmbMA_Year.Text))
                 {
-                    MessageBox.Show("년도에 숫자와 4글자로입력해주세요");
+                    MessageBox.Show("년도에 숫자와 4글자로입력해주세요.");
                     return;
                 }
 
                 if (!IsValMonth(cmbMA_Month.Text))
                 {
-                    MessageBox.Show("월 에 숫자와 2글자로입력해주세요");
+                    MessageBox.Show("월 에 숫자와 2글자로입력해주세요.");
                     return;
                 }
 
-                if (!IsValDay(cmbMA_Day.Text)) {
-                    MessageBox.Show("일 에 숫자와 1~2글자로입력해주세요");
+                if (!IsValDay(cmbMA_Day.Text))
+                {
+                    MessageBox.Show("일 에 숫자와 1~2글자로입력해주세요.");
                     return;
                 }
 
@@ -213,51 +230,34 @@ namespace LMP_Projcet.Start
 
                 if (!IsValPH(txtMA_Phone.Text))
                 {
-                    MessageBox.Show("핸드폰번호에 - 를 입력하여 번호를입력해주세요");
+                    MessageBox.Show("핸드폰번호에 - 를 입력하여 번호를 입력해주세요.");
                     return;
                 }
 
+                MemberAdd();
 
 
-                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CRank, CGender) values("
-                + ",'" + txtMA_Id.Text + "'"
-                + ",'" + txtMA_Pw.Text + "'"
-                + ",'" + txtMA_Name.Text + "'"
-                + "," + txtMA_Phone.Text + "'"
-                + ",'" + cmbMA_Year + "/" + cmbMA_Month + "/" + cmbMA_Day + "'"
-                + ",'"
-                + ",'" +'3'
-                + ",'" + grpcMA_Sex +"'";
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                MySqlDataReader dbReader = cmd.ExecuteReader();
-
-               
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("성공적으로 추가 되었습니다.");
-                    db.conn.Close();
-                }
             }
             catch (MySqlException ex)
             {
-                MessageBox.Show("DB수정에 실패하였습니다.");
+                MessageBox.Show("회원추가에 실패하였습니다.");
             }
         }
-        public static bool IsValMonth(string Text)
+        private static bool IsValMonth(string Text)
         {
             //숫자만1~2자리
             Regex Mregex = new Regex(@"^[0-9]{1,2}$");
             Match Mmatch = Mregex.Match(Text);
             return Mmatch.Success;
         }
-        public static bool IsValDay(string Text)
+        private static bool IsValDay(string Text)
         {
             //숫자만 1~2자리
             Regex Dregex = new Regex(@"^[0-9]{1,2}$");
             Match Dmatch = Dregex.Match(Text);
             return Dmatch.Success;
         }
-        public static bool IsValYear(string Text)
+        private static bool IsValYear(string Text)
         {
             //숫자만 4자리
             Regex Yregex = new Regex(@"^[0-9]{4}$");
@@ -265,14 +265,22 @@ namespace LMP_Projcet.Start
             return Ymatch.Success;
         }
 
-        public static bool IsValPH(string Text)
+        private static bool IsValAddress(string Text)
+        {
+            Regex Aregex = new Regex(@"^[\S]+(도|시)\s[\S]+(구|군)\s[\S]+(면|동)");
+            Match Amatch = Aregex.Match(Text);
+            return Amatch.Success;
+        }
+
+
+        private static bool IsValPH(string Text)
         {
             //숫자만 앞자리 2~3자리 주간 3~4자리 마지막 4자리 입력시 - 포함해서
             Regex Pregex = new Regex(@"^[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}$");
             Match Pmatch = Pregex.Match(Text);
             return Pmatch.Success;
         }
-        public static bool IsValName(string Text)
+        private static bool IsValName(string Text)
         {
             //한글만 2~5자리
             Regex Nregex = new Regex(@"^[가-힣]{2,5}$");
@@ -280,7 +288,7 @@ namespace LMP_Projcet.Start
             return Nmatch.Success;
         }
 
-        public static bool IsValidPassword(string Text)
+        private static bool IsValidPassword(string Text)
         {
             //영문, 숫자, 특수문자 포함 8글자 이상
             Regex Pregex = new Regex(@"^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$");
@@ -293,7 +301,39 @@ namespace LMP_Projcet.Start
         {
             Application.Exit();
         }
-        
 
+        public void MemberAdd()
+        {
+            string gender = "";
+            if (rdbMA_Man.Checked)
+            {
+                gender = "남자";
+            }
+            else
+            {
+                gender = "여성";
+            }
+            try
+            {
+                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CGender) values("
+                + "'" + txtMA_Id.Text + "'"
+                + ",'" + txtMA_Pw.Text + "'"
+                + ",'" + txtMA_Name.Text + "'"
+                + ",'" + txtMA_Phone.Text + "'"
+                + ",'" + cmbMA_Year.Text + "/" + cmbMA_Month.Text + "/" + cmbMA_Day.Text + "/"
+                + ",'" + gender + "');";
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("성공적으로 추가 되었습니다.");
+                    db.conn.Close();
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show("DB수정에 실패하였습니다.");
+            }
+
+        }
     }
 }

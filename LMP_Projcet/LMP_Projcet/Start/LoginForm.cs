@@ -87,12 +87,25 @@ namespace LMP_Projcet
             db.dbConnection();
             string id = txtLFID.Text;
             string password = txtLFPW.Text;
-            string sql = "select CRank, CName from LibaryProgram_DB.Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+            string sql = "select CRank, CName from lmp.Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
             string rank = "";
+
             try
             {
+                if(txtLFID.Text == "")
+                {
+                    MessageBox.Show("아이디를 입력해주세요.");
+                    return;
+                }
+
+                if (txtLFPW.Text == "")
+                {
+                    MessageBox.Show("비밀번호를 입력해주세요.");
+                    return;
+                }
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
+                
                 while (dbReader.Read())
                 {
                     rank = dbReader["CRank"] as String;
@@ -103,18 +116,24 @@ namespace LMP_Projcet
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
 
-                }else if (rank.Equals("N"))
+                }
+                else if (rank.Equals("N"))
                 {
                     AdminMainForm amf = new AdminMainForm();
                     formChange.ChangeF(this, amf);
-                }else if(rank.Equals("1") || rank.Equals("2") || rank.Equals("3"))
+                }
+                else if (rank.Equals("1") || rank.Equals("2") || rank.Equals("3"))
                 {
                     CustomerMainForm cmf = new CustomerMainForm();
                     formChange.ChangeF(this, cmf);
                 }
-                else
+                else if (rank.Equals("F"))
                 {
                     MessageBox.Show("블랙리스트에 선정된 회원이므로 접속이 제한되었습니다.");
+                }
+                else
+                {
+                    MessageBox.Show("존재하지않은 회원입니다.");
                 }
                 dbReader.Close();
             }
@@ -123,6 +142,7 @@ namespace LMP_Projcet
                 MessageBox.Show("select문에 실패하였습니다.");
                 throw;
             }
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
