@@ -30,8 +30,8 @@ namespace LMP_Projcet.Customer
         private void InitializeComponent()
         {
             this.grpCWSuggest = new System.Windows.Forms.GroupBox();
-            this.lbCWMyCusNum = new System.Windows.Forms.Label();
-            this.lbCWCusNum = new System.Windows.Forms.Label();
+            this.lbCWMyCusName = new System.Windows.Forms.Label();
+            this.lbCWCusName = new System.Windows.Forms.Label();
             this.lbCWToday = new System.Windows.Forms.Label();
             this.btnCWOk = new System.Windows.Forms.Button();
             this.btnCWCancel = new System.Windows.Forms.Button();
@@ -53,8 +53,8 @@ namespace LMP_Projcet.Customer
             // 
             // grpCWSuggest
             // 
-            this.grpCWSuggest.Controls.Add(this.lbCWMyCusNum);
-            this.grpCWSuggest.Controls.Add(this.lbCWCusNum);
+            this.grpCWSuggest.Controls.Add(this.lbCWMyCusName);
+            this.grpCWSuggest.Controls.Add(this.lbCWCusName);
             this.grpCWSuggest.Controls.Add(this.lbCWToday);
             this.grpCWSuggest.Controls.Add(this.btnCWOk);
             this.grpCWSuggest.Controls.Add(this.btnCWCancel);
@@ -71,33 +71,35 @@ namespace LMP_Projcet.Customer
             this.grpCWSuggest.TabStop = false;
             this.grpCWSuggest.Enter += new System.EventHandler(this.GBCusWriteSuggest_Enter);
             // 
-            // lbCWMyCusNum
+            // lbCWMyCusName
             // 
-            this.lbCWMyCusNum.AutoSize = true;
-            this.lbCWMyCusNum.Location = new System.Drawing.Point(499, 23);
-            this.lbCWMyCusNum.Name = "lbCWMyCusNum";
-            this.lbCWMyCusNum.Size = new System.Drawing.Size(53, 12);
-            this.lbCWMyCusNum.TabIndex = 47;
-            this.lbCWMyCusNum.Text = "17831046";
+            this.lbCWMyCusName.AutoSize = true;
+            this.lbCWMyCusName.Font = new System.Drawing.Font("굴림", 15.75F);
+            this.lbCWMyCusName.Location = new System.Drawing.Point(488, 20);
+            this.lbCWMyCusName.Name = "lbCWMyCusName";
+            this.lbCWMyCusName.Size = new System.Drawing.Size(94, 21);
+            this.lbCWMyCusName.TabIndex = 47;
+            this.lbCWMyCusName.Text = "회원이름";
             // 
-            // lbCWCusNum
+            // lbCWCusName
             // 
-            this.lbCWCusNum.AutoSize = true;
-            this.lbCWCusNum.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbCWCusNum.Location = new System.Drawing.Point(402, 20);
-            this.lbCWCusNum.Name = "lbCWCusNum";
-            this.lbCWCusNum.Size = new System.Drawing.Size(101, 21);
-            this.lbCWCusNum.TabIndex = 46;
-            this.lbCWCusNum.Text = "회원번호:";
+            this.lbCWCusName.AutoSize = true;
+            this.lbCWCusName.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCWCusName.Location = new System.Drawing.Point(402, 20);
+            this.lbCWCusName.Name = "lbCWCusName";
+            this.lbCWCusName.Size = new System.Drawing.Size(80, 21);
+            this.lbCWCusName.TabIndex = 46;
+            this.lbCWCusName.Text = "회원명:";
             // 
             // lbCWToday
             // 
             this.lbCWToday.AutoSize = true;
-            this.lbCWToday.Location = new System.Drawing.Point(107, 23);
+            this.lbCWToday.Font = new System.Drawing.Font("굴림", 15.75F);
+            this.lbCWToday.Location = new System.Drawing.Point(107, 20);
             this.lbCWToday.Name = "lbCWToday";
-            this.lbCWToday.Size = new System.Drawing.Size(53, 12);
+            this.lbCWToday.Size = new System.Drawing.Size(52, 21);
             this.lbCWToday.TabIndex = 45;
-            this.lbCWToday.Text = "날짜출력";
+            this.lbCWToday.Text = "날짜";
             // 
             // btnCWOk
             // 
@@ -314,8 +316,8 @@ namespace LMP_Projcet.Customer
         private System.Windows.Forms.Label lbCWLogo;
         private System.Windows.Forms.Label lbCWDate;
         private System.Windows.Forms.Label lbCWToday;
-        private System.Windows.Forms.Label lbCWMyCusNum;
-        private System.Windows.Forms.Label lbCWCusNum;
+        private System.Windows.Forms.Label lbCWMyCusName;
+        private System.Windows.Forms.Label lbCWCusName;
         private System.Windows.Forms.TableLayoutPanel plnCW;
         private System.Windows.Forms.Button btnCWClose;
         private System.Windows.Forms.Button btnCWMax;

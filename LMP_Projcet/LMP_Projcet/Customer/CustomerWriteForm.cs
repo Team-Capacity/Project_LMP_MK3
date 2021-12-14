@@ -1,5 +1,6 @@
 ﻿using LibraryMgrProgram;
 using System;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,13 +17,10 @@ namespace LMP_Projcet.Customer
 {
     public partial class CustomerWriteForm : Form
     {
+        dbTest db = new dbTest();
         public CustomerWriteForm()
         {
             InitializeComponent();
-            lbCWToday.Text = DateTime.Now.ToString("yyyy-MM-dd");
-            lbCWToday.Font = new Font("굴림", 12);
-
-
 
 
         }
@@ -61,29 +59,40 @@ namespace LMP_Projcet.Customer
             mouseEvent.ButtonClose(this);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         private void btnCusWriteOk_Click(object sender, EventArgs e)
         {
-          
-            
+
+            string sql = "insert into questionlist(QName,QWriter,QContent) values("
+                    + "'" + txtCWTitle.Text + "'"
+                    + ",'" + lbCWMyCusName.Text + "'"
+                    + ",'" + txtCWContent.Text + "'"
+                    + ");";
+            db.dbUpdate(sql);
         }
       
 
         private void CustomerWriteForm_Load(object sender, EventArgs e)
         {
+            lbCWToday.Text = DateTime.Now.ToString("yyyy/MM/dd");
+
+            db.dbConnection();
+            string thismyName = CustomerMainForm.myname;
+            string myName = thismyName.Substring(0, thismyName.Length - 8);
+            string sql = "select * from Customer where CName = '" + myName + "';";
+
+            MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            string name = "";
+
+            while (reader.Read())
+            {
+                name = reader[4].ToString();
+            }
+
+            lbCWMyCusName.Text = name;
+            reader.Close();
+            db.conn.Close();
 
         }
 
@@ -91,10 +100,6 @@ namespace LMP_Projcet.Customer
         {
 
         }
-
-     
-
-
 
         //작성중인 내용이 있을때 취소할 경우, 아무내용도 작성 안할때 취소할경우
         private void btnCWCancel_Click(object sender, EventArgs e)

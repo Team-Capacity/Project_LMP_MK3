@@ -15,7 +15,6 @@ namespace LMP_Projcet.Admin
     public partial class AdminOperationForm : Form
     {
         FormChange formChange = new FormChange();
-        AdminSuggestionForm suggestForm = new AdminSuggestionForm();
 
         public AdminOperationForm()
         {
@@ -30,6 +29,7 @@ namespace LMP_Projcet.Admin
 
         private void lbAOSuggestionBox_Click(object sender, EventArgs e)
         {
+            AdminSuggestionForm suggestForm = new AdminSuggestionForm();
             suggestForm.Show();
         }
 

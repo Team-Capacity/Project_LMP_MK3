@@ -20,6 +20,7 @@ namespace LibraryMgrProgram
 
         public static Color color;
 
+
         public FontChangeForm()
         {
             InitializeComponent();
@@ -148,6 +149,16 @@ namespace LibraryMgrProgram
             {
                 SetText("black");
                 color = Color.FromArgb(100, 100, 100);
+                LMP_Projcet.Properties.Settings.Default.myColor = false;
+                LMP_Projcet.Properties.Settings.Default.Save();
+                this.Close();
+                Application.Restart();
+            }
+
+            if(rdoFCWhite.Checked)
+            {
+                SetText("white");
+                color = Color.FromArgb(255, 255, 255);
                 LMP_Projcet.Properties.Settings.Default.myColor = true;
                 LMP_Projcet.Properties.Settings.Default.Save();
                 this.Close();
@@ -155,18 +166,18 @@ namespace LibraryMgrProgram
 
 
             }
-            else
-            {
-                
-            }
-
 
         }
         public void SetText(string str)
         {
             if (str == "black")
             {
-                MessageBox.Show("확인용");
+                MessageBox.Show("어두운 테마가 선택 되었습니다.");
+            }
+
+            if(str == "white")
+            {
+                MessageBox.Show("밝은 테마가 선택 되었습니다.");
             }
         }
 

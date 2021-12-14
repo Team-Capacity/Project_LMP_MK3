@@ -119,7 +119,7 @@ namespace LibraryMgrProgram
             // 
             // picFCBlack
             // 
-            this.picFCBlack.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.picFCBlack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
             this.picFCBlack.Location = new System.Drawing.Point(630, 79);
             this.picFCBlack.Name = "picFCBlack";
             this.picFCBlack.Size = new System.Drawing.Size(101, 109);
@@ -129,23 +129,23 @@ namespace LibraryMgrProgram
             // rdoFCBlack
             // 
             this.rdoFCBlack.AutoSize = true;
-            this.rdoFCBlack.Location = new System.Drawing.Point(655, 203);
+            this.rdoFCBlack.Location = new System.Drawing.Point(637, 203);
             this.rdoFCBlack.Name = "rdoFCBlack";
-            this.rdoFCBlack.Size = new System.Drawing.Size(47, 16);
+            this.rdoFCBlack.Size = new System.Drawing.Size(87, 16);
             this.rdoFCBlack.TabIndex = 16;
             this.rdoFCBlack.TabStop = true;
-            this.rdoFCBlack.Text = "다크";
+            this.rdoFCBlack.Text = "어두운 테마";
             this.rdoFCBlack.UseVisualStyleBackColor = true;
             // 
             // rdoFCWhite
             // 
             this.rdoFCWhite.AutoSize = true;
-            this.rdoFCWhite.Location = new System.Drawing.Point(428, 203);
+            this.rdoFCWhite.Location = new System.Drawing.Point(420, 203);
             this.rdoFCWhite.Name = "rdoFCWhite";
-            this.rdoFCWhite.Size = new System.Drawing.Size(93, 16);
+            this.rdoFCWhite.Size = new System.Drawing.Size(109, 16);
             this.rdoFCWhite.TabIndex = 15;
             this.rdoFCWhite.TabStop = true;
-            this.rdoFCWhite.Text = "라이트(기본)";
+            this.rdoFCWhite.Text = "밝은 테마(기본)";
             this.rdoFCWhite.UseVisualStyleBackColor = true;
             // 
             // lbFontTema
