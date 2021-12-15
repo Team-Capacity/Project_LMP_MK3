@@ -192,6 +192,7 @@ namespace LibraryMgrProgram
                 }
                 dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
                 dgv.AllowUserToAddRows = false;
+                db.conn.Close();
 
             }
             catch (Exception ex) { MessageBox.Show(ex.Message); }

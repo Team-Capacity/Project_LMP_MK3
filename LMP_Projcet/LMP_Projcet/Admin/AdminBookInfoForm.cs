@@ -17,7 +17,6 @@ namespace LibraryMgrProgram
     public partial class AdminBookInfoForm : Form
     {
 
-        int i = 0;
         public AdminBookInfoForm()
         {
             InitializeComponent();
@@ -25,11 +24,20 @@ namespace LibraryMgrProgram
 
         dbTest db = new dbTest();
         MouseEvent me = new MouseEvent();
+        FormChange fc = new FormChange();
 
         private void AdminBookInfoForm_Load(object sender, EventArgs e)
         {
+            fc.fromColorChange(this);
+            //Label[] back = { lbABIBookName3 , lbABIBookMaker3 , lbABIBookPubli3 , lbABIMakePlace3, lbABIMakeDay3, lbABIISBN3 , lbABIBLocation3 , lbABIBookger3 , lbABIBookPage3 , lbABIBookCount3 , lbABIArea3 , lbABIBookExp3 };
+            //fc.fromColorChange(back,back);
+            fc.fromColorChange(tacABIMain);
+            fc.fromColorChange(grpABIBookInfo);
+            fc.fromColorChange(grpABIBookAdd);
+            fc.fromColorChange(grpABIBookModi);
+            fc.fromColorChange(tacABIMain);
             string sql = "select * from Book;";
-            me.reloadForm(sql,dgvABIBookList,i);
+            me.reloadForm(sql,dgvABIBookList,0);
             listDescription();
         }
 
@@ -40,25 +48,32 @@ namespace LibraryMgrProgram
 
         private void btnABIOk2_Click(object sender, EventArgs e)
         {
-            DateTime bookAddDay = Convert.ToDateTime(txtABIMakeDay2.Text);
-            
-            string sql = "insert into Book(BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, Bpage, BLocal, BDate, BContent) values("
-                    + "'" + txtABIBookName2.Text + "'"
-                    + ",'" + txtABICompany2.Text + "'"
-                    + ",'" + txtABIBookMaker2.Text + "'"
-                    + "," + Int32.Parse(txtABIBookCount2.Text)
-                    + ",'" + comABIBookger2.Text + "'"
-                    + ",'" + txtABIMakePlace2.Text + "'"
-                    + ",'" + txtABIArea2.Text + "'"
-                    + ",'" + txtABIISBN2.Text + "'"
-                    + "," + Int32.Parse(txtABIBookpage2.Text)
-                    + ",'" + txtABIBLocation2.Text + "'"
-                    + ",'"+ bookAddDay.Year+"/"+bookAddDay.Month+"/"+bookAddDay.Day + "'"
-                    + ",'" + rtxtABIBBookExp2.Text + "'"
-                    + ");";
-            db.dbUpdate(sql);
-            string reloadSql = "select * from Book;";
-            me.reloadForm(reloadSql, dgvABIBookList,i);
+            if (AdminMainForm.rank.Equals("M"))
+            {
+                DateTime bookAddDay = Convert.ToDateTime(txtABIMakeDay2.Text);
+
+                string sql = "insert into Book(BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, Bpage, BLocal, BDate, BContent) values("
+                        + "'" + txtABIBookName2.Text + "'"
+                        + ",'" + txtABICompany2.Text + "'"
+                        + ",'" + txtABIBookMaker2.Text + "'"
+                        + "," + Int32.Parse(txtABIBookCount2.Text)
+                        + ",'" + comABIBookger2.Text + "'"
+                        + ",'" + txtABIMakePlace2.Text + "'"
+                        + ",'" + txtABIArea2.Text + "'"
+                        + ",'" + txtABIISBN2.Text + "'"
+                        + "," + Int32.Parse(txtABIBookpage2.Text)
+                        + ",'" + txtABIBLocation2.Text + "'"
+                        + ",'" + bookAddDay.Year + "/" + bookAddDay.Month + "/" + bookAddDay.Day + "'"
+                        + ",'" + rtxtABIBBookExp2.Text + "'"
+                        + ");";
+                db.dbUpdate(sql);
+                string reloadSql = "select * from Book;";
+                me.reloadForm(reloadSql, dgvABIBookList, 0);
+            }
+            else
+            {
+                btnABIOk2.Enabled = false;
+            }
         }
 
         // 도서 추가 초기화 버튼
@@ -87,7 +102,7 @@ namespace LibraryMgrProgram
                 if (txtABISerBar.Text == "")
                 {
                     string sql = "select * from Book;";
-                    me.reloadForm(sql, dgvABIBookList, i);
+                    me.reloadForm(sql, dgvABIBookList, 0);
                 }
                 else
                 {
@@ -115,7 +130,7 @@ namespace LibraryMgrProgram
             {
                 MessageBox.Show("검색내용이 없습니다.");
                 string sql = "select * from Book;";
-                me.reloadForm(sql, dgvABIBookList, i);
+                me.reloadForm(sql, dgvABIBookList, 0);
             }
         }
 
@@ -176,70 +191,43 @@ namespace LibraryMgrProgram
         // 도서 수정 초기화 버튼
         private void btnABIClear1_Click(object sender, EventArgs e)
         {
-            txtABIBookName1.Text = "";
-            txtABICompany1.Text = "";
-            txtABIBookMaker1.Text = "";
-            txtABIBookCount1.Text = "";
-            comABIBookger1.Text = "";
-            txtABIMakePlace1.Text = "";
-            txtABIISBN1.Text = "";
-            txtABIBookpage1.Text = "";
-            txtABIBLocation1.Text = "";
-            txtABIMakeDay1.Text = "";
-            rtxtABIBBookExp1.Text = "";
-            txtABIArea1.Text = "";
-            listDescription();
+            if (AdminMainForm.rank.Equals("M"))
+            {
+                listDescription();
+            }
+            else
+            {
+                btnABIClear1.Enabled = false;
+            }
         }
 
         private void btnABIOk1_Click(object sender, EventArgs e)
         {
-            db.dbConnection();
-            DataGridViewRow row = dgvABIBookList.SelectedRows[0];
-            int number = Int32.Parse(row.Cells[0].Value.ToString());
-
-            string mysql = "Update Book set BName = '" + txtABIBookName1.Text
-                    + "' ,BPublisher ='" + txtABICompany1.Text
-                    + "' ,BAuthor ='" + txtABIBookMaker1.Text
-                    + "' ,BCount =" + Int32.Parse(txtABIBookCount1.Text)
-                    + "  ,BGenre ='" + comABIBookger1.Text
-                    + "' ,BProduct ='" + txtABIMakePlace1.Text
-                    + "' ,Barea ='" + txtABIArea1.Text
-                    + "' ,BISBN ='" + txtABIISBN1.Text
-                    + "' ,Bpage = " + Int32.Parse(txtABIBookpage1.Text)
-                    + "  ,BLocal ='" + txtABIBLocation1.Text
-                    + "' ,BContent ='" + rtxtABIBBookExp1.Text + "'"
-                    + " where BNumber = " + number + ";";
-
-            try
+            if (AdminMainForm.rank.Equals("M"))
             {
-                MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("성공적으로 추가 되었습니다.");
-                    me.reloadForm("select * from lmp.Book.;", dgvABIBookList,i);
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void btnABIRemove_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow row = dgvABIBookList.SelectedRows[0];
-            int number = Int32.Parse(row.Cells[0].Value.ToString());
-            if (MessageBox.Show("정말로 삭제하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                db.dbConnection();
-                string mysql = "delete from Book where BNumber = " + number + ";";
                 try
                 {
+                    db.dbConnection();
+                    DataGridViewRow row = dgvABIBookList.SelectedRows[0];
+                    int number = Int32.Parse(row.Cells[0].Value.ToString());
+
+                    string mysql = "Update Book set BName = '" + txtABIBookName1.Text
+                            + "' ,BPublisher ='" + txtABICompany1.Text
+                            + "' ,BAuthor ='" + txtABIBookMaker1.Text
+                            + "' ,BCount =" + Int32.Parse(txtABIBookCount1.Text)
+                            + "  ,BGenre ='" + comABIBookger1.Text
+                            + "' ,BProduct ='" + txtABIMakePlace1.Text
+                            + "' ,Barea ='" + txtABIArea1.Text
+                            + "' ,BISBN ='" + txtABIISBN1.Text
+                            + "' ,Bpage = " + Int32.Parse(txtABIBookpage1.Text)
+                            + "  ,BLocal ='" + txtABIBLocation1.Text
+                            + "' ,BContent ='" + rtxtABIBBookExp1.Text + "'"
+                            + " where BNumber = " + number + ";";
                     MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
                     if (cmd.ExecuteNonQuery() == 1)
                     {
-                        MessageBox.Show("성공적으로 삭제 되었습니다.");
-                        me.reloadForm("select * from lmp.Book;", dgvABIBookList,i);
+                        MessageBox.Show("성공적으로 추가 되었습니다.");
+                        me.reloadForm("select * from Book.;", dgvABIBookList, 0);
                     }
                 }
                 catch (MySqlException ex)
@@ -247,8 +235,51 @@ namespace LibraryMgrProgram
                     MessageBox.Show(ex.Message);
                 }
             }
+            else
+            {
+                btnABIOk1.Enabled = false;
+            }
+           
+        }
 
+        private void btnABIRemove_Click(object sender, EventArgs e)
+        {
+            if (AdminMainForm.rank.Equals("M"))
+            {
+                try
+                {
+                    //조건 하나 더 줘야함 회원이 책을 빌리고 있다면 안됨
+                    DataGridViewRow row = dgvABIBookList.SelectedRows[0];
+                    int number = Int32.Parse(row.Cells[0].Value.ToString());
+                    if (MessageBox.Show("정말로 삭제하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                    {
+                        db.dbConnection();
+                        string mysql = "delete from Book where BNumber = " + number + ";";
+                        try
+                        {
+                            MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
+                            if (cmd.ExecuteNonQuery() == 1)
+                            {
+                                MessageBox.Show("성공적으로 삭제 되었습니다.");
+                                me.reloadForm("select * from Book;", dgvABIBookList, 0);
+                            }
+                        }
+                        catch (MySqlException ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
 
+                }
+            }
+            else
+            {
+                btnABIRemove.Enabled = false;
+            }
+            
         }
 
         private void btnABIClear2_Click_1(object sender, EventArgs e)

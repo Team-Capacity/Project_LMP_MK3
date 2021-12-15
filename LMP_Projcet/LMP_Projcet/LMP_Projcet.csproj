@@ -123,12 +123,6 @@
     <Compile Include="Admin\AdminSuggestionForm.Designer.cs">
       <DependentUpon>AdminSuggestionForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin\SubAdminBookForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Admin\SubAdminBookForm.Designer.cs">
-      <DependentUpon>SubAdminBookForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Customer\CustomerBookInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -258,9 +252,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\AdminSuggestionForm.resx">
       <DependentUpon>AdminSuggestionForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Admin\SubAdminBookForm.resx">
-      <DependentUpon>SubAdminBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customer\CustomerBookInfoForm.resx">
       <DependentUpon>CustomerBookInfoForm.cs</DependentUpon>

@@ -31,7 +31,6 @@ namespace LibraryMgrProgram
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminMainForm));
             this.lbAMHome = new System.Windows.Forms.Label();
-            this.AdGridView = new System.Windows.Forms.DataGridView();
             this.lbAMInOut = new System.Windows.Forms.Label();
             this.lbAMCusInfo = new System.Windows.Forms.Label();
             this.lbAMBookInfo = new System.Windows.Forms.Label();
@@ -50,7 +49,7 @@ namespace LibraryMgrProgram
             this.picAMBookInfo = new System.Windows.Forms.PictureBox();
             this.picAMCusInfo = new System.Windows.Forms.PictureBox();
             this.picAMInOut = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.AdGridView)).BeginInit();
+            this.plnAM0 = new System.Windows.Forms.TableLayoutPanel();
             this.plnAM.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAMOperation)).BeginInit();
@@ -73,24 +72,10 @@ namespace LibraryMgrProgram
             this.lbAMHome.Text = "CAPA 도서관";
             this.lbAMHome.Click += new System.EventHandler(this.lbAMHome_Click);
             // 
-            // AdGridView
-            // 
-            this.AdGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.AdGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.AdGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AdGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.AdGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.AdGridView.Location = new System.Drawing.Point(-3, 211);
-            this.AdGridView.Name = "AdGridView";
-            this.AdGridView.RowTemplate.Height = 23;
-            this.AdGridView.Size = new System.Drawing.Size(1403, 18);
-            this.AdGridView.TabIndex = 74;
-            // 
             // lbAMInOut
             // 
             this.lbAMInOut.AutoSize = true;
-            this.lbAMInOut.BackColor = System.Drawing.Color.Yellow;
+            this.lbAMInOut.BackColor = System.Drawing.Color.White;
             this.lbAMInOut.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbAMInOut.Location = new System.Drawing.Point(327, 135);
             this.lbAMInOut.Name = "lbAMInOut";
@@ -102,7 +87,7 @@ namespace LibraryMgrProgram
             // lbAMCusInfo
             // 
             this.lbAMCusInfo.AutoSize = true;
-            this.lbAMCusInfo.BackColor = System.Drawing.Color.Yellow;
+            this.lbAMCusInfo.BackColor = System.Drawing.Color.White;
             this.lbAMCusInfo.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbAMCusInfo.Location = new System.Drawing.Point(527, 135);
             this.lbAMCusInfo.Name = "lbAMCusInfo";
@@ -114,7 +99,7 @@ namespace LibraryMgrProgram
             // lbAMBookInfo
             // 
             this.lbAMBookInfo.AutoSize = true;
-            this.lbAMBookInfo.BackColor = System.Drawing.Color.Yellow;
+            this.lbAMBookInfo.BackColor = System.Drawing.Color.White;
             this.lbAMBookInfo.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbAMBookInfo.Location = new System.Drawing.Point(727, 135);
             this.lbAMBookInfo.Name = "lbAMBookInfo";
@@ -126,7 +111,7 @@ namespace LibraryMgrProgram
             // lbAMOperation
             // 
             this.lbAMOperation.AutoSize = true;
-            this.lbAMOperation.BackColor = System.Drawing.Color.Yellow;
+            this.lbAMOperation.BackColor = System.Drawing.Color.White;
             this.lbAMOperation.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbAMOperation.Location = new System.Drawing.Point(927, 135);
             this.lbAMOperation.Name = "lbAMOperation";
@@ -197,6 +182,7 @@ namespace LibraryMgrProgram
             this.plnAM.RowCount = 2;
             this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.plnAM.Size = new System.Drawing.Size(1403, 35);
             this.plnAM.TabIndex = 130;
             this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
@@ -315,12 +301,33 @@ namespace LibraryMgrProgram
             this.picAMInOut.TabIndex = 108;
             this.picAMInOut.TabStop = false;
             // 
+            // plnAM0
+            // 
+            this.plnAM0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnAM0.AutoSize = true;
+            this.plnAM0.BackColor = System.Drawing.Color.Silver;
+            this.plnAM0.ColumnCount = 1;
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM0.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnAM0.Location = new System.Drawing.Point(-3, 209);
+            this.plnAM0.Name = "plnAM0";
+            this.plnAM0.RowCount = 2;
+            this.plnAM0.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnAM0.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM0.Size = new System.Drawing.Size(1403, 20);
+            this.plnAM0.TabIndex = 148;
+            // 
             // AdminMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.plnAM0);
             this.Controls.Add(this.lbAMHome);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.plnAM);
@@ -336,14 +343,12 @@ namespace LibraryMgrProgram
             this.Controls.Add(this.picAMCusInfo);
             this.Controls.Add(this.lbAMInOut);
             this.Controls.Add(this.picAMInOut);
-            this.Controls.Add(this.AdGridView);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AdminMainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "사용자 메인화면";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminMainForm_FormClosing);
             this.Load += new System.EventHandler(this.AdminMainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.AdGridView)).EndInit();
             this.plnAM.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAMOperation)).EndInit();
@@ -357,7 +362,6 @@ namespace LibraryMgrProgram
 
         #endregion
         private System.Windows.Forms.Label lbAMHome;
-        private System.Windows.Forms.DataGridView AdGridView;
         private System.Windows.Forms.Label lbAMInOut;
         private System.Windows.Forms.PictureBox picAMInOut;
         private System.Windows.Forms.Label lbAMCusInfo;
@@ -376,5 +380,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbAMCustomer;
+        private System.Windows.Forms.TableLayoutPanel plnAM0;
     }
 }

@@ -35,37 +35,37 @@ namespace LibraryMgrProgram
             this.picFCBlack = new System.Windows.Forms.PictureBox();
             this.rdoFCBlack = new System.Windows.Forms.RadioButton();
             this.rdoFCWhite = new System.Windows.Forms.RadioButton();
-            this.lbFontTema = new System.Windows.Forms.Label();
             this.btnFCCancle = new System.Windows.Forms.Button();
             this.btnFCSetting = new System.Windows.Forms.Button();
-            this.lstboxFCStylelist = new System.Windows.Forms.ListBox();
-            this.lbFCStyle = new System.Windows.Forms.Label();
             this.cmbFCKo_Sel = new System.Windows.Forms.ComboBox();
-            this.lbFCKorea = new System.Windows.Forms.Label();
-            this.lbFCFontList = new System.Windows.Forms.Label();
-            this.lstFCListChoice = new System.Windows.Forms.ListBox();
-            this.lstboxFCSizelist = new System.Windows.Forms.ListBox();
-            this.lbFCSize = new System.Windows.Forms.Label();
-            this.cmbFCEn_Sel = new System.Windows.Forms.ComboBox();
-            this.lbFCEnglish = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.plnFC = new System.Windows.Forms.TableLayoutPanel();
-            this.btnFCClose = new System.Windows.Forms.Button();
-            this.btnFCMax = new System.Windows.Forms.Button();
-            this.btnFCMin = new System.Windows.Forms.Button();
+            this.plnAM = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLFClose = new System.Windows.Forms.Button();
+            this.btnLFMax = new System.Windows.Forms.Button();
+            this.btnLFMin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cmbFCKo = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grpFCSetting.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFCWhite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFCBlack)).BeginInit();
-            this.plnFC.SuspendLayout();
+            this.plnAM.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdoFCBasic
             // 
             this.rdoFCBasic.AutoSize = true;
-            this.rdoFCBasic.Location = new System.Drawing.Point(132, 117);
+            this.rdoFCBasic.Checked = true;
+            this.rdoFCBasic.Font = new System.Drawing.Font("Gulim", 12F);
+            this.rdoFCBasic.Location = new System.Drawing.Point(6, 20);
             this.rdoFCBasic.Name = "rdoFCBasic";
-            this.rdoFCBasic.Size = new System.Drawing.Size(109, 16);
+            this.rdoFCBasic.Size = new System.Drawing.Size(139, 20);
             this.rdoFCBasic.TabIndex = 43;
             this.rdoFCBasic.TabStop = true;
             this.rdoFCBasic.Text = "설정 안함(기본)";
@@ -75,11 +75,11 @@ namespace LibraryMgrProgram
             // rdoFCSetting
             // 
             this.rdoFCSetting.AutoSize = true;
-            this.rdoFCSetting.Location = new System.Drawing.Point(50, 117);
+            this.rdoFCSetting.Font = new System.Drawing.Font("Gulim", 12F);
+            this.rdoFCSetting.Location = new System.Drawing.Point(151, 20);
             this.rdoFCSetting.Name = "rdoFCSetting";
-            this.rdoFCSetting.Size = new System.Drawing.Size(75, 16);
+            this.rdoFCSetting.Size = new System.Drawing.Size(95, 20);
             this.rdoFCSetting.TabIndex = 42;
-            this.rdoFCSetting.TabStop = true;
             this.rdoFCSetting.Text = "글꼴 설정";
             this.rdoFCSetting.UseVisualStyleBackColor = true;
             this.rdoFCSetting.CheckedChanged += new System.EventHandler(this.rdoFCSetting_CheckedChanged);
@@ -87,31 +87,28 @@ namespace LibraryMgrProgram
             // grpFCSetting
             // 
             this.grpFCSetting.BackColor = System.Drawing.SystemColors.Control;
+            this.grpFCSetting.Controls.Add(this.groupBox2);
+            this.grpFCSetting.Controls.Add(this.groupBox1);
+            this.grpFCSetting.Controls.Add(this.label4);
+            this.grpFCSetting.Controls.Add(this.cmbFCKo);
+            this.grpFCSetting.Controls.Add(this.label3);
             this.grpFCSetting.Controls.Add(this.picFCWhite);
             this.grpFCSetting.Controls.Add(this.picFCBlack);
-            this.grpFCSetting.Controls.Add(this.rdoFCBlack);
-            this.grpFCSetting.Controls.Add(this.rdoFCWhite);
-            this.grpFCSetting.Controls.Add(this.lbFontTema);
             this.grpFCSetting.Controls.Add(this.btnFCCancle);
             this.grpFCSetting.Controls.Add(this.btnFCSetting);
-            this.grpFCSetting.Controls.Add(this.lstboxFCStylelist);
-            this.grpFCSetting.Controls.Add(this.lbFCStyle);
             this.grpFCSetting.Controls.Add(this.cmbFCKo_Sel);
-            this.grpFCSetting.Controls.Add(this.lbFCKorea);
-            this.grpFCSetting.Controls.Add(this.lbFCFontList);
-            this.grpFCSetting.Controls.Add(this.lstFCListChoice);
-            this.grpFCSetting.Location = new System.Drawing.Point(41, 139);
+            this.grpFCSetting.Controls.Add(this.label2);
+            this.grpFCSetting.Location = new System.Drawing.Point(12, 49);
             this.grpFCSetting.Name = "grpFCSetting";
-            this.grpFCSetting.Size = new System.Drawing.Size(956, 325);
+            this.grpFCSetting.Size = new System.Drawing.Size(552, 247);
             this.grpFCSetting.TabIndex = 41;
             this.grpFCSetting.TabStop = false;
-            this.grpFCSetting.Text = "글꼴/색상";
             // 
             // picFCWhite
             // 
             this.picFCWhite.BackColor = System.Drawing.Color.White;
             this.picFCWhite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picFCWhite.Location = new System.Drawing.Point(424, 79);
+            this.picFCWhite.Location = new System.Drawing.Point(23, 36);
             this.picFCWhite.Name = "picFCWhite";
             this.picFCWhite.Size = new System.Drawing.Size(101, 109);
             this.picFCWhite.TabIndex = 18;
@@ -119,8 +116,8 @@ namespace LibraryMgrProgram
             // 
             // picFCBlack
             // 
-            this.picFCBlack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
-            this.picFCBlack.Location = new System.Drawing.Point(630, 79);
+            this.picFCBlack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
+            this.picFCBlack.Location = new System.Drawing.Point(158, 36);
             this.picFCBlack.Name = "picFCBlack";
             this.picFCBlack.Size = new System.Drawing.Size(101, 109);
             this.picFCBlack.TabIndex = 17;
@@ -129,37 +126,30 @@ namespace LibraryMgrProgram
             // rdoFCBlack
             // 
             this.rdoFCBlack.AutoSize = true;
-            this.rdoFCBlack.Location = new System.Drawing.Point(637, 203);
+            this.rdoFCBlack.Font = new System.Drawing.Font("Gulim", 12F);
+            this.rdoFCBlack.Location = new System.Drawing.Point(151, 20);
             this.rdoFCBlack.Name = "rdoFCBlack";
-            this.rdoFCBlack.Size = new System.Drawing.Size(87, 16);
+            this.rdoFCBlack.Size = new System.Drawing.Size(111, 20);
             this.rdoFCBlack.TabIndex = 16;
-            this.rdoFCBlack.TabStop = true;
             this.rdoFCBlack.Text = "어두운 테마";
             this.rdoFCBlack.UseVisualStyleBackColor = true;
             // 
             // rdoFCWhite
             // 
             this.rdoFCWhite.AutoSize = true;
-            this.rdoFCWhite.Location = new System.Drawing.Point(420, 203);
+            this.rdoFCWhite.Checked = true;
+            this.rdoFCWhite.Font = new System.Drawing.Font("Gulim", 12F);
+            this.rdoFCWhite.Location = new System.Drawing.Point(6, 20);
             this.rdoFCWhite.Name = "rdoFCWhite";
-            this.rdoFCWhite.Size = new System.Drawing.Size(109, 16);
+            this.rdoFCWhite.Size = new System.Drawing.Size(139, 20);
             this.rdoFCWhite.TabIndex = 15;
             this.rdoFCWhite.TabStop = true;
             this.rdoFCWhite.Text = "밝은 테마(기본)";
             this.rdoFCWhite.UseVisualStyleBackColor = true;
             // 
-            // lbFontTema
-            // 
-            this.lbFontTema.AutoSize = true;
-            this.lbFontTema.Location = new System.Drawing.Point(564, 34);
-            this.lbFontTema.Name = "lbFontTema";
-            this.lbFontTema.Size = new System.Drawing.Size(29, 12);
-            this.lbFontTema.TabIndex = 14;
-            this.lbFontTema.Text = "테마";
-            // 
             // btnFCCancle
             // 
-            this.btnFCCancle.Location = new System.Drawing.Point(581, 253);
+            this.btnFCCancle.Location = new System.Drawing.Point(432, 211);
             this.btnFCCancle.Name = "btnFCCancle";
             this.btnFCCancle.Size = new System.Drawing.Size(109, 23);
             this.btnFCCancle.TabIndex = 13;
@@ -169,7 +159,7 @@ namespace LibraryMgrProgram
             // 
             // btnFCSetting
             // 
-            this.btnFCSetting.Location = new System.Drawing.Point(466, 253);
+            this.btnFCSetting.Location = new System.Drawing.Point(317, 211);
             this.btnFCSetting.Name = "btnFCSetting";
             this.btnFCSetting.Size = new System.Drawing.Size(109, 23);
             this.btnFCSetting.TabIndex = 6;
@@ -177,31 +167,9 @@ namespace LibraryMgrProgram
             this.btnFCSetting.UseVisualStyleBackColor = true;
             this.btnFCSetting.Click += new System.EventHandler(this.btnFCSetting_Click);
             // 
-            // lstboxFCStylelist
-            // 
-            this.lstboxFCStylelist.FormattingEnabled = true;
-            this.lstboxFCStylelist.ItemHeight = 12;
-            this.lstboxFCStylelist.Items.AddRange(new object[] {
-            "보통",
-            "기울임꼴",
-            "굵게",
-            "굵은 기울임꼴"});
-            this.lstboxFCStylelist.Location = new System.Drawing.Point(182, 110);
-            this.lstboxFCStylelist.Name = "lstboxFCStylelist";
-            this.lstboxFCStylelist.Size = new System.Drawing.Size(154, 136);
-            this.lstboxFCStylelist.TabIndex = 7;
-            // 
-            // lbFCStyle
-            // 
-            this.lbFCStyle.AutoSize = true;
-            this.lbFCStyle.Location = new System.Drawing.Point(180, 95);
-            this.lbFCStyle.Name = "lbFCStyle";
-            this.lbFCStyle.Size = new System.Drawing.Size(41, 12);
-            this.lbFCStyle.TabIndex = 6;
-            this.lbFCStyle.Text = "스타일";
-            // 
             // cmbFCKo_Sel
             // 
+            this.cmbFCKo_Sel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbFCKo_Sel.FormattingEnabled = true;
             this.cmbFCKo_Sel.Items.AddRange(new object[] {
             "궁서체",
@@ -212,209 +180,190 @@ namespace LibraryMgrProgram
             "나눔고딕",
             "돋움",
             "굴림체"});
-            this.cmbFCKo_Sel.Location = new System.Drawing.Point(215, 62);
+            this.cmbFCKo_Sel.Location = new System.Drawing.Point(355, 54);
             this.cmbFCKo_Sel.Name = "cmbFCKo_Sel";
-            this.cmbFCKo_Sel.Size = new System.Drawing.Size(121, 20);
+            this.cmbFCKo_Sel.Size = new System.Drawing.Size(131, 20);
             this.cmbFCKo_Sel.TabIndex = 3;
             // 
-            // lbFCKorea
+            // label2
             // 
-            this.lbFCKorea.AutoSize = true;
-            this.lbFCKorea.Location = new System.Drawing.Point(180, 66);
-            this.lbFCKorea.Name = "lbFCKorea";
-            this.lbFCKorea.Size = new System.Drawing.Size(29, 12);
-            this.lbFCKorea.TabIndex = 2;
-            this.lbFCKorea.Text = "한글";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gulim", 12F);
+            this.label2.Location = new System.Drawing.Point(309, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 16);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "글꼴";
             // 
-            // lbFCFontList
+            // plnAM
             // 
-            this.lbFCFontList.AutoSize = true;
-            this.lbFCFontList.Location = new System.Drawing.Point(16, 43);
-            this.lbFCFontList.Name = "lbFCFontList";
-            this.lbFCFontList.Size = new System.Drawing.Size(85, 12);
-            this.lbFCFontList.TabIndex = 1;
-            this.lbFCFontList.Text = "대표 글꼴 목록";
+            this.plnAM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnAM.AutoSize = true;
+            this.plnAM.BackColor = System.Drawing.Color.Silver;
+            this.plnAM.ColumnCount = 4;
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.Controls.Add(this.btnLFClose, 3, 1);
+            this.plnAM.Controls.Add(this.btnLFMax, 2, 1);
+            this.plnAM.Controls.Add(this.btnLFMin, 1, 1);
+            this.plnAM.Controls.Add(this.label1, 0, 1);
+            this.plnAM.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnAM.Location = new System.Drawing.Point(-1, -3);
+            this.plnAM.Name = "plnAM";
+            this.plnAM.RowCount = 2;
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM.Size = new System.Drawing.Size(575, 35);
+            this.plnAM.TabIndex = 151;
+            this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseDown);
+            this.plnAM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseMove);
+            this.plnAM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseUp);
             // 
-            // lstFCListChoice
+            // btnLFClose
             // 
-            this.lstFCListChoice.FormattingEnabled = true;
-            this.lstFCListChoice.ItemHeight = 12;
-            this.lstFCListChoice.Items.AddRange(new object[] {
+            this.btnLFClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFClose.FlatAppearance.BorderSize = 0;
+            this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFClose.Location = new System.Drawing.Point(552, 6);
+            this.btnLFClose.Name = "btnLFClose";
+            this.btnLFClose.Size = new System.Drawing.Size(20, 20);
+            this.btnLFClose.TabIndex = 1;
+            this.btnLFClose.Text = "🗙";
+            this.btnLFClose.UseVisualStyleBackColor = false;
+            this.btnLFClose.Click += new System.EventHandler(this.btnFCClose_Click_1);
+            // 
+            // btnLFMax
+            // 
+            this.btnLFMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMax.FlatAppearance.BorderSize = 0;
+            this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMax.Location = new System.Drawing.Point(526, 6);
+            this.btnLFMax.Name = "btnLFMax";
+            this.btnLFMax.Size = new System.Drawing.Size(19, 20);
+            this.btnLFMax.TabIndex = 3;
+            this.btnLFMax.Text = "🗖";
+            this.btnLFMax.UseVisualStyleBackColor = false;
+            this.btnLFMax.Click += new System.EventHandler(this.btnFCMax_Click);
+            // 
+            // btnLFMin
+            // 
+            this.btnLFMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMin.FlatAppearance.BorderSize = 0;
+            this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMin.Location = new System.Drawing.Point(498, 6);
+            this.btnLFMin.Name = "btnLFMin";
+            this.btnLFMin.Size = new System.Drawing.Size(20, 20);
+            this.btnLFMin.TabIndex = 2;
+            this.btnLFMin.Text = "🗕";
+            this.btnLFMin.UseVisualStyleBackColor = false;
+            this.btnLFMin.Click += new System.EventHandler(this.btnFCMin_Click_1);
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label1.Location = new System.Drawing.Point(3, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(111, 23);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "색상/글꼴";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gulim", 12F);
+            this.label3.Location = new System.Drawing.Point(6, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "배경색";
+            // 
+            // cmbFCKo
+            // 
+            this.cmbFCKo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFCKo.FormattingEnabled = true;
+            this.cmbFCKo.Items.AddRange(new object[] {
             "궁서체",
             "굵은체",
             "나눔명조",
             "바탕체",
-            "함초롱바탕"});
-            this.lstFCListChoice.Location = new System.Drawing.Point(18, 60);
-            this.lstFCListChoice.Name = "lstFCListChoice";
-            this.lstFCListChoice.Size = new System.Drawing.Size(124, 196);
-            this.lstFCListChoice.TabIndex = 0;
-            this.lstFCListChoice.SelectedIndexChanged += new System.EventHandler(this.lstFCListChoice_SelectedIndexChanged);
+            "함초롱바탕",
+            "나눔고딕",
+            "돋움",
+            "굴림체"});
+            this.cmbFCKo.Location = new System.Drawing.Point(355, 105);
+            this.cmbFCKo.Name = "cmbFCKo";
+            this.cmbFCKo.Size = new System.Drawing.Size(131, 20);
+            this.cmbFCKo.TabIndex = 45;
             // 
-            // lstboxFCSizelist
+            // label4
             // 
-            this.lstboxFCSizelist.FormattingEnabled = true;
-            this.lstboxFCSizelist.ItemHeight = 12;
-            this.lstboxFCSizelist.Items.AddRange(new object[] {
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.lstboxFCSizelist.Location = new System.Drawing.Point(500, 56);
-            this.lstboxFCSizelist.Name = "lstboxFCSizelist";
-            this.lstboxFCSizelist.Size = new System.Drawing.Size(27, 52);
-            this.lstboxFCSizelist.TabIndex = 9;
-            this.lstboxFCSizelist.SelectedIndexChanged += new System.EventHandler(this.lstboxFCSizelist_SelectedIndexChanged);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gulim", 12F);
+            this.label4.Location = new System.Drawing.Point(309, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "형태";
             // 
-            // lbFCSize
+            // groupBox1
             // 
-            this.lbFCSize.AutoSize = true;
-            this.lbFCSize.Location = new System.Drawing.Point(568, 57);
-            this.lbFCSize.Name = "lbFCSize";
-            this.lbFCSize.Size = new System.Drawing.Size(29, 12);
-            this.lbFCSize.TabIndex = 8;
-            this.lbFCSize.Text = "크기";
+            this.groupBox1.Controls.Add(this.rdoFCWhite);
+            this.groupBox1.Controls.Add(this.rdoFCBlack);
+            this.groupBox1.Location = new System.Drawing.Point(9, 152);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(268, 53);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
             // 
-            // cmbFCEn_Sel
+            // groupBox2
             // 
-            this.cmbFCEn_Sel.FormattingEnabled = true;
-            this.cmbFCEn_Sel.Location = new System.Drawing.Point(354, 72);
-            this.cmbFCEn_Sel.Name = "cmbFCEn_Sel";
-            this.cmbFCEn_Sel.Size = new System.Drawing.Size(121, 20);
-            this.cmbFCEn_Sel.TabIndex = 5;
-            // 
-            // lbFCEnglish
-            // 
-            this.lbFCEnglish.AutoSize = true;
-            this.lbFCEnglish.Location = new System.Drawing.Point(320, 76);
-            this.lbFCEnglish.Name = "lbFCEnglish";
-            this.lbFCEnglish.Size = new System.Drawing.Size(29, 12);
-            this.lbFCEnglish.TabIndex = 4;
-            this.lbFCEnglish.Text = "영문";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "9",
-            "10",
-            "11",
-            "12"});
-            this.comboBox1.Location = new System.Drawing.Point(570, 72);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(30, 20);
-            this.comboBox1.TabIndex = 19;
-            // 
-            // plnFC
-            // 
-            this.plnFC.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.plnFC.AutoSize = true;
-            this.plnFC.BackColor = System.Drawing.Color.Silver;
-            this.plnFC.ColumnCount = 4;
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.plnFC.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
-            this.plnFC.Controls.Add(this.btnFCClose, 3, 1);
-            this.plnFC.Controls.Add(this.btnFCMax, 2, 1);
-            this.plnFC.Controls.Add(this.btnFCMin, 1, 1);
-            this.plnFC.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.plnFC.Location = new System.Drawing.Point(0, -3);
-            this.plnFC.Name = "plnFC";
-            this.plnFC.RowCount = 2;
-            this.plnFC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.plnFC.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnFC.Size = new System.Drawing.Size(1031, 39);
-            this.plnFC.TabIndex = 150;
-            this.plnFC.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseDown);
-            this.plnFC.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseMove);
-            this.plnFC.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnFC_MouseUp);
-            // 
-            // btnFCClose
-            // 
-            this.btnFCClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFCClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFCClose.FlatAppearance.BorderSize = 0;
-            this.btnFCClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFCClose.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnFCClose.Location = new System.Drawing.Point(1008, 6);
-            this.btnFCClose.Name = "btnFCClose";
-            this.btnFCClose.Size = new System.Drawing.Size(20, 20);
-            this.btnFCClose.TabIndex = 1;
-            this.btnFCClose.Text = "🗙";
-            this.btnFCClose.UseVisualStyleBackColor = false;
-            this.btnFCClose.Click += new System.EventHandler(this.btnFCClose_Click_1);
-            // 
-            // btnFCMax
-            // 
-            this.btnFCMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFCMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFCMax.FlatAppearance.BorderSize = 0;
-            this.btnFCMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFCMax.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnFCMax.Location = new System.Drawing.Point(982, 6);
-            this.btnFCMax.Name = "btnFCMax";
-            this.btnFCMax.Size = new System.Drawing.Size(19, 20);
-            this.btnFCMax.TabIndex = 3;
-            this.btnFCMax.Text = "🗖";
-            this.btnFCMax.UseVisualStyleBackColor = false;
-            this.btnFCMax.Click += new System.EventHandler(this.btnFCMax_Click);
-            // 
-            // btnFCMin
-            // 
-            this.btnFCMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnFCMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnFCMin.FlatAppearance.BorderSize = 0;
-            this.btnFCMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFCMin.Font = new System.Drawing.Font("굴림", 10F);
-            this.btnFCMin.Location = new System.Drawing.Point(954, 6);
-            this.btnFCMin.Name = "btnFCMin";
-            this.btnFCMin.Size = new System.Drawing.Size(20, 20);
-            this.btnFCMin.TabIndex = 2;
-            this.btnFCMin.Text = "🗕";
-            this.btnFCMin.UseVisualStyleBackColor = false;
-            this.btnFCMin.Click += new System.EventHandler(this.btnFCMin_Click_1);
+            this.groupBox2.Controls.Add(this.rdoFCBasic);
+            this.groupBox2.Controls.Add(this.rdoFCSetting);
+            this.groupBox2.Location = new System.Drawing.Point(295, 152);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(247, 53);
+            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabStop = false;
             // 
             // FontChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(1027, 561);
-            this.Controls.Add(this.plnFC);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.rdoFCBasic);
-            this.Controls.Add(this.rdoFCSetting);
+            this.ClientSize = new System.Drawing.Size(574, 308);
+            this.Controls.Add(this.plnAM);
             this.Controls.Add(this.grpFCSetting);
-            this.Controls.Add(this.lstboxFCSizelist);
-            this.Controls.Add(this.lbFCSize);
-            this.Controls.Add(this.cmbFCEn_Sel);
-            this.Controls.Add(this.lbFCEnglish);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FontChangeForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Font";
             this.Load += new System.EventHandler(this.FontChangeForm_Load);
             this.grpFCSetting.ResumeLayout(false);
             this.grpFCSetting.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFCWhite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFCBlack)).EndInit();
-            this.plnFC.ResumeLayout(false);
+            this.plnAM.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ListBox lstboxFCSizelist;
-        private System.Windows.Forms.Label lbFCSize;
-        private System.Windows.Forms.Label lbFCStyle;
-        private System.Windows.Forms.Label lbFCFontList;
         private System.Windows.Forms.ColorDialog colorDialog1;
-        private System.Windows.Forms.ComboBox cmbFCEn_Sel;
-        private System.Windows.Forms.Label lbFCEnglish;
-        private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.GroupBox grpFCSetting;
         public System.Windows.Forms.RadioButton rdoFCBasic;
         public System.Windows.Forms.RadioButton rdoFCSetting;
@@ -422,16 +371,19 @@ namespace LibraryMgrProgram
         public System.Windows.Forms.PictureBox picFCBlack;
         public System.Windows.Forms.RadioButton rdoFCBlack;
         public System.Windows.Forms.RadioButton rdoFCWhite;
-        public System.Windows.Forms.Label lbFontTema;
         public System.Windows.Forms.Button btnFCCancle;
         public System.Windows.Forms.Button btnFCSetting;
-        public System.Windows.Forms.ListBox lstboxFCStylelist;
         public System.Windows.Forms.ComboBox cmbFCKo_Sel;
-        public System.Windows.Forms.Label lbFCKorea;
-        public System.Windows.Forms.ListBox lstFCListChoice;
-        private System.Windows.Forms.TableLayoutPanel plnFC;
-        private System.Windows.Forms.Button btnFCClose;
-        private System.Windows.Forms.Button btnFCMax;
-        private System.Windows.Forms.Button btnFCMin;
+        public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel plnAM;
+        private System.Windows.Forms.Button btnLFClose;
+        private System.Windows.Forms.Button btnLFMax;
+        private System.Windows.Forms.Button btnLFMin;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.Label label4;
+        public System.Windows.Forms.ComboBox cmbFCKo;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

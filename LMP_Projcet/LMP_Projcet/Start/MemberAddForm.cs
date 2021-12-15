@@ -131,26 +131,31 @@ namespace LMP_Projcet.Start
             {
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
+                int count = 0;
 
                 while (dbReader.Read())
                 {
-                    int count = Int32.Parse(dbReader["CID"].ToString());
-
-                    if (count == 1)
-                    {
-                        MessageBox.Show("중복된 아이디입니다.");
-                    }
-                    else if (id.Equals(""))
-                    {
-                        MessageBox.Show("아이디를 입력하여 주세요.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("사용가능한 아이디입니다.");
-                    }
+                    count = Int32.Parse(dbReader["CID"].ToString());
+                }
+                if (count == 1)
+                {
+                    MessageBox.Show("중복된 아이디입니다.");
+                }
+                else if (id.Equals(""))
+                {
+                    MessageBox.Show("아이디를 입력하여 주세요.");
+                }
+                else if (!IsValID(txtMA_Id.Text))
+                {
+                    MessageBox.Show("아이디는 숫자와 영어로만 구성해주세요");
+                }
+                else
+                {
+                    MessageBox.Show("사용가능한 아이디입니다.");
                 }
                 dbReader.Close();
                 count++;
+                db.conn.Close();
             }
             catch (Exception)
             {
@@ -304,6 +309,12 @@ namespace LMP_Projcet.Start
             Application.Exit();
         }
 
+        private static bool IsValID(string Text)
+        {
+            Regex Iregex = new Regex(@"^[0-9a-zA-Z]{1,100}$");
+            Match Imatch = Iregex.Match(Text);
+            return Imatch.Success;
+        }
         public void MemberAdd()
         {
             string gender = "";

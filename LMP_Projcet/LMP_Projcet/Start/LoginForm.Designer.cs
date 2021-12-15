@@ -141,7 +141,7 @@ namespace LMP_Projcet
             // 
             // grpLogLogin
             // 
-            this.grpLogLogin.BackColor = System.Drawing.Color.PaleTurquoise;
+            this.grpLogLogin.BackColor = System.Drawing.Color.White;
             this.grpLogLogin.Controls.Add(this.btnLFNonLogin);
             this.grpLogLogin.Controls.Add(this.picLogLogo);
             this.grpLogLogin.Controls.Add(this.label1);
@@ -260,7 +260,7 @@ namespace LMP_Projcet
             this.label3.Font = new System.Drawing.Font("Gulim", 15F);
             this.label3.Location = new System.Drawing.Point(3, 7);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 23);
+            this.label3.Size = new System.Drawing.Size(70, 23);
             this.label3.TabIndex = 0;
             this.label3.Text = "로그인폼";
             // 
@@ -274,6 +274,7 @@ namespace LMP_Projcet
             this.Controls.Add(this.grpLogLogin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "로그인폼";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.Load += new System.EventHandler(this.LoginForm_Load);

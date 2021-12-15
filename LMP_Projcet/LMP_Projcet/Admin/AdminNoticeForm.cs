@@ -105,6 +105,10 @@ namespace LibraryMgrProgram
 
         public void AdminNoticeForm_Load(object sender, EventArgs e)
         {
+            fc.fromColorChange(this);
+            Label[] back = { label1, label2, lbANNoticeView, lbANNoticeCont };
+            Panel[] panels = { plnAM };
+            fc.fromColorChange(back, back, panels);
             select1();
             select2();
         }
@@ -261,6 +265,5 @@ namespace LibraryMgrProgram
 
         }
 
-    
     }
 }

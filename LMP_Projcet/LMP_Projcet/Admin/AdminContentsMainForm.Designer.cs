@@ -64,7 +64,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             this.lbACMNotic.AutoSize = true;
             this.lbACMNotic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbACMNotic.Font = new System.Drawing.Font("굴림", 22F);
+            this.lbACMNotic.Font = new System.Drawing.Font("Gulim", 22F);
             this.lbACMNotic.Location = new System.Drawing.Point(273, 28);
             this.lbACMNotic.Name = "lbACMNotic";
             this.lbACMNotic.Size = new System.Drawing.Size(133, 30);
@@ -75,7 +75,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label2.Font = new System.Drawing.Font("굴림", 16F);
+            this.label2.Font = new System.Drawing.Font("Gulim", 16F);
             this.label2.Location = new System.Drawing.Point(727, 313);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 22);
@@ -84,7 +84,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             // textBox2
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.textBox2.BackColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(720, 338);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
@@ -96,7 +96,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             this.dgvACNotice.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvACNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvACNotice.Location = new System.Drawing.Point(116, 62);
+            this.dgvACNotice.Location = new System.Drawing.Point(132, 61);
             this.dgvACNotice.Name = "dgvACNotice";
             this.dgvACNotice.RowTemplate.Height = 23;
             this.dgvACNotice.Size = new System.Drawing.Size(450, 479);
@@ -130,12 +130,12 @@ namespace LibraryMgrProgram.AdminForm
             // 
             this.lbACMBestBook.AutoSize = true;
             this.lbACMBestBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbACMBestBook.Font = new System.Drawing.Font("굴림", 16F);
+            this.lbACMBestBook.Font = new System.Drawing.Font("Gulim", 16F);
             this.lbACMBestBook.Location = new System.Drawing.Point(727, 36);
             this.lbACMBestBook.Name = "lbACMBestBook";
             this.lbACMBestBook.Size = new System.Drawing.Size(156, 22);
             this.lbACMBestBook.TabIndex = 36;
-            this.lbACMBestBook.Text = "금일 추천 도서";
+            this.lbACMBestBook.Text = "최근 등록 도서";
             // 
             // lbACMBookName0
             // 
