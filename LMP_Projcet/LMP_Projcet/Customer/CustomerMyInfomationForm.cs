@@ -58,6 +58,7 @@ namespace LMP_Projcet.Customer
                 string gender = "";
                 string memo = "";
                 int loancnt = 0;
+             
 
                 while (reader.Read())
                 {
@@ -70,6 +71,7 @@ namespace LMP_Projcet.Customer
                     address = reader[8].ToString();
                     gender = reader[10].ToString();
                     memo = reader[11].ToString();
+               
 
 
                 }
@@ -84,11 +86,14 @@ namespace LMP_Projcet.Customer
                 lbCMIMyBirth.Text = birth;
                 lbCMIMemoView.Text = memo;
                 lbCMIAddrView.Text = address;
+                lbCMIRankView.Text = rank;
 
+            /* 사진으로 구현할 예정이었으나 힘들듯
                 if (rank.Equals('3'))
                 {
 
                 }
+            */
       
 
 

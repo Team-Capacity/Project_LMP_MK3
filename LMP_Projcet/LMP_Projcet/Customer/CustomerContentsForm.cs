@@ -23,25 +23,73 @@ namespace LibraryMgrProgram.CustomerForm
 
         private void CustomerContentsForm_Load(object sender, EventArgs e)
         {
+            Content();
+            Book();
+       
+        }
+
+        //최근 등록된 책 3권 로드되도록
+
+        private void Book()
+        {
             db.dbConnection();
-            string sql = "select NContent from NoticeList order by NNumber desc limit 1;";
+            string sql = "select BName,BAuthor from Book order by BNumber desc limit 3;";
+            MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            StringBuilder name = new StringBuilder();
+            StringBuilder author = new StringBuilder();
             
 
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                MySqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string a = reader[0].ToString();
+                name.Append("," + a);
 
-                string content = "";
+                string b = reader[1].ToString();
+                author.Append("," + b);
+            }
 
-                while(reader.Read())
-                {
+            string chkName = name.ToString();
+            string[] splitName = chkName.Split(',');
+
+            string chkAuthor = author.ToString();
+            string[] splitAuthor = chkAuthor.Split(',');
+
+
+            lbCCBookName1.Text = splitName[1];
+            lbAuthor1.Text = splitAuthor[1];
+
+            lbCCBookName3.Text = splitName[2];
+            lbAuthor3.Text = splitAuthor[2];
+
+            lbCCBookName5.Text = splitName[3];
+            lbAuthor5.Text = splitAuthor[3];
+
+            reader.Close();
+            db.conn.Close();
+        }
+
+        //최신공지사항이 로드되도록
+        private void Content()
+        {
+            db.dbConnection();
+            string sql = "select NContent from NoticeList order by NNumber desc limit 1;";
+            MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            string content = "";
+
+            while (reader.Read())
+            {
                 content = reader[0].ToString();
-                }
+            }
 
-                 reader.Close();
+            reader.Close();
+            db.conn.Close();
 
-                 txtCCNotice.Text = content;
-                 txtCCNotice.Font = new Font("맑은 고딕", 40, FontStyle.Bold);
-
+            txtCCNotice.Text = content;
+            txtCCNotice.Font = new Font("맑은 고딕", 40, FontStyle.Bold);
 
         }
     }

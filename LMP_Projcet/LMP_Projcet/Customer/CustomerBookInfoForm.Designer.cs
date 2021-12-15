@@ -188,7 +188,6 @@ namespace LMP_Projcet.Customer
             this.dgvCBIBookList.Size = new System.Drawing.Size(745, 434);
             this.dgvCBIBookList.TabIndex = 0;
             this.dgvCBIBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCBIBookList_CellClick);
-        
             // 
             // txtCBISerBar
             // 

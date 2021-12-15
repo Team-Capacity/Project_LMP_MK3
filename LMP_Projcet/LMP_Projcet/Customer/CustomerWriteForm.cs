@@ -62,7 +62,7 @@ namespace LMP_Projcet.Customer
         private void btnCusWriteOk_Click(object sender, EventArgs e)
         {
 
-            string sql = "insert into QuestionList(QName,QWriter,QContent) values("
+            string sql = "insert into lmp.QuestionList(QName,QWriter,QContent) values("
                     + "'" + txtCWTitle.Text + "'"
                     + ",'" + lbCWMyCusName.Text + "'"
                     + ",'" + txtCWContent.Text + "'"
@@ -78,7 +78,7 @@ namespace LMP_Projcet.Customer
             db.dbConnection();
             string thismyName = CustomerMainForm.myname;
             string myName = thismyName.Substring(0, thismyName.Length - 8);
-            string sql = "select * from Customer where CName = '" + myName + "';";
+            string sql = "select * from lmp.Customer where CName = '" + myName + "';";
 
             MySqlCommand cmd = new MySqlCommand(sql, db.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
