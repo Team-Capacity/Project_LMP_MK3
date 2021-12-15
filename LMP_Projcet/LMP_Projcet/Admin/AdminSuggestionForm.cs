@@ -17,6 +17,7 @@ namespace LMP_Projcet.Admin
     public partial class AdminSuggestionForm : Form
     {
         dbTest db = new dbTest();
+        FormChange fc = new FormChange();
 
         MouseEvent mouseEvent = new MouseEvent();
         public AdminSuggestionForm()
@@ -56,7 +57,10 @@ namespace LMP_Projcet.Admin
         // 폼 로드시 셀 출력
         private void AdminSuggestionForm_Load(object sender, EventArgs e)
         {
-            loadList();
+            fc.fromColorChange(this);
+            Label[] back = { lbASTitle, lbASContent, lbASday, lbASRealday, lbASWriter, lbASRealWriter, label2, label1 };
+            Panel[] panels = { plnAM };
+            fc.fromColorChange(back, back, panels);
         }
 
         //셀 크기 조절 막기 이벤트
@@ -121,23 +125,25 @@ namespace LMP_Projcet.Admin
             int SelectRow = lvASList.SelectedItems[0].Index;
             string a = lvASList.Items[SelectRow].SubItems[0].Text;
 
+/*            set @num := 0;
+            update questionlist set questionlist.QNumber = @num := (@num + 1);*/
+
 
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string sql = "delete from QuestionList where QNumber = " + a + ";";
-
+                string nextSql1 = "sql_safe_updates = 0 and @num := 0;";
+                string nextSql2 = "update QuestionList set QNumber = @num := (@num + 1)";
                 try
                 {
-                    MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                    if (cmd.ExecuteNonQuery() == 1)
-                    {
-                        MessageBox.Show("성공적으로 삭제 되었습니다.");
-                        loadList();
-                    }
+                    db.dbUpdate(sql);
+/*                    db.dbUpdate(nextSql1);
+                    db.dbUpdate(nextSql2);*/
+                    MessageBox.Show("성공적으로 삭제하셨습니다.");
                 }
-                catch (MySqlException ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+
                 }
 
             }

@@ -23,6 +23,9 @@ namespace LMP_Projcet
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
         public static string name = "";
+        public static Color backColor;
+        public static Color fontColor;
+        public static Color titleColor;
 
         public LoginForm()
         {
@@ -39,6 +42,12 @@ namespace LMP_Projcet
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            colorSetting();
+            Label[] back = { label1, labLogID , labLogPW , labLFSearch , labLFAddMem , label2 , label3 };
+            Panel[] title = { tableLayoutPanel1 };
+            formChange.fromColorChange(this);
+            formChange.fromColorChange(back, back, title);
+            formChange.fromColorChange(grpLogLogin);
 
         }
 
@@ -163,6 +172,23 @@ namespace LMP_Projcet
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+
+        private void colorSetting()
+        {
+            if (Properties.Settings.Default.myColor == false)
+            {
+                backColor = Color.FromArgb(50, 50, 50);
+                fontColor = Color.FromArgb(255, 255, 255);
+                titleColor = Color.FromArgb(63, 63, 70);
+            }
+            else
+            {
+                backColor = Color.FromArgb(255, 255, 255);
+                fontColor = Color.FromArgb(0, 0, 0);
+                titleColor = Color.FromArgb(192, 192, 192);
+            }
         }
     }
 }

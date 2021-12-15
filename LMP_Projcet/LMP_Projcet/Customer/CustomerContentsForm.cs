@@ -22,8 +22,7 @@ namespace LibraryMgrProgram.CustomerForm
         dbTest db = new dbTest();
 
         private void CustomerContentsForm_Load(object sender, EventArgs e)
-        {    
-
+        {
             db.dbConnection();
             string sql = "select NContent from NoticeList order by NNumber desc limit 1;";
             
@@ -45,7 +44,5 @@ namespace LibraryMgrProgram.CustomerForm
 
 
         }
-
-      
     }
 }

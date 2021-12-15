@@ -11,6 +11,7 @@ using LMP_Projcet;
 using LMP_Projcet.Admin;
 using LMP_Projcet.Methods;
 using LibraryMgrProgram.AdminForm;
+using MySql.Data.MySqlClient;
 
 namespace LibraryMgrProgram
 {
@@ -26,6 +27,7 @@ namespace LibraryMgrProgram
         FormChange formChange = new FormChange();
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
+        public static string rank = "";
 
 
         public AdminMainForm()
@@ -66,13 +68,35 @@ namespace LibraryMgrProgram
         {
             formChange.ChangeFIF(aConForm, palAMMain);
             lbAMCustomer.Text = LoginForm.name+"님 환영합니다.";
+            string sql = "select CRank from Customer where CName = '" + LoginForm.name + "';";
+            try
+            {
+                db.dbConnection();
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                MySqlDataReader dbReader = cmd.ExecuteReader();
+                while (dbReader.Read())
+                {
+                    rank = dbReader[0].ToString();
+                }
+                dbReader.Close();
+                db.conn.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+
 
             bool color = LMP_Projcet.Properties.Settings.Default.myColor;
             if(color == false)
             {
-                this.BackColor = FontChangeForm.color;
+                this.BackColor = LoginForm.backColor;
+                Label[] back = { lbAMOperation, lbAMBookInfo, lbAMCusInfo, lbAMInOut, lbAMHome, lbAMCustomer, lbAMLoginOut, label1 };
+                Panel[] title = { plnAM, plnAM0 };
+                formChange.fromColorChange(back, back, title);
             }
         }
+
 
         private void lbAMHome_Click(object sender, EventArgs e)
         { 

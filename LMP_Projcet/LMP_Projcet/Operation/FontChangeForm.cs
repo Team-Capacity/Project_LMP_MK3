@@ -17,8 +17,7 @@ namespace LibraryMgrProgram
     public partial class FontChangeForm : Form
     {
         public bool radioCheckedChanged = false;
-
-        public static Color color;
+        FormChange fc = new FormChange();
 
 
         public FontChangeForm()
@@ -95,14 +94,6 @@ namespace LibraryMgrProgram
 
 
         }
-
-
-
-       
-     
-
-
-       
         private void btnFCCancle_Click(object sender, EventArgs e)
         {
             CustomerOperationForm.chkShow3 = false;
@@ -112,27 +103,37 @@ namespace LibraryMgrProgram
         //대표글꼴 클릭시 옆에 한글 콤보박스에 해당 글꼴이 뜸
         private void lstFCListChoice_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lstFCListChoice.SelectedItems != null)
-            {
-                int choiceIndex = lstFCListChoice.SelectedIndex;
-                cmbFCKo_Sel.Text = lstFCListChoice.Items[choiceIndex].ToString();
-            }
             
         }
 
         public void FontChangeForm_Load(object sender, EventArgs e)
         {
+            fc.fromColorChange(grpFCSetting);
+            fc.fromColorChange(this);
+            Panel[] p = { plnAM };
+            Label[] b = { label1 };
+            fc.fromColorChange(b, b, p);
 
+            if (LMP_Projcet.Properties.Settings.Default.myColor == false)
+            {
+                rdoFCBlack.Checked = true;
+            }
+            else
+            {
+                rdoFCWhite.Checked = true;
+            }
         }
 
         public void rdoFCBasic_CheckedChanged(object sender, EventArgs e)
         {
-            grpFCSetting.Enabled = false;
+            cmbFCKo_Sel.Enabled = true;
+            cmbFCKo.Enabled = true;
         }
 
         public void rdoFCSetting_CheckedChanged(object sender, EventArgs e)
         {
-            grpFCSetting.Enabled = true;
+            cmbFCKo_Sel.Enabled = false;
+            cmbFCKo.Enabled = false;
         }
 
         private void lstboxFCSizelist_SelectedIndexChanged(object sender, EventArgs e)
@@ -147,40 +148,18 @@ namespace LibraryMgrProgram
 
             if (rdoFCBlack.Checked)
             {
-                SetText("black");
-                color = Color.FromArgb(100, 100, 100);
                 LMP_Projcet.Properties.Settings.Default.myColor = false;
                 LMP_Projcet.Properties.Settings.Default.Save();
                 this.Close();
                 Application.Restart();
-            }
-
-            if(rdoFCWhite.Checked)
+            }else if(rdoFCWhite.Checked)
             {
-                SetText("white");
-                color = Color.FromArgb(255, 255, 255);
                 LMP_Projcet.Properties.Settings.Default.myColor = true;
                 LMP_Projcet.Properties.Settings.Default.Save();
                 this.Close();
                 Application.Restart();
-
-
             }
 
         }
-        public void SetText(string str)
-        {
-            if (str == "black")
-            {
-                MessageBox.Show("어두운 테마가 선택 되었습니다.");
-            }
-
-            if(str == "white")
-            {
-                MessageBox.Show("밝은 테마가 선택 되었습니다.");
-            }
-        }
-
-       
     }
 }

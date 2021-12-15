@@ -38,56 +38,54 @@ namespace LibraryMgrProgram
             this.cboxAIOMSort = new System.Windows.Forms.ComboBox();
             this.CustomerModi = new System.Windows.Forms.TabPage();
             this.grpACMModi = new System.Windows.Forms.GroupBox();
-            this.lbACMRank2 = new System.Windows.Forms.Label();
-            this.lbACMNum2 = new System.Windows.Forms.Label();
-            this.txtACMHP2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lbACMAddr2 = new System.Windows.Forms.Label();
-            this.lbACMName2 = new System.Windows.Forms.Label();
-            this.lbACMCount2 = new System.Windows.Forms.Label();
-            this.lbACMCountView2 = new System.Windows.Forms.Label();
-            this.lbACMMemo2 = new System.Windows.Forms.Label();
-            this.picACMCustomerImg2 = new System.Windows.Forms.PictureBox();
-            this.lbACMBirth2 = new System.Windows.Forms.Label();
-            this.dgvACMStatus2 = new System.Windows.Forms.DataGridView();
-            this.lbACMSex2 = new System.Windows.Forms.Label();
-            this.btnACMModi = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbACMCustomerState2 = new System.Windows.Forms.Label();
-            this.btnACMClear1 = new System.Windows.Forms.Button();
-            this.txtACMMemoView2 = new System.Windows.Forms.TextBox();
-            this.txtACMBirth2 = new System.Windows.Forms.TextBox();
-            this.txtACMHPView2 = new System.Windows.Forms.TextBox();
-            this.txtACMNameView2 = new System.Windows.Forms.TextBox();
-            this.txtACMNumView2 = new System.Windows.Forms.TextBox();
-            this.comACMRankView2 = new System.Windows.Forms.ComboBox();
             this.txtACMAddrView2 = new System.Windows.Forms.TextBox();
+            this.comACMRankView2 = new System.Windows.Forms.ComboBox();
+            this.txtACMNumView2 = new System.Windows.Forms.TextBox();
+            this.txtACMNameView2 = new System.Windows.Forms.TextBox();
+            this.txtACMHPView2 = new System.Windows.Forms.TextBox();
+            this.txtACMBirth2 = new System.Windows.Forms.TextBox();
+            this.txtACMMemoView2 = new System.Windows.Forms.TextBox();
+            this.btnACMClear1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnACMModi = new System.Windows.Forms.Button();
+            this.lbACMSex2 = new System.Windows.Forms.Label();
+            this.dgvACMStatus2 = new System.Windows.Forms.DataGridView();
+            this.lbACMBirth2 = new System.Windows.Forms.Label();
+            this.picACMCustomerImg2 = new System.Windows.Forms.PictureBox();
+            this.lbACMMemo2 = new System.Windows.Forms.Label();
+            this.lbACMCountView2 = new System.Windows.Forms.Label();
+            this.lbACMCount2 = new System.Windows.Forms.Label();
+            this.lbACMName2 = new System.Windows.Forms.Label();
+            this.lbACMAddr2 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.txtACMHP2 = new System.Windows.Forms.Label();
+            this.lbACMNum2 = new System.Windows.Forms.Label();
+            this.lbACMRank2 = new System.Windows.Forms.Label();
             this.CustomerView = new System.Windows.Forms.TabPage();
             this.grpACMView = new System.Windows.Forms.GroupBox();
-            this.lbACMRank0 = new System.Windows.Forms.Label();
-            this.lbACMNum0 = new System.Windows.Forms.Label();
-            this.lbACMHP0 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.lbACMRankView0 = new System.Windows.Forms.Label();
-            this.lbACMNumView0 = new System.Windows.Forms.Label();
-            this.lbACMHPView0 = new System.Windows.Forms.Label();
-            this.lbACMAddr0 = new System.Windows.Forms.Label();
-            this.lbACMAddrView0 = new System.Windows.Forms.Label();
-            this.lbACMName0 = new System.Windows.Forms.Label();
-            this.lbACMNameView0 = new System.Windows.Forms.Label();
-            this.lbACMCount0 = new System.Windows.Forms.Label();
-            this.lbACMCountView0 = new System.Windows.Forms.Label();
-            this.lbACMMemo0 = new System.Windows.Forms.Label();
-            this.lbACMMemoView0 = new System.Windows.Forms.Label();
-            this.picACMCustomerImg0 = new System.Windows.Forms.PictureBox();
-            this.lbACMBirth0 = new System.Windows.Forms.Label();
-            this.dgvACMStatus0 = new System.Windows.Forms.DataGridView();
-            this.lbACMSex0 = new System.Windows.Forms.Label();
-            this.lbACMBirthView0 = new System.Windows.Forms.Label();
-            this.lbACMSexView0 = new System.Windows.Forms.Label();
-            this.btnACMDel = new System.Windows.Forms.Button();
             this.lbACMStatus0 = new System.Windows.Forms.Label();
-            this.lbACMCustomerState0 = new System.Windows.Forms.Label();
+            this.btnACMDel = new System.Windows.Forms.Button();
+            this.lbACMSexView0 = new System.Windows.Forms.Label();
+            this.lbACMBirthView0 = new System.Windows.Forms.Label();
+            this.lbACMSex0 = new System.Windows.Forms.Label();
+            this.dgvACMStatus0 = new System.Windows.Forms.DataGridView();
+            this.lbACMBirth0 = new System.Windows.Forms.Label();
+            this.picACMCustomerImg0 = new System.Windows.Forms.PictureBox();
+            this.lbACMMemoView0 = new System.Windows.Forms.Label();
+            this.lbACMMemo0 = new System.Windows.Forms.Label();
+            this.lbACMCountView0 = new System.Windows.Forms.Label();
+            this.lbACMCount0 = new System.Windows.Forms.Label();
+            this.lbACMNameView0 = new System.Windows.Forms.Label();
+            this.lbACMName0 = new System.Windows.Forms.Label();
+            this.lbACMAddrView0 = new System.Windows.Forms.Label();
+            this.lbACMAddr0 = new System.Windows.Forms.Label();
+            this.lbACMHPView0 = new System.Windows.Forms.Label();
+            this.lbACMNumView0 = new System.Windows.Forms.Label();
+            this.lbACMRankView0 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.lbACMHP0 = new System.Windows.Forms.Label();
+            this.lbACMNum0 = new System.Windows.Forms.Label();
+            this.lbACMRank0 = new System.Windows.Forms.Label();
             this.tacAIOMain = new System.Windows.Forms.TabControl();
             this.lbACMRank1 = new System.Windows.Forms.Label();
             this.lbACMNum1 = new System.Windows.Forms.Label();
@@ -115,6 +113,9 @@ namespace LibraryMgrProgram
             this.rdbACMMan1 = new System.Windows.Forms.RadioButton();
             this.rdbACMWom1 = new System.Windows.Forms.RadioButton();
             this.txtACMAddrView1 = new System.Windows.Forms.TextBox();
+            this.lbACMPW = new System.Windows.Forms.Label();
+            this.txtACMPW2 = new System.Windows.Forms.TextBox();
+            this.btnACMPWClear = new System.Windows.Forms.Button();
             this.grpcACMSex2 = new LMP_Projcet.Methods.GroupBoxBorderChagne();
             this.rdbACMWom2 = new System.Windows.Forms.RadioButton();
             this.rdbACMMan2 = new System.Windows.Forms.RadioButton();
@@ -122,12 +123,12 @@ namespace LibraryMgrProgram
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMCustomerList)).BeginInit();
             this.CustomerModi.SuspendLayout();
             this.grpACMModi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg2)).BeginInit();
             this.CustomerView.SuspendLayout();
             this.grpACMView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus0)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg0)).BeginInit();
             this.tacAIOMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus1)).BeginInit();
@@ -150,20 +151,22 @@ namespace LibraryMgrProgram
             this.dgvACMCustomerList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvACMCustomerList.Size = new System.Drawing.Size(686, 497);
             this.dgvACMCustomerList.TabIndex = 119;
+            this.dgvACMCustomerList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvACMCustomerList_CellContentClick);
             // 
             // btnAIOMSearch
             // 
-            this.btnAIOMSearch.Font = new System.Drawing.Font("Gulim", 10F);
-            this.btnAIOMSearch.Location = new System.Drawing.Point(697, 14);
+            this.btnAIOMSearch.Font = new System.Drawing.Font("Gulim", 12F);
+            this.btnAIOMSearch.Location = new System.Drawing.Point(677, 14);
             this.btnAIOMSearch.Name = "btnAIOMSearch";
-            this.btnAIOMSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnAIOMSearch.Size = new System.Drawing.Size(95, 23);
             this.btnAIOMSearch.TabIndex = 142;
             this.btnAIOMSearch.Text = "회원검색";
             this.btnAIOMSearch.UseVisualStyleBackColor = true;
+            this.btnAIOMSearch.Click += new System.EventHandler(this.btnAIOMSearch_Click);
             // 
             // txtAIOMSearch
             // 
-            this.txtAIOMSearch.Location = new System.Drawing.Point(329, 13);
+            this.txtAIOMSearch.Location = new System.Drawing.Point(309, 14);
             this.txtAIOMSearch.Name = "txtAIOMSearch";
             this.txtAIOMSearch.Size = new System.Drawing.Size(362, 21);
             this.txtAIOMSearch.TabIndex = 143;
@@ -172,16 +175,14 @@ namespace LibraryMgrProgram
             // 
             this.cboxAIOMSort.FormattingEnabled = true;
             this.cboxAIOMSort.Items.AddRange(new object[] {
-            "회원명",
-            "회원번호",
-            "대출기간",
-            "전호번호",
+            "이름",
+            "아이디",
             "생년월일"});
-            this.cboxAIOMSort.Location = new System.Drawing.Point(228, 14);
+            this.cboxAIOMSort.Location = new System.Drawing.Point(208, 15);
             this.cboxAIOMSort.Name = "cboxAIOMSort";
             this.cboxAIOMSort.Size = new System.Drawing.Size(95, 20);
             this.cboxAIOMSort.TabIndex = 144;
-            this.cboxAIOMSort.Text = "회원명";
+            this.cboxAIOMSort.Text = "이름";
             // 
             // CustomerModi
             // 
@@ -196,6 +197,9 @@ namespace LibraryMgrProgram
             // grpACMModi
             // 
             this.grpACMModi.BackColor = System.Drawing.Color.White;
+            this.grpACMModi.Controls.Add(this.btnACMPWClear);
+            this.grpACMModi.Controls.Add(this.txtACMPW2);
+            this.grpACMModi.Controls.Add(this.lbACMPW);
             this.grpACMModi.Controls.Add(this.txtACMAddrView2);
             this.grpACMModi.Controls.Add(this.grpcACMSex2);
             this.grpACMModi.Controls.Add(this.comACMRankView2);
@@ -205,7 +209,6 @@ namespace LibraryMgrProgram
             this.grpACMModi.Controls.Add(this.txtACMBirth2);
             this.grpACMModi.Controls.Add(this.txtACMMemoView2);
             this.grpACMModi.Controls.Add(this.btnACMClear1);
-            this.grpACMModi.Controls.Add(this.lbACMCustomerState2);
             this.grpACMModi.Controls.Add(this.label2);
             this.grpACMModi.Controls.Add(this.btnACMModi);
             this.grpACMModi.Controls.Add(this.lbACMSex2);
@@ -229,208 +232,13 @@ namespace LibraryMgrProgram
             this.grpACMModi.TabStop = false;
             this.grpACMModi.Text = "회원수정";
             // 
-            // lbACMRank2
+            // txtACMAddrView2
             // 
-            this.lbACMRank2.AutoSize = true;
-            this.lbACMRank2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMRank2.Location = new System.Drawing.Point(44, 33);
-            this.lbACMRank2.Name = "lbACMRank2";
-            this.lbACMRank2.Size = new System.Drawing.Size(33, 13);
-            this.lbACMRank2.TabIndex = 0;
-            this.lbACMRank2.Text = "등급";
-            // 
-            // lbACMNum2
-            // 
-            this.lbACMNum2.AutoSize = true;
-            this.lbACMNum2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMNum2.Location = new System.Drawing.Point(182, 33);
-            this.lbACMNum2.Name = "lbACMNum2";
-            this.lbACMNum2.Size = new System.Drawing.Size(59, 13);
-            this.lbACMNum2.TabIndex = 4;
-            this.lbACMNum2.Text = "회원번호";
-            // 
-            // txtACMHP2
-            // 
-            this.txtACMHP2.AutoSize = true;
-            this.txtACMHP2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.txtACMHP2.Location = new System.Drawing.Point(179, 68);
-            this.txtACMHP2.Name = "txtACMHP2";
-            this.txtACMHP2.Size = new System.Drawing.Size(59, 13);
-            this.txtACMHP2.TabIndex = 5;
-            this.txtACMHP2.Text = "전화번호";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 317);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 16);
-            this.label12.TabIndex = 6;
-            // 
-            // lbACMAddr2
-            // 
-            this.lbACMAddr2.AutoSize = true;
-            this.lbACMAddr2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMAddr2.Location = new System.Drawing.Point(42, 231);
-            this.lbACMAddr2.Name = "lbACMAddr2";
-            this.lbACMAddr2.Size = new System.Drawing.Size(33, 13);
-            this.lbACMAddr2.TabIndex = 33;
-            this.lbACMAddr2.Text = "주소";
-            // 
-            // lbACMName2
-            // 
-            this.lbACMName2.AutoSize = true;
-            this.lbACMName2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMName2.Location = new System.Drawing.Point(29, 68);
-            this.lbACMName2.Name = "lbACMName2";
-            this.lbACMName2.Size = new System.Drawing.Size(46, 13);
-            this.lbACMName2.TabIndex = 35;
-            this.lbACMName2.Text = "회원명";
-            // 
-            // lbACMCount2
-            // 
-            this.lbACMCount2.AutoSize = true;
-            this.lbACMCount2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMCount2.Location = new System.Drawing.Point(209, 103);
-            this.lbACMCount2.Name = "lbACMCount2";
-            this.lbACMCount2.Size = new System.Drawing.Size(91, 13);
-            this.lbACMCount2.TabIndex = 37;
-            this.lbACMCount2.Text = "대출/가능권수";
-            // 
-            // lbACMCountView2
-            // 
-            this.lbACMCountView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMCountView2.Location = new System.Drawing.Point(309, 95);
-            this.lbACMCountView2.Name = "lbACMCountView2";
-            this.lbACMCountView2.Size = new System.Drawing.Size(53, 26);
-            this.lbACMCountView2.TabIndex = 38;
-            this.lbACMCountView2.Text = "00/00";
-            this.lbACMCountView2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMMemo2
-            // 
-            this.lbACMMemo2.AutoSize = true;
-            this.lbACMMemo2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMMemo2.Location = new System.Drawing.Point(42, 165);
-            this.lbACMMemo2.Name = "lbACMMemo2";
-            this.lbACMMemo2.Size = new System.Drawing.Size(33, 13);
-            this.lbACMMemo2.TabIndex = 39;
-            this.lbACMMemo2.Text = "메모";
-            // 
-            // picACMCustomerImg2
-            // 
-            this.picACMCustomerImg2.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
-            this.picACMCustomerImg2.Location = new System.Drawing.Point(369, 22);
-            this.picACMCustomerImg2.Name = "picACMCustomerImg2";
-            this.picACMCustomerImg2.Size = new System.Drawing.Size(108, 130);
-            this.picACMCustomerImg2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picACMCustomerImg2.TabIndex = 50;
-            this.picACMCustomerImg2.TabStop = false;
-            // 
-            // lbACMBirth2
-            // 
-            this.lbACMBirth2.AutoSize = true;
-            this.lbACMBirth2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMBirth2.Location = new System.Drawing.Point(18, 137);
-            this.lbACMBirth2.Name = "lbACMBirth2";
-            this.lbACMBirth2.Size = new System.Drawing.Size(59, 13);
-            this.lbACMBirth2.TabIndex = 143;
-            this.lbACMBirth2.Text = "생년월일";
-            // 
-            // dgvACMStatus2
-            // 
-            this.dgvACMStatus2.BackgroundColor = System.Drawing.Color.White;
-            this.dgvACMStatus2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvACMStatus2.GridColor = System.Drawing.Color.White;
-            this.dgvACMStatus2.Location = new System.Drawing.Point(83, 269);
-            this.dgvACMStatus2.Name = "dgvACMStatus2";
-            this.dgvACMStatus2.RowTemplate.Height = 23;
-            this.dgvACMStatus2.Size = new System.Drawing.Size(394, 181);
-            this.dgvACMStatus2.TabIndex = 144;
-            // 
-            // lbACMSex2
-            // 
-            this.lbACMSex2.AutoSize = true;
-            this.lbACMSex2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMSex2.Location = new System.Drawing.Point(44, 103);
-            this.lbACMSex2.Name = "lbACMSex2";
-            this.lbACMSex2.Size = new System.Drawing.Size(33, 13);
-            this.lbACMSex2.TabIndex = 51;
-            this.lbACMSex2.Text = "성별";
-            // 
-            // btnACMModi
-            // 
-            this.btnACMModi.Location = new System.Drawing.Point(402, 468);
-            this.btnACMModi.Name = "btnACMModi";
-            this.btnACMModi.Size = new System.Drawing.Size(75, 23);
-            this.btnACMModi.TabIndex = 148;
-            this.btnACMModi.Text = "수정";
-            this.btnACMModi.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(16, 269);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 149;
-            this.label2.Text = "대출현황";
-            // 
-            // lbACMCustomerState2
-            // 
-            this.lbACMCustomerState2.AutoSize = true;
-            this.lbACMCustomerState2.Font = new System.Drawing.Font("Gulim", 12F);
-            this.lbACMCustomerState2.Location = new System.Drawing.Point(389, 182);
-            this.lbACMCustomerState2.Name = "lbACMCustomerState2";
-            this.lbACMCustomerState2.Size = new System.Drawing.Size(72, 16);
-            this.lbACMCustomerState2.TabIndex = 152;
-            this.lbACMCustomerState2.Text = "대출가능";
-            // 
-            // btnACMClear1
-            // 
-            this.btnACMClear1.Location = new System.Drawing.Point(321, 468);
-            this.btnACMClear1.Name = "btnACMClear1";
-            this.btnACMClear1.Size = new System.Drawing.Size(75, 23);
-            this.btnACMClear1.TabIndex = 153;
-            this.btnACMClear1.Text = "초기화";
-            this.btnACMClear1.UseVisualStyleBackColor = true;
-            // 
-            // txtACMMemoView2
-            // 
-            this.txtACMMemoView2.Location = new System.Drawing.Point(83, 165);
-            this.txtACMMemoView2.Multiline = true;
-            this.txtACMMemoView2.Name = "txtACMMemoView2";
-            this.txtACMMemoView2.Size = new System.Drawing.Size(279, 50);
-            this.txtACMMemoView2.TabIndex = 155;
-            // 
-            // txtACMBirth2
-            // 
-            this.txtACMBirth2.Location = new System.Drawing.Point(83, 131);
-            this.txtACMBirth2.Name = "txtACMBirth2";
-            this.txtACMBirth2.Size = new System.Drawing.Size(130, 26);
-            this.txtACMBirth2.TabIndex = 156;
-            // 
-            // txtACMHPView2
-            // 
-            this.txtACMHPView2.Location = new System.Drawing.Point(244, 62);
-            this.txtACMHPView2.Name = "txtACMHPView2";
-            this.txtACMHPView2.Size = new System.Drawing.Size(118, 26);
-            this.txtACMHPView2.TabIndex = 157;
-            // 
-            // txtACMNameView2
-            // 
-            this.txtACMNameView2.Location = new System.Drawing.Point(83, 62);
-            this.txtACMNameView2.Name = "txtACMNameView2";
-            this.txtACMNameView2.Size = new System.Drawing.Size(75, 26);
-            this.txtACMNameView2.TabIndex = 158;
-            // 
-            // txtACMNumView2
-            // 
-            this.txtACMNumView2.Location = new System.Drawing.Point(244, 25);
-            this.txtACMNumView2.Name = "txtACMNumView2";
-            this.txtACMNumView2.Size = new System.Drawing.Size(56, 26);
-            this.txtACMNumView2.TabIndex = 159;
+            this.txtACMAddrView2.Location = new System.Drawing.Point(80, 196);
+            this.txtACMAddrView2.Multiline = true;
+            this.txtACMAddrView2.Name = "txtACMAddrView2";
+            this.txtACMAddrView2.Size = new System.Drawing.Size(394, 26);
+            this.txtACMAddrView2.TabIndex = 164;
             // 
             // comACMRankView2
             // 
@@ -447,13 +255,200 @@ namespace LibraryMgrProgram
             this.comACMRankView2.Size = new System.Drawing.Size(65, 24);
             this.comACMRankView2.TabIndex = 145;
             // 
-            // txtACMAddrView2
+            // txtACMNumView2
             // 
-            this.txtACMAddrView2.Location = new System.Drawing.Point(81, 225);
-            this.txtACMAddrView2.Multiline = true;
-            this.txtACMAddrView2.Name = "txtACMAddrView2";
-            this.txtACMAddrView2.Size = new System.Drawing.Size(394, 26);
-            this.txtACMAddrView2.TabIndex = 164;
+            this.txtACMNumView2.Location = new System.Drawing.Point(244, 25);
+            this.txtACMNumView2.Name = "txtACMNumView2";
+            this.txtACMNumView2.ReadOnly = true;
+            this.txtACMNumView2.Size = new System.Drawing.Size(56, 26);
+            this.txtACMNumView2.TabIndex = 159;
+            // 
+            // txtACMNameView2
+            // 
+            this.txtACMNameView2.Location = new System.Drawing.Point(83, 62);
+            this.txtACMNameView2.Name = "txtACMNameView2";
+            this.txtACMNameView2.Size = new System.Drawing.Size(75, 26);
+            this.txtACMNameView2.TabIndex = 158;
+            // 
+            // txtACMHPView2
+            // 
+            this.txtACMHPView2.Location = new System.Drawing.Point(244, 62);
+            this.txtACMHPView2.Name = "txtACMHPView2";
+            this.txtACMHPView2.Size = new System.Drawing.Size(118, 26);
+            this.txtACMHPView2.TabIndex = 157;
+            // 
+            // txtACMBirth2
+            // 
+            this.txtACMBirth2.Location = new System.Drawing.Point(80, 132);
+            this.txtACMBirth2.Name = "txtACMBirth2";
+            this.txtACMBirth2.Size = new System.Drawing.Size(155, 26);
+            this.txtACMBirth2.TabIndex = 156;
+            // 
+            // txtACMMemoView2
+            // 
+            this.txtACMMemoView2.Location = new System.Drawing.Point(80, 228);
+            this.txtACMMemoView2.Multiline = true;
+            this.txtACMMemoView2.Name = "txtACMMemoView2";
+            this.txtACMMemoView2.Size = new System.Drawing.Size(394, 50);
+            this.txtACMMemoView2.TabIndex = 155;
+            // 
+            // btnACMClear1
+            // 
+            this.btnACMClear1.Location = new System.Drawing.Point(321, 456);
+            this.btnACMClear1.Name = "btnACMClear1";
+            this.btnACMClear1.Size = new System.Drawing.Size(75, 23);
+            this.btnACMClear1.TabIndex = 153;
+            this.btnACMClear1.Text = "초기화";
+            this.btnACMClear1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(18, 284);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 149;
+            this.label2.Text = "대출현황";
+            // 
+            // btnACMModi
+            // 
+            this.btnACMModi.Location = new System.Drawing.Point(402, 456);
+            this.btnACMModi.Name = "btnACMModi";
+            this.btnACMModi.Size = new System.Drawing.Size(75, 23);
+            this.btnACMModi.TabIndex = 148;
+            this.btnACMModi.Text = "수정";
+            this.btnACMModi.UseVisualStyleBackColor = true;
+            this.btnACMModi.Click += new System.EventHandler(this.btnACMModi_Click);
+            // 
+            // lbACMSex2
+            // 
+            this.lbACMSex2.AutoSize = true;
+            this.lbACMSex2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMSex2.Location = new System.Drawing.Point(44, 103);
+            this.lbACMSex2.Name = "lbACMSex2";
+            this.lbACMSex2.Size = new System.Drawing.Size(33, 13);
+            this.lbACMSex2.TabIndex = 51;
+            this.lbACMSex2.Text = "성별";
+            // 
+            // dgvACMStatus2
+            // 
+            this.dgvACMStatus2.BackgroundColor = System.Drawing.Color.White;
+            this.dgvACMStatus2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvACMStatus2.GridColor = System.Drawing.Color.White;
+            this.dgvACMStatus2.Location = new System.Drawing.Point(80, 284);
+            this.dgvACMStatus2.Name = "dgvACMStatus2";
+            this.dgvACMStatus2.RowTemplate.Height = 23;
+            this.dgvACMStatus2.Size = new System.Drawing.Size(394, 166);
+            this.dgvACMStatus2.TabIndex = 144;
+            // 
+            // lbACMBirth2
+            // 
+            this.lbACMBirth2.AutoSize = true;
+            this.lbACMBirth2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMBirth2.Location = new System.Drawing.Point(18, 138);
+            this.lbACMBirth2.Name = "lbACMBirth2";
+            this.lbACMBirth2.Size = new System.Drawing.Size(59, 13);
+            this.lbACMBirth2.TabIndex = 143;
+            this.lbACMBirth2.Text = "생년월일";
+            // 
+            // picACMCustomerImg2
+            // 
+            this.picACMCustomerImg2.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
+            this.picACMCustomerImg2.Location = new System.Drawing.Point(369, 22);
+            this.picACMCustomerImg2.Name = "picACMCustomerImg2";
+            this.picACMCustomerImg2.Size = new System.Drawing.Size(108, 130);
+            this.picACMCustomerImg2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picACMCustomerImg2.TabIndex = 50;
+            this.picACMCustomerImg2.TabStop = false;
+            // 
+            // lbACMMemo2
+            // 
+            this.lbACMMemo2.AutoSize = true;
+            this.lbACMMemo2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMMemo2.Location = new System.Drawing.Point(39, 228);
+            this.lbACMMemo2.Name = "lbACMMemo2";
+            this.lbACMMemo2.Size = new System.Drawing.Size(33, 13);
+            this.lbACMMemo2.TabIndex = 39;
+            this.lbACMMemo2.Text = "메모";
+            // 
+            // lbACMCountView2
+            // 
+            this.lbACMCountView2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMCountView2.Location = new System.Drawing.Point(309, 95);
+            this.lbACMCountView2.Name = "lbACMCountView2";
+            this.lbACMCountView2.Size = new System.Drawing.Size(53, 26);
+            this.lbACMCountView2.TabIndex = 38;
+            this.lbACMCountView2.Text = "00/00";
+            this.lbACMCountView2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbACMCount2
+            // 
+            this.lbACMCount2.AutoSize = true;
+            this.lbACMCount2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMCount2.Location = new System.Drawing.Point(209, 103);
+            this.lbACMCount2.Name = "lbACMCount2";
+            this.lbACMCount2.Size = new System.Drawing.Size(91, 13);
+            this.lbACMCount2.TabIndex = 37;
+            this.lbACMCount2.Text = "대출/가능권수";
+            // 
+            // lbACMName2
+            // 
+            this.lbACMName2.AutoSize = true;
+            this.lbACMName2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMName2.Location = new System.Drawing.Point(29, 68);
+            this.lbACMName2.Name = "lbACMName2";
+            this.lbACMName2.Size = new System.Drawing.Size(46, 13);
+            this.lbACMName2.TabIndex = 35;
+            this.lbACMName2.Text = "회원명";
+            // 
+            // lbACMAddr2
+            // 
+            this.lbACMAddr2.AutoSize = true;
+            this.lbACMAddr2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMAddr2.Location = new System.Drawing.Point(41, 202);
+            this.lbACMAddr2.Name = "lbACMAddr2";
+            this.lbACMAddr2.Size = new System.Drawing.Size(33, 13);
+            this.lbACMAddr2.TabIndex = 33;
+            this.lbACMAddr2.Text = "주소";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(16, 317);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(0, 16);
+            this.label12.TabIndex = 6;
+            // 
+            // txtACMHP2
+            // 
+            this.txtACMHP2.AutoSize = true;
+            this.txtACMHP2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txtACMHP2.Location = new System.Drawing.Point(179, 68);
+            this.txtACMHP2.Name = "txtACMHP2";
+            this.txtACMHP2.Size = new System.Drawing.Size(59, 13);
+            this.txtACMHP2.TabIndex = 5;
+            this.txtACMHP2.Text = "전화번호";
+            // 
+            // lbACMNum2
+            // 
+            this.lbACMNum2.AutoSize = true;
+            this.lbACMNum2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMNum2.Location = new System.Drawing.Point(182, 33);
+            this.lbACMNum2.Name = "lbACMNum2";
+            this.lbACMNum2.Size = new System.Drawing.Size(59, 13);
+            this.lbACMNum2.TabIndex = 4;
+            this.lbACMNum2.Text = "회원번호";
+            // 
+            // lbACMRank2
+            // 
+            this.lbACMRank2.AutoSize = true;
+            this.lbACMRank2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMRank2.Location = new System.Drawing.Point(44, 33);
+            this.lbACMRank2.Name = "lbACMRank2";
+            this.lbACMRank2.Size = new System.Drawing.Size(33, 13);
+            this.lbACMRank2.TabIndex = 0;
+            this.lbACMRank2.Text = "등급";
             // 
             // CustomerView
             // 
@@ -469,7 +464,6 @@ namespace LibraryMgrProgram
             // grpACMView
             // 
             this.grpACMView.BackColor = System.Drawing.Color.White;
-            this.grpACMView.Controls.Add(this.lbACMCustomerState0);
             this.grpACMView.Controls.Add(this.lbACMStatus0);
             this.grpACMView.Controls.Add(this.btnACMDel);
             this.grpACMView.Controls.Add(this.lbACMSexView0);
@@ -501,180 +495,43 @@ namespace LibraryMgrProgram
             this.grpACMView.TabStop = false;
             this.grpACMView.Text = "회원정보";
             // 
-            // lbACMRank0
+            // lbACMStatus0
             // 
-            this.lbACMRank0.AutoSize = true;
-            this.lbACMRank0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMRank0.Location = new System.Drawing.Point(44, 33);
-            this.lbACMRank0.Name = "lbACMRank0";
-            this.lbACMRank0.Size = new System.Drawing.Size(33, 13);
-            this.lbACMRank0.TabIndex = 0;
-            this.lbACMRank0.Text = "등급";
+            this.lbACMStatus0.AutoSize = true;
+            this.lbACMStatus0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMStatus0.Location = new System.Drawing.Point(16, 269);
+            this.lbACMStatus0.Name = "lbACMStatus0";
+            this.lbACMStatus0.Size = new System.Drawing.Size(59, 13);
+            this.lbACMStatus0.TabIndex = 149;
+            this.lbACMStatus0.Text = "대출현황";
             // 
-            // lbACMNum0
+            // btnACMDel
             // 
-            this.lbACMNum0.AutoSize = true;
-            this.lbACMNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMNum0.Location = new System.Drawing.Point(182, 33);
-            this.lbACMNum0.Name = "lbACMNum0";
-            this.lbACMNum0.Size = new System.Drawing.Size(59, 13);
-            this.lbACMNum0.TabIndex = 4;
-            this.lbACMNum0.Text = "회원번호";
+            this.btnACMDel.Location = new System.Drawing.Point(402, 456);
+            this.btnACMDel.Name = "btnACMDel";
+            this.btnACMDel.Size = new System.Drawing.Size(75, 23);
+            this.btnACMDel.TabIndex = 148;
+            this.btnACMDel.Text = "삭제";
+            this.btnACMDel.UseVisualStyleBackColor = true;
+            this.btnACMDel.Click += new System.EventHandler(this.btnACMDel_Click);
             // 
-            // lbACMHP0
+            // lbACMSexView0
             // 
-            this.lbACMHP0.AutoSize = true;
-            this.lbACMHP0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMHP0.Location = new System.Drawing.Point(179, 68);
-            this.lbACMHP0.Name = "lbACMHP0";
-            this.lbACMHP0.Size = new System.Drawing.Size(59, 13);
-            this.lbACMHP0.TabIndex = 5;
-            this.lbACMHP0.Text = "전화번호";
+            this.lbACMSexView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMSexView0.Location = new System.Drawing.Point(83, 95);
+            this.lbACMSexView0.Name = "lbACMSexView0";
+            this.lbACMSexView0.Size = new System.Drawing.Size(56, 26);
+            this.lbACMSexView0.TabIndex = 147;
+            this.lbACMSexView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label56
+            // lbACMBirthView0
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(16, 317);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(0, 16);
-            this.label56.TabIndex = 6;
-            // 
-            // lbACMRankView0
-            // 
-            this.lbACMRankView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMRankView0.Location = new System.Drawing.Point(83, 25);
-            this.lbACMRankView0.Name = "lbACMRankView0";
-            this.lbACMRankView0.Size = new System.Drawing.Size(39, 26);
-            this.lbACMRankView0.TabIndex = 30;
-            this.lbACMRankView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMNumView0
-            // 
-            this.lbACMNumView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMNumView0.Location = new System.Drawing.Point(244, 25);
-            this.lbACMNumView0.Name = "lbACMNumView0";
-            this.lbACMNumView0.Size = new System.Drawing.Size(56, 26);
-            this.lbACMNumView0.TabIndex = 31;
-            this.lbACMNumView0.Text = "00001";
-            this.lbACMNumView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMHPView0
-            // 
-            this.lbACMHPView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMHPView0.Location = new System.Drawing.Point(244, 60);
-            this.lbACMHPView0.Name = "lbACMHPView0";
-            this.lbACMHPView0.Size = new System.Drawing.Size(118, 26);
-            this.lbACMHPView0.TabIndex = 32;
-            this.lbACMHPView0.Text = "010-0000-0000";
-            this.lbACMHPView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMAddr0
-            // 
-            this.lbACMAddr0.AutoSize = true;
-            this.lbACMAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMAddr0.Location = new System.Drawing.Point(42, 231);
-            this.lbACMAddr0.Name = "lbACMAddr0";
-            this.lbACMAddr0.Size = new System.Drawing.Size(33, 13);
-            this.lbACMAddr0.TabIndex = 33;
-            this.lbACMAddr0.Text = "주소";
-            // 
-            // lbACMAddrView0
-            // 
-            this.lbACMAddrView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMAddrView0.Location = new System.Drawing.Point(81, 223);
-            this.lbACMAddrView0.Name = "lbACMAddrView0";
-            this.lbACMAddrView0.Size = new System.Drawing.Size(394, 26);
-            this.lbACMAddrView0.TabIndex = 34;
-            this.lbACMAddrView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMName0
-            // 
-            this.lbACMName0.AutoSize = true;
-            this.lbACMName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMName0.Location = new System.Drawing.Point(29, 68);
-            this.lbACMName0.Name = "lbACMName0";
-            this.lbACMName0.Size = new System.Drawing.Size(46, 13);
-            this.lbACMName0.TabIndex = 35;
-            this.lbACMName0.Text = "회원명";
-            // 
-            // lbACMNameView0
-            // 
-            this.lbACMNameView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMNameView0.Location = new System.Drawing.Point(83, 60);
-            this.lbACMNameView0.Name = "lbACMNameView0";
-            this.lbACMNameView0.Size = new System.Drawing.Size(75, 26);
-            this.lbACMNameView0.TabIndex = 36;
-            this.lbACMNameView0.Text = "남궁새콤";
-            this.lbACMNameView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMCount0
-            // 
-            this.lbACMCount0.AutoSize = true;
-            this.lbACMCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMCount0.Location = new System.Drawing.Point(209, 103);
-            this.lbACMCount0.Name = "lbACMCount0";
-            this.lbACMCount0.Size = new System.Drawing.Size(91, 13);
-            this.lbACMCount0.TabIndex = 37;
-            this.lbACMCount0.Text = "대출/가능권수";
-            // 
-            // lbACMCountView0
-            // 
-            this.lbACMCountView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMCountView0.Location = new System.Drawing.Point(309, 95);
-            this.lbACMCountView0.Name = "lbACMCountView0";
-            this.lbACMCountView0.Size = new System.Drawing.Size(53, 26);
-            this.lbACMCountView0.TabIndex = 38;
-            this.lbACMCountView0.Text = "00/00";
-            this.lbACMCountView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbACMMemo0
-            // 
-            this.lbACMMemo0.AutoSize = true;
-            this.lbACMMemo0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMMemo0.Location = new System.Drawing.Point(42, 165);
-            this.lbACMMemo0.Name = "lbACMMemo0";
-            this.lbACMMemo0.Size = new System.Drawing.Size(33, 13);
-            this.lbACMMemo0.TabIndex = 39;
-            this.lbACMMemo0.Text = "메모";
-            // 
-            // lbACMMemoView0
-            // 
-            this.lbACMMemoView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMMemoView0.Location = new System.Drawing.Point(83, 165);
-            this.lbACMMemoView0.Name = "lbACMMemoView0";
-            this.lbACMMemoView0.Size = new System.Drawing.Size(279, 50);
-            this.lbACMMemoView0.TabIndex = 40;
-            this.lbACMMemoView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // picACMCustomerImg0
-            // 
-            this.picACMCustomerImg0.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
-            this.picACMCustomerImg0.Location = new System.Drawing.Point(369, 22);
-            this.picACMCustomerImg0.Name = "picACMCustomerImg0";
-            this.picACMCustomerImg0.Size = new System.Drawing.Size(108, 130);
-            this.picACMCustomerImg0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picACMCustomerImg0.TabIndex = 50;
-            this.picACMCustomerImg0.TabStop = false;
-            // 
-            // lbACMBirth0
-            // 
-            this.lbACMBirth0.AutoSize = true;
-            this.lbACMBirth0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMBirth0.Location = new System.Drawing.Point(18, 134);
-            this.lbACMBirth0.Name = "lbACMBirth0";
-            this.lbACMBirth0.Size = new System.Drawing.Size(59, 13);
-            this.lbACMBirth0.TabIndex = 143;
-            this.lbACMBirth0.Text = "생년월일";
-            // 
-            // dgvACMStatus0
-            // 
-            this.dgvACMStatus0.BackgroundColor = System.Drawing.Color.White;
-            this.dgvACMStatus0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvACMStatus0.Location = new System.Drawing.Point(83, 269);
-            this.dgvACMStatus0.Name = "dgvACMStatus0";
-            this.dgvACMStatus0.RowTemplate.Height = 23;
-            this.dgvACMStatus0.Size = new System.Drawing.Size(394, 181);
-            this.dgvACMStatus0.TabIndex = 144;
+            this.lbACMBirthView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMBirthView0.Location = new System.Drawing.Point(83, 129);
+            this.lbACMBirthView0.Name = "lbACMBirthView0";
+            this.lbACMBirthView0.Size = new System.Drawing.Size(130, 26);
+            this.lbACMBirthView0.TabIndex = 146;
+            this.lbACMBirthView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbACMSex0
             // 
@@ -686,54 +543,181 @@ namespace LibraryMgrProgram
             this.lbACMSex0.TabIndex = 51;
             this.lbACMSex0.Text = "성별";
             // 
-            // lbACMBirthView0
+            // dgvACMStatus0
             // 
-            this.lbACMBirthView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMBirthView0.Location = new System.Drawing.Point(83, 126);
-            this.lbACMBirthView0.Name = "lbACMBirthView0";
-            this.lbACMBirthView0.Size = new System.Drawing.Size(130, 26);
-            this.lbACMBirthView0.TabIndex = 146;
-            this.lbACMBirthView0.Text = "0000년00월00일";
-            this.lbACMBirthView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dgvACMStatus0.AllowUserToResizeColumns = false;
+            this.dgvACMStatus0.AllowUserToResizeRows = false;
+            this.dgvACMStatus0.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvACMStatus0.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvACMStatus0.BackgroundColor = System.Drawing.Color.White;
+            this.dgvACMStatus0.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvACMStatus0.Location = new System.Drawing.Point(83, 269);
+            this.dgvACMStatus0.Name = "dgvACMStatus0";
+            this.dgvACMStatus0.RowTemplate.Height = 23;
+            this.dgvACMStatus0.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvACMStatus0.Size = new System.Drawing.Size(394, 181);
+            this.dgvACMStatus0.TabIndex = 144;
             // 
-            // lbACMSexView0
+            // lbACMBirth0
             // 
-            this.lbACMSexView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbACMSexView0.Location = new System.Drawing.Point(83, 95);
-            this.lbACMSexView0.Name = "lbACMSexView0";
-            this.lbACMSexView0.Size = new System.Drawing.Size(56, 26);
-            this.lbACMSexView0.TabIndex = 147;
-            this.lbACMSexView0.Text = "남자";
-            this.lbACMSexView0.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbACMBirth0.AutoSize = true;
+            this.lbACMBirth0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMBirth0.Location = new System.Drawing.Point(18, 137);
+            this.lbACMBirth0.Name = "lbACMBirth0";
+            this.lbACMBirth0.Size = new System.Drawing.Size(59, 13);
+            this.lbACMBirth0.TabIndex = 143;
+            this.lbACMBirth0.Text = "생년월일";
             // 
-            // btnACMDel
+            // picACMCustomerImg0
             // 
-            this.btnACMDel.Location = new System.Drawing.Point(402, 468);
-            this.btnACMDel.Name = "btnACMDel";
-            this.btnACMDel.Size = new System.Drawing.Size(75, 23);
-            this.btnACMDel.TabIndex = 148;
-            this.btnACMDel.Text = "삭제";
-            this.btnACMDel.UseVisualStyleBackColor = true;
+            this.picACMCustomerImg0.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
+            this.picACMCustomerImg0.Location = new System.Drawing.Point(369, 22);
+            this.picACMCustomerImg0.Name = "picACMCustomerImg0";
+            this.picACMCustomerImg0.Size = new System.Drawing.Size(108, 130);
+            this.picACMCustomerImg0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picACMCustomerImg0.TabIndex = 50;
+            this.picACMCustomerImg0.TabStop = false;
             // 
-            // lbACMStatus0
+            // lbACMMemoView0
             // 
-            this.lbACMStatus0.AutoSize = true;
-            this.lbACMStatus0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMStatus0.Location = new System.Drawing.Point(16, 269);
-            this.lbACMStatus0.Name = "lbACMStatus0";
-            this.lbACMStatus0.Size = new System.Drawing.Size(59, 13);
-            this.lbACMStatus0.TabIndex = 149;
-            this.lbACMStatus0.Text = "대출현황";
+            this.lbACMMemoView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMMemoView0.Location = new System.Drawing.Point(83, 203);
+            this.lbACMMemoView0.Name = "lbACMMemoView0";
+            this.lbACMMemoView0.Size = new System.Drawing.Size(394, 50);
+            this.lbACMMemoView0.TabIndex = 40;
+            this.lbACMMemoView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lbACMCustomerState0
+            // lbACMMemo0
             // 
-            this.lbACMCustomerState0.AutoSize = true;
-            this.lbACMCustomerState0.Font = new System.Drawing.Font("Gulim", 12F);
-            this.lbACMCustomerState0.Location = new System.Drawing.Point(389, 182);
-            this.lbACMCustomerState0.Name = "lbACMCustomerState0";
-            this.lbACMCustomerState0.Size = new System.Drawing.Size(72, 16);
-            this.lbACMCustomerState0.TabIndex = 152;
-            this.lbACMCustomerState0.Text = "대출가능";
+            this.lbACMMemo0.AutoSize = true;
+            this.lbACMMemo0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMMemo0.Location = new System.Drawing.Point(42, 203);
+            this.lbACMMemo0.Name = "lbACMMemo0";
+            this.lbACMMemo0.Size = new System.Drawing.Size(33, 13);
+            this.lbACMMemo0.TabIndex = 39;
+            this.lbACMMemo0.Text = "메모";
+            // 
+            // lbACMCountView0
+            // 
+            this.lbACMCountView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMCountView0.Location = new System.Drawing.Point(309, 95);
+            this.lbACMCountView0.Name = "lbACMCountView0";
+            this.lbACMCountView0.Size = new System.Drawing.Size(53, 26);
+            this.lbACMCountView0.TabIndex = 38;
+            this.lbACMCountView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbACMCount0
+            // 
+            this.lbACMCount0.AutoSize = true;
+            this.lbACMCount0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMCount0.Location = new System.Drawing.Point(209, 103);
+            this.lbACMCount0.Name = "lbACMCount0";
+            this.lbACMCount0.Size = new System.Drawing.Size(91, 13);
+            this.lbACMCount0.TabIndex = 37;
+            this.lbACMCount0.Text = "대출/가능권수";
+            // 
+            // lbACMNameView0
+            // 
+            this.lbACMNameView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMNameView0.Location = new System.Drawing.Point(83, 60);
+            this.lbACMNameView0.Name = "lbACMNameView0";
+            this.lbACMNameView0.Size = new System.Drawing.Size(75, 26);
+            this.lbACMNameView0.TabIndex = 36;
+            this.lbACMNameView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbACMName0
+            // 
+            this.lbACMName0.AutoSize = true;
+            this.lbACMName0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMName0.Location = new System.Drawing.Point(29, 68);
+            this.lbACMName0.Name = "lbACMName0";
+            this.lbACMName0.Size = new System.Drawing.Size(46, 13);
+            this.lbACMName0.TabIndex = 35;
+            this.lbACMName0.Text = "회원명";
+            // 
+            // lbACMAddrView0
+            // 
+            this.lbACMAddrView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMAddrView0.Location = new System.Drawing.Point(83, 165);
+            this.lbACMAddrView0.Name = "lbACMAddrView0";
+            this.lbACMAddrView0.Size = new System.Drawing.Size(394, 26);
+            this.lbACMAddrView0.TabIndex = 34;
+            this.lbACMAddrView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbACMAddr0
+            // 
+            this.lbACMAddr0.AutoSize = true;
+            this.lbACMAddr0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMAddr0.Location = new System.Drawing.Point(42, 173);
+            this.lbACMAddr0.Name = "lbACMAddr0";
+            this.lbACMAddr0.Size = new System.Drawing.Size(33, 13);
+            this.lbACMAddr0.TabIndex = 33;
+            this.lbACMAddr0.Text = "주소";
+            // 
+            // lbACMHPView0
+            // 
+            this.lbACMHPView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMHPView0.Location = new System.Drawing.Point(244, 60);
+            this.lbACMHPView0.Name = "lbACMHPView0";
+            this.lbACMHPView0.Size = new System.Drawing.Size(118, 26);
+            this.lbACMHPView0.TabIndex = 32;
+            this.lbACMHPView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbACMNumView0
+            // 
+            this.lbACMNumView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMNumView0.Location = new System.Drawing.Point(244, 25);
+            this.lbACMNumView0.Name = "lbACMNumView0";
+            this.lbACMNumView0.Size = new System.Drawing.Size(56, 26);
+            this.lbACMNumView0.TabIndex = 31;
+            this.lbACMNumView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbACMRankView0
+            // 
+            this.lbACMRankView0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbACMRankView0.Location = new System.Drawing.Point(83, 25);
+            this.lbACMRankView0.Name = "lbACMRankView0";
+            this.lbACMRankView0.Size = new System.Drawing.Size(39, 26);
+            this.lbACMRankView0.TabIndex = 30;
+            this.lbACMRankView0.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(16, 317);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(0, 16);
+            this.label56.TabIndex = 6;
+            // 
+            // lbACMHP0
+            // 
+            this.lbACMHP0.AutoSize = true;
+            this.lbACMHP0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMHP0.Location = new System.Drawing.Point(179, 68);
+            this.lbACMHP0.Name = "lbACMHP0";
+            this.lbACMHP0.Size = new System.Drawing.Size(59, 13);
+            this.lbACMHP0.TabIndex = 5;
+            this.lbACMHP0.Text = "전화번호";
+            // 
+            // lbACMNum0
+            // 
+            this.lbACMNum0.AutoSize = true;
+            this.lbACMNum0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMNum0.Location = new System.Drawing.Point(182, 33);
+            this.lbACMNum0.Name = "lbACMNum0";
+            this.lbACMNum0.Size = new System.Drawing.Size(59, 13);
+            this.lbACMNum0.TabIndex = 4;
+            this.lbACMNum0.Text = "회원번호";
+            // 
+            // lbACMRank0
+            // 
+            this.lbACMRank0.AutoSize = true;
+            this.lbACMRank0.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMRank0.Location = new System.Drawing.Point(44, 33);
+            this.lbACMRank0.Name = "lbACMRank0";
+            this.lbACMRank0.Size = new System.Drawing.Size(33, 13);
+            this.lbACMRank0.TabIndex = 0;
+            this.lbACMRank0.Text = "등급";
             // 
             // tacAIOMain
             // 
@@ -744,6 +728,7 @@ namespace LibraryMgrProgram
             this.tacAIOMain.SelectedIndex = 0;
             this.tacAIOMain.Size = new System.Drawing.Size(517, 532);
             this.tacAIOMain.TabIndex = 141;
+            this.tacAIOMain.SelectedIndexChanged += new System.EventHandler(this.tacAIOMain_SelectedIndexChanged);
             // 
             // lbACMRank1
             // 
@@ -1004,6 +989,33 @@ namespace LibraryMgrProgram
             this.txtACMAddrView1.Size = new System.Drawing.Size(394, 26);
             this.txtACMAddrView1.TabIndex = 163;
             // 
+            // lbACMPW
+            // 
+            this.lbACMPW.AutoSize = true;
+            this.lbACMPW.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMPW.Location = new System.Drawing.Point(15, 170);
+            this.lbACMPW.Name = "lbACMPW";
+            this.lbACMPW.Size = new System.Drawing.Size(59, 13);
+            this.lbACMPW.TabIndex = 165;
+            this.lbACMPW.Text = "비밀번호";
+            // 
+            // txtACMPW2
+            // 
+            this.txtACMPW2.Location = new System.Drawing.Point(80, 164);
+            this.txtACMPW2.Name = "txtACMPW2";
+            this.txtACMPW2.Size = new System.Drawing.Size(158, 26);
+            this.txtACMPW2.TabIndex = 166;
+            // 
+            // btnACMPWClear
+            // 
+            this.btnACMPWClear.Location = new System.Drawing.Point(244, 166);
+            this.btnACMPWClear.Name = "btnACMPWClear";
+            this.btnACMPWClear.Size = new System.Drawing.Size(113, 23);
+            this.btnACMPWClear.TabIndex = 164;
+            this.btnACMPWClear.Text = "비번초기화";
+            this.btnACMPWClear.UseVisualStyleBackColor = true;
+            this.btnACMPWClear.Click += new System.EventHandler(this.btnACMPWClear_Click);
+            // 
             // grpcACMSex2
             // 
             this.grpcACMSex2.BorderColor = System.Drawing.Color.White;
@@ -1019,7 +1031,7 @@ namespace LibraryMgrProgram
             // 
             this.rdbACMWom2.AutoSize = true;
             this.rdbACMWom2.Font = new System.Drawing.Font("Gulim", 10F);
-            this.rdbACMWom2.Location = new System.Drawing.Point(63, 9);
+            this.rdbACMWom2.Location = new System.Drawing.Point(63, 10);
             this.rdbACMWom2.Name = "rdbACMWom2";
             this.rdbACMWom2.Size = new System.Drawing.Size(53, 18);
             this.rdbACMWom2.TabIndex = 161;
@@ -1068,13 +1080,13 @@ namespace LibraryMgrProgram
             this.CustomerModi.ResumeLayout(false);
             this.grpACMModi.ResumeLayout(false);
             this.grpACMModi.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg2)).EndInit();
             this.CustomerView.ResumeLayout(false);
             this.grpACMView.ResumeLayout(false);
             this.grpACMView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus0)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg0)).EndInit();
             this.tacAIOMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picACMCustomerImg1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACMStatus1)).EndInit();
@@ -1103,7 +1115,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.TextBox txtACMBirth2;
         private System.Windows.Forms.TextBox txtACMMemoView2;
         private System.Windows.Forms.Button btnACMClear1;
-        private System.Windows.Forms.Label lbACMCustomerState2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnACMModi;
         private System.Windows.Forms.Label lbACMSex2;
@@ -1121,7 +1132,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label lbACMRank2;
         private System.Windows.Forms.TabPage CustomerView;
         private System.Windows.Forms.GroupBox grpACMView;
-        private System.Windows.Forms.Label lbACMCustomerState0;
         private System.Windows.Forms.Label lbACMStatus0;
         private System.Windows.Forms.Button btnACMDel;
         private System.Windows.Forms.Label lbACMSexView0;
@@ -1173,5 +1183,8 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.RadioButton rdbACMMan1;
         private System.Windows.Forms.RadioButton rdbACMWom1;
         private System.Windows.Forms.TextBox txtACMAddrView1;
+        private System.Windows.Forms.Button btnACMPWClear;
+        private System.Windows.Forms.TextBox txtACMPW2;
+        private System.Windows.Forms.Label lbACMPW;
     }
 }

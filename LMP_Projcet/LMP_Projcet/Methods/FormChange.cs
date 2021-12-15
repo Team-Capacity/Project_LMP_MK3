@@ -34,6 +34,68 @@ namespace LMP_Projcet.Methods
             g.BorderColor = Color.White;
         }
 
-        
+        public void fromColorChange(Label[] back, Label[] font, Panel[] title)
+        {
+            for (int i = 0; i < back.Length; i++)
+            {
+                back[i].BackColor = LoginForm.backColor;
+            }
+            for (int i = 0; i < font.Length; i++)
+            {
+                font[i].ForeColor = LoginForm.fontColor;
+            }
+            for (int i = 0; i < title.Length; i++)
+            {
+                title[i].BackColor = LoginForm.titleColor;
+            }
+        }
+        public void fromColorChange(Label[] back, Label[] font)
+        {
+            for (int i = 0; i < back.Length; i++)
+            {
+                back[i].BackColor = LoginForm.backColor;
+            }
+            for (int i = 0; i < font.Length; i++)
+            {
+                font[i].ForeColor = LoginForm.fontColor;
+            }
+        }
+
+        public void fromBColorChange(Label[] back)
+        {
+            for (int i = 0; i < back.Length; i++)
+            {
+                back[i].BackColor = LoginForm.backColor;
+            }
+        }
+        public void fromFColorChange(Label[] font)
+        {
+            for (int i = 0; i < font.Length; i++)
+            {
+                font[i].ForeColor = LoginForm.fontColor;
+            }
+        }
+
+        public void fromColorChange(Form form)
+        {
+            form.BackColor = LoginForm.backColor;
+        }
+
+        public void fromColorChange(GroupBox group)
+        {
+            group.BackColor = LoginForm.backColor;
+            group.ForeColor = LoginForm.fontColor;
+        }
+
+        public void fromColorChange(TabControl tab)
+        {
+            for(int i = 0; i< tab.TabPages.Count; i++)
+            {
+                tab.TabPages[i].BackColor = LoginForm.backColor;
+                tab.TabPages[i].ForeColor = LoginForm.fontColor;
+            }
+        }
+
+
     }
 }

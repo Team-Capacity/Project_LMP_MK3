@@ -16,6 +16,7 @@ namespace LibraryMgrProgram
     {
         MouseEvent me = new MouseEvent();
         dbTest db = new dbTest();
+        FormChange fc = new FormChange();
         public AdminInputOutputForm()
         {
             InitializeComponent();
@@ -24,6 +25,12 @@ namespace LibraryMgrProgram
         // 폼로드시
         private void AdminInputOutputForm_Load(object sender, EventArgs e)
         {
+            fc.fromColorChange(this);
+            fc.fromColorChange(grpAIOMem0);
+            fc.fromColorChange(grpAIOMem1);
+            fc.fromColorChange(grpAIOLone);
+            fc.fromColorChange(grpAIOReturn);
+
             string bookSQL = "select * from Book;";
             string cusSQL = "select * from Customer where CNumber > 1;";
             me.reloadForm(bookSQL, gdvAIOBView, 0);
@@ -115,8 +122,8 @@ namespace LibraryMgrProgram
                         string loanAddSql = "insert into LoanList (LCustomerNum , LBookNum, LTime) values ("
                                             + cusNum
                                             + ", " + bookNum
-                                            + ", '" + new DateTime().AddDays(8).ToString("yyyy/MM/dd") + "');"; //날짜가 이상함 바꿔야함
-                                                                                                                //업데이트 진행
+                                            + ", '" + DateTime.Now.AddDays(8).ToString("yyyy/MM/dd") + "');"; 
+
                         db.dbUpdate(newCusSQL);
                         db.dbUpdate(newBookSQL);
                         db.dbUpdate(loanAddSql);
@@ -274,6 +281,39 @@ namespace LibraryMgrProgram
 
         private void btnAIOExtension_Click(object sender, EventArgs e)
         {
+            string sql = "select LExtend , LBookNum, LTime from LoanList where LCustomerNum = " + lbAIOMNumView1.Text + ";";
+            try
+            {
+
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                MySqlDataReader dbReader = cmd.ExecuteReader();
+                int  extendCount = 0;
+                int bookNum = 0;
+                string loanTime = "";
+                while (dbReader.Read())
+                {
+                    extendCount = Int32.Parse(dbReader[0].ToString());
+                    bookNum = Int32.Parse(dbReader[1].ToString());
+                    loanTime = dbReader[3].ToString();
+                }
+
+                if(extendCount < 1)
+                {
+                    string extendSql = "update LoanList set loanTime = " + Convert.ToDateTime(loanTime).AddDays(8).ToString("yyyy-MM-dd") + " where BNumber = " + bookNum + ";";
+                    db.dbUpdate(extendSql);
+                }
+                else
+                {
+                    MessageBox.Show("이미 연장을 진행하였습니다.");
+                }
+                dbReader.Close();
+                db.conn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("select문에 실패하였습니다.");
+                throw;
+            }
 
         }
 
@@ -314,7 +354,7 @@ namespace LibraryMgrProgram
                     me.reloadForm(bookSql, gdvAIOBView, 0);
                     string cusSql = ("select distinct CNumber, CRank, CID, CPW, CName, CLoanCot, CAccrue, CPH, CBirth, CAddress, CDate, CGender, CMemo from LoanList INNER JOIN Customer ON LoanList.LCustomerNum = Customer.CNumber;").ToString();
                     me.reloadForm(cusSql, gdvAIOMView, 1);
-                    MemberlistDescription0();
+                    //MemberlistDescription0();
                 }
                 catch (Exception ex)
                 {
@@ -397,13 +437,11 @@ namespace LibraryMgrProgram
             lbAIOBISBNView0.Text = row.Cells[8].Value.ToString();
             lbAIOBPageView0.Text = row.Cells[9].Value.ToString();
             lbAIOBAddrView0.Text = row.Cells[10].Value.ToString();
-            // 대출기간은 +7~14한 날짜여야함으로 바뀌어야함
             lbAIOBTimeView0.Text = maxTime.ToString("yyyy/MM/dd") + " ~ " + maxTime.AddDays(8).ToString("yyyy/MM/dd");
         }
 
         private void BooklistDescription0()
         {
-            DateTime maxTime = DateTime.Now;
             DataGridViewRow row = gdvAIOBView.SelectedRows[0];
             lbAIOBNumView1.Text = row.Cells[0].Value.ToString();
             lbAIOBNameView1.Text = row.Cells[1].Value.ToString();
@@ -413,8 +451,27 @@ namespace LibraryMgrProgram
             lbAIOBISBNView1.Text = row.Cells[8].Value.ToString();
             lbAIOBPageView1.Text = row.Cells[9].Value.ToString();
             lbAIOBAddrView1.Text = row.Cells[10].Value.ToString();
-            // 대출기간은 +7~14한 날짜여야함으로 바뀌어야함
-            lbAIOBTimeView1.Text = maxTime.ToString("yyyy/MM/dd") + " ~ " + maxTime.AddDays(8).ToString("yyyy/MM/dd");
+
+            try
+            {
+                db.dbConnection();
+                string sql = "select LDate , LTime from LoanList where LBookNum = " + Int32.Parse(lbAIOBNumView1.Text) + ";";
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+                MySqlDataReader dbReader = cmd.ExecuteReader();
+                string resultDay = "";
+                while (dbReader.Read())
+                {
+                    resultDay = dbReader[0].ToString();
+                }
+                dbReader.Close();
+                db.conn.Close();
+                DateTime loanDay = Convert.ToDateTime(resultDay);
+                lbAIOBTimeView1.Text = loanDay.ToString("yyyy-MM-dd") + " ~ " + loanDay.AddDays(8).ToString("yyyy-MM-dd");
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
     }

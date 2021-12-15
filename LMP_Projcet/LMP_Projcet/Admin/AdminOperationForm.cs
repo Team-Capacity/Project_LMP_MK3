@@ -23,6 +23,13 @@ namespace LMP_Projcet.Admin
 
         private void AdminOperationForm_Load(object sender, EventArgs e)
         {
+            Label[] back = { lbAONotice, lbAOSuggestionBox, lbAOColor };
+            formChange.fromColorChange(this);
+            formChange.fromColorChange(grpAOBookInfo);
+            formChange.fromColorChange(grpAOSuggestionBox);
+            formChange.fromColorChange(grpAOColor);
+            formChange.fromBColorChange(back);
+            
 
         }
 

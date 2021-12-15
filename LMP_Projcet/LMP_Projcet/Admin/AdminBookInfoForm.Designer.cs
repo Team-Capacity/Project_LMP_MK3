@@ -581,7 +581,13 @@ namespace LibraryMgrProgram
             this.comABIBookger2.FormattingEnabled = true;
             this.comABIBookger2.Items.AddRange(new object[] {
             "교육",
-            "철학"});
+            "철학",
+            "자기계발",
+            "인문/심리",
+            "시/에세이",
+            "경제/경영",
+            "만화",
+            "여행"});
             this.comABIBookger2.Location = new System.Drawing.Point(201, 198);
             this.comABIBookger2.Name = "comABIBookger2";
             this.comABIBookger2.Size = new System.Drawing.Size(102, 24);
@@ -901,6 +907,15 @@ namespace LibraryMgrProgram
             // comABIBookger1
             // 
             this.comABIBookger1.FormattingEnabled = true;
+            this.comABIBookger1.Items.AddRange(new object[] {
+            "교육",
+            "철학",
+            "자기계발",
+            "인문/심리",
+            "시/에세이",
+            "경제/경영",
+            "만화",
+            "여행"});
             this.comABIBookger1.Location = new System.Drawing.Point(201, 196);
             this.comABIBookger1.Name = "comABIBookger1";
             this.comABIBookger1.Size = new System.Drawing.Size(102, 24);
@@ -984,7 +999,7 @@ namespace LibraryMgrProgram
             // 
             this.rtxtABIBBookExp1.Location = new System.Drawing.Point(83, 292);
             this.rtxtABIBBookExp1.Name = "rtxtABIBBookExp1";
-            this.rtxtABIBBookExp1.Size = new System.Drawing.Size(382, 162);
+            this.rtxtABIBBookExp1.Size = new System.Drawing.Size(382, 154);
             this.rtxtABIBBookExp1.TabIndex = 11;
             this.rtxtABIBBookExp1.Text = "";
             // 
@@ -1085,7 +1100,6 @@ namespace LibraryMgrProgram
             this.grpABIBookList.Size = new System.Drawing.Size(765, 460);
             this.grpABIBookList.TabIndex = 38;
             this.grpABIBookList.TabStop = false;
-            this.grpABIBookList.Text = "도서 목록";
             // 
             // dgvABIBookList
             // 
