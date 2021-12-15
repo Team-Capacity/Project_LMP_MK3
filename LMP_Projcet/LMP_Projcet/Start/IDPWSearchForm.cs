@@ -138,7 +138,7 @@ namespace LibraryMgrProgram
 
             if (!IsValSeBir(txtSerPwBir.Text))
             {
-                MessageBox.Show("예시에 맞게작성해주세요.");
+                MessageBox.Show("생년월일을 예시에 맞게작성해주세요. ex)990717");
                 return;
             }
 

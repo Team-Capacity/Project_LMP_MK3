@@ -121,6 +121,7 @@ namespace LMP_Projcet.Start
             this.txtAM_Address.Name = "txtAM_Address";
             this.txtAM_Address.Size = new System.Drawing.Size(257, 25);
             this.txtAM_Address.TabIndex = 5;
+            this.txtAM_Address.Text = "서울특별시 강북구 미아동";
             this.TtMA.SetToolTip(this.txtAM_Address, "시/도 구/군 면/동으로 작성해주세요 ex)서울특별시 강북구 미아동");
             // 
             // lbMA_Join
@@ -147,6 +148,7 @@ namespace LMP_Projcet.Start
             // 
             // btnMA_Join
             // 
+            this.btnMA_Join.Enabled = false;
             this.btnMA_Join.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMA_Join.Location = new System.Drawing.Point(95, 402);
             this.btnMA_Join.Name = "btnMA_Join";
@@ -214,6 +216,38 @@ namespace LMP_Projcet.Start
             // cmbMA_Day
             // 
             this.cmbMA_Day.FormattingEnabled = true;
+            this.cmbMA_Day.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.cmbMA_Day.Location = new System.Drawing.Point(350, 256);
             this.cmbMA_Day.Name = "cmbMA_Day";
             this.cmbMA_Day.Size = new System.Drawing.Size(38, 20);
@@ -227,6 +261,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Name.Name = "txtMA_Name";
             this.txtMA_Name.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Name.TabIndex = 0;
+            this.txtMA_Name.Text = "이게";
             // 
             // lbMA_Day
             // 
@@ -249,6 +284,19 @@ namespace LMP_Projcet.Start
             // cmbMA_Month
             // 
             this.cmbMA_Month.FormattingEnabled = true;
+            this.cmbMA_Month.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
             this.cmbMA_Month.Location = new System.Drawing.Point(273, 256);
             this.cmbMA_Month.Name = "cmbMA_Month";
             this.cmbMA_Month.Size = new System.Drawing.Size(38, 20);
@@ -302,6 +350,7 @@ namespace LMP_Projcet.Start
             this.txtMA_PwCheck.Name = "txtMA_PwCheck";
             this.txtMA_PwCheck.Size = new System.Drawing.Size(162, 25);
             this.txtMA_PwCheck.TabIndex = 4;
+            this.txtMA_PwCheck.Text = "dkahffkd1@";
             // 
             // txtMA_Pw
             // 
@@ -311,6 +360,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Pw.Name = "txtMA_Pw";
             this.txtMA_Pw.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Pw.TabIndex = 3;
+            this.txtMA_Pw.Text = "dkahffkd1@";
             this.TtMA.SetToolTip(this.txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
       
             // 
@@ -352,6 +402,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Id.Name = "txtMA_Id";
             this.txtMA_Id.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Id.TabIndex = 1;
+            this.txtMA_Id.Text = "qwe123";
             // 
             // lbMA_Id
             // 
@@ -371,6 +422,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Phone.Name = "txtMA_Phone";
             this.txtMA_Phone.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Phone.TabIndex = 11;
+            this.txtMA_Phone.Text = "010-5555-5555";
             // 
             // plnMA
             // 
