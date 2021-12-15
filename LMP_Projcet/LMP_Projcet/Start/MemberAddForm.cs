@@ -43,21 +43,13 @@ namespace LMP_Projcet.Start
             TtMA.ReshowDelay = 100;
             //생년월일 콤보박스에 값 추가
             int choice;
-            for (choice = 1920; choice < 2100; choice++)
+            for (choice = 1920; choice < 2020; choice++)
             {
                 cmbMA_Year.Items.Add(choice);
             }
+            
 
 
-            for (choice = 1; choice < 13; choice++)
-            {
-                cmbMA_Month.Items.Add(choice);
-            }
-
-            for (choice = 1; choice < 32; choice++)
-            {
-                cmbMA_Day.Items.Add(choice);
-            }
 
             //비밀번호 *표시로, 최대길이는 16
             txtMA_Pw.PasswordChar = '*';
@@ -127,6 +119,10 @@ namespace LMP_Projcet.Start
             db.dbConnection();
             string id = txtMA_Id.Text;
             string sql = "select Count(CID) as CID from Customer where CID = '" + id + "'";
+            int count = 0;
+            
+
+
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
@@ -134,21 +130,29 @@ namespace LMP_Projcet.Start
 
                 while (dbReader.Read())
                 {
-                    int count = Int32.Parse(dbReader["CID"].ToString());
-
-                    if (count == 1)
-                    {
-                        MessageBox.Show("중복된 아이디입니다.");
-                    }
-                    else if (id.Equals(""))
-                    {
-                        MessageBox.Show("아이디를 입력하여 주세요.");
-                    }
-                    else
-                    {
-                        MessageBox.Show("사용가능한 아이디입니다.");
-                    }
+                    count = Int32.Parse(dbReader["CID"].ToString());
+                   
                 }
+
+                if (count == 1)
+                {
+                    MessageBox.Show("중복된 아이디입니다.");
+                }
+                else if (id.Equals(""))
+                {
+                    MessageBox.Show("아이디를 입력하여 주세요.");
+                }
+                else if (!IsValID(txtMA_Id.Text))
+                {
+                    MessageBox.Show("아이디는 숫자와 영어로만 구성해주세요");
+                }
+                else
+                {
+                    btnMA_Join.Enabled = true;
+                    MessageBox.Show("사용가능한 아이디입니다.");
+                }
+
+
                 dbReader.Close();
                 count++;
             }
@@ -174,22 +178,16 @@ namespace LMP_Projcet.Start
             string Day = cmbMA_Day.Text;
             string Address = txtAM_Address.Text;
 
-
-            if (count == 0)
-            {
-                MessageBox.Show("중복확인버튼을 눌러주세요.");
-                return;
-            }
-
+            
             try
             {
+
 
                 if (!IsValName(txtMA_Name.Text))
                 {
                     MessageBox.Show("이름을 한글로 2~5글자로 입력해주세요");
                     return;
                 }
-
 
                 if (!IsValidPassword(txtMA_Pw.Text))
                 {
@@ -202,11 +200,11 @@ namespace LMP_Projcet.Start
                     MessageBox.Show("비밀번호가 일치하지 않습니다. 확인 후 다시 입력해주세요.");
                     return;
                 }
-                if (!IsValAddress(txtAM_Address.Text))
+               /* if (!IsValAddress(txtAM_Address.Text))
                 {
                     MessageBox.Show("시/도 구/군 면/동으로 작성해주세요.");
                     return;
-                }
+                }*/
 
                 if (!IsValYear(cmbMA_Year.Text))
                 {
@@ -238,14 +236,42 @@ namespace LMP_Projcet.Start
                     return;
                 }
 
-                MemberAdd();
 
+                string gender = "";
+
+                if (rdbMA_Man.Checked)
+                {
+                    gender = "남자";
+                }
+                else
+                {
+                    gender = "여성";
+                }
+
+                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CGender) values("
+                    + "'" + txtMA_Id.Text + "'"
+                    + ",'" + txtMA_Pw.Text + "'"
+                    + ",'" + txtMA_Name.Text + "'"
+                    + ",'" + txtMA_Phone.Text + "'"
+                    + ",'" + cmbMA_Year.Text + "" + cmbMA_Month.Text + "" + cmbMA_Day.Text + "'"
+                    + ",'" + txtAM_Address.Text + "'"
+                    + ",'" + gender + "'"
+                    + ");";
+                db.dbUpdate(sql);
+                MessageBox.Show("추가되었습니다.");
 
             }
             catch (MySqlException ex)
             {
                 MessageBox.Show("회원추가에 실패하였습니다.");
             }
+        }
+
+        private static bool IsValID(string Text)
+        {
+            Regex Iregex = new Regex(@"^[0-9a-zA-Z]{1,100}$");
+            Match Imatch = Iregex.Match(Text);
+            return Imatch.Success; 
         }
         private static bool IsValMonth(string Text)
         {
@@ -269,12 +295,12 @@ namespace LMP_Projcet.Start
             return Ymatch.Success;
         }
 
-        private static bool IsValAddress(string Text)
+      /*  private static bool IsValAddress(string Text)
         {
             Regex Aregex = new Regex(@"^[\S]+(도|시)\s[\S]+(구|군)\s[\S]+(면|동)");
             Match Amatch = Aregex.Match(Text);
             return Amatch.Success;
-        }
+        }*/
 
 
         private static bool IsValPH(string Text)
@@ -286,8 +312,8 @@ namespace LMP_Projcet.Start
         }
         private static bool IsValName(string Text)
         {
-            //한글만 2~5자리
-            Regex Nregex = new Regex(@"^[가-힣]{2,5}$");
+            //한글만 2~4자리
+            Regex Nregex = new Regex(@"^[가-힣]{2,4}$");
             Match Nmatch = Nregex.Match(Text);
             return Nmatch.Success;
         }
@@ -304,38 +330,8 @@ namespace LMP_Projcet.Start
             Application.Exit();
         }
 
-        public void MemberAdd()
-        {
-            string gender = "";
-            if (rdbMA_Man.Checked)
-            {
-                gender = "남자";
-            }
-            else
-            {
-                gender = "여성";
-            }
-            try
-            {
-                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CGender) values("
-                + "'" + txtMA_Id.Text + "'"
-                + ",'" + txtMA_Pw.Text + "'"
-                + ",'" + txtMA_Name.Text + "'"
-                + ",'" + txtMA_Phone.Text + "'"
-                + ",'" + cmbMA_Year.Text + "/" + cmbMA_Month.Text + "/" + cmbMA_Day.Text + "/"
-                + ",'" + gender + "');";
-                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    MessageBox.Show("성공적으로 추가 되었습니다.");
-                    db.conn.Close();
-                }
-            }
-            catch (MySqlException ex)
-            {
-                MessageBox.Show("DB수정에 실패하였습니다.");
-            }
+       
 
-        }
+        
     }
 }

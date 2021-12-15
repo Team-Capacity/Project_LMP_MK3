@@ -36,6 +36,9 @@ namespace LMP_Projcet.Start
             this.lbMA_Join = new System.Windows.Forms.Label();
             this.btnMA_Cancel = new System.Windows.Forms.Button();
             this.btnMA_Join = new System.Windows.Forms.Button();
+            this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
+            this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
+            this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.lbMA_Name = new System.Windows.Forms.Label();
             this.lbMA_Sex = new System.Windows.Forms.Label();
             this.cmbMA_Day = new System.Windows.Forms.ComboBox();
@@ -60,9 +63,6 @@ namespace LMP_Projcet.Start
             this.btnMAMin = new System.Windows.Forms.Button();
             this.btnMAClose = new System.Windows.Forms.Button();
             this.TtMA = new System.Windows.Forms.ToolTip(this.components);
-            this.grpcMA_Sex = new LMP_Projcet.Methods.GroupBoxBorderChagne();
-            this.rdbMA_Wom = new System.Windows.Forms.RadioButton();
-            this.rdbMA_Man = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.grpcMA_Sex.SuspendLayout();
             this.plnMA.SuspendLayout();
@@ -121,6 +121,7 @@ namespace LMP_Projcet.Start
             this.txtAM_Address.Name = "txtAM_Address";
             this.txtAM_Address.Size = new System.Drawing.Size(257, 25);
             this.txtAM_Address.TabIndex = 5;
+            this.txtAM_Address.Text = "서울특별시 강북구 미아동";
             this.TtMA.SetToolTip(this.txtAM_Address, "시/도 구/군 면/동으로 작성해주세요 ex)서울특별시 강북구 미아동");
             // 
             // lbMA_Join
@@ -147,6 +148,7 @@ namespace LMP_Projcet.Start
             // 
             // btnMA_Join
             // 
+            this.btnMA_Join.Enabled = false;
             this.btnMA_Join.Font = new System.Drawing.Font("굴림", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btnMA_Join.Location = new System.Drawing.Point(95, 402);
             this.btnMA_Join.Name = "btnMA_Join";
@@ -155,6 +157,41 @@ namespace LMP_Projcet.Start
             this.btnMA_Join.Text = "회원가입";
             this.btnMA_Join.UseVisualStyleBackColor = true;
             this.btnMA_Join.Click += new System.EventHandler(this.btnMA_Join_Click);
+            // 
+            // grpcMA_Sex
+            // 
+            this.grpcMA_Sex.BorderColor = System.Drawing.Color.White;
+            this.grpcMA_Sex.Controls.Add(this.rdbMA_Wom);
+            this.grpcMA_Sex.Controls.Add(this.rdbMA_Man);
+            this.grpcMA_Sex.Location = new System.Drawing.Point(168, 293);
+            this.grpcMA_Sex.Name = "grpcMA_Sex";
+            this.grpcMA_Sex.Size = new System.Drawing.Size(122, 37);
+            this.grpcMA_Sex.TabIndex = 166;
+            this.grpcMA_Sex.TabStop = false;
+            // 
+            // rdbMA_Wom
+            // 
+            this.rdbMA_Wom.AutoSize = true;
+            this.rdbMA_Wom.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbMA_Wom.Location = new System.Drawing.Point(63, 9);
+            this.rdbMA_Wom.Name = "rdbMA_Wom";
+            this.rdbMA_Wom.Size = new System.Drawing.Size(53, 18);
+            this.rdbMA_Wom.TabIndex = 10;
+            this.rdbMA_Wom.TabStop = true;
+            this.rdbMA_Wom.Text = "여자";
+            this.rdbMA_Wom.UseVisualStyleBackColor = true;
+            // 
+            // rdbMA_Man
+            // 
+            this.rdbMA_Man.AutoSize = true;
+            this.rdbMA_Man.Font = new System.Drawing.Font("굴림", 10F);
+            this.rdbMA_Man.Location = new System.Drawing.Point(6, 10);
+            this.rdbMA_Man.Name = "rdbMA_Man";
+            this.rdbMA_Man.Size = new System.Drawing.Size(53, 18);
+            this.rdbMA_Man.TabIndex = 9;
+            this.rdbMA_Man.TabStop = true;
+            this.rdbMA_Man.Text = "남자";
+            this.rdbMA_Man.UseVisualStyleBackColor = true;
             // 
             // lbMA_Name
             // 
@@ -179,6 +216,38 @@ namespace LMP_Projcet.Start
             // cmbMA_Day
             // 
             this.cmbMA_Day.FormattingEnabled = true;
+            this.cmbMA_Day.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31"});
             this.cmbMA_Day.Location = new System.Drawing.Point(350, 256);
             this.cmbMA_Day.Name = "cmbMA_Day";
             this.cmbMA_Day.Size = new System.Drawing.Size(38, 20);
@@ -192,6 +261,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Name.Name = "txtMA_Name";
             this.txtMA_Name.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Name.TabIndex = 0;
+            this.txtMA_Name.Text = "이게";
             // 
             // lbMA_Day
             // 
@@ -214,6 +284,19 @@ namespace LMP_Projcet.Start
             // cmbMA_Month
             // 
             this.cmbMA_Month.FormattingEnabled = true;
+            this.cmbMA_Month.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
             this.cmbMA_Month.Location = new System.Drawing.Point(273, 256);
             this.cmbMA_Month.Name = "cmbMA_Month";
             this.cmbMA_Month.Size = new System.Drawing.Size(38, 20);
@@ -267,6 +350,7 @@ namespace LMP_Projcet.Start
             this.txtMA_PwCheck.Name = "txtMA_PwCheck";
             this.txtMA_PwCheck.Size = new System.Drawing.Size(162, 25);
             this.txtMA_PwCheck.TabIndex = 4;
+            this.txtMA_PwCheck.Text = "dkahffkd1@";
             // 
             // txtMA_Pw
             // 
@@ -276,6 +360,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Pw.Name = "txtMA_Pw";
             this.txtMA_Pw.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Pw.TabIndex = 3;
+            this.txtMA_Pw.Text = "dkahffkd1@";
             this.TtMA.SetToolTip(this.txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
             // 
             // lbMA_Birth
@@ -316,6 +401,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Id.Name = "txtMA_Id";
             this.txtMA_Id.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Id.TabIndex = 1;
+            this.txtMA_Id.Text = "qwe123";
             // 
             // lbMA_Id
             // 
@@ -335,6 +421,7 @@ namespace LMP_Projcet.Start
             this.txtMA_Phone.Name = "txtMA_Phone";
             this.txtMA_Phone.Size = new System.Drawing.Size(162, 25);
             this.txtMA_Phone.TabIndex = 11;
+            this.txtMA_Phone.Text = "010-5555-5555";
             // 
             // plnMA
             // 
@@ -407,41 +494,6 @@ namespace LMP_Projcet.Start
             this.btnMAClose.Text = "🗙";
             this.btnMAClose.UseVisualStyleBackColor = false;
             this.btnMAClose.Click += new System.EventHandler(this.btnMAClose_Click);
-            // 
-            // grpcMA_Sex
-            // 
-            this.grpcMA_Sex.BorderColor = System.Drawing.Color.White;
-            this.grpcMA_Sex.Controls.Add(this.rdbMA_Wom);
-            this.grpcMA_Sex.Controls.Add(this.rdbMA_Man);
-            this.grpcMA_Sex.Location = new System.Drawing.Point(168, 293);
-            this.grpcMA_Sex.Name = "grpcMA_Sex";
-            this.grpcMA_Sex.Size = new System.Drawing.Size(122, 37);
-            this.grpcMA_Sex.TabIndex = 166;
-            this.grpcMA_Sex.TabStop = false;
-            // 
-            // rdbMA_Wom
-            // 
-            this.rdbMA_Wom.AutoSize = true;
-            this.rdbMA_Wom.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbMA_Wom.Location = new System.Drawing.Point(63, 9);
-            this.rdbMA_Wom.Name = "rdbMA_Wom";
-            this.rdbMA_Wom.Size = new System.Drawing.Size(53, 18);
-            this.rdbMA_Wom.TabIndex = 10;
-            this.rdbMA_Wom.TabStop = true;
-            this.rdbMA_Wom.Text = "여자";
-            this.rdbMA_Wom.UseVisualStyleBackColor = true;
-            // 
-            // rdbMA_Man
-            // 
-            this.rdbMA_Man.AutoSize = true;
-            this.rdbMA_Man.Font = new System.Drawing.Font("굴림", 10F);
-            this.rdbMA_Man.Location = new System.Drawing.Point(6, 10);
-            this.rdbMA_Man.Name = "rdbMA_Man";
-            this.rdbMA_Man.Size = new System.Drawing.Size(53, 18);
-            this.rdbMA_Man.TabIndex = 9;
-            this.rdbMA_Man.TabStop = true;
-            this.rdbMA_Man.Text = "남자";
-            this.rdbMA_Man.UseVisualStyleBackColor = true;
             // 
             // MemberAddForm
             // 
