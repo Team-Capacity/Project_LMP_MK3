@@ -69,6 +69,7 @@ namespace LMP_Projcet.Admin
             e.NewWidth = lvASList.Columns[e.ColumnIndex].Width;
             e.Cancel = true;
         }
+
         //셀 클릭시 발생 이벤트
         private void ItemSelect_MouseClick(object sender, MouseEventArgs e)
         {
@@ -90,6 +91,7 @@ namespace LMP_Projcet.Admin
 
             }
         }
+
         //데이터 베이스 리스트 불러오는거
         private void loadList()
         {
@@ -118,6 +120,7 @@ namespace LMP_Projcet.Admin
             reader.Close();
             db.conn.Close();
         }
+
         // 삭제 버튼 클릭시 삭제하고 갱신
         private void btnASDel_Click(object sender, EventArgs e)
         {
@@ -131,6 +134,8 @@ namespace LMP_Projcet.Admin
 
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
+                int SelectRow = lvASList.SelectedItems[0].Index;
+                string a = lvASList.Items[SelectRow].SubItems[0].Text;
                 string sql = "delete from QuestionList where QNumber = " + a + ";";
                 string nextSql1 = "sql_safe_updates = 0 and @num := 0;";
                 string nextSql2 = "update QuestionList set QNumber = @num := (@num + 1)";
