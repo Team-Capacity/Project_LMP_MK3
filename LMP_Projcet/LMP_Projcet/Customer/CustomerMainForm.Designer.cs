@@ -49,14 +49,13 @@ namespace LibraryMgrProgram
             this.btnCMMax = new System.Windows.Forms.Button();
             this.btnCMMin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.CusGridView = new System.Windows.Forms.DataGridView();
+            this.plnAM0 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMOperation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCusInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).BeginInit();
             this.plnCM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -79,7 +78,7 @@ namespace LibraryMgrProgram
             // 
             this.lbCMCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCMCustomer.AutoSize = true;
-            this.lbCMCustomer.Font = new System.Drawing.Font("굴림", 14F);
+            this.lbCMCustomer.Font = new System.Drawing.Font("Gulim", 14F);
             this.lbCMCustomer.Location = new System.Drawing.Point(1208, 56);
             this.lbCMCustomer.Name = "lbCMCustomer";
             this.lbCMCustomer.Size = new System.Drawing.Size(165, 19);
@@ -90,7 +89,7 @@ namespace LibraryMgrProgram
             // 
             this.lbCMLoginOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCMLoginOut.AutoSize = true;
-            this.lbCMLoginOut.Font = new System.Drawing.Font("굴림", 12F);
+            this.lbCMLoginOut.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbCMLoginOut.ForeColor = System.Drawing.Color.Black;
             this.lbCMLoginOut.Location = new System.Drawing.Point(1301, 85);
             this.lbCMLoginOut.Name = "lbCMLoginOut";
@@ -104,7 +103,7 @@ namespace LibraryMgrProgram
             this.lbCMOperation.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCMOperation.AutoSize = true;
             this.lbCMOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbCMOperation.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbCMOperation.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbCMOperation.Location = new System.Drawing.Point(727, 135);
             this.lbCMOperation.Name = "lbCMOperation";
             this.lbCMOperation.Size = new System.Drawing.Size(120, 27);
@@ -117,7 +116,7 @@ namespace LibraryMgrProgram
             this.lbCMBookInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCMBookInfo.AutoSize = true;
             this.lbCMBookInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbCMBookInfo.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbCMBookInfo.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbCMBookInfo.Location = new System.Drawing.Point(328, 135);
             this.lbCMBookInfo.Name = "lbCMBookInfo";
             this.lbCMBookInfo.Size = new System.Drawing.Size(93, 27);
@@ -130,7 +129,7 @@ namespace LibraryMgrProgram
             this.lbCMCusInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbCMCusInfo.AutoSize = true;
             this.lbCMCusInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbCMCusInfo.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbCMCusInfo.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbCMCusInfo.Location = new System.Drawing.Point(527, 135);
             this.lbCMCusInfo.Name = "lbCMCusInfo";
             this.lbCMCusInfo.Size = new System.Drawing.Size(120, 27);
@@ -142,7 +141,7 @@ namespace LibraryMgrProgram
             // 
             this.lbCMHome.AutoSize = true;
             this.lbCMHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCMHome.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCMHome.Font = new System.Drawing.Font("Gulim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMHome.Location = new System.Drawing.Point(12, 135);
             this.lbCMHome.Name = "lbCMHome";
             this.lbCMHome.Size = new System.Drawing.Size(209, 34);
@@ -243,7 +242,7 @@ namespace LibraryMgrProgram
             this.btnCMClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCMClose.FlatAppearance.BorderSize = 0;
             this.btnCMClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCMClose.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCMClose.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCMClose.Location = new System.Drawing.Point(1380, 6);
             this.btnCMClose.Name = "btnCMClose";
             this.btnCMClose.Size = new System.Drawing.Size(20, 20);
@@ -258,7 +257,7 @@ namespace LibraryMgrProgram
             this.btnCMMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCMMax.FlatAppearance.BorderSize = 0;
             this.btnCMMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCMMax.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCMMax.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCMMax.Location = new System.Drawing.Point(1354, 6);
             this.btnCMMax.Name = "btnCMMax";
             this.btnCMMax.Size = new System.Drawing.Size(19, 20);
@@ -273,7 +272,7 @@ namespace LibraryMgrProgram
             this.btnCMMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCMMin.FlatAppearance.BorderSize = 0;
             this.btnCMMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCMMin.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCMMin.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCMMin.Location = new System.Drawing.Point(1326, 6);
             this.btnCMMin.Name = "btnCMMin";
             this.btnCMMin.Size = new System.Drawing.Size(20, 20);
@@ -286,26 +285,32 @@ namespace LibraryMgrProgram
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 23);
             this.label1.TabIndex = 148;
             this.label1.Text = "메인폼";
             // 
-            // CusGridView
+            // plnAM0
             // 
-            this.CusGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.plnAM0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CusGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CusGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CusGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.CusGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CusGridView.Location = new System.Drawing.Point(-3, 211);
-            this.CusGridView.Name = "CusGridView";
-            this.CusGridView.RowTemplate.Height = 23;
-            this.CusGridView.Size = new System.Drawing.Size(1403, 18);
-            this.CusGridView.TabIndex = 143;
+            this.plnAM0.AutoSize = true;
+            this.plnAM0.BackColor = System.Drawing.Color.Silver;
+            this.plnAM0.ColumnCount = 1;
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM0.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnAM0.Location = new System.Drawing.Point(-3, 209);
+            this.plnAM0.Name = "plnAM0";
+            this.plnAM0.RowCount = 2;
+            this.plnAM0.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnAM0.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM0.Size = new System.Drawing.Size(1403, 20);
+            this.plnAM0.TabIndex = 149;
             // 
             // CustomerMainForm
             // 
@@ -314,12 +319,12 @@ namespace LibraryMgrProgram
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.plnAM0);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.plnCM);
             this.Controls.Add(this.lbCMHome);
             this.Controls.Add(this.picCMLogo);
             this.Controls.Add(this.picCMCustomer);
-            this.Controls.Add(this.CusGridView);
             this.Controls.Add(this.lbCMCustomer);
             this.Controls.Add(this.lbCMLoginOut);
             this.Controls.Add(this.lbCMOperation);
@@ -342,7 +347,6 @@ namespace LibraryMgrProgram
             ((System.ComponentModel.ISupportInitialize)(this.picCMCusInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).EndInit();
             this.plnCM.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -367,6 +371,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnCMMin;
         public System.Windows.Forms.Panel palCMMain;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView CusGridView;
+        private System.Windows.Forms.TableLayoutPanel plnAM0;
     }
 }

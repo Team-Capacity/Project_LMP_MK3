@@ -11,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LibraryMgrProgram;
 
 
 namespace LMP_Projcet.Customer
@@ -25,10 +24,7 @@ namespace LMP_Projcet.Customer
         }
 
         FormChange fc = new FormChange();
-        DataTable dbdataset;
-        BindingSource bSource;
         dbTest db = new dbTest();
-        CustomerEditForm ce;
 
 
         private void update()
@@ -39,7 +35,10 @@ namespace LMP_Projcet.Customer
 
         private void CustomerMyInfomationForm_Load(object sender, EventArgs e)
         {
-
+            fc.fromColorChange(this);
+            Label[] l = { lbCMIInfo, lbCMIRank , lbCMIRankView , lbCMINum , lbCMINumView , lbCMIMyName , lbCMIName, lbCMIHP , lbCMIHPView , lbCMIMan , lbCMISex , lbCMICount , lbCMICountView , lbCMIBirth, lbCMIMyBirth, lbCMIMemo, lbCMIAddrView, lbCMIAddr, lbCMICustomerState };
+            fc.fromColorChange(GBCusEdit);
+            fc.fromColorChange(l, l);
          
                 db.dbConnection();
                 string thismyName = CustomerMainForm.myname;    
@@ -66,14 +65,11 @@ namespace LMP_Projcet.Customer
                     rank = reader[1].ToString();
                     name = reader[4].ToString();
                     loancnt = Int32.Parse(reader[5].ToString());
-                    ph = reader[6].ToString();
-                    birth = reader[7].ToString();
-                    address = reader[8].ToString();
-                    gender = reader[10].ToString();
-                    memo = reader[11].ToString();
-               
-
-
+                    ph = reader[7].ToString();
+                    birth = reader[8].ToString();
+                    address = reader[9].ToString();
+                    gender = reader[11].ToString();
+                    memo = reader[12].ToString();
                 }
                 reader.Close();
 
@@ -100,9 +96,6 @@ namespace LMP_Projcet.Customer
 
         }
    
-
-        
-
         public static bool chkShow = false;
         private void btnCMIEdit_Click(object sender, EventArgs e)
         {
@@ -136,11 +129,5 @@ namespace LMP_Projcet.Customer
 
         }
 
-        private void lbCMIMyAge_Click(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

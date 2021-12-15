@@ -65,7 +65,11 @@ namespace LMP_Projcet.NonCustomer
 
         private void NonCustomerOperationForm1_Load(object sender, EventArgs e)
         {
-
+            fc.fromColorChange(this);
+            fc.fromColorChange(grpNCOBookInfo);
+            fc.fromColorChange(grpNCOColor);
+            Label[] back = { lbNCOColor, lbNCONotice };
+            fc.fromColorChange(back, back);
         }
     }
 }

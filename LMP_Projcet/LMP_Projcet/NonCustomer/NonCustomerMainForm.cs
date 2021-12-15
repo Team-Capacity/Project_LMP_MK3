@@ -76,7 +76,10 @@ namespace LibraryMgrProgram
         //메인 폼 판넬 안에 공지사항
         private void NonCustomerMainForm_Load(object sender, EventArgs e)
         {
-           
+            formChange.fromColorChange(this);
+            Label[] back = { lbNCMHome, lbNCMBookInfo , lbNCMOperation, lbNCMLogin, label2 };
+            Panel[] p = { plnAM, plnAM0 };
+            formChange.fromColorChange(back, back, p);
             formChange.ChangeFIF(ncc, palNCMMain);
         }
 

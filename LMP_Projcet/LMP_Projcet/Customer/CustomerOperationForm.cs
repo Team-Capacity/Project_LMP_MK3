@@ -28,15 +28,6 @@ namespace LMP_Projcet.Customer
         {
             InitializeComponent();
           
-
-
-
-
-
-
-
-
-
         }
 
         //공지사항 클릭 이동
@@ -115,7 +106,12 @@ namespace LMP_Projcet.Customer
 
         private void CustomerOperationForm_Load(object sender, EventArgs e)
         {
-       
+            Label[] back = { lbCOColor, lbCOSuggest, lbCONotice };
+            formChange.fromColorChange(this);
+            formChange.fromColorChange(grpCOColor);
+            formChange.fromColorChange(grpCOSuggest);
+            formChange.fromColorChange(grpCOBookInfo);
+            formChange.fromBColorChange(back);
 
         }
 

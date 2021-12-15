@@ -169,7 +169,6 @@ namespace LMP_Projcet.Customer
             this.grpCBIBookList.Size = new System.Drawing.Size(765, 460);
             this.grpCBIBookList.TabIndex = 43;
             this.grpCBIBookList.TabStop = false;
-            this.grpCBIBookList.Text = "도서 목록";
             // 
             // dgvCBIBookList
             // 
@@ -209,7 +208,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookName3
             // 
             this.lbABIBookName3.AutoSize = true;
-            this.lbABIBookName3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookName3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookName3.ForeColor = System.Drawing.Color.Red;
             this.lbABIBookName3.Location = new System.Drawing.Point(31, 42);
             this.lbABIBookName3.Name = "lbABIBookName3";
@@ -219,7 +218,7 @@ namespace LMP_Projcet.Customer
             // lbABIISBN3
             // 
             this.lbABIISBN3.AutoSize = true;
-            this.lbABIISBN3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIISBN3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIISBN3.ForeColor = System.Drawing.Color.Red;
             this.lbABIISBN3.Location = new System.Drawing.Point(40, 170);
             this.lbABIISBN3.Name = "lbABIISBN3";
@@ -229,7 +228,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookMaker3
             // 
             this.lbABIBookMaker3.AutoSize = true;
-            this.lbABIBookMaker3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookMaker3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookMaker3.ForeColor = System.Drawing.Color.Red;
             this.lbABIBookMaker3.Location = new System.Drawing.Point(44, 74);
             this.lbABIBookMaker3.Name = "lbABIBookMaker3";
@@ -239,7 +238,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookPubli3
             // 
             this.lbABIBookPubli3.AutoSize = true;
-            this.lbABIBookPubli3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookPubli3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookPubli3.Location = new System.Drawing.Point(31, 106);
             this.lbABIBookPubli3.Name = "lbABIBookPubli3";
             this.lbABIBookPubli3.Size = new System.Drawing.Size(46, 13);
@@ -256,7 +255,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookExp3
             // 
             this.lbABIBookExp3.AutoSize = true;
-            this.lbABIBookExp3.Font = new System.Drawing.Font("굴림", 10F);
+            this.lbABIBookExp3.Font = new System.Drawing.Font("Gulim", 10F);
             this.lbABIBookExp3.Location = new System.Drawing.Point(31, 267);
             this.lbABIBookExp3.Name = "lbABIBookExp3";
             this.lbABIBookExp3.Size = new System.Drawing.Size(35, 14);
@@ -265,7 +264,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookCount3
             // 
             this.lbABIBookCount3.AutoSize = true;
-            this.lbABIBookCount3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookCount3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookCount3.Location = new System.Drawing.Point(206, 237);
             this.lbABIBookCount3.Name = "lbABIBookCount3";
             this.lbABIBookCount3.Size = new System.Drawing.Size(33, 13);
@@ -274,7 +273,7 @@ namespace LMP_Projcet.Customer
             // lbABIBLocation3
             // 
             this.lbABIBLocation3.AutoSize = true;
-            this.lbABIBLocation3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBLocation3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBLocation3.Location = new System.Drawing.Point(18, 205);
             this.lbABIBLocation3.Name = "lbABIBLocation3";
             this.lbABIBLocation3.Size = new System.Drawing.Size(59, 13);
@@ -283,7 +282,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookger3
             // 
             this.lbABIBookger3.AutoSize = true;
-            this.lbABIBookger3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookger3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookger3.Location = new System.Drawing.Point(44, 236);
             this.lbABIBookger3.Name = "lbABIBookger3";
             this.lbABIBookger3.Size = new System.Drawing.Size(33, 13);
@@ -292,7 +291,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookPage3
             // 
             this.lbABIBookPage3.AutoSize = true;
-            this.lbABIBookPage3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookPage3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookPage3.Location = new System.Drawing.Point(201, 138);
             this.lbABIBookPage3.Name = "lbABIBookPage3";
             this.lbABIBookPage3.Size = new System.Drawing.Size(46, 13);
@@ -301,7 +300,7 @@ namespace LMP_Projcet.Customer
             // lbABIMakePlace3
             // 
             this.lbABIMakePlace3.AutoSize = true;
-            this.lbABIMakePlace3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIMakePlace3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIMakePlace3.Location = new System.Drawing.Point(165, 205);
             this.lbABIMakePlace3.Name = "lbABIMakePlace3";
             this.lbABIMakePlace3.Size = new System.Drawing.Size(59, 13);
@@ -310,7 +309,7 @@ namespace LMP_Projcet.Customer
             // lbABIMakeDay3
             // 
             this.lbABIMakeDay3.AutoSize = true;
-            this.lbABIMakeDay3.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIMakeDay3.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIMakeDay3.Location = new System.Drawing.Point(18, 138);
             this.lbABIMakeDay3.Name = "lbABIMakeDay3";
             this.lbABIMakeDay3.Size = new System.Drawing.Size(59, 13);
@@ -444,7 +443,7 @@ namespace LMP_Projcet.Customer
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookMaker);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIISBN);
             this.grpCBIBookInfo.Controls.Add(this.lbCBIBookName);
-            this.grpCBIBookInfo.Font = new System.Drawing.Font("굴림", 12F);
+            this.grpCBIBookInfo.Font = new System.Drawing.Font("Gulim", 12F);
             this.grpCBIBookInfo.Location = new System.Drawing.Point(6, 6);
             this.grpCBIBookInfo.Name = "grpCBIBookInfo";
             this.grpCBIBookInfo.Size = new System.Drawing.Size(497, 491);
@@ -491,7 +490,7 @@ namespace LMP_Projcet.Customer
             // lbCBIArea
             // 
             this.lbCBIArea.AutoSize = true;
-            this.lbCBIArea.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIArea.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIArea.Location = new System.Drawing.Point(6, 267);
             this.lbCBIArea.Name = "lbCBIArea";
             this.lbCBIArea.Size = new System.Drawing.Size(72, 13);
@@ -519,7 +518,7 @@ namespace LMP_Projcet.Customer
             // lbCBIMakePlace
             // 
             this.lbCBIMakePlace.AutoSize = true;
-            this.lbCBIMakePlace.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIMakePlace.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIMakePlace.Location = new System.Drawing.Point(18, 237);
             this.lbCBIMakePlace.Name = "lbCBIMakePlace";
             this.lbCBIMakePlace.Size = new System.Drawing.Size(59, 13);
@@ -583,7 +582,7 @@ namespace LMP_Projcet.Customer
             // lbCBIMakeDay
             // 
             this.lbCBIMakeDay.AutoSize = true;
-            this.lbCBIMakeDay.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIMakeDay.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIMakeDay.Location = new System.Drawing.Point(18, 138);
             this.lbCBIMakeDay.Name = "lbCBIMakeDay";
             this.lbCBIMakeDay.Size = new System.Drawing.Size(59, 13);
@@ -593,7 +592,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookPage
             // 
             this.lbCBIBookPage.AutoSize = true;
-            this.lbCBIBookPage.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBookPage.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBookPage.Location = new System.Drawing.Point(201, 138);
             this.lbCBIBookPage.Name = "lbCBIBookPage";
             this.lbCBIBookPage.Size = new System.Drawing.Size(46, 13);
@@ -603,7 +602,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookger
             // 
             this.lbCBIBookger.AutoSize = true;
-            this.lbCBIBookger.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBookger.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBookger.Location = new System.Drawing.Point(162, 204);
             this.lbCBIBookger.Name = "lbCBIBookger";
             this.lbCBIBookger.Size = new System.Drawing.Size(33, 13);
@@ -613,7 +612,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBLocation
             // 
             this.lbCBIBLocation.AutoSize = true;
-            this.lbCBIBLocation.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBLocation.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBLocation.Location = new System.Drawing.Point(18, 205);
             this.lbCBIBLocation.Name = "lbCBIBLocation";
             this.lbCBIBLocation.Size = new System.Drawing.Size(59, 13);
@@ -633,7 +632,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookCount
             // 
             this.lbCBIBookCount.AutoSize = true;
-            this.lbCBIBookCount.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBookCount.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBookCount.Location = new System.Drawing.Point(368, 267);
             this.lbCBIBookCount.Name = "lbCBIBookCount";
             this.lbCBIBookCount.Size = new System.Drawing.Size(33, 13);
@@ -643,7 +642,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookExp
             // 
             this.lbCBIBookExp.AutoSize = true;
-            this.lbCBIBookExp.Font = new System.Drawing.Font("굴림", 10F);
+            this.lbCBIBookExp.Font = new System.Drawing.Font("Gulim", 10F);
             this.lbCBIBookExp.Location = new System.Drawing.Point(40, 292);
             this.lbCBIBookExp.Name = "lbCBIBookExp";
             this.lbCBIBookExp.Size = new System.Drawing.Size(35, 14);
@@ -661,7 +660,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookPubli
             // 
             this.lbCBIBookPubli.AutoSize = true;
-            this.lbCBIBookPubli.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBookPubli.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBookPubli.Location = new System.Drawing.Point(31, 106);
             this.lbCBIBookPubli.Name = "lbCBIBookPubli";
             this.lbCBIBookPubli.Size = new System.Drawing.Size(46, 13);
@@ -671,7 +670,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookMaker
             // 
             this.lbCBIBookMaker.AutoSize = true;
-            this.lbCBIBookMaker.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBookMaker.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBookMaker.ForeColor = System.Drawing.Color.Red;
             this.lbCBIBookMaker.Location = new System.Drawing.Point(44, 74);
             this.lbCBIBookMaker.Name = "lbCBIBookMaker";
@@ -682,7 +681,7 @@ namespace LMP_Projcet.Customer
             // lbCBIISBN
             // 
             this.lbCBIISBN.AutoSize = true;
-            this.lbCBIISBN.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIISBN.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIISBN.ForeColor = System.Drawing.Color.Red;
             this.lbCBIISBN.Location = new System.Drawing.Point(40, 170);
             this.lbCBIISBN.Name = "lbCBIISBN";
@@ -693,7 +692,7 @@ namespace LMP_Projcet.Customer
             // lbCBIBookName
             // 
             this.lbCBIBookName.AutoSize = true;
-            this.lbCBIBookName.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCBIBookName.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCBIBookName.ForeColor = System.Drawing.Color.Red;
             this.lbCBIBookName.Location = new System.Drawing.Point(31, 42);
             this.lbCBIBookName.Name = "lbCBIBookName";
@@ -704,7 +703,7 @@ namespace LMP_Projcet.Customer
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label25.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label25.ForeColor = System.Drawing.Color.Red;
             this.label25.Location = new System.Drawing.Point(31, 42);
             this.label25.Name = "label25";
@@ -714,7 +713,7 @@ namespace LMP_Projcet.Customer
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label24.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label24.ForeColor = System.Drawing.Color.Red;
             this.label24.Location = new System.Drawing.Point(40, 170);
             this.label24.Name = "label24";
@@ -724,7 +723,7 @@ namespace LMP_Projcet.Customer
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label23.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label23.ForeColor = System.Drawing.Color.Red;
             this.label23.Location = new System.Drawing.Point(44, 74);
             this.label23.Name = "label23";
@@ -734,7 +733,7 @@ namespace LMP_Projcet.Customer
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label22.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label22.Location = new System.Drawing.Point(31, 106);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(46, 13);
@@ -751,7 +750,7 @@ namespace LMP_Projcet.Customer
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("굴림", 10F);
+            this.label19.Font = new System.Drawing.Font("Gulim", 10F);
             this.label19.Location = new System.Drawing.Point(31, 267);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(35, 14);
@@ -760,7 +759,7 @@ namespace LMP_Projcet.Customer
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label18.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label18.Location = new System.Drawing.Point(206, 237);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(33, 13);
@@ -769,7 +768,7 @@ namespace LMP_Projcet.Customer
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label16.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label16.Location = new System.Drawing.Point(18, 205);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(59, 13);
@@ -778,7 +777,7 @@ namespace LMP_Projcet.Customer
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label15.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label15.Location = new System.Drawing.Point(44, 236);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(33, 13);
@@ -787,7 +786,7 @@ namespace LMP_Projcet.Customer
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label14.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label14.Location = new System.Drawing.Point(201, 138);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(46, 13);
@@ -796,7 +795,7 @@ namespace LMP_Projcet.Customer
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label13.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label13.Location = new System.Drawing.Point(165, 205);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(59, 13);
@@ -805,7 +804,7 @@ namespace LMP_Projcet.Customer
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label12.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label12.Location = new System.Drawing.Point(18, 138);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(59, 13);
@@ -922,7 +921,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookName2
             // 
             this.lbABIBookName2.AutoSize = true;
-            this.lbABIBookName2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookName2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookName2.Location = new System.Drawing.Point(31, 42);
             this.lbABIBookName2.Name = "lbABIBookName2";
             this.lbABIBookName2.Size = new System.Drawing.Size(46, 13);
@@ -931,7 +930,7 @@ namespace LMP_Projcet.Customer
             // lbABIISBN2
             // 
             this.lbABIISBN2.AutoSize = true;
-            this.lbABIISBN2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIISBN2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIISBN2.Location = new System.Drawing.Point(40, 170);
             this.lbABIISBN2.Name = "lbABIISBN2";
             this.lbABIISBN2.Size = new System.Drawing.Size(37, 13);
@@ -940,7 +939,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookMaker2
             // 
             this.lbABIBookMaker2.AutoSize = true;
-            this.lbABIBookMaker2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookMaker2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookMaker2.Location = new System.Drawing.Point(44, 74);
             this.lbABIBookMaker2.Name = "lbABIBookMaker2";
             this.lbABIBookMaker2.Size = new System.Drawing.Size(33, 13);
@@ -949,7 +948,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookPubli2
             // 
             this.lbABIBookPubli2.AutoSize = true;
-            this.lbABIBookPubli2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookPubli2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookPubli2.Location = new System.Drawing.Point(31, 106);
             this.lbABIBookPubli2.Name = "lbABIBookPubli2";
             this.lbABIBookPubli2.Size = new System.Drawing.Size(46, 13);
@@ -966,7 +965,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookExp2
             // 
             this.lbABIBookExp2.AutoSize = true;
-            this.lbABIBookExp2.Font = new System.Drawing.Font("굴림", 10F);
+            this.lbABIBookExp2.Font = new System.Drawing.Font("Gulim", 10F);
             this.lbABIBookExp2.Location = new System.Drawing.Point(31, 267);
             this.lbABIBookExp2.Name = "lbABIBookExp2";
             this.lbABIBookExp2.Size = new System.Drawing.Size(35, 14);
@@ -984,7 +983,7 @@ namespace LMP_Projcet.Customer
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label32.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label32.Location = new System.Drawing.Point(206, 237);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(33, 13);
@@ -993,7 +992,7 @@ namespace LMP_Projcet.Customer
             // lbABIBLocation2
             // 
             this.lbABIBLocation2.AutoSize = true;
-            this.lbABIBLocation2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBLocation2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBLocation2.Location = new System.Drawing.Point(18, 205);
             this.lbABIBLocation2.Name = "lbABIBLocation2";
             this.lbABIBLocation2.Size = new System.Drawing.Size(59, 13);
@@ -1002,7 +1001,7 @@ namespace LMP_Projcet.Customer
             // lbABIBookger2
             // 
             this.lbABIBookger2.AutoSize = true;
-            this.lbABIBookger2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIBookger2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIBookger2.Location = new System.Drawing.Point(44, 236);
             this.lbABIBookger2.Name = "lbABIBookger2";
             this.lbABIBookger2.Size = new System.Drawing.Size(33, 13);
@@ -1011,7 +1010,7 @@ namespace LMP_Projcet.Customer
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label31.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label31.Location = new System.Drawing.Point(201, 138);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(46, 13);
@@ -1020,7 +1019,7 @@ namespace LMP_Projcet.Customer
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label30.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label30.Location = new System.Drawing.Point(165, 205);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(59, 13);
@@ -1029,7 +1028,7 @@ namespace LMP_Projcet.Customer
             // lbABIMakeDay2
             // 
             this.lbABIMakeDay2.AutoSize = true;
-            this.lbABIMakeDay2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbABIMakeDay2.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbABIMakeDay2.Location = new System.Drawing.Point(18, 138);
             this.lbABIMakeDay2.Name = "lbABIMakeDay2";
             this.lbABIMakeDay2.Size = new System.Drawing.Size(59, 13);

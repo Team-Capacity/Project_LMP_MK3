@@ -29,7 +29,7 @@ namespace LibraryMgrProgram.AdminForm
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminContentsMainForm));
             this.lbACMNotic = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -50,20 +50,10 @@ namespace LibraryMgrProgram.AdminForm
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView2)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox3
-            // 
-            this.textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox3.Location = new System.Drawing.Point(722, 62);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(550, 234);
-            this.textBox3.TabIndex = 17;
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // lbACMNotic
             // 
             this.lbACMNotic.AutoSize = true;
-            this.lbACMNotic.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbACMNotic.BackColor = System.Drawing.Color.White;
             this.lbACMNotic.Font = new System.Drawing.Font("Gulim", 22F);
             this.lbACMNotic.Location = new System.Drawing.Point(273, 28);
             this.lbACMNotic.Name = "lbACMNotic";
@@ -74,7 +64,7 @@ namespace LibraryMgrProgram.AdminForm
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Gulim", 16F);
             this.label2.Location = new System.Drawing.Point(727, 313);
             this.label2.Name = "label2";
@@ -94,7 +84,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             // dgvACNotice
             // 
-            this.dgvACNotice.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgvACNotice.BackgroundColor = System.Drawing.Color.White;
             this.dgvACNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvACNotice.Location = new System.Drawing.Point(132, 61);
             this.dgvACNotice.Name = "dgvACNotice";
@@ -104,32 +94,38 @@ namespace LibraryMgrProgram.AdminForm
             // 
             // picACMBookView0
             // 
+            this.picACMBookView0.Image = ((System.Drawing.Image)(resources.GetObject("picACMBookView0.Image")));
             this.picACMBookView0.Location = new System.Drawing.Point(740, 77);
             this.picACMBookView0.Name = "picACMBookView0";
             this.picACMBookView0.Size = new System.Drawing.Size(120, 135);
+            this.picACMBookView0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picACMBookView0.TabIndex = 33;
             this.picACMBookView0.TabStop = false;
             // 
             // picACMBookView1
             // 
+            this.picACMBookView1.Image = ((System.Drawing.Image)(resources.GetObject("picACMBookView1.Image")));
             this.picACMBookView1.Location = new System.Drawing.Point(935, 77);
             this.picACMBookView1.Name = "picACMBookView1";
             this.picACMBookView1.Size = new System.Drawing.Size(120, 135);
+            this.picACMBookView1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picACMBookView1.TabIndex = 34;
             this.picACMBookView1.TabStop = false;
             // 
             // picACMBookView2
             // 
+            this.picACMBookView2.Image = ((System.Drawing.Image)(resources.GetObject("picACMBookView2.Image")));
             this.picACMBookView2.Location = new System.Drawing.Point(1130, 77);
             this.picACMBookView2.Name = "picACMBookView2";
             this.picACMBookView2.Size = new System.Drawing.Size(120, 135);
+            this.picACMBookView2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picACMBookView2.TabIndex = 35;
             this.picACMBookView2.TabStop = false;
             // 
             // lbACMBestBook
             // 
             this.lbACMBestBook.AutoSize = true;
-            this.lbACMBestBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lbACMBestBook.BackColor = System.Drawing.Color.White;
             this.lbACMBestBook.Font = new System.Drawing.Font("Gulim", 16F);
             this.lbACMBestBook.Location = new System.Drawing.Point(727, 36);
             this.lbACMBestBook.Name = "lbACMBestBook";
@@ -195,6 +191,7 @@ namespace LibraryMgrProgram.AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 553);
             this.Controls.Add(this.lbACMAuthor2);
             this.Controls.Add(this.lbACMBookName2);
@@ -208,7 +205,6 @@ namespace LibraryMgrProgram.AdminForm
             this.Controls.Add(this.picACMBookView0);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbACMNotic);
-            this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.dgvACNotice);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -226,8 +222,6 @@ namespace LibraryMgrProgram.AdminForm
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label lbACMNotic;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;

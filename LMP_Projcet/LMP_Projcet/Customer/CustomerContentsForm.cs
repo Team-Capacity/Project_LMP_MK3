@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LMP_Projcet.Methods;
 
 namespace LibraryMgrProgram.CustomerForm
 {
@@ -18,11 +19,15 @@ namespace LibraryMgrProgram.CustomerForm
         {
             InitializeComponent();
         }
-        MouseEvent me = new MouseEvent();
         dbTest db = new dbTest();
+        FormChange fc = new FormChange();
 
         private void CustomerContentsForm_Load(object sender, EventArgs e)
         {
+            fc.fromColorChange(this);
+            Label[] back = { lbCCNotic, lbCCBestBook, lbCCStatus, lbCCBookName1,  lbAuthor1,  lbCCBookName3, lbAuthor3, lbCCBookName5, lbAuthor5 };
+            fc.fromColorChange(back,back);
+
             Content();
             Book();
        

@@ -30,101 +30,30 @@ namespace LibraryMgrProgram
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NonCustomerMainForm));
-            this.plnNCM = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNCMMax = new System.Windows.Forms.Button();
-            this.btnNCMMin = new System.Windows.Forms.Button();
-            this.btnNCMClose = new System.Windows.Forms.Button();
             this.lbNCMLogin = new System.Windows.Forms.Label();
             this.lbNCMOperation = new System.Windows.Forms.Label();
             this.lbNCMBookInfo = new System.Windows.Forms.Label();
-            this.dgvNCM = new System.Windows.Forms.DataGridView();
             this.palNCMMain = new System.Windows.Forms.Panel();
             this.picNCMOperation = new System.Windows.Forms.PictureBox();
             this.picNCMBookInfo = new System.Windows.Forms.PictureBox();
             this.lbNCMHome = new System.Windows.Forms.Label();
             this.picNCMLogo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.plnNCM.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNCM)).BeginInit();
+            this.plnAM = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLFClose = new System.Windows.Forms.Button();
+            this.btnLFMax = new System.Windows.Forms.Button();
+            this.btnLFMin = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.plnAM0 = new System.Windows.Forms.TableLayoutPanel();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMOperation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMBookInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMLogo)).BeginInit();
+            this.plnAM.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // plnNCM
-            // 
-            this.plnNCM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.plnNCM.AutoSize = true;
-            this.plnNCM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.plnNCM.ColumnCount = 3;
-            this.plnNCM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnNCM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnNCM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnNCM.Controls.Add(this.btnNCMMax, 1, 1);
-            this.plnNCM.Controls.Add(this.btnNCMMin, 0, 1);
-            this.plnNCM.Controls.Add(this.btnNCMClose, 2, 1);
-            this.plnNCM.Location = new System.Drawing.Point(0, -3);
-            this.plnNCM.Name = "plnNCM";
-            this.plnNCM.RowCount = 2;
-            this.plnNCM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.plnNCM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnNCM.Size = new System.Drawing.Size(1399, 39);
-            this.plnNCM.TabIndex = 0;
-            this.plnNCM.Paint += new System.Windows.Forms.PaintEventHandler(this.plnNCM_Paint);
-            this.plnNCM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnNCM_MouseDown);
-            this.plnNCM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnNCM_MouseMove);
-            this.plnNCM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnNCM_MouseUp);
-            // 
-            // btnNCMMax
-            // 
-            this.btnNCMMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNCMMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNCMMax.FlatAppearance.BorderSize = 0;
-            this.btnNCMMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMMax.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnNCMMax.Location = new System.Drawing.Point(1336, 6);
-            this.btnNCMMax.Name = "btnNCMMax";
-            this.btnNCMMax.Size = new System.Drawing.Size(20, 20);
-            this.btnNCMMax.TabIndex = 3;
-            this.btnNCMMax.Text = "🗖";
-            this.btnNCMMax.UseVisualStyleBackColor = false;
-            this.btnNCMMax.Click += new System.EventHandler(this.btnNCMMax_Click);
-            // 
-            // btnNCMMin
-            // 
-            this.btnNCMMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNCMMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNCMMin.FlatAppearance.BorderSize = 0;
-            this.btnNCMMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMMin.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnNCMMin.Location = new System.Drawing.Point(1296, 6);
-            this.btnNCMMin.Name = "btnNCMMin";
-            this.btnNCMMin.Size = new System.Drawing.Size(20, 20);
-            this.btnNCMMin.TabIndex = 2;
-            this.btnNCMMin.Text = "🗕";
-            this.btnNCMMin.UseVisualStyleBackColor = false;
-            this.btnNCMMin.Click += new System.EventHandler(this.btnNCMMin_Click);
-            // 
-            // btnNCMClose
-            // 
-            this.btnNCMClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNCMClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnNCMClose.FlatAppearance.BorderSize = 0;
-            this.btnNCMClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNCMClose.Font = new System.Drawing.Font("굴림", 15F);
-            this.btnNCMClose.Location = new System.Drawing.Point(1376, 6);
-            this.btnNCMClose.Name = "btnNCMClose";
-            this.btnNCMClose.Size = new System.Drawing.Size(20, 20);
-            this.btnNCMClose.TabIndex = 1;
-            this.btnNCMClose.Text = "🗙";
-            this.btnNCMClose.UseVisualStyleBackColor = false;
-            this.btnNCMClose.Click += new System.EventHandler(this.btnNCMClose_Click);
             // 
             // lbNCMLogin
             // 
             this.lbNCMLogin.AutoSize = true;
-            this.lbNCMLogin.Font = new System.Drawing.Font("굴림", 12F);
+            this.lbNCMLogin.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbNCMLogin.ForeColor = System.Drawing.Color.Black;
             this.lbNCMLogin.Location = new System.Drawing.Point(1316, 85);
             this.lbNCMLogin.Name = "lbNCMLogin";
@@ -137,7 +66,7 @@ namespace LibraryMgrProgram
             // 
             this.lbNCMOperation.AutoSize = true;
             this.lbNCMOperation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCMOperation.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbNCMOperation.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbNCMOperation.Location = new System.Drawing.Point(528, 135);
             this.lbNCMOperation.Name = "lbNCMOperation";
             this.lbNCMOperation.Size = new System.Drawing.Size(120, 27);
@@ -149,27 +78,13 @@ namespace LibraryMgrProgram
             // 
             this.lbNCMBookInfo.AutoSize = true;
             this.lbNCMBookInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCMBookInfo.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbNCMBookInfo.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbNCMBookInfo.Location = new System.Drawing.Point(328, 135);
             this.lbNCMBookInfo.Name = "lbNCMBookInfo";
             this.lbNCMBookInfo.Size = new System.Drawing.Size(93, 27);
             this.lbNCMBookInfo.TabIndex = 146;
             this.lbNCMBookInfo.Text = "책정보";
             this.lbNCMBookInfo.Click += new System.EventHandler(this.lbNCMBookInfo_Click_1);
-            // 
-            // dgvNCM
-            // 
-            this.dgvNCM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvNCM.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dgvNCM.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvNCM.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvNCM.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNCM.Location = new System.Drawing.Point(-3, 211);
-            this.dgvNCM.Name = "dgvNCM";
-            this.dgvNCM.RowTemplate.Height = 23;
-            this.dgvNCM.Size = new System.Drawing.Size(1403, 18);
-            this.dgvNCM.TabIndex = 151;
             // 
             // palNCMMain
             // 
@@ -206,7 +121,7 @@ namespace LibraryMgrProgram
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbNCMHome.AutoSize = true;
             this.lbNCMHome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbNCMHome.Font = new System.Drawing.Font("굴림", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbNCMHome.Font = new System.Drawing.Font("Gulim", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbNCMHome.Location = new System.Drawing.Point(12, 135);
             this.lbNCMHome.Name = "lbNCMHome";
             this.lbNCMHome.Size = new System.Drawing.Size(209, 34);
@@ -226,16 +141,108 @@ namespace LibraryMgrProgram
             this.picNCMLogo.TabIndex = 154;
             this.picNCMLogo.TabStop = false;
             // 
-            // label1
+            // plnAM
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.Font = new System.Drawing.Font("굴림", 15F);
-            this.label1.Location = new System.Drawing.Point(3, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 23);
-            this.label1.TabIndex = 167;
-            this.label1.Text = "메인폼";
+            this.plnAM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnAM.AutoSize = true;
+            this.plnAM.BackColor = System.Drawing.Color.Silver;
+            this.plnAM.ColumnCount = 4;
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.Controls.Add(this.btnLFClose, 3, 1);
+            this.plnAM.Controls.Add(this.btnLFMax, 2, 1);
+            this.plnAM.Controls.Add(this.btnLFMin, 1, 1);
+            this.plnAM.Controls.Add(this.label2, 0, 1);
+            this.plnAM.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnAM.Location = new System.Drawing.Point(-2, -2);
+            this.plnAM.Name = "plnAM";
+            this.plnAM.RowCount = 2;
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.plnAM.Size = new System.Drawing.Size(1403, 35);
+            this.plnAM.TabIndex = 168;
+            this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnNCM_MouseDown);
+            this.plnAM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnNCM_MouseMove);
+            this.plnAM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnNCM_MouseUp);
+            // 
+            // btnLFClose
+            // 
+            this.btnLFClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFClose.FlatAppearance.BorderSize = 0;
+            this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFClose.Location = new System.Drawing.Point(1380, 6);
+            this.btnLFClose.Name = "btnLFClose";
+            this.btnLFClose.Size = new System.Drawing.Size(20, 20);
+            this.btnLFClose.TabIndex = 1;
+            this.btnLFClose.Text = "🗙";
+            this.btnLFClose.UseVisualStyleBackColor = false;
+            this.btnLFClose.Click += new System.EventHandler(this.btnNCMClose_Click);
+            // 
+            // btnLFMax
+            // 
+            this.btnLFMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMax.FlatAppearance.BorderSize = 0;
+            this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMax.Location = new System.Drawing.Point(1354, 6);
+            this.btnLFMax.Name = "btnLFMax";
+            this.btnLFMax.Size = new System.Drawing.Size(19, 20);
+            this.btnLFMax.TabIndex = 3;
+            this.btnLFMax.Text = "🗖";
+            this.btnLFMax.UseVisualStyleBackColor = false;
+            this.btnLFMax.Click += new System.EventHandler(this.btnNCMMax_Click);
+            // 
+            // btnLFMin
+            // 
+            this.btnLFMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMin.FlatAppearance.BorderSize = 0;
+            this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMin.Location = new System.Drawing.Point(1326, 6);
+            this.btnLFMin.Name = "btnLFMin";
+            this.btnLFMin.Size = new System.Drawing.Size(20, 20);
+            this.btnLFMin.TabIndex = 2;
+            this.btnLFMin.Text = "🗕";
+            this.btnLFMin.UseVisualStyleBackColor = false;
+            this.btnLFMin.Click += new System.EventHandler(this.btnNCMMin_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label2.Location = new System.Drawing.Point(3, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "메인폼";
+            // 
+            // plnAM0
+            // 
+            this.plnAM0.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnAM0.AutoSize = true;
+            this.plnAM0.BackColor = System.Drawing.Color.Silver;
+            this.plnAM0.ColumnCount = 1;
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM0.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM0.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnAM0.Location = new System.Drawing.Point(-3, 209);
+            this.plnAM0.Name = "plnAM0";
+            this.plnAM0.RowCount = 2;
+            this.plnAM0.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnAM0.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM0.Size = new System.Drawing.Size(1403, 20);
+            this.plnAM0.TabIndex = 149;
             // 
             // NonCustomerMainForm
             // 
@@ -244,16 +251,15 @@ namespace LibraryMgrProgram
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(1400, 800);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.plnAM0);
+            this.Controls.Add(this.plnAM);
             this.Controls.Add(this.lbNCMHome);
             this.Controls.Add(this.picNCMLogo);
-            this.Controls.Add(this.dgvNCM);
             this.Controls.Add(this.lbNCMLogin);
             this.Controls.Add(this.lbNCMOperation);
             this.Controls.Add(this.picNCMOperation);
             this.Controls.Add(this.lbNCMBookInfo);
             this.Controls.Add(this.picNCMBookInfo);
-            this.Controls.Add(this.plnNCM);
             this.Controls.Add(this.palNCMMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NonCustomerMainForm";
@@ -261,31 +267,29 @@ namespace LibraryMgrProgram
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NonCustomerMainForm_FormClosing);
             this.Load += new System.EventHandler(this.NonCustomerMainForm_Load);
-            this.plnNCM.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvNCM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMOperation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMBookInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picNCMLogo)).EndInit();
+            this.plnAM.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel plnNCM;
-        private System.Windows.Forms.Button btnNCMMax;
-        private System.Windows.Forms.Button btnNCMMin;
-        private System.Windows.Forms.Button btnNCMClose;
         private System.Windows.Forms.Label lbNCMLogin;
         private System.Windows.Forms.Label lbNCMOperation;
         private System.Windows.Forms.PictureBox picNCMOperation;
         private System.Windows.Forms.Label lbNCMBookInfo;
         private System.Windows.Forms.PictureBox picNCMBookInfo;
-        private System.Windows.Forms.DataGridView dgvNCM;
         private System.Windows.Forms.Panel palNCMMain;
         private System.Windows.Forms.Label lbNCMHome;
         private System.Windows.Forms.PictureBox picNCMLogo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TableLayoutPanel plnAM;
+        private System.Windows.Forms.Button btnLFClose;
+        private System.Windows.Forms.Button btnLFMax;
+        private System.Windows.Forms.Button btnLFMin;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TableLayoutPanel plnAM0;
     }
 }

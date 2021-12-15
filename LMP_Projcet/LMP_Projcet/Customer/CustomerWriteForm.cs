@@ -18,10 +18,10 @@ namespace LMP_Projcet.Customer
     public partial class CustomerWriteForm : Form
     {
         dbTest db = new dbTest();
+        FormChange fc = new FormChange();
         public CustomerWriteForm()
         {
             InitializeComponent();
-
         }
 
         MouseEvent mouseEvent = new MouseEvent();
@@ -96,12 +96,19 @@ namespace LMP_Projcet.Customer
 
         private void CustomerWriteForm_Load(object sender, EventArgs e)
         {
+            fc.fromColorChange(this);
+            fc.fromColorChange(grpCWSuggest);
+            Label[] l = { lbCWNotice, lbCWLogo, label1 };
+            Panel[] p = { plnCW };
+            fc.fromColorChange(grpCWSuggest);
+            fc.fromColorChange(l, l,p);
+
             lbCWToday.Text = DateTime.Now.ToString("yyyy/MM/dd");
 
             db.dbConnection();
             string thismyName = CustomerMainForm.myname;
             string myName = thismyName.Substring(0, thismyName.Length - 8);
-            string sql = "select * from lmp.Customer where CName = '" + myName + "';";
+            string sql = "select * from Customer where CName = '" + myName + "';";
 
             MySqlCommand cmd = new MySqlCommand(sql, db.conn);
             MySqlDataReader reader = cmd.ExecuteReader();

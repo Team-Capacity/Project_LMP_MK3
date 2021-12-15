@@ -84,7 +84,7 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCNNotice.AutoSize = true;
             this.lbCNNotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lbCNNotice.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCNNotice.Font = new System.Drawing.Font("Gulim", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCNNotice.ForeColor = System.Drawing.Color.Black;
             this.lbCNNotice.Location = new System.Drawing.Point(269, 50);
             this.lbCNNotice.Name = "lbCNNotice";
@@ -133,7 +133,7 @@ namespace LMP_Projcet.Customer
             this.btnCNClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCNClose.FlatAppearance.BorderSize = 0;
             this.btnCNClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCNClose.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCNClose.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCNClose.Location = new System.Drawing.Point(1135, 6);
             this.btnCNClose.Name = "btnCNClose";
             this.btnCNClose.Size = new System.Drawing.Size(20, 20);
@@ -148,7 +148,7 @@ namespace LMP_Projcet.Customer
             this.btnCNMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCNMax.FlatAppearance.BorderSize = 0;
             this.btnCNMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCNMax.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCNMax.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCNMax.Location = new System.Drawing.Point(1109, 6);
             this.btnCNMax.Name = "btnCNMax";
             this.btnCNMax.Size = new System.Drawing.Size(19, 20);
@@ -163,7 +163,7 @@ namespace LMP_Projcet.Customer
             this.btnCNMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCNMin.FlatAppearance.BorderSize = 0;
             this.btnCNMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCNMin.Font = new System.Drawing.Font("굴림", 10F);
+            this.btnCNMin.Font = new System.Drawing.Font("Gulim", 10F);
             this.btnCNMin.Location = new System.Drawing.Point(1081, 6);
             this.btnCNMin.Name = "btnCNMin";
             this.btnCNMin.Size = new System.Drawing.Size(20, 20);
@@ -184,17 +184,17 @@ namespace LMP_Projcet.Customer
             // lbCNNoticeView
             // 
             this.lbCNNoticeView.AutoSize = true;
-            this.lbCNNoticeView.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCNNoticeView.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCNNoticeView.Location = new System.Drawing.Point(33, 97);
             this.lbCNNoticeView.Name = "lbCNNoticeView";
-            this.lbCNNoticeView.Size = new System.Drawing.Size(70, 21);
+            this.lbCNNoticeView.Size = new System.Drawing.Size(62, 21);
             this.lbCNNoticeView.TabIndex = 151;
-            this.lbCNNoticeView.Text = "제목: ";
+            this.lbCNNoticeView.Text = "제목:";
             // 
             // lbCNNoticeView3
             // 
             this.lbCNNoticeView3.AutoSize = true;
-            this.lbCNNoticeView3.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCNNoticeView3.Font = new System.Drawing.Font("Gulim", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCNNoticeView3.Location = new System.Drawing.Point(33, 129);
             this.lbCNNoticeView3.Name = "lbCNNoticeView3";
             this.lbCNNoticeView3.Size = new System.Drawing.Size(62, 21);
@@ -224,7 +224,7 @@ namespace LMP_Projcet.Customer
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.BackColor = System.Drawing.Color.Silver;
-            this.label1.Font = new System.Drawing.Font("굴림", 15F);
+            this.label1.Font = new System.Drawing.Font("Gulim", 15F);
             this.label1.Location = new System.Drawing.Point(3, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 23);

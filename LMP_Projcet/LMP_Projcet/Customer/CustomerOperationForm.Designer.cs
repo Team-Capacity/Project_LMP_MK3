@@ -32,19 +32,19 @@ namespace LMP_Projcet.Customer
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerOperationForm));
             this.grpCOColor = new System.Windows.Forms.GroupBox();
             this.lbCOColor = new System.Windows.Forms.Label();
+            this.picCOColor = new System.Windows.Forms.PictureBox();
             this.grpCOSuggest = new System.Windows.Forms.GroupBox();
             this.lbCOSuggest = new System.Windows.Forms.Label();
+            this.picCOSuggest = new System.Windows.Forms.PictureBox();
             this.grpCOBookInfo = new System.Windows.Forms.GroupBox();
             this.lbCONotice = new System.Windows.Forms.Label();
             this.picCONotice = new System.Windows.Forms.PictureBox();
-            this.picCOColor = new System.Windows.Forms.PictureBox();
-            this.picCOSuggest = new System.Windows.Forms.PictureBox();
             this.grpCOColor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).BeginInit();
             this.grpCOSuggest.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).BeginInit();
             this.grpCOBookInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCONotice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).BeginInit();
             this.SuspendLayout();
             // 
             // grpCOColor
@@ -62,13 +62,23 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCOColor.AutoSize = true;
             this.lbCOColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbCOColor.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbCOColor.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbCOColor.Location = new System.Drawing.Point(57, 67);
             this.lbCOColor.Name = "lbCOColor";
             this.lbCOColor.Size = new System.Drawing.Size(131, 27);
             this.lbCOColor.TabIndex = 124;
             this.lbCOColor.Text = "색상/글꼴";
             this.lbCOColor.Click += new System.EventHandler(this.lbCOColor_Click);
+            // 
+            // picCOColor
+            // 
+            this.picCOColor.Image = ((System.Drawing.Image)(resources.GetObject("picCOColor.Image")));
+            this.picCOColor.Location = new System.Drawing.Point(6, 20);
+            this.picCOColor.Name = "picCOColor";
+            this.picCOColor.Size = new System.Drawing.Size(100, 77);
+            this.picCOColor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCOColor.TabIndex = 125;
+            this.picCOColor.TabStop = false;
             // 
             // grpCOSuggest
             // 
@@ -85,13 +95,23 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCOSuggest.AutoSize = true;
             this.lbCOSuggest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbCOSuggest.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbCOSuggest.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbCOSuggest.Location = new System.Drawing.Point(57, 70);
             this.lbCOSuggest.Name = "lbCOSuggest";
             this.lbCOSuggest.Size = new System.Drawing.Size(120, 27);
             this.lbCOSuggest.TabIndex = 127;
             this.lbCOSuggest.Text = "건의하기";
             this.lbCOSuggest.Click += new System.EventHandler(this.lbCOSuggest_Click);
+            // 
+            // picCOSuggest
+            // 
+            this.picCOSuggest.Image = ((System.Drawing.Image)(resources.GetObject("picCOSuggest.Image")));
+            this.picCOSuggest.Location = new System.Drawing.Point(13, 20);
+            this.picCOSuggest.Name = "picCOSuggest";
+            this.picCOSuggest.Size = new System.Drawing.Size(100, 77);
+            this.picCOSuggest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCOSuggest.TabIndex = 128;
+            this.picCOSuggest.TabStop = false;
             // 
             // grpCOBookInfo
             // 
@@ -108,7 +128,7 @@ namespace LMP_Projcet.Customer
             // 
             this.lbCONotice.AutoSize = true;
             this.lbCONotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbCONotice.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbCONotice.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbCONotice.Location = new System.Drawing.Point(63, 70);
             this.lbCONotice.Name = "lbCONotice";
             this.lbCONotice.Size = new System.Drawing.Size(120, 27);
@@ -127,26 +147,6 @@ namespace LMP_Projcet.Customer
             this.picCONotice.TabIndex = 128;
             this.picCONotice.TabStop = false;
             // 
-            // picCOColor
-            // 
-            this.picCOColor.Image = ((System.Drawing.Image)(resources.GetObject("picCOColor.Image")));
-            this.picCOColor.Location = new System.Drawing.Point(6, 20);
-            this.picCOColor.Name = "picCOColor";
-            this.picCOColor.Size = new System.Drawing.Size(100, 77);
-            this.picCOColor.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCOColor.TabIndex = 125;
-            this.picCOColor.TabStop = false;
-            // 
-            // picCOSuggest
-            // 
-            this.picCOSuggest.Image = ((System.Drawing.Image)(resources.GetObject("picCOSuggest.Image")));
-            this.picCOSuggest.Location = new System.Drawing.Point(13, 20);
-            this.picCOSuggest.Name = "picCOSuggest";
-            this.picCOSuggest.Size = new System.Drawing.Size(100, 77);
-            this.picCOSuggest.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picCOSuggest.TabIndex = 128;
-            this.picCOSuggest.TabStop = false;
-            // 
             // CustomerOperationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -163,13 +163,13 @@ namespace LMP_Projcet.Customer
             this.Load += new System.EventHandler(this.CustomerOperationForm_Load);
             this.grpCOColor.ResumeLayout(false);
             this.grpCOColor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).EndInit();
             this.grpCOSuggest.ResumeLayout(false);
             this.grpCOSuggest.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).EndInit();
             this.grpCOBookInfo.ResumeLayout(false);
             this.grpCOBookInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCONotice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOColor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picCOSuggest)).EndInit();
             this.ResumeLayout(false);
 
         }

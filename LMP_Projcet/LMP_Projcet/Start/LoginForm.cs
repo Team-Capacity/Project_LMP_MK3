@@ -23,6 +23,7 @@ namespace LMP_Projcet
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
         public static string name = "";
+        public static int number = 0;
         public static Color backColor;
         public static Color fontColor;
         public static Color titleColor;

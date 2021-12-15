@@ -47,7 +47,7 @@ namespace LMP_Projcet.NonCustomer
             this.grpNCOBookInfo.BackColor = System.Drawing.Color.White;
             this.grpNCOBookInfo.Controls.Add(this.lbNCONotice);
             this.grpNCOBookInfo.Controls.Add(this.picNCONotice);
-            this.grpNCOBookInfo.Location = new System.Drawing.Point(345, 189);
+            this.grpNCOBookInfo.Location = new System.Drawing.Point(440, 189);
             this.grpNCOBookInfo.Name = "grpNCOBookInfo";
             this.grpNCOBookInfo.Size = new System.Drawing.Size(210, 97);
             this.grpNCOBookInfo.TabIndex = 135;
@@ -57,7 +57,7 @@ namespace LMP_Projcet.NonCustomer
             // 
             this.lbNCONotice.AutoSize = true;
             this.lbNCONotice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCONotice.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbNCONotice.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbNCONotice.Location = new System.Drawing.Point(63, 70);
             this.lbNCONotice.Name = "lbNCONotice";
             this.lbNCONotice.Size = new System.Drawing.Size(120, 27);
@@ -81,7 +81,7 @@ namespace LMP_Projcet.NonCustomer
             this.grpNCOColor.BackColor = System.Drawing.Color.White;
             this.grpNCOColor.Controls.Add(this.lbNCOColor);
             this.grpNCOColor.Controls.Add(this.picNCOColor);
-            this.grpNCOColor.Location = new System.Drawing.Point(614, 189);
+            this.grpNCOColor.Location = new System.Drawing.Point(709, 189);
             this.grpNCOColor.Name = "grpNCOColor";
             this.grpNCOColor.Size = new System.Drawing.Size(210, 97);
             this.grpNCOColor.TabIndex = 133;
@@ -91,7 +91,7 @@ namespace LMP_Projcet.NonCustomer
             // 
             this.lbNCOColor.AutoSize = true;
             this.lbNCOColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.lbNCOColor.Font = new System.Drawing.Font("굴림", 20F);
+            this.lbNCOColor.Font = new System.Drawing.Font("Gulim", 20F);
             this.lbNCOColor.Location = new System.Drawing.Point(57, 67);
             this.lbNCOColor.Name = "lbNCOColor";
             this.lbNCOColor.Size = new System.Drawing.Size(131, 27);

@@ -127,7 +127,6 @@ namespace LMP_Projcet.Start
             {
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                 MySqlDataReader dbReader = cmd.ExecuteReader();
-                int count = 0;
 
                 while (dbReader.Read())
                 {

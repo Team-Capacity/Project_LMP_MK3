@@ -23,7 +23,7 @@ namespace LMP_Projcet.Customer
 
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
-        int i;
+        FormChange fc = new FormChange();
 
         private void plnCN_MouseDown(object sender, MouseEventArgs e)
         {
@@ -108,11 +108,12 @@ namespace LMP_Projcet.Customer
 
         private void CustomerNoticeForm_Load(object sender, EventArgs e)
         {
-
+            Label[] back = { lbCNNoticeView, lbCNNoticeView3, label1, lbCNNotice };
+            Panel[] p = { plnCN };
+            fc.fromColorChange(back, back, p);
+            fc.fromColorChange(this);
             select1();
             select2();
-
-
         }
 
         private void dgvCNList_CellClick(object sender, DataGridViewCellEventArgs e)

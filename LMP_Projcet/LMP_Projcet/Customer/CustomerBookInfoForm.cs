@@ -23,9 +23,8 @@ namespace LMP_Projcet.Customer
         {
             InitializeComponent();
         }
-        dbConnect dc = new dbConnect();
-        dbTest db = new dbTest();
         MouseEvent me = new MouseEvent();
+        FormChange fc = new FormChange();
 
         //책 제목 OR 저자 검색시 DataGridView에 해당 조건에 맞는 내용만 보이게 하는 함수
        
@@ -34,8 +33,11 @@ namespace LMP_Projcet.Customer
         {
             string sql = "select * from Book;";
             me.reloadForm(sql, dgvCBIBookList, 0);
-         
             Discrption();
+
+            fc.fromColorChange(this);
+            fc.fromColorChange(grpCBIBookInfo);
+            fc.fromColorChange(tacCBIMain);
         }
 
         //dataGridView 행 클릭시 옆에 자세한 내용 출력
@@ -100,9 +102,6 @@ namespace LMP_Projcet.Customer
 
             //여러개의 열이나 행을 선택하지 못하도록 막음
             dgvCBIBookList.MultiSelect = false;
-
-
-
         }
 
     

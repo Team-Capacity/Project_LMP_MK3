@@ -134,8 +134,6 @@ namespace LMP_Projcet.Admin
 
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                int SelectRow = lvASList.SelectedItems[0].Index;
-                string a = lvASList.Items[SelectRow].SubItems[0].Text;
                 string sql = "delete from QuestionList where QNumber = " + a + ";";
                 string nextSql1 = "sql_safe_updates = 0 and @num := 0;";
                 string nextSql2 = "update QuestionList set QNumber = @num := (@num + 1)";

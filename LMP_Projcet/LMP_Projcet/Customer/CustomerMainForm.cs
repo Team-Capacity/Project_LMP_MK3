@@ -22,13 +22,6 @@ namespace LibraryMgrProgram
         public CustomerMainForm()
         {
             InitializeComponent();
-            FontChangeForm fc = new FontChangeForm();
-            if(fc.rdoFCBlack.Checked)
-            {
-                this.BackColor = Color.Black;
-            }
-
-
         }
 
         MouseEvent mouseEvent = new MouseEvent();
@@ -39,11 +32,6 @@ namespace LibraryMgrProgram
         CustomerOperationForm cof = new CustomerOperationForm();
         CustomerContentsForm ccf = new CustomerContentsForm();
         CustomerBookInfoForm cbi = new CustomerBookInfoForm();
-        LoginForm lf = new LoginForm();
-
-        dbTest db = new dbTest();
-        String sql = "";
-
         public static string myname;
     
 
@@ -79,35 +67,22 @@ namespace LibraryMgrProgram
             mouseEvent.PlanMouseUp();
         }
 
-       
-
-   
-
-
         //로그아웃 -> 로그인 화면으로 이동
         private void lbCMLogOut_Click_1(object sender, EventArgs e)
         {
 
-            Application.Restart();
-         
+            Application.Restart();  
         }
-
-     
-   
-
-
-
         //공지사항,추천도서,현황 기본으로 로드
         private void CustomerMainForm_Load(object sender, EventArgs e)
         {
-           
-
+            Label[] back = { label1, lbCMCustomer, lbCMLoginOut, lbCMHome, lbCMBookInfo, lbCMCusInfo, lbCMOperation };
+            Panel[] p = { plnCM , plnAM0 };
+            formChange.fromColorChange(back, back,p);  
+            formChange.fromColorChange(this);
             formChange.ChangeFIF(ccf, palCMMain);
             lbCMCustomer.Text = LoginForm.name + "님 환영합니다.";
             myname = lbCMCustomer.Text;
-
-         
-
         }
 
         CustomerEditForm ce = new CustomerEditForm();

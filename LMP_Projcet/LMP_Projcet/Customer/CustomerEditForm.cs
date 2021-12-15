@@ -30,39 +30,29 @@ namespace LMP_Projcet.Customer
         dbTest db = new dbTest();
         CustomerMyInfomationForm cmi = new CustomerMyInfomationForm();
         FormChange fc = new FormChange();
-        LoginForm lf = new LoginForm();
 
         //회원탈퇴
         private void btnCusDel_Click(object sender, EventArgs e)
         {
             if(MessageBox.Show("정말로 탈퇴 하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-
                 db.dbConnection();
-                
-            
+
                 try
                 {
-                  
-                
-
-                    string sql = "delete from lmp.customer where CNumber = " + LoginForm.number + ";";
+                    
+                    string sql = "delete from Customer where CNumber = " + LoginForm.number + ";";
                     MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                     MySqlCommand mc = new MySqlCommand(sql, db.conn);
                     MySqlDataReader reader;
 
                     reader = mc.ExecuteReader();
-                  
-
-                
 
                     MessageBox.Show("탈퇴가 성공적으로 완료가 되었습니다.");
                     reader.Close();
 
                     this.Close();
                     Application.Restart();
-
-
                 }
                 catch(MySqlException ex)
                 {
@@ -83,13 +73,20 @@ namespace LMP_Projcet.Customer
        
         private void CustomerEditForm_Load(object sender, EventArgs e)
         {
-          
+
+            fc.fromColorChange(this);
+            fc.fromColorChange(gBCEEdit);
+            Label[] back = { lbCERank, lbCERankView , lbCEMyNum, lbCENum, lbCEPossbile, lbCEMyPossbile , lbCECustomerState2 , lbCECustomerState , lbCEMan, lbCESEX , lbCEMemo, label1 };
+            Panel[] p = { plnCE };
+            fc.fromColorChange(back, back, p);
+
+
             db.dbConnection();
           
 
             string thismyName = CustomerMainForm.myname;
             string myName = thismyName.Substring(0, thismyName.Length - 8);
-            string sql = "select * from lmp.Customer where CName = '" + myName + "';";
+            string sql = "select * from Customer where CName = '" + myName + "';";
 
             MySqlCommand cmd = new MySqlCommand(sql, db.conn);
             MySqlDataReader reader = cmd.ExecuteReader();
@@ -129,14 +126,6 @@ namespace LMP_Projcet.Customer
             txtCEMyAddrView.Text = address;
             txtCEPW.Text = pw;
             lbCERankView.Text = rank;
-
-
-            /*
-            if (rank.Equals('3'))
-            {
-
-            }
-            */
         }
 
         private void btnCEMin_Click(object sender, EventArgs e)
