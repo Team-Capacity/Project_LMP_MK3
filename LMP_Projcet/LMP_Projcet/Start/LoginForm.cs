@@ -23,6 +23,7 @@ namespace LMP_Projcet
         MouseEvent mouseEvent = new MouseEvent();
         dbTest db = new dbTest();
         public static string name = "";
+        public static int number = 0;
 
         public LoginForm()
         {
@@ -87,7 +88,7 @@ namespace LMP_Projcet
             db.dbConnection();
             string id = txtLFID.Text;
             string password = txtLFPW.Text;
-            string sql = "select CRank, CName from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
+            string sql = "select CRank,CName , CNumber from Customer where CID = '" + id + "'" + "and CPW = '" + password + "';";
             string rank = "";
 
             try
@@ -110,7 +111,9 @@ namespace LMP_Projcet
                 {
                     rank = dbReader["CRank"] as String;
                     name = dbReader["CName"] as String;
+                    number = Int32.Parse(dbReader["CNumber"].ToString());//회원탈퇴시 번호기준으로 해서 필요함.
                 }
+                
                 if (rank.Equals("M"))
                 {
                     AdminMainForm amf = new AdminMainForm();

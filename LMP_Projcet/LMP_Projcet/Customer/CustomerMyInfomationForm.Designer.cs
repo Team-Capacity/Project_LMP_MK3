@@ -54,6 +54,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIInfo = new System.Windows.Forms.Label();
             this.picCMIRankView = new System.Windows.Forms.PictureBox();
             this.txtCMIMyList = new System.Windows.Forms.TextBox();
+            this.lbCMIRankView = new System.Windows.Forms.Label();
             this.GBCusEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCMICustomerImg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMIRankView)).BeginInit();
@@ -64,7 +65,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIAddr.AutoSize = true;
             this.lbCMIAddr.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIAddr.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIAddr.Location = new System.Drawing.Point(567, 360);
+            this.lbCMIAddr.Location = new System.Drawing.Point(567, 373);
             this.lbCMIAddr.Name = "lbCMIAddr";
             this.lbCMIAddr.Size = new System.Drawing.Size(47, 19);
             this.lbCMIAddr.TabIndex = 164;
@@ -75,7 +76,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIName.AutoSize = true;
             this.lbCMIName.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIName.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIName.Location = new System.Drawing.Point(567, 126);
+            this.lbCMIName.Location = new System.Drawing.Point(567, 122);
             this.lbCMIName.Name = "lbCMIName";
             this.lbCMIName.Size = new System.Drawing.Size(47, 19);
             this.lbCMIName.TabIndex = 160;
@@ -97,7 +98,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIBirth.AutoSize = true;
             this.lbCMIBirth.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIBirth.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIBirth.Location = new System.Drawing.Point(529, 203);
+            this.lbCMIBirth.Location = new System.Drawing.Point(529, 210);
             this.lbCMIBirth.Name = "lbCMIBirth";
             this.lbCMIBirth.Size = new System.Drawing.Size(85, 19);
             this.lbCMIBirth.TabIndex = 148;
@@ -109,7 +110,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIHP.AutoSize = true;
             this.lbCMIHP.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIHP.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIHP.Location = new System.Drawing.Point(727, 126);
+            this.lbCMIHP.Location = new System.Drawing.Point(727, 122);
             this.lbCMIHP.Name = "lbCMIHP";
             this.lbCMIHP.Size = new System.Drawing.Size(85, 19);
             this.lbCMIHP.TabIndex = 150;
@@ -120,7 +121,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIMyName.AutoSize = true;
             this.lbCMIMyName.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIMyName.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIMyName.Location = new System.Drawing.Point(620, 126);
+            this.lbCMIMyName.Location = new System.Drawing.Point(620, 122);
             this.lbCMIMyName.Name = "lbCMIMyName";
             this.lbCMIMyName.Size = new System.Drawing.Size(66, 19);
             this.lbCMIMyName.TabIndex = 167;
@@ -131,7 +132,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIAddrView.AutoSize = true;
             this.lbCMIAddrView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIAddrView.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIAddrView.Location = new System.Drawing.Point(620, 360);
+            this.lbCMIAddrView.Location = new System.Drawing.Point(620, 373);
             this.lbCMIAddrView.Name = "lbCMIAddrView";
             this.lbCMIAddrView.Size = new System.Drawing.Size(525, 19);
             this.lbCMIAddrView.TabIndex = 168;
@@ -142,7 +143,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIMan.AutoSize = true;
             this.lbCMIMan.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIMan.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIMan.Location = new System.Drawing.Point(620, 166);
+            this.lbCMIMan.Location = new System.Drawing.Point(620, 165);
             this.lbCMIMan.Name = "lbCMIMan";
             this.lbCMIMan.Size = new System.Drawing.Size(47, 19);
             this.lbCMIMan.TabIndex = 169;
@@ -153,7 +154,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIMyBirth.AutoSize = true;
             this.lbCMIMyBirth.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIMyBirth.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIMyBirth.Location = new System.Drawing.Point(620, 203);
+            this.lbCMIMyBirth.Location = new System.Drawing.Point(620, 210);
             this.lbCMIMyBirth.Name = "lbCMIMyBirth";
             this.lbCMIMyBirth.Size = new System.Drawing.Size(101, 19);
             this.lbCMIMyBirth.TabIndex = 170;
@@ -165,7 +166,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIHPView.AutoSize = true;
             this.lbCMIHPView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIHPView.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIHPView.Location = new System.Drawing.Point(830, 126);
+            this.lbCMIHPView.Location = new System.Drawing.Point(830, 122);
             this.lbCMIHPView.Name = "lbCMIHPView";
             this.lbCMIHPView.Size = new System.Drawing.Size(137, 19);
             this.lbCMIHPView.TabIndex = 171;
@@ -174,6 +175,7 @@ namespace LMP_Projcet.Customer
             // GBCusEdit
             // 
             this.GBCusEdit.BackColor = System.Drawing.Color.White;
+            this.GBCusEdit.Controls.Add(this.lbCMIRankView);
             this.GBCusEdit.Controls.Add(this.lbCMIMemoView);
             this.GBCusEdit.Controls.Add(this.lbCMIMemo);
             this.GBCusEdit.Controls.Add(this.lbCMICustomerState);
@@ -209,9 +211,9 @@ namespace LMP_Projcet.Customer
             // lbCMIMemoView
             // 
             this.lbCMIMemoView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbCMIMemoView.Location = new System.Drawing.Point(621, 243);
+            this.lbCMIMemoView.Location = new System.Drawing.Point(621, 256);
             this.lbCMIMemoView.Name = "lbCMIMemoView";
-            this.lbCMIMemoView.Size = new System.Drawing.Size(293, 89);
+            this.lbCMIMemoView.Size = new System.Drawing.Size(524, 89);
             this.lbCMIMemoView.TabIndex = 189;
             this.lbCMIMemoView.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -220,7 +222,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIMemo.AutoSize = true;
             this.lbCMIMemo.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIMemo.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIMemo.Location = new System.Drawing.Point(567, 243);
+            this.lbCMIMemo.Location = new System.Drawing.Point(567, 256);
             this.lbCMIMemo.Name = "lbCMIMemo";
             this.lbCMIMemo.Size = new System.Drawing.Size(47, 19);
             this.lbCMIMemo.TabIndex = 186;
@@ -231,7 +233,7 @@ namespace LMP_Projcet.Customer
             this.lbCMICustomerState.AutoSize = true;
             this.lbCMICustomerState.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMICustomerState.ForeColor = System.Drawing.Color.Black;
-            this.lbCMICustomerState.Location = new System.Drawing.Point(1031, 241);
+            this.lbCMICustomerState.Location = new System.Drawing.Point(1031, 221);
             this.lbCMICustomerState.Name = "lbCMICustomerState";
             this.lbCMICustomerState.Size = new System.Drawing.Size(85, 19);
             this.lbCMICustomerState.TabIndex = 185;
@@ -242,7 +244,7 @@ namespace LMP_Projcet.Customer
             this.lbCMIRank.AutoSize = true;
             this.lbCMIRank.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMIRank.ForeColor = System.Drawing.Color.Black;
-            this.lbCMIRank.Location = new System.Drawing.Point(567, 79);
+            this.lbCMIRank.Location = new System.Drawing.Point(567, 77);
             this.lbCMIRank.Name = "lbCMIRank";
             this.lbCMIRank.Size = new System.Drawing.Size(47, 19);
             this.lbCMIRank.TabIndex = 184;
@@ -251,7 +253,7 @@ namespace LMP_Projcet.Customer
             // picCMICustomerImg
             // 
             this.picCMICustomerImg.Image = global::LMP_Projcet.Properties.Resources.ddoing1;
-            this.picCMICustomerImg.Location = new System.Drawing.Point(996, 75);
+            this.picCMICustomerImg.Location = new System.Drawing.Point(996, 60);
             this.picCMICustomerImg.Name = "picCMICustomerImg";
             this.picCMICustomerImg.Size = new System.Drawing.Size(149, 151);
             this.picCMICustomerImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -263,7 +265,7 @@ namespace LMP_Projcet.Customer
             this.lbCMICount.AutoSize = true;
             this.lbCMICount.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMICount.ForeColor = System.Drawing.Color.Black;
-            this.lbCMICount.Location = new System.Drawing.Point(727, 166);
+            this.lbCMICount.Location = new System.Drawing.Point(727, 165);
             this.lbCMICount.Name = "lbCMICount";
             this.lbCMICount.Size = new System.Drawing.Size(131, 19);
             this.lbCMICount.TabIndex = 180;
@@ -274,7 +276,7 @@ namespace LMP_Projcet.Customer
             this.lbCMICountView.AutoSize = true;
             this.lbCMICountView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMICountView.ForeColor = System.Drawing.Color.Black;
-            this.lbCMICountView.Location = new System.Drawing.Point(876, 166);
+            this.lbCMICountView.Location = new System.Drawing.Point(876, 165);
             this.lbCMICountView.Name = "lbCMICountView";
             this.lbCMICountView.Size = new System.Drawing.Size(37, 25);
             this.lbCMICountView.TabIndex = 181;
@@ -284,7 +286,7 @@ namespace LMP_Projcet.Customer
             // btnCMIEdit
             // 
             this.btnCMIEdit.Font = new System.Drawing.Font("굴림", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnCMIEdit.Location = new System.Drawing.Point(1060, 419);
+            this.btnCMIEdit.Location = new System.Drawing.Point(1060, 421);
             this.btnCMIEdit.Name = "btnCMIEdit";
             this.btnCMIEdit.Size = new System.Drawing.Size(85, 33);
             this.btnCMIEdit.TabIndex = 176;
@@ -298,7 +300,7 @@ namespace LMP_Projcet.Customer
             this.lbCMINum.AutoSize = true;
             this.lbCMINum.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMINum.ForeColor = System.Drawing.Color.Black;
-            this.lbCMINum.Location = new System.Drawing.Point(727, 79);
+            this.lbCMINum.Location = new System.Drawing.Point(727, 77);
             this.lbCMINum.Name = "lbCMINum";
             this.lbCMINum.Size = new System.Drawing.Size(85, 19);
             this.lbCMINum.TabIndex = 182;
@@ -309,7 +311,7 @@ namespace LMP_Projcet.Customer
             this.lbCMINumView.AutoSize = true;
             this.lbCMINumView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbCMINumView.ForeColor = System.Drawing.Color.Black;
-            this.lbCMINumView.Location = new System.Drawing.Point(830, 79);
+            this.lbCMINumView.Location = new System.Drawing.Point(830, 77);
             this.lbCMINumView.Name = "lbCMINumView";
             this.lbCMINumView.Size = new System.Drawing.Size(59, 19);
             this.lbCMINumView.TabIndex = 183;
@@ -336,7 +338,7 @@ namespace LMP_Projcet.Customer
             // 
             // picCMIRankView
             // 
-            this.picCMIRankView.Location = new System.Drawing.Point(621, 75);
+            this.picCMIRankView.Location = new System.Drawing.Point(531, 51);
             this.picCMIRankView.Name = "picCMIRankView";
             this.picCMIRankView.Size = new System.Drawing.Size(30, 25);
             this.picCMIRankView.TabIndex = 177;
@@ -349,6 +351,17 @@ namespace LMP_Projcet.Customer
             this.txtCMIMyList.Name = "txtCMIMyList";
             this.txtCMIMyList.Size = new System.Drawing.Size(463, 403);
             this.txtCMIMyList.TabIndex = 188;
+            // 
+            // lbCMIRankView
+            // 
+            this.lbCMIRankView.AutoSize = true;
+            this.lbCMIRankView.Font = new System.Drawing.Font("굴림", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbCMIRankView.ForeColor = System.Drawing.Color.Black;
+            this.lbCMIRankView.Location = new System.Drawing.Point(620, 77);
+            this.lbCMIRankView.Name = "lbCMIRankView";
+            this.lbCMIRankView.Size = new System.Drawing.Size(85, 19);
+            this.lbCMIRankView.TabIndex = 190;
+            this.lbCMIRankView.Text = "랭크표시";
             // 
             // CustomerMyInfomationForm
             // 
@@ -396,5 +409,6 @@ namespace LMP_Projcet.Customer
         public System.Windows.Forms.Label lbCMIHPView;
         public System.Windows.Forms.Label lbCMIMemoView;
         public System.Windows.Forms.Label lbCMIMyName;
+        public System.Windows.Forms.Label lbCMIRankView;
     }
 }

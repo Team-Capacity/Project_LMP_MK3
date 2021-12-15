@@ -89,6 +89,9 @@ namespace LMP_Projcet.Methods
             {
                 dbConnection();
                 MySqlCommand cmd = new MySqlCommand(updateCmd, conn);
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                }
                 conn.Close();
             }
             catch (MySqlException e)

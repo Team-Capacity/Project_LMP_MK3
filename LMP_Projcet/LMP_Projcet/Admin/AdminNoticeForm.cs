@@ -64,7 +64,7 @@ namespace LibraryMgrProgram
         //공지사항 db쪽 내용 가져옴
         private void select1()
         {
-            string sql = "select * from NoticeList ORDER BY NNumber DESC;";
+            string sql = "select * from lmp.noticeList ORDER BY NNumber DESC;";
             mouseEvent.reloadForm(sql, dgvANList, 2);
 
 
@@ -77,7 +77,7 @@ namespace LibraryMgrProgram
         private void select2()
         {
             db.dbConnection();
-            string sql2 = "select NName, NContent from NoticeList order by NNumber desc limit 1;";
+            string sql2 = "select NName, NContent from lmp.noticeList order by NNumber desc limit 1;";
 
 
             MySqlCommand cmd = new MySqlCommand(sql2, db.conn);
@@ -94,6 +94,7 @@ namespace LibraryMgrProgram
             }
 
             reader.Close();
+            db.conn.Close();
 
             txtANNoticeView.Text = name;
             txtANNoticeCont.Text = content;
@@ -140,40 +141,13 @@ namespace LibraryMgrProgram
         {
             if (comANSerList.SelectedItem.Equals("제목"))
             {
-                string sql = ("select * from NoticeList where NName Like '%" + txtANInput.Text + "%';").ToString();
+                string sql = ("select * from lmp.NoticeList where NName Like '%" + txtANInput.Text + "%';").ToString();
                 mouseEvent.reloadForm(sql, dgvANList, 2);
             }
         }
         FormChange fc = new FormChange();
 
-        private void btnANAdd_Click(object sender, EventArgs e)
-        {
-                  
-            if (!string.IsNullOrWhiteSpace(txtANNoticeCont.Text) || !string.IsNullOrWhiteSpace(txtANNoticeView.Text))
-            {
-                
-                    string Date = DateTime.Now.ToString("yyyy-MM-dd");
-                    string sql = "insert into NoticeList(NName , NContent , NDate) values("
-                            + "'" + txtANNoticeView.Text + "'"
-                            + ",'" + txtANNoticeCont.Text + "'"
-                            + ",'" + Date + "'"
-                            + ");";
-
-                    db.dbUpdate(sql);
-                    string reloadSql = "select * from NoticeList ORDER BY NNumber DESC;";
-                    mouseEvent.reloadForm(reloadSql, dgvANList, 2);
-                                   
-              
-            }
-         
-
-            else 
-            {
-                MessageBox.Show("제목 및 내용을 입력해 주세요");
-                return;
-            }
-
-        }
+   
 
         //textbox 수정 허용/불가
         private void ReadOnlyF()
@@ -204,7 +178,7 @@ namespace LibraryMgrProgram
             DataGridViewRow row = dgvANList.SelectedRows[0];
             int number = Int32.Parse(row.Cells[0].Value.ToString());
 
-            string mysql = "Update NoticeList set NName = '" + txtANNoticeView.Text
+            string mysql = "Update lmp.NoticeList set NName = '" + txtANNoticeView.Text
                     + "', NContent = '" + txtANNoticeCont.Text + "'"
                     + " where NNumber = " + number +";";
 
@@ -214,7 +188,7 @@ namespace LibraryMgrProgram
                 if (cmd.ExecuteNonQuery() == 1)
                 {
                     MessageBox.Show("성공적으로 수정이 되었습니다.");
-                    mouseEvent.reloadForm("select * from NoticeList ORDER BY NNumber DESC;", dgvANList, 2);
+                    mouseEvent.reloadForm("select * from lmp.NoticeList ORDER BY NNumber DESC;", dgvANList, 2);
                 }
             }
             catch (MySqlException ex)
@@ -232,20 +206,49 @@ namespace LibraryMgrProgram
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 db.dbConnection();
-                string mysql = "delete from NoticeList where NNumber = " + number + ";";
+                string mysql = "delete from lmp.NoticeList where NNumber = " + number + ";";
                 try
                 {
                     MySqlCommand cmd = new MySqlCommand(mysql, db.conn);
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("성공적으로 삭제 되었습니다.");
-                        mouseEvent.reloadForm("select * from NoticeList ORDER BY NNumber DESC;", dgvANList, 2);
+                        mouseEvent.reloadForm("select * from lmp.NoticeList ORDER BY NNumber DESC;", dgvANList, 2);
                     }
                 }
                 catch (MySqlException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+            }
+        }
+
+
+        private void btnANAdd_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtANNoticeCont.Text) || !string.IsNullOrWhiteSpace(txtANNoticeView.Text))
+            {
+
+                string Date = DateTime.Now.ToString("yyyy-MM-dd");
+                string sql = "insert into noticeList(NName , NContent , NDate) values("
+                        + "'" + txtANNoticeView.Text + "'"
+                        + ",'" + txtANNoticeCont.Text + "'"
+                        + ",'" + Date + "'"
+                        + ");";
+
+                db.dbUpdate(sql);
+                string reloadSql = "select * from lmp.noticeList ORDER BY NNumber DESC;";
+                mouseEvent.reloadForm(reloadSql, dgvANList, 2);
+
+                db.conn.Close();
+
+
+            }
+
+            else
+            {
+                MessageBox.Show("제목 및 내용을 입력해 주세요");
+                return;
             }
         }
 
@@ -261,6 +264,6 @@ namespace LibraryMgrProgram
 
         }
 
-    
+      
     }
 }

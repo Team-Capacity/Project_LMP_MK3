@@ -87,9 +87,9 @@ namespace LibraryMgrProgram
         //로그아웃 -> 로그인 화면으로 이동
         private void lbCMLogOut_Click_1(object sender, EventArgs e)
         {
-            
-            
-            formChange.ChangeF(this,lf) ;
+
+            Application.Restart();
+         
         }
 
      
@@ -114,7 +114,7 @@ namespace LibraryMgrProgram
         //회원정보 클릭시 내정보
         private void lbCMInfo_Click(object sender, EventArgs e)
         {
-           ce.change();
+       
             formChange.ChangeFIF(cmi, palCMMain);
         }
 

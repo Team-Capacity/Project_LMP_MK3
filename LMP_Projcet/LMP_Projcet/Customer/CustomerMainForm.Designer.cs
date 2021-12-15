@@ -38,7 +38,6 @@ namespace LibraryMgrProgram
             this.lbCMOperation = new System.Windows.Forms.Label();
             this.lbCMBookInfo = new System.Windows.Forms.Label();
             this.lbCMCusInfo = new System.Windows.Forms.Label();
-            this.CusGridView = new System.Windows.Forms.DataGridView();
             this.lbCMHome = new System.Windows.Forms.Label();
             this.picCMLogo = new System.Windows.Forms.PictureBox();
             this.picCMCustomer = new System.Windows.Forms.PictureBox();
@@ -50,13 +49,14 @@ namespace LibraryMgrProgram
             this.btnCMMax = new System.Windows.Forms.Button();
             this.btnCMMin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).BeginInit();
+            this.CusGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMOperation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCusInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).BeginInit();
             this.plnCM.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -137,20 +137,6 @@ namespace LibraryMgrProgram
             this.lbCMCusInfo.TabIndex = 135;
             this.lbCMCusInfo.Text = "회원정보";
             this.lbCMCusInfo.Click += new System.EventHandler(this.lbCMInfo_Click);
-            // 
-            // CusGridView
-            // 
-            this.CusGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.CusGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.CusGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CusGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.CusGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.CusGridView.Location = new System.Drawing.Point(-3, 211);
-            this.CusGridView.Name = "CusGridView";
-            this.CusGridView.RowTemplate.Height = 23;
-            this.CusGridView.Size = new System.Drawing.Size(1403, 18);
-            this.CusGridView.TabIndex = 143;
             // 
             // lbCMHome
             // 
@@ -307,6 +293,20 @@ namespace LibraryMgrProgram
             this.label1.TabIndex = 148;
             this.label1.Text = "메인폼";
             // 
+            // CusGridView
+            // 
+            this.CusGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CusGridView.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.CusGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.CusGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.CusGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CusGridView.Location = new System.Drawing.Point(-3, 211);
+            this.CusGridView.Name = "CusGridView";
+            this.CusGridView.RowTemplate.Height = 23;
+            this.CusGridView.Size = new System.Drawing.Size(1403, 18);
+            this.CusGridView.TabIndex = 143;
+            // 
             // CustomerMainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -336,13 +336,13 @@ namespace LibraryMgrProgram
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CustomerMainForm_FormClosing);
             this.Load += new System.EventHandler(this.CustomerMainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCustomer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMOperation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMCusInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCMBookInfo)).EndInit();
             this.plnCM.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CusGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -357,7 +357,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label lbCMBookInfo;
         private System.Windows.Forms.Label lbCMCusInfo;
         private System.Windows.Forms.PictureBox picCMCusInfo;
-        private System.Windows.Forms.DataGridView CusGridView;
         private System.Windows.Forms.PictureBox picCMCustomer;
         private System.Windows.Forms.Label lbCMHome;
         private System.Windows.Forms.PictureBox picCMLogo;
@@ -368,5 +367,6 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Button btnCMMin;
         public System.Windows.Forms.Panel palCMMain;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView CusGridView;
     }
 }
