@@ -22,7 +22,6 @@ namespace LMP_Projcet.Customer
         {
             InitializeComponent();
 
-
         }
 
         MouseEvent mouseEvent = new MouseEvent();
@@ -61,13 +60,37 @@ namespace LMP_Projcet.Customer
 
         private void btnCusWriteOk_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (txtCWTitle.Text == "")
+                {
+                    MessageBox.Show("제목을 입력하지 않았습니다.");
+                    return;
+                }
 
-            string sql = "insert into QuestionList(QName,QWriter,QContent) values("
+                else if (txtCWContent.Text == "")
+                {
+                    MessageBox.Show("내용을 입력하지 않았습니다.");
+                    return;
+                }
+                else
+                {
+                    string sql = "insert into QuestionList(QName,QWriter,QContent) values("
                     + "'" + txtCWTitle.Text + "'"
                     + ",'" + lbCWMyCusName.Text + "'"
                     + ",'" + txtCWContent.Text + "'"
                     + ");";
-            db.dbUpdate(sql);
+                    db.dbUpdate(sql);
+                    MessageBox.Show("추가되었습니다.");
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("select문에 실패하였습니다.");
+                throw;
+            }
+            txtCWTitle.Text = "";
+            txtCWContent.Text = "";
         }
       
 
