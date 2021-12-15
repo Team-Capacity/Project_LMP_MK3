@@ -261,19 +261,19 @@ namespace LibraryMgrProgram
         {
             if (AdminMainForm.rank.Equals("M"))
             {
+                string gender = "";
+                if (rdbACMMan2.Checked)
+                {
+                    gender = "남자";
+                }
+                else
+                {
+                    gender = "여성";
+                }
                 try
                 {
                     db.dbConnection();
                     DataGridViewRow row = dgvACMCustomerList.SelectedRows[0];
-                    string gender = "";
-                    if (rdbACMMan2.Checked)
-                    {
-                        gender = "남자";
-                    }
-                    else
-                    {
-                        gender = "여성";
-                    }
                     string password = "";
                     if (IsValidPassword(txtACMPW2.Text))
                     {

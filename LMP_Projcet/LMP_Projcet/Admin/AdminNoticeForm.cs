@@ -70,7 +70,8 @@ namespace LibraryMgrProgram
 
             DataGridViewColumn column = dgvANList.Columns[2];
             dgvANList.Columns[0].Width = 100;
-            dgvANList.Columns[2].Width = 200;
+            dgvANList.Columns[2].Width = 100;
+            dgvANList.Columns[3].Width = 200;
         }
 
         //공지사항 들어가면 자동으로 최신 공지사항 내용을 출력해주도록 함
@@ -131,14 +132,12 @@ namespace LibraryMgrProgram
             DataGridViewRow row = dgvANList.SelectedRows[0];
 
             txtANNoticeView.Text = row.Cells[1].Value.ToString();
-            txtANNoticeCont.Text = row.Cells[2].Value.ToString();
+            txtANNoticeCont.Text = row.Cells[3].Value.ToString();
 
             txtANNoticeView.Font = new Font("맑은고딕", 15, FontStyle.Bold);
             txtANNoticeCont.Font = new Font("맑은고딕", 25, FontStyle.Bold);
 
             dgvANList.MultiSelect = false;
-           
-
         }
 
         private void btnANListFind_Click(object sender, EventArgs e)
@@ -234,7 +233,7 @@ namespace LibraryMgrProgram
             {
 
                 string Date = DateTime.Now.ToString("yyyy-MM-dd");
-                string sql = "insert into noticeList(NName , NContent , NDate) values("
+                string sql = "insert into NoticeList(NName , NContent , NDate) values("
                         + "'" + txtANNoticeView.Text + "'"
                         + ",'" + txtANNoticeCont.Text + "'"
                         + ",'" + Date + "'"
@@ -245,8 +244,6 @@ namespace LibraryMgrProgram
                 mouseEvent.reloadForm(reloadSql, dgvANList, 2);
 
                 db.conn.Close();
-
-
             }
 
             else

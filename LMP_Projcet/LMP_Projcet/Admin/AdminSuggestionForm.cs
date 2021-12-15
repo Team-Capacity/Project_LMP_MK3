@@ -61,6 +61,7 @@ namespace LMP_Projcet.Admin
             Label[] back = { lbASTitle, lbASContent, lbASday, lbASRealday, lbASWriter, lbASRealWriter, label2, label1 };
             Panel[] panels = { plnAM };
             fc.fromColorChange(back, back, panels);
+            loadList();
         }
 
         //셀 크기 조절 막기 이벤트
@@ -151,6 +152,11 @@ namespace LMP_Projcet.Admin
 
             }
             db.conn.Close();
+        }
+
+        private void btnASListFind_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

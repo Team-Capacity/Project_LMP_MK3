@@ -98,7 +98,6 @@ namespace LibraryMgrProgram
                 {
                     string cusNum = lbAIOMNumView0.Text;
                     string bookNum = lbAIOBNumView0.Text;
-                    MessageBox.Show("cusNum = " + cusNum + "\nbookNum = " + bookNum);
                     // 고객/ 책의 개수 파악
                     string accureSql = "select CAccrue from Customer where CNumber = '" + cusNum + "';";
                     string cusSql = "select CLoanCot from Customer where CNumber = '" + cusNum + "';";

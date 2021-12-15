@@ -120,6 +120,7 @@ namespace LMP_Projcet.Admin
             this.btnASListFind.TabIndex = 31;
             this.btnASListFind.Text = "검 색";
             this.btnASListFind.UseVisualStyleBackColor = false;
+            this.btnASListFind.Click += new System.EventHandler(this.btnASListFind_Click);
             // 
             // lvASList
             // 

@@ -123,29 +123,6 @@ namespace LibraryMgrProgram
             imageBox.Image.Save(savePath + "\\" + saveName + ".jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
         }
 
-      /*  public void ftpList()
-        {
-            string ftpURL = dbc.Server;
-            string ftpUser = dbc.Id;
-            string ftpPassword = dbc.Pwd;
-
-            int port = 6000;
-
-            string ftpDirectory = "/home/pi/LMP";
-
-            var conInfo = new ConnectionInfo(ftpURL, port.ToString(), new PasswordAuthenticationMethod(ftpUser, ftpPassword));
-            using(var sftp = new SftpClient(conInfo))
-            {
-                sftp.Connect();
-
-                foreach(var f in sftp.ListDirectory("."))
-                {
-                    MessageBox.Show(f.Name);
-                }
-            }
-
-
-        }*/
 
         public void reloadForm(string sqlQuery, DataGridView dgv, int chkBookCus)
         {
@@ -155,7 +132,7 @@ namespace LibraryMgrProgram
             BindingSource bSource;
             string[] Bname = { "책 번호", "제목", "출판사", "저자", "갯수", "장르", "출판 지역", "책 본고장", "ISBN", "페이지", "책의 위치", "발행 날짜", "메모", "책추가" };
             string[] Cname = { "회원번호", "등급", "id" , "pw", "이름" ,"대출권수", "누적대출권수","전화번호","생년월일" , "주소" , "가입날짜","성별","메모"};
-            string[] Nname = { "공지번호", "제목", "내용", "날짜"};
+            string[] Nname = { "공지번호", "제목", "날짜", "내용"};
 
             //데이터가 하나도 없을 경우를 만들어 두지 않았음
             try
