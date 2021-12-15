@@ -142,7 +142,6 @@ namespace LibraryMgrProgram
             this.dgvACMCustomerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvACMCustomerList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvACMCustomerList.BackgroundColor = System.Drawing.Color.White;
-            this.dgvACMCustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvACMCustomerList.Location = new System.Drawing.Point(89, 43);
             this.dgvACMCustomerList.Name = "dgvACMCustomerList";
             this.dgvACMCustomerList.ReadOnly = true;
@@ -271,7 +270,6 @@ namespace LibraryMgrProgram
             // 
             this.comACMRankView2.FormattingEnabled = true;
             this.comACMRankView2.Items.AddRange(new object[] {
-            "M",
             "N",
             "1",
             "2",

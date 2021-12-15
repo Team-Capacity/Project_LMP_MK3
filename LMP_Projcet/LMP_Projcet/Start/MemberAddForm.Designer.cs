@@ -108,7 +108,7 @@ namespace LMP_Projcet.Start
             // 
             this.lblMA_Address.AutoSize = true;
             this.lblMA_Address.Font = new System.Drawing.Font("Gulim", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lblMA_Address.Location = new System.Drawing.Point(105, 219);
+            this.lblMA_Address.Location = new System.Drawing.Point(105, 216);
             this.lblMA_Address.Name = "lblMA_Address";
             this.lblMA_Address.Size = new System.Drawing.Size(42, 16);
             this.lblMA_Address.TabIndex = 180;
@@ -117,7 +117,7 @@ namespace LMP_Projcet.Start
             // txtAM_Address
             // 
             this.txtAM_Address.Font = new System.Drawing.Font("Gulim", 12F);
-            this.txtAM_Address.Location = new System.Drawing.Point(168, 216);
+            this.txtAM_Address.Location = new System.Drawing.Point(168, 213);
             this.txtAM_Address.Multiline = true;
             this.txtAM_Address.Name = "txtAM_Address";
             this.txtAM_Address.Size = new System.Drawing.Size(257, 25);
@@ -511,6 +511,7 @@ namespace LMP_Projcet.Start
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MemberAddForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MemberAddForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MemberAddForm_FormClosing);
             this.Load += new System.EventHandler(this.MemberAddForm_Load);

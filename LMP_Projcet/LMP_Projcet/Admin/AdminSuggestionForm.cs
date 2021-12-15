@@ -129,25 +129,22 @@ namespace LMP_Projcet.Admin
             int SelectRow = lvASList.SelectedItems[0].Index;
             string a = lvASList.Items[SelectRow].SubItems[0].Text;
 
-/*            set @num := 0;
-            update questionlist set questionlist.QNumber = @num := (@num + 1);*/
 
+/*                string nextSql1 = "sql_safe_updates = 0 and @num := 0;";
+                string nextSql2 = "update QuestionList set QNumber = @num := (@num + 1)";*/
 
             if (MessageBox.Show("정말로 삭제하시겠습니까?", "", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string sql = "delete from QuestionList where QNumber = " + a + ";";
-                string nextSql1 = "sql_safe_updates = 0 and @num := 0;";
-                string nextSql2 = "update QuestionList set QNumber = @num := (@num + 1)";
                 try
                 {
                     db.dbUpdate(sql);
-/*                    db.dbUpdate(nextSql1);
-                    db.dbUpdate(nextSql2);*/
+                    loadList();
                     MessageBox.Show("성공적으로 삭제하셨습니다.");
                 }
                 catch (Exception)
                 {
-
+                    MessageBox.Show("삭제에 실패하였습니다.");
                 }
 
             }
@@ -156,7 +153,38 @@ namespace LMP_Projcet.Admin
 
         private void btnASListFind_Click(object sender, EventArgs e)
         {
+            string textBOX = "";
+            if (comASSerList.Text == "제목" && txtASInput.Text != textBOX)
+            {
+                string qdate = "";
+                DateTime addtime;
+                lvASList.FullRowSelect = true;
+                db.dbConnection();
 
+                string sql = "SELECT * FROM QuestionList where QName Like '%" + txtASInput.Text + "%'order by QNumber desc;";
+                MySqlCommand cmd = new MySqlCommand(sql, db.conn);
+
+                lvASList.Items.Clear();
+                MySqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    ListViewItem item = new ListViewItem(reader["QNumber"].ToString());
+                    item.SubItems.Add(reader["QName"].ToString());
+                    //item.SubItems.Add(reader["QDate"].ToString());
+                    qdate = reader["QDate"].ToString();
+                    item.SubItems.Add(string.Format("{0:yyyy-MM=dd HH:mm:dd}", qdate));// 문자 포멧필요
+                    item.SubItems.Add(reader["QWriter"].ToString());
+                    item.SubItems.Add(reader["QContent"].ToString());
+
+                    lvASList.Items.Add(item);
+                }
+                reader.Close();
+                db.conn.Close();
+            }
+            else if (txtASInput.Text == textBOX)
+            {
+                loadList();
+            }
         }
     }
 }

@@ -325,6 +325,7 @@ namespace LibraryMgrProgram
             this.Controls.Add(this.grpSerID);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IDPWSearchForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "아이디/비밀번호 찾기";
             this.Load += new System.EventHandler(this.IDPWSearchForm_Load);
             this.grpSerID.ResumeLayout(false);

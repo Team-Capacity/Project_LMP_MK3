@@ -176,5 +176,37 @@ namespace LibraryMgrProgram
 
         }
 
+
+        public void reloadForm(string sqlQuery, DataGridView dgv, string[] dgvText)
+        {
+            db.dbConnection();
+            MySqlCommand cmdDatabase = new MySqlCommand(sqlQuery, db.conn);
+            DataTable dbdataset;
+            BindingSource bSource;
+
+            try
+            {
+                MySqlDataAdapter sda = new MySqlDataAdapter();
+                sda.SelectCommand = cmdDatabase;
+                dbdataset = new DataTable();
+                sda.Fill(dbdataset);
+                bSource = new BindingSource();
+                bSource.DataSource = dbdataset;
+                dgv.DataSource = bSource;
+                sda.Update(dbdataset);
+
+                for (int i = 0; i < dgvText.Length; i++)
+                {
+                    dgv.Columns[i].HeaderText = dgvText[i];
+                }
+                dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgv.AllowUserToAddRows = false;
+                db.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("갱신 도중 에러가 발생하였습니다.\n" + ex.Message);
+            }
+        }
     }
 }

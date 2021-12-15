@@ -27,7 +27,7 @@ namespace LibraryMgrProgram.CustomerForm
         private void CustomerContentsForm_Load(object sender, EventArgs e)
         {
             fc.fromColorChange(this);
-            Label[] back = { lbCCNotic, lbCCBestBook, lbCCStatus, lbCCBookName1,  lbAuthor1,  lbCCBookName3, lbAuthor3, lbCCBookName5, lbAuthor5 };
+            Label[] back = { lbCCNotic, lbCCBestBook, lbCCStatus, lbCCBookName1,  lbAuthor1,  lbCCBookName3, lbAuthor3, lbCCBookName5, lbAuthor5, lbCCNotice };
             fc.fromColorChange(back,back);
 
             Content();
@@ -37,6 +37,7 @@ namespace LibraryMgrProgram.CustomerForm
                 string sql = "select distinct BNumber, BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, BPage, BLocal, BDate, BContent, BAddDate " +
                         "from LoanList, Book " +
                         "Where LoanList.LBookNum = Book.BNumber and LoanList.LCustomerNum = " + LoginForm.number + ";";
+
                 me.reloadForm(sql, dgvCCInfo, 0);
             }
             catch (Exception)
@@ -107,9 +108,10 @@ namespace LibraryMgrProgram.CustomerForm
             reader.Close();
             db.conn.Close();
 
-            txtCCNotice.Text = content;
-            txtCCNotice.Font = new Font("맑은 고딕", 40, FontStyle.Bold);
+            lbCCNotice.Text = content;
+            lbCCNotice.Font = new Font("맑은 고딕", 40, FontStyle.Bold);
 
         }
+
     }
 }

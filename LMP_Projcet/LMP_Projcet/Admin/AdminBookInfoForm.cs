@@ -227,7 +227,7 @@ namespace LibraryMgrProgram
                     if (cmd.ExecuteNonQuery() == 1)
                     {
                         MessageBox.Show("성공적으로 추가 되었습니다.");
-                        me.reloadForm("select * from Book.;", dgvABIBookList, 0);
+                        me.reloadForm("select * from Book;", dgvABIBookList, 0);
                     }
                 }
                 catch (MySqlException ex)
@@ -269,6 +269,8 @@ namespace LibraryMgrProgram
                             MessageBox.Show(ex.Message);
                         }
                     }
+                    clear();
+
                 }
                 catch (Exception)
                 {
@@ -282,20 +284,33 @@ namespace LibraryMgrProgram
             
         }
 
-        private void btnABIClear2_Click_1(object sender, EventArgs e)
+        private void clear()
         {
-            txtABIBookName1.Text = "";
-            txtABICompany1.Text = "";
-            txtABIBookMaker1.Text = "";
-            txtABIBookCount1.Text = "";
-            comABIBookger1.Text = "";
-            txtABIMakePlace1.Text = "";
-            txtABIISBN1.Text = "";
-            txtABIBookpage1.Text = "";
-            txtABIBLocation1.Text = "";
-            txtABIMakeDay1.Text = "";
-            rtxtABIBBookExp1.Text = "";
-            txtABIArea1.Text = "";
+            txtABIBookName2.Text = "";
+            txtABICompany2.Text = "";
+            txtABIBookMaker2.Text = "";
+            txtABIBookCount2.Text = "";
+            comABIBookger2.Text = "";
+            txtABIMakePlace2.Text = "";
+            txtABIISBN2.Text = "";
+            txtABIBookpage2.Text = "";
+            txtABIBLocation2.Text = "";
+            txtABIMakeDay2.Text = "";
+            rtxtABIBBookExp2.Text = "";
+            txtABIArea2.Text = "";
+
+            lbABIBookName.Text = "";
+            lbABICompany.Text = "";
+            lbABIBookMaker.Text = "";
+            lbABIBookCount.Text = "";
+            lbABIBookger.Text = "";
+            lbABIMakePlace.Text = "";
+            lbABIISBN.Text = "";
+            lbABIBookpage.Text = "";
+            lbABIBLocation.Text = "";
+            lbABIMakeDay.Text = "";
+            lbABIBBookExp.Text = "";
+            lbABIArea.Text = "";
         }
     }
 }

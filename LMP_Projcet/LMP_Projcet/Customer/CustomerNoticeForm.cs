@@ -68,8 +68,9 @@ namespace LMP_Projcet.Customer
         //DB쪽 내용 Datagridview쪽으로 옮겨와지게함
         private void select1()
         {
-            string sql = "select * from NoticeList ORDER BY NNumber DESC;";
-            me.reloadForm(sql, dgvCNList, 2);
+            string sql = "select NNumber, NName, NContent , NDate from NoticeList ORDER BY NNumber DESC;";
+            string[] reload = { "번호", "제목", "내용", "날짜" };
+            me.reloadForm(sql, dgvCNList, reload);
 
 
             DataGridViewColumn column = dgvCNList.Columns[2];
@@ -118,7 +119,6 @@ namespace LMP_Projcet.Customer
 
         private void dgvCNList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             Discrption();
         }
 
@@ -127,8 +127,6 @@ namespace LMP_Projcet.Customer
         {
             try
             {
-              
-
                 // 조회부분
                 DataGridViewRow row = dgvCNList.SelectedRows[0];
                 lbCNNoticeView2.Text = row.Cells[1].Value.ToString();
@@ -151,8 +149,9 @@ namespace LMP_Projcet.Customer
         {
             if (cmbCNSerList.SelectedItem.Equals("제목"))
             {
-                string sql = ("select * from NoticeList where NName Like '%" + txtCNInput.Text + "%';").ToString();
-                me.reloadForm(sql, dgvCNList, 2);
+                string sql = ("select NNumber, NName, NContent , NDate from NoticeList where NName Like '%" + txtCNInput.Text + "%';").ToString();
+                string[] reload = { "번호", "제목", "내용", "날짜" };
+                me.reloadForm(sql, dgvCNList, reload);
             }
         }
     }

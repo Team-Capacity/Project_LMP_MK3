@@ -166,7 +166,7 @@ namespace LMP_Projcet.Customer
             this.grpCBIBookList.Controls.Add(this.dgvCBIBookList);
             this.grpCBIBookList.Location = new System.Drawing.Point(46, 36);
             this.grpCBIBookList.Name = "grpCBIBookList";
-            this.grpCBIBookList.Size = new System.Drawing.Size(765, 460);
+            this.grpCBIBookList.Size = new System.Drawing.Size(765, 505);
             this.grpCBIBookList.TabIndex = 43;
             this.grpCBIBookList.TabStop = false;
             // 
@@ -184,7 +184,7 @@ namespace LMP_Projcet.Customer
             this.dgvCBIBookList.RowHeadersVisible = false;
             this.dgvCBIBookList.RowTemplate.Height = 23;
             this.dgvCBIBookList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCBIBookList.Size = new System.Drawing.Size(745, 434);
+            this.dgvCBIBookList.Size = new System.Drawing.Size(745, 479);
             this.dgvCBIBookList.TabIndex = 0;
             this.dgvCBIBookList.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCBIBookList_CellClick);
             // 

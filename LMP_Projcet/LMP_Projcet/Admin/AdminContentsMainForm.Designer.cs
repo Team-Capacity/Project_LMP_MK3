@@ -44,10 +44,12 @@ namespace LibraryMgrProgram.AdminForm
             this.lbACMBookName1 = new System.Windows.Forms.Label();
             this.lbACMAuthor2 = new System.Windows.Forms.Label();
             this.lbACMBookName2 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvACNotice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView2)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbACMNotic
@@ -84,18 +86,24 @@ namespace LibraryMgrProgram.AdminForm
             // 
             // dgvACNotice
             // 
+            this.dgvACNotice.AllowUserToResizeColumns = false;
+            this.dgvACNotice.AllowUserToResizeRows = false;
+            this.dgvACNotice.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvACNotice.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvACNotice.BackgroundColor = System.Drawing.Color.White;
             this.dgvACNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvACNotice.Location = new System.Drawing.Point(132, 61);
             this.dgvACNotice.Name = "dgvACNotice";
+            this.dgvACNotice.ReadOnly = true;
             this.dgvACNotice.RowTemplate.Height = 23;
+            this.dgvACNotice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvACNotice.Size = new System.Drawing.Size(450, 479);
             this.dgvACNotice.TabIndex = 32;
             // 
             // picACMBookView0
             // 
             this.picACMBookView0.Image = ((System.Drawing.Image)(resources.GetObject("picACMBookView0.Image")));
-            this.picACMBookView0.Location = new System.Drawing.Point(740, 77);
+            this.picACMBookView0.Location = new System.Drawing.Point(11, 20);
             this.picACMBookView0.Name = "picACMBookView0";
             this.picACMBookView0.Size = new System.Drawing.Size(120, 135);
             this.picACMBookView0.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -105,7 +113,7 @@ namespace LibraryMgrProgram.AdminForm
             // picACMBookView1
             // 
             this.picACMBookView1.Image = ((System.Drawing.Image)(resources.GetObject("picACMBookView1.Image")));
-            this.picACMBookView1.Location = new System.Drawing.Point(935, 77);
+            this.picACMBookView1.Location = new System.Drawing.Point(206, 20);
             this.picACMBookView1.Name = "picACMBookView1";
             this.picACMBookView1.Size = new System.Drawing.Size(120, 135);
             this.picACMBookView1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -115,7 +123,7 @@ namespace LibraryMgrProgram.AdminForm
             // picACMBookView2
             // 
             this.picACMBookView2.Image = ((System.Drawing.Image)(resources.GetObject("picACMBookView2.Image")));
-            this.picACMBookView2.Location = new System.Drawing.Point(1130, 77);
+            this.picACMBookView2.Location = new System.Drawing.Point(401, 20);
             this.picACMBookView2.Name = "picACMBookView2";
             this.picACMBookView2.Size = new System.Drawing.Size(120, 135);
             this.picACMBookView2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -127,7 +135,7 @@ namespace LibraryMgrProgram.AdminForm
             this.lbACMBestBook.AutoSize = true;
             this.lbACMBestBook.BackColor = System.Drawing.Color.White;
             this.lbACMBestBook.Font = new System.Drawing.Font("Gulim", 16F);
-            this.lbACMBestBook.Location = new System.Drawing.Point(727, 36);
+            this.lbACMBestBook.Location = new System.Drawing.Point(716, 53);
             this.lbACMBestBook.Name = "lbACMBestBook";
             this.lbACMBestBook.Size = new System.Drawing.Size(156, 22);
             this.lbACMBestBook.TabIndex = 36;
@@ -136,7 +144,7 @@ namespace LibraryMgrProgram.AdminForm
             // lbACMBookName0
             // 
             this.lbACMBookName0.AutoSize = true;
-            this.lbACMBookName0.Location = new System.Drawing.Point(747, 226);
+            this.lbACMBookName0.Location = new System.Drawing.Point(18, 169);
             this.lbACMBookName0.Name = "lbACMBookName0";
             this.lbACMBookName0.Size = new System.Drawing.Size(29, 12);
             this.lbACMBookName0.TabIndex = 37;
@@ -145,7 +153,7 @@ namespace LibraryMgrProgram.AdminForm
             // lbACMAuthor0
             // 
             this.lbACMAuthor0.AutoSize = true;
-            this.lbACMAuthor0.Location = new System.Drawing.Point(747, 270);
+            this.lbACMAuthor0.Location = new System.Drawing.Point(18, 213);
             this.lbACMAuthor0.Name = "lbACMAuthor0";
             this.lbACMAuthor0.Size = new System.Drawing.Size(29, 12);
             this.lbACMAuthor0.TabIndex = 40;
@@ -154,7 +162,7 @@ namespace LibraryMgrProgram.AdminForm
             // lbACMAuthor1
             // 
             this.lbACMAuthor1.AutoSize = true;
-            this.lbACMAuthor1.Location = new System.Drawing.Point(942, 270);
+            this.lbACMAuthor1.Location = new System.Drawing.Point(213, 213);
             this.lbACMAuthor1.Name = "lbACMAuthor1";
             this.lbACMAuthor1.Size = new System.Drawing.Size(29, 12);
             this.lbACMAuthor1.TabIndex = 42;
@@ -163,7 +171,7 @@ namespace LibraryMgrProgram.AdminForm
             // lbACMBookName1
             // 
             this.lbACMBookName1.AutoSize = true;
-            this.lbACMBookName1.Location = new System.Drawing.Point(942, 226);
+            this.lbACMBookName1.Location = new System.Drawing.Point(213, 169);
             this.lbACMBookName1.Name = "lbACMBookName1";
             this.lbACMBookName1.Size = new System.Drawing.Size(29, 12);
             this.lbACMBookName1.TabIndex = 41;
@@ -172,7 +180,7 @@ namespace LibraryMgrProgram.AdminForm
             // lbACMAuthor2
             // 
             this.lbACMAuthor2.AutoSize = true;
-            this.lbACMAuthor2.Location = new System.Drawing.Point(1137, 270);
+            this.lbACMAuthor2.Location = new System.Drawing.Point(408, 213);
             this.lbACMAuthor2.Name = "lbACMAuthor2";
             this.lbACMAuthor2.Size = new System.Drawing.Size(29, 12);
             this.lbACMAuthor2.TabIndex = 44;
@@ -181,11 +189,28 @@ namespace LibraryMgrProgram.AdminForm
             // lbACMBookName2
             // 
             this.lbACMBookName2.AutoSize = true;
-            this.lbACMBookName2.Location = new System.Drawing.Point(1137, 226);
+            this.lbACMBookName2.Location = new System.Drawing.Point(408, 169);
             this.lbACMBookName2.Name = "lbACMBookName2";
             this.lbACMBookName2.Size = new System.Drawing.Size(29, 12);
             this.lbACMBookName2.TabIndex = 43;
             this.lbACMBookName2.Text = "제목";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.picACMBookView2);
+            this.groupBox1.Controls.Add(this.lbACMAuthor2);
+            this.groupBox1.Controls.Add(this.picACMBookView0);
+            this.groupBox1.Controls.Add(this.lbACMBookName2);
+            this.groupBox1.Controls.Add(this.picACMBookView1);
+            this.groupBox1.Controls.Add(this.lbACMAuthor1);
+            this.groupBox1.Controls.Add(this.lbACMBookName1);
+            this.groupBox1.Controls.Add(this.lbACMBookName0);
+            this.groupBox1.Controls.Add(this.lbACMAuthor0);
+            this.groupBox1.Location = new System.Drawing.Point(720, 78);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(550, 232);
+            this.groupBox1.TabIndex = 45;
+            this.groupBox1.TabStop = false;
             // 
             // AdminContentsMainForm
             // 
@@ -193,16 +218,8 @@ namespace LibraryMgrProgram.AdminForm
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 553);
-            this.Controls.Add(this.lbACMAuthor2);
-            this.Controls.Add(this.lbACMBookName2);
-            this.Controls.Add(this.lbACMAuthor1);
-            this.Controls.Add(this.lbACMBookName1);
-            this.Controls.Add(this.lbACMAuthor0);
-            this.Controls.Add(this.lbACMBookName0);
             this.Controls.Add(this.lbACMBestBook);
-            this.Controls.Add(this.picACMBookView2);
-            this.Controls.Add(this.picACMBookView1);
-            this.Controls.Add(this.picACMBookView0);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lbACMNotic);
             this.Controls.Add(this.textBox2);
@@ -216,6 +233,8 @@ namespace LibraryMgrProgram.AdminForm
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView0)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picACMBookView2)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,5 +255,6 @@ namespace LibraryMgrProgram.AdminForm
         private System.Windows.Forms.Label lbACMBookName1;
         private System.Windows.Forms.Label lbACMAuthor2;
         private System.Windows.Forms.Label lbACMBookName2;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

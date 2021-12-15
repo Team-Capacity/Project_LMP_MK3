@@ -37,18 +37,16 @@ namespace LibraryMgrProgram.CustomerForm
             this.picCCBookView2 = new System.Windows.Forms.PictureBox();
             this.picCCBookView1 = new System.Windows.Forms.PictureBox();
             this.picCCBookView0 = new System.Windows.Forms.PictureBox();
-            this.txtCCNotice = new System.Windows.Forms.TextBox();
-            this.dgvCCNotice = new System.Windows.Forms.DataGridView();
             this.dgvCCInfo = new System.Windows.Forms.DataGridView();
             this.lbCCBookName1 = new System.Windows.Forms.Label();
             this.lbAuthor3 = new System.Windows.Forms.Label();
             this.lbAuthor5 = new System.Windows.Forms.Label();
             this.lbCCBookName3 = new System.Windows.Forms.Label();
             this.lbCCBookName5 = new System.Windows.Forms.Label();
+            this.lbCCNotice = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picCCBookView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCCBookView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCCBookView0)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCCNotice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCCInfo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -123,27 +121,6 @@ namespace LibraryMgrProgram.CustomerForm
             this.picCCBookView0.TabIndex = 32;
             this.picCCBookView0.TabStop = false;
             // 
-            // txtCCNotice
-            // 
-            this.txtCCNotice.BackColor = System.Drawing.Color.White;
-            this.txtCCNotice.Location = new System.Drawing.Point(116, 62);
-            this.txtCCNotice.Multiline = true;
-            this.txtCCNotice.Name = "txtCCNotice";
-            this.txtCCNotice.ReadOnly = true;
-            this.txtCCNotice.Size = new System.Drawing.Size(450, 479);
-            this.txtCCNotice.TabIndex = 41;
-            this.txtCCNotice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // dgvCCNotice
-            // 
-            this.dgvCCNotice.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgvCCNotice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCCNotice.Location = new System.Drawing.Point(116, 62);
-            this.dgvCCNotice.Name = "dgvCCNotice";
-            this.dgvCCNotice.RowTemplate.Height = 23;
-            this.dgvCCNotice.Size = new System.Drawing.Size(450, 479);
-            this.dgvCCNotice.TabIndex = 31;
-            // 
             // dgvCCInfo
             // 
             this.dgvCCInfo.BackgroundColor = System.Drawing.Color.White;
@@ -200,18 +177,26 @@ namespace LibraryMgrProgram.CustomerForm
             this.lbCCBookName5.TabIndex = 48;
             this.lbCCBookName5.Text = "제목:";
             // 
+            // lbCCNotice
+            // 
+            this.lbCCNotice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCCNotice.Location = new System.Drawing.Point(110, 59);
+            this.lbCCNotice.Name = "lbCCNotice";
+            this.lbCCNotice.Size = new System.Drawing.Size(442, 479);
+            this.lbCCNotice.TabIndex = 49;
+            // 
             // CustomerContentsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1376, 553);
+            this.Controls.Add(this.lbCCNotice);
             this.Controls.Add(this.lbCCBookName5);
             this.Controls.Add(this.lbCCBookName3);
             this.Controls.Add(this.lbAuthor5);
             this.Controls.Add(this.lbAuthor3);
             this.Controls.Add(this.lbCCBookName1);
-            this.Controls.Add(this.txtCCNotice);
             this.Controls.Add(this.lbAuthor1);
             this.Controls.Add(this.picCCBookView2);
             this.Controls.Add(this.picCCBookView1);
@@ -219,7 +204,6 @@ namespace LibraryMgrProgram.CustomerForm
             this.Controls.Add(this.lbCCBestBook);
             this.Controls.Add(this.lbCCStatus);
             this.Controls.Add(this.lbCCNotic);
-            this.Controls.Add(this.dgvCCNotice);
             this.Controls.Add(this.dgvCCInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CustomerContentsForm";
@@ -229,7 +213,6 @@ namespace LibraryMgrProgram.CustomerForm
             ((System.ComponentModel.ISupportInitialize)(this.picCCBookView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCCBookView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCCBookView0)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCCNotice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCCInfo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -245,13 +228,12 @@ namespace LibraryMgrProgram.CustomerForm
         private System.Windows.Forms.PictureBox picCCBookView1;
         private System.Windows.Forms.PictureBox picCCBookView2;
         private System.Windows.Forms.Label lbAuthor1;
-        private System.Windows.Forms.TextBox txtCCNotice;
-        private System.Windows.Forms.DataGridView dgvCCNotice;
         private System.Windows.Forms.DataGridView dgvCCInfo;
         private System.Windows.Forms.Label lbCCBookName1;
         private System.Windows.Forms.Label lbAuthor3;
         private System.Windows.Forms.Label lbAuthor5;
         private System.Windows.Forms.Label lbCCBookName3;
         private System.Windows.Forms.Label lbCCBookName5;
+        private System.Windows.Forms.Label lbCCNotice;
     }
 }

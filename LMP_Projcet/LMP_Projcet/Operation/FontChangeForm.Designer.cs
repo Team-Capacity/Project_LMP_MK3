@@ -31,10 +31,15 @@ namespace LibraryMgrProgram
             this.rdoFCBasic = new System.Windows.Forms.RadioButton();
             this.rdoFCSetting = new System.Windows.Forms.RadioButton();
             this.grpFCSetting = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdoFCWhite = new System.Windows.Forms.RadioButton();
+            this.rdoFCBlack = new System.Windows.Forms.RadioButton();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cmbFCKo = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.picFCWhite = new System.Windows.Forms.PictureBox();
             this.picFCBlack = new System.Windows.Forms.PictureBox();
-            this.rdoFCBlack = new System.Windows.Forms.RadioButton();
-            this.rdoFCWhite = new System.Windows.Forms.RadioButton();
             this.btnFCCancle = new System.Windows.Forms.Button();
             this.btnFCSetting = new System.Windows.Forms.Button();
             this.cmbFCKo_Sel = new System.Windows.Forms.ComboBox();
@@ -45,17 +50,12 @@ namespace LibraryMgrProgram
             this.btnLFMax = new System.Windows.Forms.Button();
             this.btnLFMin = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbFCKo = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.grpFCSetting.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFCWhite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFCBlack)).BeginInit();
             this.plnAM.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // rdoFCBasic
@@ -104,6 +104,88 @@ namespace LibraryMgrProgram
             this.grpFCSetting.TabIndex = 41;
             this.grpFCSetting.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.rdoFCBasic);
+            this.groupBox2.Controls.Add(this.rdoFCSetting);
+            this.groupBox2.Location = new System.Drawing.Point(295, 152);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(247, 53);
+            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdoFCWhite);
+            this.groupBox1.Controls.Add(this.rdoFCBlack);
+            this.groupBox1.Location = new System.Drawing.Point(9, 152);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(268, 53);
+            this.groupBox1.TabIndex = 47;
+            this.groupBox1.TabStop = false;
+            // 
+            // rdoFCWhite
+            // 
+            this.rdoFCWhite.AutoSize = true;
+            this.rdoFCWhite.Checked = true;
+            this.rdoFCWhite.Font = new System.Drawing.Font("Gulim", 12F);
+            this.rdoFCWhite.Location = new System.Drawing.Point(6, 20);
+            this.rdoFCWhite.Name = "rdoFCWhite";
+            this.rdoFCWhite.Size = new System.Drawing.Size(139, 20);
+            this.rdoFCWhite.TabIndex = 15;
+            this.rdoFCWhite.TabStop = true;
+            this.rdoFCWhite.Text = "밝은 테마(기본)";
+            this.rdoFCWhite.UseVisualStyleBackColor = true;
+            // 
+            // rdoFCBlack
+            // 
+            this.rdoFCBlack.AutoSize = true;
+            this.rdoFCBlack.Font = new System.Drawing.Font("Gulim", 12F);
+            this.rdoFCBlack.Location = new System.Drawing.Point(151, 20);
+            this.rdoFCBlack.Name = "rdoFCBlack";
+            this.rdoFCBlack.Size = new System.Drawing.Size(111, 20);
+            this.rdoFCBlack.TabIndex = 16;
+            this.rdoFCBlack.Text = "어두운 테마";
+            this.rdoFCBlack.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Gulim", 12F);
+            this.label4.Location = new System.Drawing.Point(309, 109);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(40, 16);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "형태";
+            // 
+            // cmbFCKo
+            // 
+            this.cmbFCKo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFCKo.FormattingEnabled = true;
+            this.cmbFCKo.Items.AddRange(new object[] {
+            "궁서체",
+            "굵은체",
+            "나눔명조",
+            "바탕체",
+            "함초롱바탕",
+            "나눔고딕",
+            "돋움",
+            "굴림체"});
+            this.cmbFCKo.Location = new System.Drawing.Point(355, 105);
+            this.cmbFCKo.Name = "cmbFCKo";
+            this.cmbFCKo.Size = new System.Drawing.Size(131, 20);
+            this.cmbFCKo.TabIndex = 45;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Gulim", 12F);
+            this.label3.Location = new System.Drawing.Point(6, 17);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(56, 16);
+            this.label3.TabIndex = 44;
+            this.label3.Text = "배경색";
+            // 
             // picFCWhite
             // 
             this.picFCWhite.BackColor = System.Drawing.Color.White;
@@ -122,30 +204,6 @@ namespace LibraryMgrProgram
             this.picFCBlack.Size = new System.Drawing.Size(101, 109);
             this.picFCBlack.TabIndex = 17;
             this.picFCBlack.TabStop = false;
-            // 
-            // rdoFCBlack
-            // 
-            this.rdoFCBlack.AutoSize = true;
-            this.rdoFCBlack.Font = new System.Drawing.Font("Gulim", 12F);
-            this.rdoFCBlack.Location = new System.Drawing.Point(151, 20);
-            this.rdoFCBlack.Name = "rdoFCBlack";
-            this.rdoFCBlack.Size = new System.Drawing.Size(111, 20);
-            this.rdoFCBlack.TabIndex = 16;
-            this.rdoFCBlack.Text = "어두운 테마";
-            this.rdoFCBlack.UseVisualStyleBackColor = true;
-            // 
-            // rdoFCWhite
-            // 
-            this.rdoFCWhite.AutoSize = true;
-            this.rdoFCWhite.Checked = true;
-            this.rdoFCWhite.Font = new System.Drawing.Font("Gulim", 12F);
-            this.rdoFCWhite.Location = new System.Drawing.Point(6, 20);
-            this.rdoFCWhite.Name = "rdoFCWhite";
-            this.rdoFCWhite.Size = new System.Drawing.Size(139, 20);
-            this.rdoFCWhite.TabIndex = 15;
-            this.rdoFCWhite.TabStop = true;
-            this.rdoFCWhite.Text = "밝은 테마(기본)";
-            this.rdoFCWhite.UseVisualStyleBackColor = true;
             // 
             // btnFCCancle
             // 
@@ -277,64 +335,6 @@ namespace LibraryMgrProgram
             this.label1.TabIndex = 0;
             this.label1.Text = "색상/글꼴";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Gulim", 12F);
-            this.label3.Location = new System.Drawing.Point(6, 17);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(56, 16);
-            this.label3.TabIndex = 44;
-            this.label3.Text = "배경색";
-            // 
-            // cmbFCKo
-            // 
-            this.cmbFCKo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFCKo.FormattingEnabled = true;
-            this.cmbFCKo.Items.AddRange(new object[] {
-            "궁서체",
-            "굵은체",
-            "나눔명조",
-            "바탕체",
-            "함초롱바탕",
-            "나눔고딕",
-            "돋움",
-            "굴림체"});
-            this.cmbFCKo.Location = new System.Drawing.Point(355, 105);
-            this.cmbFCKo.Name = "cmbFCKo";
-            this.cmbFCKo.Size = new System.Drawing.Size(131, 20);
-            this.cmbFCKo.TabIndex = 45;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Gulim", 12F);
-            this.label4.Location = new System.Drawing.Point(309, 109);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 16);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "형태";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.rdoFCWhite);
-            this.groupBox1.Controls.Add(this.rdoFCBlack);
-            this.groupBox1.Location = new System.Drawing.Point(9, 152);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(268, 53);
-            this.groupBox1.TabIndex = 47;
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.rdoFCBasic);
-            this.groupBox2.Controls.Add(this.rdoFCSetting);
-            this.groupBox2.Location = new System.Drawing.Point(295, 152);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(247, 53);
-            this.groupBox2.TabIndex = 48;
-            this.groupBox2.TabStop = false;
-            // 
             // FontChangeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -350,13 +350,13 @@ namespace LibraryMgrProgram
             this.Load += new System.EventHandler(this.FontChangeForm_Load);
             this.grpFCSetting.ResumeLayout(false);
             this.grpFCSetting.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFCWhite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFCBlack)).EndInit();
             this.plnAM.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

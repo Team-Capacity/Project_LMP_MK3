@@ -172,7 +172,6 @@ namespace LibraryMgrProgram
             this.gdvAIOBView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.gdvAIOBView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gdvAIOBView.BackgroundColor = System.Drawing.Color.White;
-            this.gdvAIOBView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdvAIOBView.Location = new System.Drawing.Point(85, 307);
             this.gdvAIOBView.Name = "gdvAIOBView";
             this.gdvAIOBView.ReadOnly = true;
@@ -205,7 +204,6 @@ namespace LibraryMgrProgram
             this.gdvAIOMView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.gdvAIOMView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.gdvAIOMView.BackgroundColor = System.Drawing.Color.White;
-            this.gdvAIOMView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdvAIOMView.Location = new System.Drawing.Point(85, 40);
             this.gdvAIOMView.Name = "gdvAIOMView";
             this.gdvAIOMView.ReadOnly = true;

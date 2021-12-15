@@ -31,7 +31,6 @@ namespace LMP_Projcet.Start
 
         private void MemberAddForm_Load(object sender, EventArgs e)
         {
-
             TtMA.SetToolTip(txtMA_Name, "2~5글자 한글로만 작성해주세요");
             TtMA.SetToolTip(txtMA_Pw, "특수문자+영문자+숫자로 이루어져야 하며 8자 이상이어야 합니다.");
             TtMA.SetToolTip(txtAM_Address, "ex)서울특별시 강북구 미아동");
@@ -43,24 +42,17 @@ namespace LMP_Projcet.Start
             TtMA.ReshowDelay = 100;
             //생년월일 콤보박스에 값 추가
             int choice;
-            for (choice = 1920; choice < 2020; choice++)
+            for (choice = 1960; choice < 2020; choice++)
             {
                 cmbMA_Year.Items.Add(choice);
             }
             
-
-
-
             //비밀번호 *표시로, 최대길이는 16
             txtMA_Pw.PasswordChar = '*';
             txtMA_Pw.MaxLength = 16;
 
             txtMA_PwCheck.PasswordChar = '*';
             txtMA_PwCheck.MaxLength = 16;
-
-
-
-
         }
 
 
@@ -86,9 +78,7 @@ namespace LMP_Projcet.Start
         {
 
 
-
         }
-
         private void btnMAMin_Click(object sender, EventArgs e)
         {
             mouseEvent.FormMinSize(this);
@@ -101,13 +91,9 @@ namespace LMP_Projcet.Start
 
         private void btnMAClose_Click(object sender, EventArgs e)
         {
-            mouseEvent.ButtonClose(this);
+            this.Hide();
+            new LoginForm().Show();
         }
-
-
-
-
-
         private void btnMA_Cancel_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -119,10 +105,9 @@ namespace LMP_Projcet.Start
             db.dbConnection();
             string id = txtMA_Id.Text;
             string sql = "select Count(CID) as CID from Customer where CID = '" + id + "'";
+            string chkSql = "select ";
             int count = 0;
             
-
-
             try
             {
                 MySqlCommand cmd = new MySqlCommand(sql, db.conn);
@@ -146,6 +131,11 @@ namespace LMP_Projcet.Start
                 {
                     MessageBox.Show("아이디는 숫자와 영어로만 구성해주세요");
                 }
+                else if (txtMA_Id.Text == "admin")
+                {
+                    MessageBox.Show("사용할 수 없는 아이디입니다.");
+                    return;
+                }
                 else
                 {
                     btnMA_Join.Enabled = true;
@@ -159,7 +149,7 @@ namespace LMP_Projcet.Start
             }
             catch (Exception)
             {
-                MessageBox.Show("select문에 실패하였습니다.");
+                MessageBox.Show("회원추가에 실패하였습니다.");
                 throw;
             }
         }
@@ -179,11 +169,8 @@ namespace LMP_Projcet.Start
             string Day = cmbMA_Day.Text;
             string Address = txtAM_Address.Text;
 
-            
             try
             {
-
-
                 if (!IsValName(txtMA_Name.Text))
                 {
                     MessageBox.Show("이름을 한글로 2~5글자로 입력해주세요");
@@ -206,7 +193,6 @@ namespace LMP_Projcet.Start
                     MessageBox.Show("시/도 구/군 면/동으로 작성해주세요.");
                     return;
                 }*/
-
                 if (!IsValYear(cmbMA_Year.Text))
                 {
                     MessageBox.Show("년도에 숫자와 4글자로입력해주세요.");
@@ -236,8 +222,6 @@ namespace LMP_Projcet.Start
                     MessageBox.Show("핸드폰번호에 - 를 입력하여 번호를 입력해주세요.");
                     return;
                 }
-
-
                 string gender = "";
 
                 if (rdbMA_Man.Checked)
@@ -249,7 +233,18 @@ namespace LMP_Projcet.Start
                     gender = "여성";
                 }
 
-                string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CGender) values("
+                string chksql = "select * from Customer where CName = '" + txtMA_Name.Text + "' and CPH = '" + txtMA_Phone.Text + "' and CBirth = '" + cmbMA_Year.Text + "" + cmbMA_Month.Text + "" + cmbMA_Day.Text + "';";
+                MySqlCommand cmd0 = new MySqlCommand(chksql, db.conn);
+                MySqlDataReader dbReader = cmd0.ExecuteReader();
+                string result = "";
+                while (dbReader.Read())
+                {
+                    result = dbReader[0].ToString();
+                }
+                if (result.Equals(""))
+                {
+                    
+                    string sql = "insert into Customer(CID, CPW, CName, CPH, CBirth, CAddress, CGender) values("
                     + "'" + txtMA_Id.Text + "'"
                     + ",'" + txtMA_Pw.Text + "'"
                     + ",'" + txtMA_Name.Text + "'"
@@ -258,8 +253,15 @@ namespace LMP_Projcet.Start
                     + ",'" + txtAM_Address.Text + "'"
                     + ",'" + gender + "'"
                     + ");";
-                db.dbUpdate(sql);
-                MessageBox.Show("추가되었습니다.");
+                    db.dbUpdate(sql);
+                    MessageBox.Show("추가되었습니다.");
+                    this.Hide();
+                    new LoginForm().Show();
+                }
+                else
+                {
+                    MessageBox.Show("중복된 회원입니다.");
+                }
 
             }
             catch (MySqlException ex)
@@ -330,9 +332,5 @@ namespace LMP_Projcet.Start
         {
             Application.Exit();
         }
-
-       
-
-        
     }
 }

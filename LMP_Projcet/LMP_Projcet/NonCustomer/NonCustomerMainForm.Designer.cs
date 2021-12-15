@@ -55,7 +55,7 @@ namespace LibraryMgrProgram
             this.lbNCMLogin.AutoSize = true;
             this.lbNCMLogin.Font = new System.Drawing.Font("Gulim", 12F);
             this.lbNCMLogin.ForeColor = System.Drawing.Color.Black;
-            this.lbNCMLogin.Location = new System.Drawing.Point(1316, 85);
+            this.lbNCMLogin.Location = new System.Drawing.Point(1315, 56);
             this.lbNCMLogin.Name = "lbNCMLogin";
             this.lbNCMLogin.Size = new System.Drawing.Size(56, 16);
             this.lbNCMLogin.TabIndex = 150;
@@ -264,6 +264,7 @@ namespace LibraryMgrProgram
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "NonCustomerMainForm";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NonCustomerMainForm_FormClosing);
             this.Load += new System.EventHandler(this.NonCustomerMainForm_Load);

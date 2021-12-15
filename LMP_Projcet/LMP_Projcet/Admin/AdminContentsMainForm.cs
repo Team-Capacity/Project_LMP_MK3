@@ -16,6 +16,7 @@ namespace LibraryMgrProgram.AdminForm
     {
         FormChange fc = new FormChange();
         dbTest db = new dbTest();
+        MouseEvent me = new MouseEvent();
         public AdminContentsMainForm()
         {
             InitializeComponent();
@@ -27,7 +28,10 @@ namespace LibraryMgrProgram.AdminForm
             fc.fromColorChange(back, back);
             fc.fromColorChange(this);
             Book();
+            Notice();
+
         }
+        //로드시 최근 추가된 책을 보여주기
         private void Book()
         {
             db.dbConnection();
@@ -66,6 +70,24 @@ namespace LibraryMgrProgram.AdminForm
 
             reader.Close();
             db.conn.Close();
+        }
+
+        private void Notice()
+        {
+            try
+            {
+                db.dbConnection();
+                string sql = "select NName, NContent,NDate from NoticeList";
+                string[] resultType = { "제목", "내용","날짜" };
+                me.reloadForm(sql, dgvACNotice, resultType);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("공지사항로드 중에 에러가 발생하였습니다.");
+            }
+
+
+
         }
 
     }

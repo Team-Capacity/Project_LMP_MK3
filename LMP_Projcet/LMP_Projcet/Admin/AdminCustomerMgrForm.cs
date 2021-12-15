@@ -32,7 +32,6 @@ namespace LibraryMgrProgram
 
         private void AdminCustomerMgrForm_Load(object sender, EventArgs e)
         {
-            
             fc.fromColorChange(this);
             fc.fromColorChange(grpACMView);
             fc.fromColorChange(grpACMModi);
@@ -41,6 +40,7 @@ namespace LibraryMgrProgram
             me.reloadForm(cusSQL, dgvACMCustomerList, 1);
             MemberlistDescription();
         }
+
 
         private void btnACMAdd_Click(object sender, EventArgs e)
         {
@@ -71,14 +71,14 @@ namespace LibraryMgrProgram
                     }
                     else if (cboxAIOMSort.SelectedItem.Equals("생년월일"))
                     {
-                        string sql = ("select * from Customer where CBirth Like '%" + txtAIOMSearch.Text + "%';").ToString();
+                        string sql = ("select * from Customer where CBirth Like '%" + txtAIOMSearch.Text + "%' ;");
                         me.reloadForm(sql, dgvACMCustomerList, 1);
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("검색내용이 없습니다.");
+                MessageBox.Show("검색의 실패하였습니다.\n" + ex.Message);
                 string sql = "select * from Customer where CNumber > 0;";
                 me.reloadForm(sql, dgvACMCustomerList, 1);
             }
@@ -225,7 +225,7 @@ namespace LibraryMgrProgram
                     {
                         int number = Int32.Parse(lbACMNumView0.Text);
                         // 삭제여부 확인
-                        if (MessageBox.Show("정말로 삭제하시겠습니까?", "YesOrNo", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                        if (MessageBox.Show("정말로 삭제하시겠습니까?", "삭제하기", MessageBoxButtons.YesNo) == DialogResult.Yes)
                         {
                             string mysql = "delete from Customer where CNumber = " + number + ";";
                             try
@@ -278,6 +278,7 @@ namespace LibraryMgrProgram
                 {
                     gender = "여성";
                 }
+                
                 try
                 {
                     db.dbConnection();
