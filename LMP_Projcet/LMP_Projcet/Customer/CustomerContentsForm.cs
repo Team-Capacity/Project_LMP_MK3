@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LMP_Projcet.Methods;
+using LMP_Projcet;
 
 namespace LibraryMgrProgram.CustomerForm
 {
@@ -21,6 +22,7 @@ namespace LibraryMgrProgram.CustomerForm
         }
         dbTest db = new dbTest();
         FormChange fc = new FormChange();
+        MouseEvent me = new MouseEvent();
 
         private void CustomerContentsForm_Load(object sender, EventArgs e)
         {
@@ -30,7 +32,19 @@ namespace LibraryMgrProgram.CustomerForm
 
             Content();
             Book();
-       
+            try
+            {
+                string sql = "select distinct BNumber, BName, BPublisher, BAuthor, BCount, BGenre, BProduct, Barea, BISBN, BPage, BLocal, BDate, BContent, BAddDate " +
+                        "from LoanList, Book " +
+                        "Where LoanList.LBookNum = Book.BNumber and LoanList.LCustomerNum = " + LoginForm.number + ";";
+                me.reloadForm(sql, dgvCCInfo, 0);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("에러발생");
+            }
+
+
         }
 
         //최근 등록된 책 3권 로드되도록

@@ -245,10 +245,8 @@ namespace LibraryMgrProgram
                 string bookNum = lbAIOBNumView1.Text;
                 try
                 {
-                    MessageBox.Show("cusNum = " + cusNum + "\nbookNum = " + bookNum);
                     string chkloan = "select LCustomerNum, LBookNum from LoanList where LCustomerNum = '" + cusNum + "' and LBookNum = '" + bookNum + "';";
                     int chkCount = chkLoan(chkloan);
-                    MessageBox.Show(chkCount.ToString());
 
                     string cusSql = "select CLoanCot from Customer where CNumber = '" + cusNum + "';";
                     string bookSQL = "select BCount from Book where BNumber = '" + bookNum + "';";
@@ -395,6 +393,10 @@ namespace LibraryMgrProgram
             {
                 loanCount = 1;
             }
+            else
+            {
+                loanCount = 1;
+            }
             lbAIOMCountView0.Text += "/" + (9 / loanCount).ToString();
         }
         //반납 페이지 글
@@ -418,6 +420,10 @@ namespace LibraryMgrProgram
                 loanCount = Int32.Parse(rank);
             }
             else if (rank.Equals("N"))
+            {
+                loanCount = 1;
+            }
+            else
             {
                 loanCount = 1;
             }

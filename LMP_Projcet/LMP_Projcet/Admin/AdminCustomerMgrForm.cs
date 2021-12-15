@@ -112,6 +112,10 @@ namespace LibraryMgrProgram
             {
                 loanCount = 1;
             }
+            else
+            {
+                loanCount = 1;
+            }
             lbACMCountView0.Text += "/" + (9 / loanCount).ToString();
         }
 
@@ -148,6 +152,10 @@ namespace LibraryMgrProgram
                 loanCount = 1;
             }
             else if (rank.Equals("M"))
+            {
+                loanCount = 1;
+            }
+            else
             {
                 loanCount = 1;
             }

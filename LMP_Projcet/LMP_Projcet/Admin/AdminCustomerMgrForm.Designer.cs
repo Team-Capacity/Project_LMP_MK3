@@ -38,6 +38,9 @@ namespace LibraryMgrProgram
             this.cboxAIOMSort = new System.Windows.Forms.ComboBox();
             this.CustomerModi = new System.Windows.Forms.TabPage();
             this.grpACMModi = new System.Windows.Forms.GroupBox();
+            this.btnACMPWClear = new System.Windows.Forms.Button();
+            this.txtACMPW2 = new System.Windows.Forms.TextBox();
+            this.lbACMPW = new System.Windows.Forms.Label();
             this.txtACMAddrView2 = new System.Windows.Forms.TextBox();
             this.comACMRankView2 = new System.Windows.Forms.ComboBox();
             this.txtACMNumView2 = new System.Windows.Forms.TextBox();
@@ -113,9 +116,6 @@ namespace LibraryMgrProgram
             this.rdbACMMan1 = new System.Windows.Forms.RadioButton();
             this.rdbACMWom1 = new System.Windows.Forms.RadioButton();
             this.txtACMAddrView1 = new System.Windows.Forms.TextBox();
-            this.lbACMPW = new System.Windows.Forms.Label();
-            this.txtACMPW2 = new System.Windows.Forms.TextBox();
-            this.btnACMPWClear = new System.Windows.Forms.Button();
             this.grpcACMSex2 = new LMP_Projcet.Methods.GroupBoxBorderChagne();
             this.rdbACMWom2 = new System.Windows.Forms.RadioButton();
             this.rdbACMMan2 = new System.Windows.Forms.RadioButton();
@@ -231,6 +231,33 @@ namespace LibraryMgrProgram
             this.grpACMModi.TabIndex = 163;
             this.grpACMModi.TabStop = false;
             this.grpACMModi.Text = "회원수정";
+            // 
+            // btnACMPWClear
+            // 
+            this.btnACMPWClear.Location = new System.Drawing.Point(244, 166);
+            this.btnACMPWClear.Name = "btnACMPWClear";
+            this.btnACMPWClear.Size = new System.Drawing.Size(113, 23);
+            this.btnACMPWClear.TabIndex = 164;
+            this.btnACMPWClear.Text = "비번초기화";
+            this.btnACMPWClear.UseVisualStyleBackColor = true;
+            this.btnACMPWClear.Click += new System.EventHandler(this.btnACMPWClear_Click);
+            // 
+            // txtACMPW2
+            // 
+            this.txtACMPW2.Location = new System.Drawing.Point(80, 164);
+            this.txtACMPW2.Name = "txtACMPW2";
+            this.txtACMPW2.Size = new System.Drawing.Size(158, 26);
+            this.txtACMPW2.TabIndex = 166;
+            // 
+            // lbACMPW
+            // 
+            this.lbACMPW.AutoSize = true;
+            this.lbACMPW.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbACMPW.Location = new System.Drawing.Point(15, 170);
+            this.lbACMPW.Name = "lbACMPW";
+            this.lbACMPW.Size = new System.Drawing.Size(59, 13);
+            this.lbACMPW.TabIndex = 165;
+            this.lbACMPW.Text = "비밀번호";
             // 
             // txtACMAddrView2
             // 
@@ -988,33 +1015,6 @@ namespace LibraryMgrProgram
             this.txtACMAddrView1.Name = "txtACMAddrView1";
             this.txtACMAddrView1.Size = new System.Drawing.Size(394, 26);
             this.txtACMAddrView1.TabIndex = 163;
-            // 
-            // lbACMPW
-            // 
-            this.lbACMPW.AutoSize = true;
-            this.lbACMPW.Font = new System.Drawing.Font("Gulim", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.lbACMPW.Location = new System.Drawing.Point(15, 170);
-            this.lbACMPW.Name = "lbACMPW";
-            this.lbACMPW.Size = new System.Drawing.Size(59, 13);
-            this.lbACMPW.TabIndex = 165;
-            this.lbACMPW.Text = "비밀번호";
-            // 
-            // txtACMPW2
-            // 
-            this.txtACMPW2.Location = new System.Drawing.Point(80, 164);
-            this.txtACMPW2.Name = "txtACMPW2";
-            this.txtACMPW2.Size = new System.Drawing.Size(158, 26);
-            this.txtACMPW2.TabIndex = 166;
-            // 
-            // btnACMPWClear
-            // 
-            this.btnACMPWClear.Location = new System.Drawing.Point(244, 166);
-            this.btnACMPWClear.Name = "btnACMPWClear";
-            this.btnACMPWClear.Size = new System.Drawing.Size(113, 23);
-            this.btnACMPWClear.TabIndex = 164;
-            this.btnACMPWClear.Text = "비번초기화";
-            this.btnACMPWClear.UseVisualStyleBackColor = true;
-            this.btnACMPWClear.Click += new System.EventHandler(this.btnACMPWClear_Click);
             // 
             // grpcACMSex2
             // 

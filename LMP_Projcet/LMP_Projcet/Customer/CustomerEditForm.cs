@@ -40,7 +40,6 @@ namespace LMP_Projcet.Customer
 
                 try
                 {
-                    
                     string sql = "delete from Customer where CNumber = " + LoginForm.number + ";";
                     MySqlCommand cmd = new MySqlCommand(sql, db.conn);
                     MySqlCommand mc = new MySqlCommand(sql, db.conn);
@@ -108,10 +107,10 @@ namespace LMP_Projcet.Customer
                 rank = reader[1].ToString();
                 pw = reader[3].ToString();
                 name = reader[4].ToString();
-                ph = reader[6].ToString();
-                birth = reader[7].ToString();
-                address = reader[8].ToString(); 
-                memo = reader[11].ToString();
+                ph = reader[7].ToString();
+                birth = reader[8].ToString();
+                address = reader[9].ToString(); 
+                memo = reader[12].ToString();
             }
 
             reader.Close();
@@ -201,7 +200,7 @@ namespace LMP_Projcet.Customer
         
 
             db.dbConnection();
-            string Query2 = "Update customer set CName = '" + txtCEMyName.Text
+            string Query2 = "Update Customer set CName = '" + txtCEMyName.Text
                     + "', CPH = '" + txtCEHPView.Text
                     + "', CPW = '" + txtCEPW.Text
                     + "', CBirth = '" + csbirth.Year  + "/" + csbirth.Month +  "/" + csbirth.Day 
