@@ -189,6 +189,16 @@ namespace LibraryMgrProgram
             Ttse.InitialDelay = 100;
             Ttse.ReshowDelay = 100;
         }
+
+        private void btnLFMax_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMaxSize(this);
+        }
+
+        private void btnLFMin_Click(object sender, EventArgs e)
+        {
+            mouseEvent.FormMinSize(this);
+        }
     }
     }
 

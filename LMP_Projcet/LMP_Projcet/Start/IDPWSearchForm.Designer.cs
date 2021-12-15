@@ -48,9 +48,12 @@ namespace LibraryMgrProgram
             this.labSerPwHP = new System.Windows.Forms.Label();
             this.labSerPwID = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnLFClose = new System.Windows.Forms.Button();
-            this.plnAM = new System.Windows.Forms.TableLayoutPanel();
             this.Ttse = new System.Windows.Forms.ToolTip(this.components);
+            this.plnAM = new System.Windows.Forms.TableLayoutPanel();
+            this.btnLFClose = new System.Windows.Forms.Button();
+            this.btnLFMax = new System.Windows.Forms.Button();
+            this.btnLFMin = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.grpSerID.SuspendLayout();
             this.grpSerPW.SuspendLayout();
             this.plnAM.SuspendLayout();
@@ -228,42 +231,88 @@ namespace LibraryMgrProgram
             this.label5.Text = "비밀번호 찾기";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // plnAM
+            // 
+            this.plnAM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.plnAM.AutoSize = true;
+            this.plnAM.BackColor = System.Drawing.Color.Silver;
+            this.plnAM.ColumnCount = 4;
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 28F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.plnAM.Controls.Add(this.btnLFClose, 3, 1);
+            this.plnAM.Controls.Add(this.btnLFMax, 2, 1);
+            this.plnAM.Controls.Add(this.btnLFMin, 1, 1);
+            this.plnAM.Controls.Add(this.label2, 0, 1);
+            this.plnAM.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.plnAM.Location = new System.Drawing.Point(-3, -2);
+            this.plnAM.Name = "plnAM";
+            this.plnAM.RowCount = 2;
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.plnAM.Size = new System.Drawing.Size(788, 35);
+            this.plnAM.TabIndex = 131;
+            this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
+            this.plnAM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseMove);
+            this.plnAM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseUp);
+            // 
             // btnLFClose
             // 
             this.btnLFClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLFClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLFClose.FlatAppearance.BorderSize = 0;
             this.btnLFClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 15F);
-            this.btnLFClose.Location = new System.Drawing.Point(747, 6);
+            this.btnLFClose.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFClose.Location = new System.Drawing.Point(765, 6);
             this.btnLFClose.Name = "btnLFClose";
-            this.btnLFClose.Size = new System.Drawing.Size(34, 25);
+            this.btnLFClose.Size = new System.Drawing.Size(20, 20);
             this.btnLFClose.TabIndex = 1;
             this.btnLFClose.Text = "🗙";
             this.btnLFClose.UseVisualStyleBackColor = false;
             this.btnLFClose.Click += new System.EventHandler(this.btnLFClose_Click);
             // 
-            // plnAM
+            // btnLFMax
             // 
-            this.plnAM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.plnAM.AutoSize = true;
-            this.plnAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.plnAM.ColumnCount = 1;
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnAM.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.plnAM.Controls.Add(this.btnLFClose, 0, 1);
-            this.plnAM.Location = new System.Drawing.Point(0, 0);
-            this.plnAM.Name = "plnAM";
-            this.plnAM.RowCount = 2;
-            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.plnAM.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.plnAM.Size = new System.Drawing.Size(784, 37);
-            this.plnAM.TabIndex = 75;
-            this.plnAM.MouseDown += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseDown);
-            this.plnAM.MouseMove += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseMove);
-            this.plnAM.MouseUp += new System.Windows.Forms.MouseEventHandler(this.plnAM_MouseUp);
+            this.btnLFMax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMax.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMax.FlatAppearance.BorderSize = 0;
+            this.btnLFMax.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMax.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMax.Location = new System.Drawing.Point(739, 6);
+            this.btnLFMax.Name = "btnLFMax";
+            this.btnLFMax.Size = new System.Drawing.Size(19, 20);
+            this.btnLFMax.TabIndex = 3;
+            this.btnLFMax.Text = "🗖";
+            this.btnLFMax.UseVisualStyleBackColor = false;
+            this.btnLFMax.Click += new System.EventHandler(this.btnLFMax_Click);
+            // 
+            // btnLFMin
+            // 
+            this.btnLFMin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLFMin.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLFMin.FlatAppearance.BorderSize = 0;
+            this.btnLFMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLFMin.Font = new System.Drawing.Font("Gulim", 10F);
+            this.btnLFMin.Location = new System.Drawing.Point(711, 6);
+            this.btnLFMin.Name = "btnLFMin";
+            this.btnLFMin.Size = new System.Drawing.Size(20, 20);
+            this.btnLFMin.TabIndex = 2;
+            this.btnLFMin.Text = "🗕";
+            this.btnLFMin.UseVisualStyleBackColor = false;
+            this.btnLFMin.Click += new System.EventHandler(this.btnLFMin_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label2.Font = new System.Drawing.Font("Gulim", 15F);
+            this.label2.Location = new System.Drawing.Point(3, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(103, 23);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "계정 찾기";
             // 
             // IDPWSearchForm
             // 
@@ -308,8 +357,11 @@ namespace LibraryMgrProgram
         private System.Windows.Forms.Label labSerPwHP;
         private System.Windows.Forms.Label labSerPwID;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnLFClose;
-        private System.Windows.Forms.TableLayoutPanel plnAM;
         private System.Windows.Forms.ToolTip Ttse;
+        private System.Windows.Forms.TableLayoutPanel plnAM;
+        private System.Windows.Forms.Button btnLFClose;
+        private System.Windows.Forms.Button btnLFMax;
+        private System.Windows.Forms.Button btnLFMin;
+        private System.Windows.Forms.Label label2;
     }
 }
